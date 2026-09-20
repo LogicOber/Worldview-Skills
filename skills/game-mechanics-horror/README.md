@@ -1,6 +1,6 @@
 # Horror Game Mechanics
 
-Seventeen standalone Agent Skills cover familiar horror-game situations with implementable rules and direct tests. They describe what the player understands and does, what the simulation is allowed to know, how pressure changes a decision, what survives failure, and what evidence is needed before an encounter can be called playable.
+Eighteen standalone Agent Skills cover familiar horror-game situations with implementable rules and direct tests. They describe what the player understands and does, what the simulation is allowed to know, how pressure changes a decision, what survives failure, and what evidence is needed before an encounter can be called playable.
 
 Every package contains an original method written for this repository or a documented transformation of the user's own supplied mechanics material. `SOURCE.md` records that boundary. Examples use original fictional settings and demonstrate completed fields; their maps and values never become silent defaults.
 
@@ -52,6 +52,7 @@ The package template gives the Agent a fillable layer-lock record. Its example s
 | [`worldview-game-roaming-stalker-pressure`](worldview-game-roaming-stalker-pressure/README.md) | A persistent threat should roam a connected map, search plausibly, and create pressure without teleporting onto the player. | Route graph, pressure model, encounter spacing, anti-camping response, and fair re-entry rules. |
 | [`worldview-game-safe-room-pressure-reset`](worldview-game-safe-room-pressure-reset/README.md) | A protected room should let the player reorganize and breathe without deleting all accumulated danger. | Boundary, entry, pursuer disengagement, resource, exit-pressure, save, and reset rules. |
 | [`worldview-game-barricade-delay-and-route-choice`](worldview-game-barricade-delay-and-route-choice/README.md) | Blocking one approach should buy time while consuming access, material, silence, or a future route. | Stateful barrier, shared route mutation, useful-delay calculation, breach/detour, and persistence evidence. |
+| [`worldview-game-chase-route-architecture`](worldview-game-chase-route-architecture/README.md) | A pursuit should be a learnable building with a main route, risky alternatives, failure loops, and recovery—not an enemy following the player's transform. | Architectural graph and annotated plan, route legality, sight/hearing/microphone/sanity contracts, timing margins, checkpoints, and runtime proof. |
 
 ### Scarcity, preparation, and bodily risk
 
@@ -126,7 +127,7 @@ Each package has its own `SOURCE.md` with the exact input and rewrite boundary.
 | Source | Skills | How it was used |
 | --- | --- | --- |
 | User-supplied `mechanics-pack-2026-09-11.tar.gz` | `worldview-game-lure-hide-escape`, `worldview-game-observation-gated-stalker`, `worldview-game-restore-power-under-pressure` | These packages record the exact internal file or brief consulted. Their expanded methods, lock sequences, templates, and public examples are repository-authored. |
-| The user's 2026-09-18 request for original horror mechanics | The other 14 Skills in this category | The mechanic methods and fictional examples were written from the requested design problem. No external Skill supplied their content. |
+| The user's 2026-09-18 request for original horror mechanics | The other 15 Skills in this category | The mechanic methods and fictional examples were written from the requested design problem. No external Skill supplied their content. |
 
 ## Collection boundaries
 

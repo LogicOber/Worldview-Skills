@@ -7,11 +7,11 @@ A skill is a `SKILL.md` an agent reads before doing a job. It is not documentati
 ```yaml
 ---
 name: kebab-case-id
-title: Human Title
 description: One paragraph. What the skill produces, when to use it, and the words a user would say that should trigger it. This is what routing reads.
-category: film-video | game-design | game-mechanics-horror | game-production | 3d-assets | 2d-game | narrative | core-engine
+title: Optional human-facing title
+category: Optional repository category
 triggers:
-  - "phrases a user would actually type"
+  - "optional phrases a user would actually type"
 ---
 ```
 
@@ -22,9 +22,9 @@ triggers:
 1. **Why this exists** — one or two paragraphs naming the failure the skill prevents. Skills written without a failure in mind become feature lists.
 2. **What the user gets** — a table of deliverables with formats.
 3. **What the user has to do** — usually three or four items. If it is more, the skill is asking too much.
-4. **How it runs** — which core-engine stages are called, in order, with gates marked.
+4. **How it runs** — the implementation phases, evidence gates, and handoff order; a Skill may be standalone and need not call a core-engine stage.
 5. **Rules this entry enforces** — the non-negotiables, each with the reason.
-6. **Example** — a real one from a real project, with the actual numbers.
+6. **Example** — a complete original worked example with concrete numbers; never copy an external game's content or claim an unrun example was shipped.
 7. **Related entries.**
 
 ## The body — what every core-engine skill has
@@ -51,12 +51,14 @@ Core skills are called by entry skills. They are more technical and more specifi
 ```text
 skills/<category>/<name>/
   SKILL.md    required
-  showcase/   at least one image or clip of the output; users browse this before installing
-  examples/   optional; a worked example with the real prompt and result
-  templates/  optional; files the skill fills in
+  README.md   human-facing choice and Slash invocation page
+  SOURCE.md   authorship, research, and non-copy boundary for public Skills
+  references/ optional failure analysis and reasoning
+  templates/  optional durable contracts the Agent fills in
+  examples/   optional fully original worked example with concrete fields
 ```
 
-Add a row to the category table in the root `README.md`. If the skill is a new entry point, add it to "Which skills you actually need to remember." If it is internal, add it to the internal table and to `film-pipeline/SKILL.md`'s stage list.
+Add a row to the category table in the root `README.md`, update the localized README when the category is user-facing, and update `docs/game-skill-architecture.md` when a new category or public naming pattern is introduced. If the Skill is internal, add it to the internal table and to its owning pipeline method.
 
 ## Testing a skill
 

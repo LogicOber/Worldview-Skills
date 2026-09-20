@@ -2,21 +2,25 @@
   <img src=".github/assets/worldview-skills-cover.png" alt="Worldview Skills" width="100%">
 </p>
 
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-2f80ed?style=for-the-badge" alt="Apache 2.0 license"></a>
+  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-63-111827?style=for-the-badge" alt="63 Skills"></a>
+  <a href="https://skills.sh"><img src="https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex-111827?style=for-the-badge" alt="Works with Claude Code and Codex"></a>
+</p>
+
+<p align="center"><a href="./README.md"><strong>English</strong></a> · <a href="./README.zh-CN.md">简体中文</a></p>
+
 # Worldview Skills
 
 Build playable games, high-fidelity game scenes, films, reusable visual assets, and complete stories with Claude Code, Codex, or another Agent that supports `SKILL.md`.
 
-<p align="center">
-  <a href="./README.md"><kbd><strong>English</strong></kbd></a>
-  <a href="./README.zh-CN.md"><kbd>简体中文</kbd></a>
-</p>
+Give an Agent this repository URL and a sentence describing what you want. It installs the relevant Skills, chooses the production path, reads the contract, asks only questions that change the result, builds and verifies the work, and reports exactly what is ready. You do not need to learn a node graph, assemble a workflow by hand, or remember which internal Skill to trigger next. Slash entries remain available when you want precise control over one stage.
 
-Start with one sentence, an existing project, or a set of world references. Call the matching Slash entry and the Agent receives the production steps, files to create, checks to run, and result to hand back.
+The repository currently includes **63 installable Skills** for:
 
-The repository currently includes **59 installable Skills** for:
-
-- building a new playable game slice or rebuilding an existing game's presentation;
+- expanding a short premise into a researched single-ending game campaign, building a new playable slice, or rebuilding an existing game's presentation;
 - implementing horror mechanics such as pursuit, hiding, sound detection, scarce saves, investigation, and death loops;
+- studying games from screenshots and videos, turning observed chase architecture into route contracts, and selecting a safe 3D asset-production route;
 - designing boss fights, ability kits, levels, puzzles, branching choices, and playable 2D formats;
 - creating consistent characters, bosses, environments, props, sprites, and visual effects;
 - producing short films, cutscenes, action sequences, product videos, and social clips;
@@ -27,6 +31,7 @@ The repository currently includes **59 installable Skills** for:
 - [Install and update](#install-and-update)
 - [High-fidelity game production](#high-fidelity-game-production)
 - [Horror game mechanics](#horror-game-mechanics)
+- [Game analysis](#game-analysis)
 - [Game design and 2D game creation](#game-design-and-2d-game-creation)
 - [3D asset creation](#3d-asset-creation)
 - [Film and video production](#film-and-video-production)
@@ -36,7 +41,7 @@ The repository currently includes **59 installable Skills** for:
 
 ## Install and update
 
-Install all 59 Skills for every supported Agent:
+Install all 63 Skills for every supported Agent:
 
 ```bash
 npx skills add LogicOber/Worldview-Skills --all
@@ -71,6 +76,7 @@ through a tide station while the water rises. Use the current repository.
 
 | Slash entry | Use it for | Result |
 | --- | --- | --- |
+| [`/worldview-game-single-ending-campaign`](skills/game-production/worldview-game-single-ending-campaign/README.md) | Expand a short premise into an original, researched, story-driven game with one canonical ending and a substantial playable world. | Dated research ledger, original fictionalization, complete route, connected gameplay systems, maps, NPCs, items, state/save logic, runtime evidence, and a verified build or deployment URL. |
 | [`/worldview-game-high-fidelity-vertical-slice`](skills/game-production/worldview-game-high-fidelity-vertical-slice/README.md) | Turn a story, place, or game idea into one polished 2D or 3D playable chapter. | Playable core, three to five real gameplay states, original asset plan, integrated presentation, runtime captures, performance evidence, and handoff. |
 | [`/worldview-game-runtime-visual-fidelity-rebuild`](skills/game-production/worldview-game-runtime-visual-fidelity-rebuild/README.md) | Replace the generic or inconsistent presentation of a game that already works. | Protected gameplay baseline, rebuilt camera/assets/materials/lighting/VFX/UI/audio, same-state comparisons, regression journeys, and measured performance. |
 
@@ -78,11 +84,11 @@ For the strongest result in Codex, use **GPT-6 Astra + Max** for one deep end-to
 
 Image generation, Blender MCP, another DCC, browser or engine automation, and profilers are used when they are configured and authorized. Each Skill also defines a fallback when one of those capabilities is unavailable.
 
-[Compare the two game-production Skills →](skills/game-production/README.md)
+[Choose a game-production Skill →](skills/game-production/README.md)
 
 ## Horror game mechanics
 
-Seventeen standalone Skills implement complete, testable horror-game situations.
+Eighteen standalone Skills implement complete, testable horror-game situations, including route architecture for designed indoor pursuits.
 
 | Family | Included mechanics |
 | --- | --- |
@@ -90,6 +96,17 @@ Seventeen standalone Skills implement complete, testable horror-game situations.
 | **Survival decisions** | Scarce inventory, key-item backtracking, limited-save risk, and fictional wound treatment. |
 | **Investigation and objectives** | Power restoration, proximity tracking, entity identification, and threat-interrupted puzzles. |
 | **Perception and cooperation** | Perception distortion, persistent death-loop clues, and asymmetric-information cooperation. |
+
+For a chase whose tension must come from a learnable building and route rather than an omniscient enemy sprinting behind the player:
+
+```text
+/worldview-game-chase-route-architecture
+
+Design the hospital pursuit as an architectural route. Produce a 2.5D plan with
+the main escape line, one risky alternate, failed loops, sight breaks, sound
+events, item gates, checkpoints, and the exact timing margin for the final door.
+Then implement and verify the route in the current project.
+```
 
 ```text
 /worldview-game-lure-hide-escape
@@ -99,7 +116,15 @@ of sight, hide beneath the bed, and escape through the second door while the
 creature searches the false sound source.
 ```
 
-[Choose from all 17 horror mechanics →](skills/game-mechanics-horror/README.md)
+[Choose from all horror mechanics →](skills/game-mechanics-horror/README.md)
+
+## Game analysis
+
+Use the analysis Skill before implementation when you want the Agent to learn from a set of gameplay videos, screenshots, a creator's channel, or a reference style. It treats the footage as design evidence: player decisions, hesitation, route discovery, camera language, architecture, objects, threat state, sound, and the connection between them. It does not merely summarize the plot or imitate another game's assets.
+
+| Slash entry | What it creates |
+| --- | --- |
+| [`/worldview-gameplay-video-analysis`](skills/game-analysis/worldview-gameplay-video-analysis/README.md) | A timestamped observation ledger, screenshot/style board, route and mechanism diagrams, tagged design patterns and failure modes, and cross-video clusters that can feed a new horror game's contracts. |
 
 ## Game design and 2D game creation
 
@@ -136,6 +161,7 @@ These Skills create consistent design sheets, multi-angle references, production
 | [`/environment-scene`](skills/3d-assets/environment-scene/SKILL.md) | A location plate, multi-angle coverage, fixed landmark layout, and optional 3D scene. |
 | [`/weapon-prop`](skills/3d-assets/weapon-prop/SKILL.md) | A consistent weapon, relic, tool, costume, or text-bearing prop. |
 | [`/vfx-effect`](skills/3d-assets/vfx-effect/SKILL.md) | A reusable effect with shape, palette, timing, causality, and a reviewable loop. |
+| [`/worldview-3d-asset-production-route`](skills/3d-assets/worldview-3d-asset-production-route/README.md) | A decision and verification route for hand-authored, procedural, or image-to-3D assets, including static-mesh use, topology and rigging checks, Tripo-style generation limits, rights, and runtime integration. |
 
 ## Film and video production
 
@@ -186,15 +212,18 @@ The folder labels below describe the Skills they contain:
 skills/
 ├── game-production/          Skills for building or visually rebuilding playable games
 ├── game-mechanics-horror/    Skills for implementing horror gameplay mechanics
+├── game-analysis/             Skills for extracting design evidence from games and gameplay media
 ├── game-design/              Skills for designing encounters, abilities, levels, and choices
 ├── 2d-game/                  Skills for creating playable 2D formats and pixel art
 ├── 3d-assets/                Skills for creating characters, environments, props, and VFX
 ├── film-video/               Skills for producing complete films and video formats
 ├── core-engine/              Skills for executing individual film-production stages
 └── narrative/                Skills for writing complete story structures
+
+docs/                          Maintainer notes for category boundaries and Skill-writing conventions
 ```
 
-Future game-perspective Skills—first-person, third-person, 2.5D, isometric, and side-view—have their own reserved branch in the [game Skill architecture](docs/game-skill-architecture.md), separate from gameplay mechanics and production Skills.
+The `docs/` folder is for maintainers. It explains how the repository is organized and how new Skills are written; an Agent normally needs only the matching `SKILL.md` and its companion files. Future game-perspective Skills—first-person, third-person, 2.5D, isometric, and side-view—have their own reserved branch in the [game Skill architecture](docs/game-skill-architecture.md), separate from gameplay mechanics and production Skills.
 
 ## License and sources
 
