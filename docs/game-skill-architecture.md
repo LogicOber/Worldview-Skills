@@ -7,7 +7,9 @@ Game Skills are organized by the decision they help a creator make. The director
 ```text
 skills/
 ├── game-mechanics-horror/   released pursuit, scarcity, investigation, vulnerability
-├── game-production/         released playable-slice and fidelity-rebuild methods
+├── game-analysis/            released gameplay-media observation and design extraction
+├── game-production/         released campaign, playable-slice, and fidelity-rebuild methods
+│   ├── worldview-game-single-ending-campaign/
 │   ├── worldview-game-high-fidelity-vertical-slice/
 │   └── worldview-game-runtime-visual-fidelity-rebuild/
 ├── game-mechanics-action/   future combat, timing, defense, and encounters
@@ -17,7 +19,7 @@ skills/
 └── game-formats/            future larger forms such as platformers or card games
 ```
 
-`game-mechanics-horror/` and `game-production/` are released branches containing real Skills. The other branches above describe reserved homes, not released features, and do not belong in Git until they contain an installable leaf. Category directories stay one level below `skills/` so the default Skills CLI discovery path can find every leaf without requiring a special deep-scan flag.
+`game-mechanics-horror/`, `game-analysis/`, and `game-production/` are released branches containing real Skills. The other branches above describe reserved homes, not released features, and do not belong in Git until they contain an installable leaf. Category directories stay one level below `skills/` so the default Skills CLI discovery path can find every leaf without requiring a special deep-scan flag.
 
 ## Why perspective is separate from mechanic
 
@@ -43,26 +45,30 @@ Give each Skill one primary home based on the question it closes:
 - “Which reusable state persists across encounters?” belongs under `game-systems/`.
 - “What complete kind of playable product is being assembled?” belongs under `game-formats/`.
 - “How is a playable result built, tested, or handed off?” belongs under `game-production/`.
+- “What can be learned from observed gameplay footage, screenshots, or a reference corpus?” belongs under `game-analysis/`.
 
 Do not duplicate the same Skill under several branches. Explain important secondary relationships in its README and description instead.
 
 ## Released game-production boundaries
 
-The released production branch contains two outcome-level jobs:
+The released production branch contains three outcome-level jobs:
 
 | Standalone Skill | Decision boundary |
 | --- | --- |
+| [`worldview-game-single-ending-campaign`](../skills/game-production/worldview-game-single-ending-campaign/README.md) | Starts from a short premise or researched subject and owns a complete route to one canonical ending. It may define original fictionalization, maps, NPCs, items, connected gameplay systems, campaign state, presentation, and release proof. It reduces scope rather than presenting unfinished content as a vast finished world. |
 | [`worldview-game-high-fidelity-vertical-slice`](../skills/game-production/worldview-game-high-fidelity-vertical-slice/README.md) | Starts from a story, place, or game idea and may define one bounded slice's loop, route, camera, signature event, ending, presentation, and proof. It stops at a short complete slice rather than claiming delivery of an unbounded commercial game. |
 | [`worldview-game-runtime-visual-fidelity-rebuild`](../skills/game-production/worldview-game-runtime-visual-fidelity-rebuild/README.md) | Starts from a game that already works. It records a protected behavior baseline, diagnoses visible runtime defects, and rebuilds presentation without silently changing controls, collision, timing, scoring, save behavior, or other locked rules. |
 
-The two Skills can recommend each other, but neither is an automatic stage of the other. A new slice may choose gameplay facts that a rebuild is specifically required to preserve. Each therefore ships as a complete, independently installable leaf with its own method, provenance, reasoning, contract, and fictional example under the [game-production category](../skills/game-production/README.md).
+The three Skills can recommend each other, but none is an automatic stage of another. A campaign must prove a full narrative route; a slice deliberately stops after a short bounded chapter; a rebuild protects rules that the other two may be allowed to create. Each therefore ships as a complete, independently installable leaf with its own method, provenance, reasoning, contract, and fictional example under the [game-production category](../skills/game-production/README.md).
 
 ## Public naming
 
-Every public game Skill uses a result-oriented name:
+Every public Skill uses a result-oriented name. Cross-category packages use a short domain prefix when that makes the result clearer:
 
 ```text
 worldview-game-<recognizable-result>
+worldview-gameplay-<recognizable-analysis-result>
+worldview-3d-<recognizable-asset-result>
 ```
 
 The name should tell a user what becomes possible after invocation. Folder categories do not need to be repeated in the name. Avoid vague names such as `game-helper`, technology-bound names such as `unity-horror-tool`, or numbered names whose meaning depends on reading a separate roadmap.
@@ -81,7 +87,7 @@ worldview-game-<recognizable-result>/
 
 `SKILL.md` is the executable method read by an Agent. `README.md` helps a person decide whether to invoke it. `SOURCE.md` distinguishes supplied evidence, original design decisions, and later revisions. References preserve the reasoning behind rules; templates define durable outputs; examples show a complete fictional application without becoming hidden defaults.
 
-The two released `game-production/` packages use this same leaf structure. Installing either leaf alone is sufficient to recover its inputs, decisions, tool boundaries, outputs, verification, and handoff; no sibling Skill is a hidden runtime dependency.
+The released `game-production/` packages use this same leaf structure. Installing any leaf alone is sufficient to recover its inputs, decisions, tool boundaries, outputs, verification, and handoff; no sibling Skill is a hidden runtime dependency.
 
 Mechanic Skills expose their decision order directly. `SKILL.md` names each mechanic-specific lock, the artifact it fixes, the condition that closes it, the values still open to tuning, and the project change that reopens it. The template provides the same names as fillable rows. The example fills those rows with concrete states, routes, thresholds, and evidence, including one change that would invalidate later work. This prevents a late tuning edit from silently changing the encounter, state ownership, or save boundary it was supposed to measure.
 

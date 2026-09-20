@@ -2,21 +2,25 @@
   <img src=".github/assets/worldview-skills-cover.png" alt="Worldview Skills" width="100%">
 </p>
 
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-2f80ed?style=for-the-badge" alt="Apache 2.0 license"></a>
+  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-63-111827?style=for-the-badge" alt="63 Skills"></a>
+  <a href="https://skills.sh"><img src="https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex-111827?style=for-the-badge" alt="Works with Claude Code and Codex"></a>
+</p>
+
+<p align="center"><a href="./README.md">English</a> · <a href="./README.zh-CN.md"><strong>简体中文</strong></a></p>
+
 # Worldview Skills
 
 让 Claude Code、Codex 或其他支持 `SKILL.md` 的 Agent，从一句需求开始制作可玩的游戏、高保真游戏场景、电影、可复用视觉资产和完整故事。
 
-<p align="center">
-  <a href="./README.md"><kbd>English</kbd></a>
-  <a href="./README.zh-CN.md"><kbd><strong>简体中文</strong></kbd></a>
-</p>
+把仓库链接和一句需求交给 Agent 即可。它会自行安装相关 Skill、选择制作路径、读取契约，只在答案会改变结果时提问，完成制作、验证和交付。你不需要先学节点工作流，也不需要记住内部 Skill 的触发顺序；需要精细控制时，再直接使用对应的 Slash 入口。
 
-你可以提供一句想法、一个现有项目，或一组世界观资料。调用对应的 Slash 入口以后，Agent 会获得具体制作步骤、需要创建的文件、必须执行的检查和最终交付要求。
+仓库目前包含 **63 个可安装 Skill**，可以用来：
 
-仓库目前包含 **59 个可安装 Skill**，可以用来：
-
-- 制作新的可玩游戏切片，或重建现有游戏的视觉呈现；
+- 把简短想法扩展成经过调研的单结局游戏，制作新的可玩切片，或重建现有游戏的视觉呈现；
 - 实现追逐、躲藏、声音侦测、稀缺存档、调查和死亡循环等恐怖玩法；
+- 从游戏截图和视频提取设计证据，把追逐建筑转成路线契约，并选择合适的 3D 资产制作路线；
 - 设计 Boss 战、英雄技能、关卡、谜题、分支选择和可玩的 2D 游戏形式；
 - 制作统一的角色、Boss、环境、道具、像素动画和视觉特效；
 - 制作短片、游戏过场、动作场面、产品视频和社交媒体短视频；
@@ -27,6 +31,7 @@
 - [安装与更新](#安装与更新)
 - [高保真游戏制作](#高保真游戏制作)
 - [恐怖游戏机制](#恐怖游戏机制)
+- [游戏分析](#游戏分析)
 - [游戏设计与 2D 游戏制作](#游戏设计与-2d-游戏制作)
 - [3D 资产制作](#3d-资产制作)
 - [电影与视频制作](#电影与视频制作)
@@ -36,7 +41,7 @@
 
 ## 安装与更新
 
-为所有受支持的 Agent 安装全部 59 个 Skill：
+为所有受支持的 Agent 安装全部 63 个 Skill：
 
 ```bash
 npx skills add LogicOber/Worldview-Skills --all
@@ -71,6 +76,7 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 
 | Slash 入口 | 适合用来做什么 | 得到什么 |
 | --- | --- | --- |
+| [`/worldview-game-single-ending-campaign`](skills/game-production/worldview-game-single-ending-campaign/README.md) | 把简短设想扩展成原创、经过调研、只有一个正史结局并拥有完整可玩世界的剧情游戏。 | 带日期的调研记录、原创虚构化方案、完整路线、互相关联的玩法系统、地图、NPC、物品、状态与存档逻辑、运行证据，以及验证过的构建或部署 URL。 |
 | [`/worldview-game-high-fidelity-vertical-slice`](skills/game-production/worldview-game-high-fidelity-vertical-slice/README.md) | 把故事、地点或游戏想法制作成一段精致的 2D 或 3D 可玩章节。 | 可玩核心、3–5 个真实游玩状态、原创资产方案、完整视觉呈现、运行时截图、性能证据和交付说明。 |
 | [`/worldview-game-runtime-visual-fidelity-rebuild`](skills/game-production/worldview-game-runtime-visual-fidelity-rebuild/README.md) | 为玩法已经正常、但画面通用或不统一的游戏重建视觉呈现。 | 玩法保护基线，以及重建后的镜头、资产、材质、灯光、特效、UI、音频、同状态对比、回归测试和性能测量。 |
 
@@ -78,11 +84,11 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 
 如果已经配置并获得授权，Skill 可以使用图像生成、Blender MCP、其他 DCC、浏览器或引擎自动化和 Profiler；缺少某项能力时，每个 Skill 也写明了替代路线。
 
-[对比两个游戏制作 Skill →](skills/game-production/README.md)
+[选择适合的游戏制作 Skill →](skills/game-production/README.md)
 
 ## 恐怖游戏机制
 
-17 个独立 Skill 可以实现完整、可测试的恐怖游戏情境。
+18 个独立 Skill 可以实现完整、可测试的恐怖游戏情境，其中包括专门为室内追逐设计路线和建筑空间的 Skill。
 
 | 类别 | 包含的机制 |
 | --- | --- |
@@ -98,7 +104,25 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 等怪物搜索错误声源时，从第二扇门离开。
 ```
 
-[查看全部 17 个恐怖机制 →](skills/game-mechanics-horror/README.md)
+[查看全部恐怖机制 →](skills/game-mechanics-horror/README.md)
+
+如果追逐的紧张感必须来自玩家可以学习的建筑和路线，而不是怪物无脑追在身后：
+
+```text
+/worldview-game-chase-route-architecture
+
+把医院追逐设计成建筑路线。生成 2.5D 平面图，标出主逃生线、危险备选线、
+失败回路、视线断点、声音事件、道具门、检查点，以及最终门的准确时间余量。
+然后在当前项目实现并验证这条路线。
+```
+
+## 游戏分析
+
+在实现前，可以让 Agent 从游戏视频、截图、创作者频道或风格参考中提取设计证据。它会记录玩家的决策、犹豫、回头、镜头、建筑、物品、威胁状态、声音及其串联方式，而不只是复述剧情或照抄资产。
+
+| Slash 入口 | 制作内容 |
+| --- | --- |
+| [`/worldview-gameplay-video-analysis`](skills/game-analysis/worldview-gameplay-video-analysis/README.md) | 带时间戳的观察记录、截图/风格板、路线与机制图、设计模式与失败模式标签，以及可以反哺恐怖游戏契约的跨视频聚类。 |
 
 ## 游戏设计与 2D 游戏制作
 
@@ -135,6 +159,7 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 | [`/environment-scene`](skills/3d-assets/environment-scene/SKILL.md) | 场景主视图、多角度覆盖、固定地标布局和可选 3D 场景。 |
 | [`/weapon-prop`](skills/3d-assets/weapon-prop/SKILL.md) | 保持统一的武器、遗物、工具、服装或文字道具。 |
 | [`/vfx-effect`](skills/3d-assets/vfx-effect/SKILL.md) | 具有形状、配色、时序、因果关系和可审查循环的特效。 |
+| [`/worldview-3d-asset-production-route`](skills/3d-assets/worldview-3d-asset-production-route/README.md) | 在手工建模、程序化建模和图像转 3D 之间做选择，并检查静物网格、拓扑、绑定、变形、授权和运行时集成。 |
 
 ## 电影与视频制作
 

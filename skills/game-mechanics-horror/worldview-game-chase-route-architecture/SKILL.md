@@ -1,0 +1,275 @@
+---
+name: worldview-game-chase-route-architecture
+description: "Use when a horror chase needs a designed indoor route rather than a pursuer that simply follows the player's live position. Builds a measured building graph, success and failure paths, imperfect perception, linked mechanics, checkpoints, and a verified runtime encounter."
+---
+
+# Worldview Game — Chase Route Architecture
+
+## Call this Skill
+
+```text
+/worldview-game-chase-route-architecture
+```
+
+Treat the text after the Slash command as the creative brief. Do not ask the user to convert a room idea into engine jargon. Infer ordinary implementation details from the project, and ask one grouped question only when two incompatible chase promises are possible.
+
+## What this Skill is responsible for
+
+This Skill makes the chase a spatial problem the player can learn. It joins four distinct layers without confusing them:
+
+1. **Architecture:** rooms, stairs, openings, occluders, heights, landmarks, loops, dead ends, and route edges.
+2. **Runtime geometry:** collision, navigation mesh, movement constraints, door states, and legal traversal.
+3. **Perception simulation:** sight, hearing, authored traces, microphone input, sanity/perception effects, memory, and pursuit decisions.
+4. **Communication:** the floor plan, route colors, sound/LOS legend, lighting, audio, signs, and feedback that let a player form a mental model.
+
+The player should be able to fail because they made a comprehensible route decision, learn which cause mattered, and try again quickly. A red arrow on a generated image is not a route until the running build proves it.
+
+## Read only the files this task needs
+
+- Read [templates/chase-route-contract.md](templates/chase-route-contract.md) before implementation unless the project already contains an equivalent contract. Map fields into the existing format rather than making a parallel system.
+- Read [references/why-chase-routes-fail.md](references/why-chase-routes-fail.md) when choosing branches, diagnosing a flat chase, or reviewing a route that feels arbitrary.
+- Read [examples/the-red-service-corridor.md](examples/the-red-service-corridor.md) when a filled contract would clarify the expected evidence. Its names, dimensions, and values are not defaults.
+- Read [SOURCE.md](SOURCE.md) when auditing provenance or explaining which decisions are original.
+- `README.md` is the human catalog page; it is not required after this Skill is loaded.
+
+## Intake: recover the actual problem
+
+Before drawing a route, write a short intake note. Separate what the user declared, what the project already proves, what a source video or screenshot merely suggests, and what you are proposing.
+
+```markdown
+## Declared
+- Story position and desired feeling:
+- Player objective and failure tolerance:
+- Existing map, pursuer, player, and mechanics:
+- Required runtime and delivery target:
+
+## Observed
+- Build/version and test entry:
+- Walkable geometry and collision:
+- Navigation and door behavior:
+- Sight, hearing, sound, microphone, sanity, and checkpoint behavior:
+- Player reaction or playtest observation:
+
+## Proposed
+- Route promise:
+- New geometry or interactions:
+- Why each new element is needed:
+- What evidence could overturn it:
+```
+
+Do not imitate a route from a reference game one-to-one. Extract the design question—such as “how can the player make the pursuer commit to the wrong wing?”—and author a new topology, landmarks, timings, and fictional context.
+
+## Layer locks
+
+Work in order. A later lock may tune only fields named mutable in the table. If a discovery hits a reopen trigger, reopen the earliest affected lock, invalidate the dependent implementation and evidence, and rerun it. Do not silently retune a route after a geometry change.
+
+| Lock | Artifact that must be concrete | Close when | Still mutable afterward | Reopen trigger and invalidated work |
+| --- | --- | --- | --- | --- |
+| **Route promise** | One sentence states objective, pursuer information, main route, meaningful alternative, teaching failure, and recovery. | The request and project can support those beats without becoming a different genre or omniscient chase. | Fictional dressing and non-route props. | Objective, ending, pursuer power, or route count changes; invalidate every later lock. |
+| **Architectural graph** | Versioned plan with rooms, entrances, exits, landmarks, loops, occluders, vertical links, and route edges. | A player and pursuer can be placed on every required edge; scale and coordinates are recorded. | Surface material, decor, and dimensions that do not change an edge or sight boundary. | A wall, stair, door, landmark, or branch moves; invalidate runtime geometry, perception, timing, and route evidence. |
+| **Runtime geometry** | Collision, navmesh/path nodes, door states, reach, slopes, turn radii, and spatial ownership. | A grey-box build traverses the graph with no phantom openings or unreachable targets. | Physics tolerances and non-structural polish. | Collision/navmesh/door or movement model changes; invalidate LOS, audio, timing, and captures. |
+| **Pursuer evidence** | State and knowledge contract for sight, sound, trace, memory, search, commitment, and reacquisition. | Every transition cites a declared observation; hidden live player position is never read accidentally. | Ranges, ageing, and animation timings within the same evidence hierarchy. | New sensor, priority, tracking rule, or memory behavior; invalidate AI traces, timing, and failure explanations. |
+| **Route readability** | Landmark, affordance, lighting/audio cue, and information budget for each critical edge. | A first-time player can identify the next decision and a failure can be explained after replay. | Wording, color grade, nonessential prop dressing. | Landmark removal, contradictory cue, or route ambiguity; invalidate playtest claims and presentation evidence. |
+| **Interacting mechanics** | Contract for doors, items, sound, microphone, sanity/perception, and existing systems that alter route edges. | Each mechanic changes a named edge and has fallback, permission, and reset rules. | Values within the same topology and authority. | A mechanic changes topology, evidence, or player information; invalidate dependent traces and timing. |
+| **Timing and margin** | Measured path lengths, speeds, interactions, holds, acceleration, uncertainty, and success/failure margins. | Intended success has a repeatable positive window; the teaching failure is repeatable and attributable. | Fine tuning inside tested tolerance; accessibility assistance that preserves route logic. | Route, speed, animation, input assistance, sensor, or checkpoint change; discard all balance claims and captures. |
+| **Checkpoint and reset** | Saved state, pursuit reset, memory cleanup, soft-lock handling, and retry placement. | Retries test the route quickly and no event/callback/door state leaks across a run. | Evidence file names and extra test coverage. | Save authority or any prior lock changes; rerun affected phases and replace stale evidence. |
+| **Presentation and delivery** | Final diagram, controls, screenshot, URL/build, limitations, and source/asset ledger. | Every claim points to the build or an explicitly labeled proposal; the tested entry launches. | Copy polish and optional extra captures. | A release claim, runtime, asset, or route changes; reopen the affected lock rather than patching the report. |
+
+## Build the architectural graph before art
+
+### 1. Choose a route promise
+
+Use a single sentence with the form:
+
+> The player must **[objective]** while the pursuer can **[declared evidence]**; the main route wins by **[route idea]**, the alternative trades **[cost]** for **[benefit]**, and the first understandable failure teaches **[rule]** before **[recovery/checkpoint]**.
+
+The encounter may be a short recurring chase or a major boss-like sequence. Its place in the campaign determines how much rehearsal, foreshadowing, and checkpoint support it needs. Do not inflate a five-minute route into a fake “large level” by adding empty corridors.
+
+### 2. Draw a graph, not a screenshot
+
+Author a top-down or 2.5D plan with a coordinate scale and stable landmark IDs. Start with boxes and arrows; do not let generated concept art hide the topology. Include:
+
+- player start and objective boundary;
+- pursuer start, patrol, commitment point, search points, and reacquisition lines;
+- all solid boundaries, doors, shutters, stairs, lifts, drop-offs, and one-way edges;
+- sight-breaking corners, transparent or slatted barriers, and vertical LOS changes;
+- sound sources, acoustic zones, occlusion, and microphone/noise events if used;
+- item or interaction gates and what state they modify;
+- main success route, alternate success route, survivable wrong route, fatal/capture route, and retreat/recovery edge;
+- checkpoint, restart, and branch-merge landmarks.
+
+Use red for player route examples only when the legend says whether a line is main success, alternate success, or failure. Use separate colors or line styles for pursuer paths, sight cones, audio, locked edges, and uncertain proposals. The map should still be understandable when printed without color.
+
+### 3. Keep four maps in agreement
+
+Do not collapse these into one “level image.”
+
+| Map | Owns | Must agree with |
+| --- | --- | --- |
+| Architectural plan | Intended walls, openings, scale, landmarks, and route graph | The player's mental model |
+| Collision/navmesh | Legal movement and pathfinding | Every route edge and door state |
+| Perception map | LOS, hearing, trace, vertical visibility, memory | Declared pursuer evidence |
+| Presentation diagram | What the player can infer under pressure | Route readability, not hidden implementation trivia |
+
+When they disagree, fix the earliest layer. A red line cannot certify a route through a wall, and a navigation path cannot justify a door the player cannot perceive.
+
+## Optional image, browser, and API tools
+
+An authorized image model can produce a clean architectural diagram, route overlay, or paint-over. Give it explicit requirements: scale, orthographic/top-down camera, room labels, stable IDs, legend, and no invented doors. Save the prompt, provider, date, output, and revision ID in the contract. Treat image output as a communication draft only.
+
+If an image tool cannot preserve labels or scale, draw an SVG/Canvas diagram from the graph. Do not spend tokens iterating on a pretty image before the grey box works.
+
+Browser automation, game-engine tools, Blender, external APIs, and MCP servers are optional dependencies. Use them only when configured or authorized in the current project. Check one minimal call before a batch. Do not install paid services, upload private footage, or send microphone data without a clear permission and a documented fallback. A missing service is a stated limitation, not a reason to claim completion.
+
+## Route topology and player learning
+
+### Main, alternative, wrong, and recovery edges
+
+Every edge in the contract must answer four questions:
+
+1. What can the player observe before committing?
+2. What action or resource changes the edge?
+3. What does the pursuer know and do while it changes?
+4. If the edge fails, where can the player learn, retreat, or retry?
+
+At least one route should be discoverable without a frame-perfect trick. A route may be hidden by pressure, but its landmark or consequence should have appeared during a safe beat. A good first capture teaches the next attempt; a random branch that can only be solved by a guide is not depth.
+
+Branches should rejoin at an intentional landmark. Preserve only useful state across the merge: time lost, item spent, injury, noise level, pursuer commitment, knowledge, or a changed shortcut. If two branches require separate untestable campaigns, reduce them or move the difference into a bounded state.
+
+### Architectural affordances
+
+Use a small repeated vocabulary: a red stripe that survives a sanity pulse, a numbered service door, a visible pressure gauge, a sound source behind a grille, a stair with a unique handrail. The player should know which spaces are distinct even when the pursuer removes time to look around.
+
+Do not fill every room with lore. A chase room exists to support route decisions, recovery, or pressure. Each major landmark should have a spatial function and a player-facing meaning.
+
+## Perception, sound, microphone, and sanity
+
+### Pursuer evidence
+
+The renderer and simulation may know the player's transform; the pursuer may not. Use an explicit record such as:
+
+```text
+current sighting       valid while LOS, range, and declared visibility hold
+last seen              frozen at the last valid sight position
+last heard             source position, event type, and authoritative time
+trace / disturbance   optional declared evidence, with age and confidence
+search target          selected by the contract's priority rules
+route commitment       path and expiry after a meaningful cue
+```
+
+Sight, sound, trace, and supernatural perception must have named priority, range, occlusion, age, and reset behavior. A sound should lead to its source, not silently reveal the player's current position. If the intended horror uses an omniscient entity, say so and design a different decision—cover timing, terrain, or resource use—instead of pretending it is a learnable evidence chase.
+
+### Sound and microphone input
+
+An authored footstep, thrown object, noise meter, and microphone event are different inputs. Record source, position, intensity, timestamp, radius/zone, occlusion, cost, cooldown, and deduplication. For microphone input:
+
+- ask for or use explicit permission;
+- keep raw audio out of saves and reports;
+- provide a deterministic non-microphone fallback;
+- expose calibration and a sensitivity range;
+- test no-device, muted, noisy-room, and accessibility paths;
+- never make a private recording or upload necessary for the chase to be playable.
+
+### Sanity and perception
+
+Sanity may distort light, audio, UI, timing estimates, or the apparent pursuer. It must not silently change collision or create an impossible route unless the contract names that as the central mechanic. Give the player a reliable anchor—floor stripe, clock, tactile door, authored sound, or map landmark—so distortion is a decision rather than arbitrary loss of control.
+
+## Measure the route
+
+Do not use an invented “30% chance of escape.” Measure the narrowest intended path in the actual runtime.
+
+```text
+player route time
+  = movement + acceleration/turning + interactions + animation/camera locks
+  + uncertainty allowance
+
+pursuer route time
+  = path traversal + door/obstacle handling + inspection/search hold
+  + reacquisition delay
+
+timing margin = pursuer route time - player route time
+```
+
+Measure ordinary input and any supported assistance. Record where the player can see the pursuer, what feedback announces commitment, and whether the margin disappears after a detour, injury, noise event, or sanity effect. A positive arithmetic margin is not sufficient if a door's collision, a turn radius, or a hidden animation consumes it.
+
+Create at least four traces:
+
+1. intended success at ordinary input;
+2. early or incorrect decision that fails for a visible reason;
+3. late decision that reaches a recovery or checkpoint where possible;
+4. accessibility or reduced-speed path, preserving the same route logic.
+
+The player may succeed on the first try, but the route should also reward the player who watches, remembers, and tests the building after a capture.
+
+## Integrate existing mechanics without turning the chase into errands
+
+For every item, door, environmental system, sound source, microphone signal, sanity effect, or wound state, name the route edge it changes. A key that only opens a decorative door adds workload, not depth. A bolt cutter that opens a quiet stair but makes a loud event is a route decision.
+
+Use an interaction table:
+
+| Mechanic | Player action | State change | Route edge affected | Pursuer consequence | Cue and fallback |
+| --- | --- | --- | --- | --- | --- |
+| Item | | | | | |
+| Door/shutter | | | | | |
+| Noise/microphone | | | | | |
+| Sanity/perception | | | | | |
+| Other | | | | | |
+
+Do not add a new mechanic merely to decorate the chase. If the project already has a sound, health, or checkpoint system, reuse its authority and reset path.
+
+## Grey-box implementation order
+
+1. Inventory the project and place the smallest authorized map in scope.
+2. Lock the route promise and architectural graph in the contract.
+3. Build collision, navmesh/path nodes, doors, and player traversal with proxy geometry.
+4. Validate every route edge and vertical connection before adding a pursuer.
+5. Implement pursuer evidence and explicit memory; add pursuit only after an observation trace works.
+6. Add landmarks and cues that communicate the route at walking speed.
+7. Add items, sound, microphone fallback, sanity, and other linked mechanics one at a time.
+8. Measure the successful and failing paths; tune only within the timing lock.
+9. Add art, generated assets, animation, lighting, and audio without changing topology.
+10. Capture the diagram and the runtime scene separately, then perform the full verification and delivery check.
+
+If an existing runtime is unavailable, deliver the contract, diagram source, route graph, timing assumptions, and exact implementation blocker. Do not call a diagram or video “playable.”
+
+## Assets and 3D generation
+
+Use existing licensed assets when they satisfy the route. For a missing static prop, a generated mesh may be acceptable after collision is checked. For a pursuer or any rigged character, inspect topology, pivot, scale, skeleton, skin weights, materials, and animation deformation before relying on it in a timed route. AI-generated assets may look detailed while failing at joints or producing unusable collision; proxy geometry is safer for the first pass.
+
+If Tripo, Blender, an image model, or another provider is used, record the provider, authorization, prompt or settings, input assets, output path, license status, and replacement plan. Never let a tool's default output change a locked route without reopening the appropriate lock.
+
+## Checkpoints, capture, and reset
+
+The checkpoint should preserve meaningful preparation while resetting active pursuit state. Decide explicitly whether it retains a cut chain, solved pressure valve, discovered route hint, injury, noise, item, or sanity. On restart, clear timers, route commitments, current sight, last-known positions, sound events, microphone state, navigation requests, interaction callbacks, door animations, damage/death callbacks, and transient distortion.
+
+Test capture at every active phase: before commitment, during pursuit, after sight loss, during an interaction, in a hidden or distorted state, at the checkpoint, after success, and after failure. A retry that repeats a ten-minute fetch sequence prevents route learning and is a design defect.
+
+## Verify and hand off
+
+The delivery is complete only when the project supports the requested runtime evidence. Verify:
+
+- the versioned diagram has scale, stable IDs, legend, and source metadata;
+- each architectural edge is legal in collision and navigation;
+- door, stair, drop, slope, and turn behavior matches the diagram;
+- sight and audio boundaries use the same walls the player sees;
+- the pursuer never reads undeclared live player position;
+- main success, alternate/recovery route, and teaching failure were played;
+- timing margins were measured and the narrowest successful input is documented;
+- item, microphone, sanity, and checkpoint behavior either passed or is marked unavailable;
+- capture and restart leave no stale event, callback, memory record, or soft lock;
+- the running entry point, controls, screenshot, build/URL, and limitations are recorded.
+
+Return a concise handoff with:
+
+```text
+<project route or URL>
+Controls: <...>
+Contract: <path>
+Route diagram: <path, version, legend>
+Verified: <success, teaching failure, reset, key boundary checks>
+Unverified or blocked: <exact limitation>
+External tools/assets: <provider, permission, license, fallback>
+```
+
+Do not describe a rendered screenshot, generated floor plan, or planned branch as a tested game behavior.
+

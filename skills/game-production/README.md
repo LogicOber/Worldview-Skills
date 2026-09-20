@@ -1,10 +1,27 @@
-# High-Fidelity Game Production
+# Game Production
 
-Two standalone Agent Skills turn a short creative brief into work that can be played and inspected in the real runtime. One starts a bounded game slice. The other rebuilds the presentation of a game that already works but still looks like default primitives, flat vectors, stock UI, or unrelated assets placed together.
+Three standalone Agent Skills turn a short creative brief or an existing project into work that can be played and inspected in the real runtime. One researches and builds a substantial story campaign with one canonical ending. One starts a bounded game slice. One rebuilds the presentation of a game that already works but still looks like default primitives, flat vectors, stock UI, or unrelated assets placed together.
 
-Each entry turns “AAA-style” into a bounded target: one project-specific visual standard, an authored or procedural asset route, real gameplay states, measured frame behavior, and a handoff that says exactly what is finished. The delivery target is one polished playable slice rather than an entire full-length commercial game.
+Each entry turns an outcome such as “a complete campaign” or “AAA-style presentation” into a bounded target with working gameplay, project-specific visual decisions, real runtime states, measured behavior, and a handoff that says exactly what is finished. Choose by the result you need; no package requires another one to be installed.
 
 ## Install and call one Skill
+
+For a researched story-driven campaign with one ending:
+
+```bash
+npx skills add LogicOber/Worldview-Skills \
+  --skill worldview-game-single-ending-campaign
+```
+
+```text
+/worldview-game-single-ending-campaign
+
+Build an English-language 3D horror campaign about an archivist entering a city
+where public knowledge is controlled by a private certification bureau. Give it
+one canonical ending, several connected forms of play, and a complete route from
+first control to credits. Research the debate, create original composite fiction,
+and return a deployed URL if this environment is authorized to deploy.
+```
 
 For a new playable chapter:
 
@@ -43,10 +60,11 @@ The user supplies the story or the visible problem. The Agent recovers the proje
 
 | Skill | Use it when | Smallest useful input | Primary result |
 | --- | --- | --- | --- |
+| [`worldview-game-single-ending-campaign`](worldview-game-single-ending-campaign/README.md) | A short premise should become a substantial researched game with one canonical ending, a populated world, connected gameplay, and a complete playable route. | A protagonist, conflict, theme, real-world topic, or story idea. Project, platform, duration, and publication constraints are optional. | Dated research and fiction ledgers, one ending designed backward, complete route, maps, NPCs, items, shared state, several forms of play, runtime evidence, and a tested build or authorized deployment. |
 | [`worldview-game-high-fidelity-vertical-slice`](worldview-game-high-fidelity-vertical-slice/README.md) | A story, place, or game idea should become a bounded 2D or 3D playable slice with a high presentation bar. | A premise. An existing project, target platform, references, and time limit are optional. | A playable core, three to five runtime-matched visual states, an original asset plan, integrated presentation, performance evidence, and a truthful handoff. |
 | [`worldview-game-runtime-visual-fidelity-rebuild`](worldview-game-runtime-visual-fidelity-rebuild/README.md) | The game already runs, but its actual play view looks generic, flat, inconsistent, or materially unfinished. | The project path and a sentence describing what looks wrong or what the world should feel like. | A protected-behavior baseline, causal visual diagnosis, rebuilt runtime presentation, same-state comparisons, regression journeys, and measured delivery. |
 
-These jobs remain separate because they lock different facts. A new slice is allowed to choose its player loop, camera, route, and ending. A fidelity rebuild must preserve those rules unless the user expands the scope. Combining both into one automatic workflow would let an art pass silently redesign the game it was supposed to preserve.
+These jobs remain separate because they lock different facts. A campaign owns research, original fictionalization, the full route, world state, and one ending. A slice proves a short bounded experience. A fidelity rebuild must preserve an existing game's rules unless the user expands the scope. Combining them automatically would let a short prototype claim campaign completeness or let an art pass silently redesign behavior it was supposed to preserve.
 
 ## Recommended model setting
 
@@ -79,9 +97,9 @@ Before implementation, the Agent records which project, runtime, capture, genera
 
 Credentials stay outside source control. Paid calls, uploads of proprietary references, external downloads, and deployment require real authorization; finding an environment key does not supply that authorization.
 
-## What both methods check
+## What all three methods check
 
-The two packages have different lock orders, but both distinguish three kinds of evidence:
+The three packages have different lock orders, but all distinguish three kinds of evidence:
 
 | Evidence | What it can prove | What it cannot prove alone |
 | --- | --- | --- |
@@ -96,6 +114,13 @@ Both methods use three to five named gameplay states instead of one beauty shot.
 ```text
 skills/game-production/
 ├── README.md
+├── worldview-game-single-ending-campaign/
+│   ├── README.md
+│   ├── SKILL.md
+│   ├── SOURCE.md
+│   ├── references/why-single-ending-campaigns-fail.md
+│   ├── templates/single-ending-campaign-contract.md
+│   └── examples/the-lantern-index.md
 ├── worldview-game-high-fidelity-vertical-slice/
 │   ├── README.md
 │   ├── SKILL.md
@@ -116,7 +141,7 @@ Each `SKILL.md` is the executable method loaded by Claude, Codex, or another com
 
 ## Originality records
 
-Each package has a `SOURCE.md` that records the material reviewed, the authorship boundary, and the decisions written for this repository. External code, prompts, assets, project names, provider integrations, and directory structures are not included in either package.
+Each package has a `SOURCE.md` that records the material reviewed, the authorship boundary, and the decisions written for this repository. External code, prompts, assets, project names, provider integrations, and directory structures are not included in these packages.
 
 ## What the packages deliberately do not contain
 
