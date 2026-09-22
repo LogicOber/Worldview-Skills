@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "",
+  "source_id": "V01",
+  "series": {
+    "series_id": "",
+    "season_id": "",
+    "episode_id": "",
+    "episode_reports_before_synthesis": false,
+    "cumulative_series_time": "unknown"
+  },
+  "analysis_mode": "edited_highlight",
+  "scope": {
+    "question": "",
+    "source_authorized": false,
+    "sample_gate": "pilot_only",
+    "selection_rule": ""
+  },
+  "time_model": {
+    "source_runtime_seconds": null,
+    "known_experience_time_seconds": null,
+    "estimated_experience_time_range_seconds": {
+      "min": null,
+      "max": null
+    },
+    "estimate_basis": [],
+    "campaign_position": "unknown",
+    "confidence": "low",
+    "unknown_intervals": []
+  },
+  "beats": [
+    {
+      "beat_id": "B01",
+      "source_time": {
+        "start_seconds": null,
+        "end_seconds": null
+      },
+      "experience_time": {
+        "start_seconds": null,
+        "end_seconds": null,
+        "range_basis": "unknown",
+        "confidence": "low"
+      },
+      "delta_from_previous_beat_seconds": {
+        "min": null,
+        "max": null,
+        "status": "unknown"
+      },
+      "editorial_status": {
+        "cut_before": false,
+        "cut_after": false,
+        "omitted_retry_or_traversal": false,
+        "reordered_or_accelerated": false,
+        "notes": ""
+      },
+      "campaign_progression": {
+        "observed_marker": "",
+        "reported_marker": "",
+        "inferred_position": "unknown",
+        "confidence": "low"
+      },
+      "event": {
+        "player_action": "",
+        "camera_or_edit": "",
+        "world_feedback": "",
+        "player_knowledge_before": "",
+        "player_knowledge_after": "",
+        "mechanism_tags": []
+      },
+      "player_experience": {
+        "voice_or_commentary": "unavailable",
+        "hesitation_or_silence": "",
+        "belief_or_prediction": "",
+        "rejected_alternative": "",
+        "source_status": "observed / reported / unavailable"
+      },
+      "audio_evidence": {
+        "named_game_cue": "unavailable",
+        "commentary_speech_present": "unknown",
+        "measured_activity": { "window_seconds": 1, "rms_peak_seconds": [], "spectral_change_seconds": [] },
+        "channel_mix": "unknown",
+        "interpretation_limit": "Do not identify a game sound or emotion from RMS alone."
+      },
+      "emotion": {
+        "observed_signals": [],
+        "commentary_signal": "unavailable",
+        "tension_0_to_5": null,
+        "arousal_0_to_5": null,
+        "curiosity_0_to_5": null,
+        "relief_0_to_5": null,
+        "valence_minus2_to_plus2": null,
+        "inference": "",
+        "confidence": "low",
+        "alternative_explanation": ""
+      },
+      "design_forecast": {
+        "setup_before": "",
+        "expected_player_question": "",
+        "intended_emotional_transition": "",
+        "payoff_or_reversal": "",
+        "after_effect": "",
+        "test_for_new_work": "",
+        "claim_class": "proposed"
+      },
+      "evidence": [
+        {
+          "segment_id": "S01",
+          "source_reference": "",
+          "class": "observed",
+          "confidence": "low"
+        }
+      ]
+    }
+  ],
+  "curve_points": [
+    {
+      "point_id": "C01",
+      "experience_time_seconds": null,
+      "source_time_seconds": null,
+      "tension_0_to_5": null,
+      "arousal_0_to_5": null,
+      "curiosity_0_to_5": null,
+      "relief_0_to_5": null,
+      "valence_minus2_to_plus2": null,
+      "basis_beat_id": "B01",
+      "confidence": "low"
+    }
+  ],
+  "layered_reasoning": [
+    {
+      "beat_id": "B01",
+      "evidence": [],
+      "player_model": { "knowledge": "", "resources": [], "hypothesis": "", "likely_misread": "" },
+      "spatial_route_grammar": "",
+      "system_coupling": { "camera": "", "sound": "", "objects": "", "enemy_state": "", "objective": "" },
+      "hypothesis_transaction": { "question_before": "", "evidence_spent": "", "later_test": "", "updated_belief": "" },
+      "room_purpose": "unknown",
+      "attention_budget": { "see": "", "hear": "", "remember": "", "read": "", "operate": "", "priority": "" },
+      "information_regime": { "scarcity_or_unreliability": [], "change_in_next_beat": "" },
+      "emotional_pacing_function": "",
+      "behavior_produced_or_protected": "",
+      "break_condition": "",
+      "new_rule": "",
+      "tunables": [],
+      "verification_test": "",
+      "confidence": "low"
+    }
+  ],
+  "editorial_gaps": [
+    {
+      "gap_id": "G01",
+      "source_before_seconds": null,
+      "source_after_seconds": null,
+      "estimated_removed_experience_time_seconds": {
+        "min": null,
+        "max": null,
+        "status": "unknown"
+      },
+      "what_may_be_missing": [],
+      "do_not_claim": [],
+      "evidence": []
+    }
+  ],
+  "jev_audit": {
+    "used": false,
+    "model": "typesafe-ai/jev",
+    "input_rows": [],
+    "schema_or_questions": [],
+    "raw_result_location": "",
+    "human_reviewed": false,
+    "overrides": []
+  },
+  "limits": [],
+  "next_capture": []
+}

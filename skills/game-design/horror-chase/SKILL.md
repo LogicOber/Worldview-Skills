@@ -39,6 +39,18 @@ This skill designs the odds first, then the monster.
 3. Approve the one-page chase design.
 4. Pick takes by number.
 
+If the project has a qualitative experience brief, also read the selected
+`experience_reference_ids` from the gameplay-experience-study archive. Preserve
+the named felt sequence and the player misread the study allows, but replace
+the source's surface, map, cast, wording, and visual identity.
+
+```markdown
+experience_reference_ids:
+felt_sequence_to_preserve:
+player_misread_to_allow:
+quality_failure_to_avoid:
+```
+
 ## The chase template
 
 ```markdown

@@ -7,7 +7,7 @@ This file records the origin of `worldview-gameplay-video-analysis` so the repos
 | Field | Record |
 | --- | --- |
 | Source type | Original synthesis for this repository |
-| Request | User request dated 2026-09-20 to create an English Skill for evidence-led gameplay video analysis, URL acquisition, route reconstruction, clustering, and chase handoff |
+| Request | User request dated 2026-09-20 to create an English Skill for evidence-led gameplay video analysis, route reconstruction, clustering, and chase handoff |
 | External Skill used | None; the repository's Skill-writing conventions were followed without copying another Skill |
 | External code or directory copied | None |
 | Media included | None; the package contains no video, screenshot, subtitle, or third-party asset |
@@ -15,9 +15,9 @@ This file records the origin of `worldview-gameplay-video-analysis` so the repos
 
 ## Method boundary
 
-The method begins from a general design-analysis problem: gameplay footage contains decisions, camera behavior, spatial feedback, and recovery that a plot summary cannot preserve. It requires timecoded observations before design inference, separates observed/report/inferred/proposed claims, and treats video acquisition and copyright scope as explicit constraints.
+The method begins from a general design-analysis problem: gameplay footage contains decisions, camera behavior, spatial feedback, recovery, and emotional pacing that a plot summary cannot preserve. It requires timecoded observations before design inference, separates source-video time from estimated player experience time, records setup/expectation/beat/after-effect transitions in JSON, separates observed/reported/inferred/proposed claims, and treats video acquisition and copyright scope as explicit constraints.
 
-The package does not reproduce any published game's route, level, dialogue, UI, enemy design, terminology, or footage. Its tags, evidence schema, contact-sheet guidance, abstract floorplan notation, 20/30/50-video clustering rule, URL probe gate, optional Jev boundary, and chase handoff are repository-authored proposals.
+The package does not reproduce any published game's route, level, dialogue, UI, enemy design, terminology, or footage. Its tags, dual-clock experience timeline, bounded emotional curve, evidence schema, contact-sheet guidance, abstract floorplan notation, 20/30/50-video clustering rule, single-pilot gate, optional Jev boundary, and chase handoff are repository-authored proposals.
 
 ## User-owned and reference scope
 
@@ -25,12 +25,8 @@ Future analyses may process local media, uploaded screenshots, style references,
 
 ## Provider boundary
 
-`yt-dlp`, `ffmpeg`, authorized browser automation, and the optional AI Gateway `typesafe-ai/jev` are named as capabilities an environment may provide; no dependency is bundled here. Jev is described only as an optional typed classifier over extracted text/event rows, not as a video model. Keys and cookies remain environment configuration and are never repository content.
+No media-collection tool is bundled or required by this package. The Skill begins with local media or an authorized media integration supplied by the environment. The optional AI Gateway `typesafe-ai/jev` is described only as a typed classifier over extracted text/event rows, not as a video model.
 
-## Current capability references
+## Current capability reference
 
-These links were checked to describe optional integrations accurately; they are not dependencies and no external prose or code was copied:
-
-- [Vercel AI Gateway — Jev](https://vercel.com/ai-gateway/models/jev) describes Jev as TypeSafe AI's structured evaluation model and shows the `typesafe-ai/jev` model ID with parallel typed questions. The Skill therefore applies it only after media has become text or event rows.
-- [Vercel agent-browser](https://github.com/vercel-labs/agent-browser) documents the optional browser automation CLI and its `agent-browser install` flow. A future run must inspect the installed version and access policy rather than assuming the tool exists.
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp) documents URL and batch-file acquisition, subtitles, metadata, and supported-site behavior. The Skill's one-URL probe gate is a repository-authored safety and cost rule, not a copied workflow.
+The optional [Vercel AI Gateway — Jev](https://vercel.com/ai-gateway/models/jev) reference describes a typed evaluator that may be applied after media has become text or event rows. It is not a media viewer and is not required.

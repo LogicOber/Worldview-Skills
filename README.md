@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-2f80ed?style=for-the-badge" alt="Apache 2.0 license"></a>
-  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-63-111827?style=for-the-badge" alt="63 Skills"></a>
+  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-65-111827?style=for-the-badge" alt="65 Skills"></a>
   <a href="https://skills.sh"><img src="https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex-111827?style=for-the-badge" alt="Works with Claude Code and Codex"></a>
 </p>
 
@@ -16,11 +16,11 @@ Build playable games, high-fidelity game scenes, films, reusable visual assets, 
 
 Give an Agent this repository URL and a sentence describing what you want. It installs the relevant Skills, chooses the production path, reads the contract, asks only questions that change the result, builds and verifies the work, and reports exactly what is ready. You do not need to learn a node graph, assemble a workflow by hand, or remember which internal Skill to trigger next. Slash entries remain available when you want precise control over one stage.
 
-The repository currently includes **63 installable Skills** for:
+The repository currently includes **65 installable Skills** for:
 
-- expanding a short premise into a researched single-ending game campaign, building a new playable slice, or rebuilding an existing game's presentation;
+- expanding a short premise into a complete horror experience or a researched single-ending game campaign, building a new playable slice, or rebuilding an existing game's presentation;
 - implementing horror mechanics such as pursuit, hiding, sound detection, scarce saves, investigation, and death loops;
-- studying games from screenshots and videos, turning observed chase architecture into route contracts, and selecting a safe 3D asset-production route;
+- studying games from screenshots and videos, reconstructing lived player experience, turning observed chase architecture into route contracts, and selecting a safe 3D asset-production route;
 - designing boss fights, ability kits, levels, puzzles, branching choices, and playable 2D formats;
 - creating consistent characters, bosses, environments, props, sprites, and visual effects;
 - producing short films, cutscenes, action sequences, product videos, and social clips;
@@ -41,7 +41,7 @@ The repository currently includes **63 installable Skills** for:
 
 ## Install and update
 
-Install all 63 Skills for every supported Agent:
+Install all 65 Skills for every supported Agent:
 
 ```bash
 npx skills add LogicOber/Worldview-Skills --all
@@ -76,6 +76,7 @@ through a tide station while the water rises. Use the current repository.
 
 | Slash entry | Use it for | Result |
 | --- | --- | --- |
+| [`/worldview-game-horror-production`](skills/game-production/worldview-game-horror-production/README.md) | Turn a short horror premise into a complete experience with connected mechanics, memorable spaces, a learnable threat, fear rhythm, recovery, and a tested ending. | Horror production contract, experience timeline, map/route plan, selected mechanic contracts, grey-box order, sensory plan, verification journeys, and a playable or implementation-ready handoff. |
 | [`/worldview-game-single-ending-campaign`](skills/game-production/worldview-game-single-ending-campaign/README.md) | Expand a short premise into an original, researched, story-driven game with one canonical ending and a substantial playable world. | Dated research ledger, original fictionalization, complete route, connected gameplay systems, maps, NPCs, items, state/save logic, runtime evidence, and a verified build or deployment URL. |
 | [`/worldview-game-high-fidelity-vertical-slice`](skills/game-production/worldview-game-high-fidelity-vertical-slice/README.md) | Turn a story, place, or game idea into one polished 2D or 3D playable chapter. | Playable core, three to five real gameplay states, original asset plan, integrated presentation, runtime captures, performance evidence, and handoff. |
 | [`/worldview-game-runtime-visual-fidelity-rebuild`](skills/game-production/worldview-game-runtime-visual-fidelity-rebuild/README.md) | Replace the generic or inconsistent presentation of a game that already works. | Protected gameplay baseline, rebuilt camera/assets/materials/lighting/VFX/UI/audio, same-state comparisons, regression journeys, and measured performance. |
@@ -88,7 +89,7 @@ Image generation, Blender MCP, another DCC, browser or engine automation, and pr
 
 ## Horror game mechanics
 
-Eighteen standalone Skills implement complete, testable horror-game situations, including route architecture for designed indoor pursuits.
+Eighteen standalone Skills implement complete, testable horror-game situations, including route architecture for designed indoor pursuits. Use [`/worldview-game-horror-production`](skills/game-production/worldview-game-horror-production/README.md) when the Agent should compose those situations into one complete game.
 
 | Family | Included mechanics |
 | --- | --- |
@@ -125,6 +126,7 @@ Use the analysis Skill before implementation when you want the Agent to learn fr
 | Slash entry | What it creates |
 | --- | --- |
 | [`/worldview-gameplay-video-analysis`](skills/game-analysis/worldview-gameplay-video-analysis/README.md) | A timestamped observation ledger, screenshot/style board, route and mechanism diagrams, tagged design patterns and failure modes, and cross-video clusters that can feed a new horror game's contracts. |
+| [`/worldview-gameplay-experience-study`](skills/game-analysis/worldview-gameplay-experience-study/README.md) | A first-person reconstruction, third-person design critique, quality judgment, routed qualitative cases, and original transfer cards built from evidence. |
 
 ## Game design and 2D game creation
 

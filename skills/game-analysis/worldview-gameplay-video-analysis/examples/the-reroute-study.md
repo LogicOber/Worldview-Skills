@@ -8,6 +8,8 @@ The designer supplied one authorized local MP4, `harbor-warden-run.mp4`, and ask
 
 The footage was 17:42 long, single-player, with game audio and no face-cam. It had two visible cuts and one loading screen. The route was inspected as an abstract topology, not redrawn as the source level.
 
+The companion [timeline JSON](the-reroute-study.timeline.json) keeps the 17:42 source clock separate from a cautious 22–30 minute experience-time estimate. It records the missing intervals as unknown, marks the emotional change from guarded curiosity to urgency to brief relief, and labels the new pacing forecast as proposed. The estimate is deliberately a range: the highlight does not reveal how many retries or traversals were removed.
+
 ## Evidence ledger
 
 | ID | Source/timecode | Observation | Class | Confidence |

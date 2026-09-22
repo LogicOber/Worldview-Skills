@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "selection_basis": "top_views_desc",
+  "ranking_snapshot_utc": "",
+  "list_url": "",
+  "creator_id": "",
+  "requested_n": 30,
+  "resolved_n": 0,
+  "sort_verified": false,
+  "pagination": {"page_size": 30, "pages_read": 0},
+  "probe": {
+    "one_video_id": "",
+    "probe_status": "not_started | succeeded | failed",
+    "probe_result": "",
+    "attempts": [
+      {
+        "method": "",
+        "result": "",
+        "credentials": "none | user-authorized-session | unknown"
+      }
+    ],
+    "next_safe_input": "user-provided media | authorized media connector | stop",
+    "bulk_gate": "blocked_until_probe_succeeds"
+  },
+  "items": [
+    {
+      "rank": 1,
+      "source_id": "",
+      "title_public": "",
+      "view_count_observed": null,
+      "duration_seconds": null,
+      "published_at": "",
+      "source_kind": "upload | live_cut | compilation | unknown",
+      "acquisition_status": "not_started | probed | acquired | failed | skipped",
+      "excluded_reason": "",
+      "public_case_id": ""
+    }
+  ],
+  "limits": [
+    "Ranking is a snapshot and may change after collection.",
+    "A page sort must be verified rather than inferred from card position.",
+    "Operational source IDs and URLs remain outside public qualitative case files.",
+    "One concrete video must be probed before bulk acquisition.",
+    "A successful metadata lookup is not a successful media probe; one short local decode is required."
+  ]
+}

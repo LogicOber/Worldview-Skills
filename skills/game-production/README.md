@@ -1,10 +1,27 @@
 # Game Production
 
-Three standalone Agent Skills turn a short creative brief or an existing project into work that can be played and inspected in the real runtime. One researches and builds a substantial story campaign with one canonical ending. One starts a bounded game slice. One rebuilds the presentation of a game that already works but still looks like default primitives, flat vectors, stock UI, or unrelated assets placed together.
+Four standalone Agent Skills turn a short creative brief or an existing project into work that can be played and inspected in the real runtime. One expands a horror premise into a complete fear-driven experience and routes its mechanics. One researches and builds a substantial story campaign with one canonical ending. One starts a bounded game slice. One rebuilds the presentation of a game that already works but still looks like default primitives, flat vectors, stock UI, or unrelated assets placed together.
 
 Each entry turns an outcome such as “a complete campaign” or “AAA-style presentation” into a bounded target with working gameplay, project-specific visual decisions, real runtime states, measured behavior, and a handoff that says exactly what is finished. Choose by the result you need; no package requires another one to be installed.
 
 ## Install and call one Skill
+
+For a complete horror game whose mechanics, route, pacing, and sensory design should be filled in from a short premise:
+
+```bash
+npx skills add LogicOber/Worldview-Skills \
+  --skill worldview-game-horror-production
+```
+
+```text
+/worldview-game-horror-production
+
+Build a single-ending first-person horror game about a courier who must cross a
+closed hospital during a citywide blackout. Design the building as a memorable
+route, make the threat learnable rather than omniscient, use investigation before
+one measured pursuit, and return a playable build with failure, recovery, and
+ending tests.
+```
 
 For a researched story-driven campaign with one ending:
 
@@ -60,6 +77,7 @@ The user supplies the story or the visible problem. The Agent recovers the proje
 
 | Skill | Use it when | Smallest useful input | Primary result |
 | --- | --- | --- | --- |
+| [`worldview-game-horror-production`](worldview-game-horror-production/README.md) | A short horror premise should become a complete experience with a fear rhythm, connected mechanics, memorable spaces, recovery, and a tested ending. | A premise, desired fear, setting, perspective, or one reference image. | Horror production contract, experience timeline, map/route plan, selected mechanic contracts, grey-box order, sensory plan, verification journeys, and playable or implementation-ready handoff. |
 | [`worldview-game-single-ending-campaign`](worldview-game-single-ending-campaign/README.md) | A short premise should become a substantial researched game with one canonical ending, a populated world, connected gameplay, and a complete playable route. | A protagonist, conflict, theme, real-world topic, or story idea. Project, platform, duration, and publication constraints are optional. | Dated research and fiction ledgers, one ending designed backward, complete route, maps, NPCs, items, shared state, several forms of play, runtime evidence, and a tested build or authorized deployment. |
 | [`worldview-game-high-fidelity-vertical-slice`](worldview-game-high-fidelity-vertical-slice/README.md) | A story, place, or game idea should become a bounded 2D or 3D playable slice with a high presentation bar. | A premise. An existing project, target platform, references, and time limit are optional. | A playable core, three to five runtime-matched visual states, an original asset plan, integrated presentation, performance evidence, and a truthful handoff. |
 | [`worldview-game-runtime-visual-fidelity-rebuild`](worldview-game-runtime-visual-fidelity-rebuild/README.md) | The game already runs, but its actual play view looks generic, flat, inconsistent, or materially unfinished. | The project path and a sentence describing what looks wrong or what the world should feel like. | A protected-behavior baseline, causal visual diagnosis, rebuilt runtime presentation, same-state comparisons, regression journeys, and measured delivery. |
@@ -114,6 +132,13 @@ Both methods use three to five named gameplay states instead of one beauty shot.
 ```text
 skills/game-production/
 ├── README.md
+├── worldview-game-horror-production/
+│   ├── README.md
+│   ├── SKILL.md
+│   ├── SOURCE.md
+│   ├── references/why-horror-games-fail.md
+│   ├── templates/horror-production-contract.md
+│   └── examples/the-last-service-floor.md
 ├── worldview-game-single-ending-campaign/
 │   ├── README.md
 │   ├── SKILL.md

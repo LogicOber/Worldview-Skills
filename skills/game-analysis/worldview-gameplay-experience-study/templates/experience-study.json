@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "study_id": "replace-with-deidentified-id",
+  "status": "draft",
+  "tags": [],
+  "source_scope": {
+    "description": "De-identified evidence scope; do not place source names or URLs in a public case file.",
+    "source_time_status": "known | partial | unknown",
+    "experience_time_status": "known | range | unknown",
+    "editorial_gaps": [],
+    "retention_boundary": ""
+  },
+  "visual_manifest": [],
+  "beats": [
+    {
+      "beat_id": "B01",
+      "source_time": [0, 0],
+      "experience_time": "unknown",
+      "observed_scene": "",
+      "evidence": [],
+      "first_person": {
+        "before_belief": "",
+        "attention_and_body": "",
+        "hesitation": "",
+        "choice": "",
+        "immediate_after": "",
+        "learned_rule": "",
+        "status": "reconstructed | unavailable",
+        "confidence": "high | medium | low"
+      },
+      "third_person": {
+        "what_the_work_is_doing": "",
+        "why_placement_matters": "",
+        "quality_judgment": "effective | weak | fair | unfair | memorable | forgettable | funny | beautiful | merely_loud | unresolved",
+        "why": "",
+        "alternative_reading": ""
+      },
+      "expectation": {
+        "player_expected": "",
+        "work_delivered": "",
+        "turn_type": "confirmation | fair_reversal | misdirection | false_alarm | earned_surprise | arbitrary_punishment | recovery | unresolved"
+      },
+      "transfer": {
+        "relationship_to_preserve": "",
+        "surface_to_change": "",
+        "implementation_action_chain": [],
+        "failure_boundary": "",
+        "verification_test": ""
+      },
+      "unknowns": []
+    }
+  ],
+  "curve": [],
+  "selected_prior_studies": [],
+  "design_handoff": {
+    "one_sentence": "",
+    "do_not_copy": [],
+    "first_time_player_test": ""
+  }
+}

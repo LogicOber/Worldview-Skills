@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract attention route legend</title>
+  <desc id="desc">An original topology plate showing expectation, uncertain sound, cover, false branch, successful route, and recovery.</desc>
+  <rect width="960" height="420" fill="#101722"/>
+  <g font-family="Inter,Arial,sans-serif" font-size="18" fill="#eef4ff">
+    <text x="32" y="36" font-size="25" font-weight="700">ATTENTION ROUTE · ORIGINAL ABSTRACT PLATE</text>
+    <text x="32" y="68" fill="#a9b7ca">Use relationships, not the surface of any source level.</text>
+  </g>
+  <g stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M100 210 H260 C320 210 335 125 410 125 H520" stroke="#51d88a" stroke-width="10"/>
+    <path d="M260 210 C320 210 340 300 410 300 H520" stroke="#ef6675" stroke-width="10" stroke-dasharray="18 14"/>
+    <path d="M520 125 C600 125 610 210 680 210 H850" stroke="#51d88a" stroke-width="10"/>
+    <path d="M520 300 C600 300 620 210 680 210" stroke="#f1c75b" stroke-width="8" stroke-dasharray="10 12"/>
+    <path d="M410 125 V70" stroke="#7dd3fc" stroke-width="6" stroke-dasharray="8 10"/>
+  </g>
+  <g font-family="Inter,Arial,sans-serif" font-size="17" text-anchor="middle">
+    <g fill="#dbeafe" stroke="#26364e" stroke-width="3"><circle cx="100" cy="210" r="38"/><circle cx="260" cy="210" r="38"/><circle cx="410" cy="125" r="38"/><circle cx="520" cy="125" r="38"/><circle cx="410" cy="300" r="38"/><circle cx="680" cy="210" r="38"/><circle cx="850" cy="210" r="38"/></g>
+    <g fill="#102036"><text x="100" y="216">START</text><text x="260" y="216">QUESTION</text><text x="410" y="131">COVER</text><text x="520" y="131">CUE</text><text x="410" y="306">FALSE</text><text x="680" y="216">RECOVER</text><text x="850" y="216">PAYOFF</text></g>
+  </g>
+  <g font-family="Inter,Arial,sans-serif" font-size="16">
+    <rect x="32" y="350" width="18" height="8" fill="#51d88a"/><text x="60" y="359" fill="#dbeafe">successful / teachable route</text>
+    <rect x="260" y="350" width="18" height="8" fill="#ef6675"/><text x="288" y="359" fill="#dbeafe">failed or too-late route</text>
+    <rect x="495" y="350" width="18" height="8" fill="#f1c75b"/><text x="523" y="359" fill="#dbeafe">uncertain / test branch</text>
+    <rect x="720" y="350" width="18" height="8" fill="#7dd3fc"/><text x="748" y="359" fill="#dbeafe">sound / information line</text>
+  </g>
+</svg>

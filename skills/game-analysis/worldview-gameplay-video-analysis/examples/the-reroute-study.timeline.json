@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "reroute-study-pilot",
+  "source_id": "V01",
+  "analysis_mode": "edited_highlight",
+  "scope": {
+    "question": "How does a player learn recovery during a pursuit without copying the source level?",
+    "source_authorized": true,
+    "sample_gate": "pilot_only",
+    "selection_rule": "single supplied local MP4"
+  },
+  "time_model": {
+    "source_runtime_seconds": 1062,
+    "known_experience_time_seconds": null,
+    "estimated_experience_time_range_seconds": {
+      "min": 1320,
+      "max": 1800
+    },
+    "estimate_basis": [
+      "two visible edits",
+      "one loading screen",
+      "one implied retry before the visible fork",
+      "continuous landmark state across the visible run"
+    ],
+    "campaign_position": "mid_sequence, inferred from the checkpoint and pursuit escalation",
+    "confidence": "low",
+    "unknown_intervals": [
+      "Any traversal and retries removed before 04:06",
+      "The continuation after the cut at approximately 06:58"
+    ]
+  },
+  "beats": [
+    {
+      "beat_id": "B01",
+      "source_time": { "start_seconds": 246, "end_seconds": 272 },
+      "experience_time": {
+        "start_seconds": 420,
+        "end_seconds": 520,
+        "range_basis": "relative estimate from visible progression and omitted setup",
+        "confidence": "low"
+      },
+      "delta_from_previous_beat_seconds": { "min": null, "max": null, "status": "unknown" },
+      "editorial_status": {
+        "cut_before": true,
+        "cut_after": false,
+        "omitted_retry_or_traversal": true,
+        "reordered_or_accelerated": false,
+        "notes": "The first visible beat begins after an edit; the prior setup is unavailable."
+      },
+      "campaign_progression": {
+        "observed_marker": "flooded hall and bell cue",
+        "reported_marker": "",
+        "inferred_position": "pursuit setup",
+        "confidence": "low"
+      },
+      "event": {
+        "player_action": "Stops at a bell, rotates twice, then chooses the lit stair after the red pennant enters frame.",
+        "camera_or_edit": "Camera sweep exposes a landmark but not the whole route.",
+        "world_feedback": "Bell continues; no clear enemy body is visible.",
+        "player_knowledge_before": "The player has a warning cue but uncertain direction.",
+        "player_knowledge_after": "The lit stair is treated as the current route anchor.",
+        "mechanism_tags": ["landmark_reorientation", "hesitation_before_visibility"]
+      },
+      "emotion": {
+        "observed_signals": ["brief stop", "two camera turns", "no verbal reaction"],
+        "commentary_signal": "unavailable",
+        "tension_0_to_5": 3,
+        "arousal_0_to_5": 2,
+        "curiosity_0_to_5": 4,
+        "relief_0_to_5": 1,
+        "valence_minus2_to_plus2": -1,
+        "inference": "The pause suggests uncertainty more strongly than panic.",
+        "confidence": "medium",
+        "alternative_explanation": "The player may be checking controls or waiting for audio information."
+      },
+      "design_forecast": {
+        "setup_before": "Let a directional cue arrive before the player can see the threat.",
+        "expected_player_question": "Which visible landmark is safe to trust?",
+        "intended_emotional_transition": "curiosity to guarded commitment",
+        "payoff_or_reversal": "The landmark supports a route choice without revealing the full map.",
+        "after_effect": "Preserve the landmark so a later wrong turn can be recovered.",
+        "test_for_new_work": "Ask a first-time tester to point to the recovery landmark before moving.",
+        "claim_class": "proposed"
+      },
+      "evidence": [
+        { "segment_id": "S01", "source_reference": "V01 04:06–04:32", "class": "observed", "confidence": "high" }
+      ]
+    },
+    {
+      "beat_id": "B02",
+      "source_time": { "start_seconds": 273, "end_seconds": 298 },
+      "experience_time": {
+        "start_seconds": 521,
+        "end_seconds": 590,
+        "range_basis": "continuous visible action after B01",
+        "confidence": "medium"
+      },
+      "delta_from_previous_beat_seconds": { "min": 1, "max": 1, "status": "visible_continuity" },
+      "editorial_status": {
+        "cut_before": false,
+        "cut_after": false,
+        "omitted_retry_or_traversal": false,
+        "reordered_or_accelerated": false,
+        "notes": "No visible cut between B01 and B02."
+      },
+      "campaign_progression": {
+        "observed_marker": "gate closes behind player",
+        "reported_marker": "",
+        "inferred_position": "commitment beat",
+        "confidence": "medium"
+      },
+      "event": {
+        "player_action": "Tests the closed gate once, then runs toward the stair.",
+        "camera_or_edit": "Backward look is brief and does not show the pursuer.",
+        "world_feedback": "Gate closure and footsteps increase pressure.",
+        "player_knowledge_before": "Return is still possible in principle.",
+        "player_knowledge_after": "Forward movement is the practical option.",
+        "mechanism_tags": ["door_as_commitment", "occluded_threat_audio"]
+      },
+      "emotion": {
+        "observed_signals": ["single gate test", "immediate forward movement"],
+        "commentary_signal": "unavailable",
+        "tension_0_to_5": 4,
+        "arousal_0_to_5": 4,
+        "curiosity_0_to_5": 3,
+        "relief_0_to_5": 0,
+        "valence_minus2_to_plus2": -2,
+        "inference": "The closure converts uncertainty into time pressure.",
+        "confidence": "medium",
+        "alternative_explanation": "The player may already know the route from an omitted attempt."
+      },
+      "design_forecast": {
+        "setup_before": "Make the commitment visible and reversible only once.",
+        "expected_player_question": "Did the threat force this route, or is there another exit?",
+        "intended_emotional_transition": "uncertainty to urgency",
+        "payoff_or_reversal": "The player receives a readable forward route rather than a blind maze.",
+        "after_effect": "The next wrong turn should cost time, not erase all agency.",
+        "test_for_new_work": "Measure whether testers can describe what changed when the door closed.",
+        "claim_class": "proposed"
+      },
+      "evidence": [
+        { "segment_id": "S02", "source_reference": "V01 04:33–04:58", "class": "observed", "confidence": "high" }
+      ]
+    },
+    {
+      "beat_id": "B03",
+      "source_time": { "start_seconds": 311, "end_seconds": 347 },
+      "experience_time": {
+        "start_seconds": 620,
+        "end_seconds": 760,
+        "range_basis": "continuous visible action with a short return",
+        "confidence": "medium"
+      },
+      "delta_from_previous_beat_seconds": { "min": 30, "max": 90, "status": "partly_visible" },
+      "editorial_status": {
+        "cut_before": false,
+        "cut_after": false,
+        "omitted_retry_or_traversal": false,
+        "reordered_or_accelerated": false,
+        "notes": "The player reaches the fork after visible traversal; exact movement time is approximate."
+      },
+      "campaign_progression": {
+        "observed_marker": "dry passage fork",
+        "reported_marker": "",
+        "inferred_position": "bounded wrong turn",
+        "confidence": "medium"
+      },
+      "event": {
+        "player_action": "Takes the dry passage, reaches a dead end, laughs, reverses, and returns to the pennant.",
+        "camera_or_edit": "The dead end is shown long enough to establish the error.",
+        "world_feedback": "No new exit appears; the landmark remains readable on return.",
+        "player_knowledge_before": "The fork has at least two plausible branches.",
+        "player_knowledge_after": "One branch is rejected and the landmark restores orientation.",
+        "mechanism_tags": ["bounded_wrong_turn", "landmark_reorientation", "retry_learning"]
+      },
+      "emotion": {
+        "observed_signals": ["laughter", "quick reversal", "no panic stop"],
+        "commentary_signal": "laugh audible, words unclear",
+        "tension_0_to_5": 3,
+        "arousal_0_to_5": 3,
+        "curiosity_0_to_5": 2,
+        "relief_0_to_5": 3,
+        "valence_minus2_to_plus2": 1,
+        "inference": "The bounded error releases some pressure because recovery is immediate.",
+        "confidence": "medium",
+        "alternative_explanation": "The laugh may be a creator persona habit rather than relief."
+      },
+      "design_forecast": {
+        "setup_before": "Offer two credible choices under time pressure.",
+        "expected_player_question": "Can I recover if this branch is wrong?",
+        "intended_emotional_transition": "urgency to brief relief and learning",
+        "payoff_or_reversal": "The wrong branch teaches the landmark rather than punishing with a full reset.",
+        "after_effect": "Confidence should rise without making the next route trivial.",
+        "test_for_new_work": "Compare completion and remembered landmark after one bounded wrong turn.",
+        "claim_class": "proposed"
+      },
+      "evidence": [
+        { "segment_id": "S03", "source_reference": "V01 05:11–05:47", "class": "observed", "confidence": "high" }
+      ]
+    }
+  ],
+  "curve_points": [
+    { "point_id": "C01", "experience_time_seconds": 420, "source_time_seconds": 246, "tension_0_to_5": 3, "arousal_0_to_5": 2, "curiosity_0_to_5": 4, "relief_0_to_5": 1, "valence_minus2_to_plus2": -1, "basis_beat_id": "B01", "confidence": "medium" },
+    { "point_id": "C02", "experience_time_seconds": 550, "source_time_seconds": 285, "tension_0_to_5": 4, "arousal_0_to_5": 4, "curiosity_0_to_5": 3, "relief_0_to_5": 0, "valence_minus2_to_plus2": -2, "basis_beat_id": "B02", "confidence": "medium" },
+    { "point_id": "C03", "experience_time_seconds": 700, "source_time_seconds": 330, "tension_0_to_5": 3, "arousal_0_to_5": 3, "curiosity_0_to_5": 2, "relief_0_to_5": 3, "valence_minus2_to_plus2": 1, "basis_beat_id": "B03", "confidence": "medium" }
+  ],
+  "editorial_gaps": [
+    {
+      "gap_id": "G01",
+      "source_before_seconds": 0,
+      "source_after_seconds": 246,
+      "estimated_removed_experience_time_seconds": { "min": 0, "max": 420, "status": "unknown" },
+      "what_may_be_missing": ["route learning", "failed attempts", "story setup"],
+      "do_not_claim": ["B01 is the first pursuit cue", "the player had no prior knowledge"],
+      "evidence": ["cut before 04:06"]
+    },
+    {
+      "gap_id": "G02",
+      "source_before_seconds": 418,
+      "source_after_seconds": 419,
+      "estimated_removed_experience_time_seconds": { "min": 0, "max": 600, "status": "unknown" },
+      "what_may_be_missing": ["post-checkpoint continuation", "additional pursuit beats"],
+      "do_not_claim": ["the checkpoint ends the pursuit", "the threat resets"],
+      "evidence": ["visible cut shortly after V01 06:58"]
+    }
+  ],
+  "jev_audit": {
+    "used": false,
+    "model": "typesafe-ai/jev",
+    "input_rows": [],
+    "schema_or_questions": [],
+    "raw_result_location": "",
+    "human_reviewed": false,
+    "overrides": []
+  },
+  "limits": [
+    "This is an edited highlight, not a real-time run.",
+    "The pursuiter's awareness state is not visible enough to claim patrol or search behavior.",
+    "The experience-time range is a design-analysis estimate, not recovered save data."
+  ],
+  "next_capture": [
+    "A clean unedited run around the fork",
+    "One frame of the upper landing and one frame of the checkpoint transition",
+    "Any available chapter or retry context"
+  ]
+}
