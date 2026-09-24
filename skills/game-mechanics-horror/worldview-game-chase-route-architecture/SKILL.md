@@ -142,6 +142,67 @@ Use a small repeated vocabulary: a red stripe that survives a sanity pulse, a nu
 
 Do not fill every room with lore. A chase room exists to support route decisions, recovery, or pressure. Each major landmark should have a spatial function and a player-facing meaning.
 
+## Audit every route edge as a chain of decisions
+
+Do not approve an edge because it has a door, a corridor, or a red arrow. For every important edge, write the decision chain below in the contract. This is the smallest unit of route design that can be playtested and revised:
+
+| Decision point | Record this | Reject the edge when |
+| --- | --- | --- |
+| Notice | The landmark, sound, light, object, or threat trace that reaches the player before commitment. | The player must already be running or already know the map to notice the choice. |
+| Hypothesis | The two or more explanations a careful player can form. | Only one answer is visible, or the alternatives are indistinguishable random guesses. |
+| Commitment | The input, item, timing, stance, door, or route turn that makes the choice costly. | The player can undo the choice without time, information, or spatial cost. |
+| Pursuer response | What the pursuer can know, which edge it takes, and when that knowledge expires. | The pursuer reads the live transform or reacts in a way the player cannot cause or observe. |
+| Immediate feedback | The change in sightline, sound, door state, distance, resource, or body state that confirms the choice. | Failure is communicated only by damage or a delayed cutscene. |
+| Wrong but useful result | A survivable loss, detour, noise event, closed shortcut, or new clue. | The wrong branch is instant death before the player has a chance to learn the rule. |
+| Recovery | The safe-enough anchor where the player can orient and choose again. | Recovery is a featureless hallway, a forced reload, or a ten-minute repeat. |
+| Next-attempt delta | The one fact the player can change after failure. | The player must copy an unexplained sequence or wait for a random seed. |
+
+Write a concrete action chain, for example:
+
+```text
+player hears a scrape behind the numbered laundry door
+→ sees the service stripe continue left and the shutter control on the right
+→ can close the shutter (gains distance, loses the quiet shortcut) or run left
+→ the pursuer investigates the last sound, not the player's current transform
+→ the closed shutter buys one measured turn but makes the next junction louder
+→ a failed left turn reaches a lit washroom where the player can see the stripe again
+→ the next attempt can choose the shutter earlier or preserve the shortcut
+```
+
+The nouns must come from the current map. “Nearby threat,” “alternate route,” and “tension” are placeholders, not completed design records.
+
+## Remove the shortcuts that make a chase feel cheap
+
+Before art polish, mark each item below as `present`, `absent`, or `intentionally accepted with reason`:
+
+| Cheap shortcut | Why it fails the player | Required replacement |
+| --- | --- | --- |
+| Monster follows the player's live position through walls | Hiding and route knowledge have no value. | Last-seen, heard, trace, or declared supernatural evidence with an expiry. |
+| Three hallways with different wallpaper | The player cannot learn a topology under pressure. | A repeated landmark grammar and a route trade that changes state. |
+| One correct door with no rehearsal | Success depends on a guide or luck. | Preview the affordance, then test it under pressure with a recoverable first failure. |
+| Key or fuse placed at the end of a detour | The chase becomes a fetch errand. | Make the object alter a route edge, sensor, sound profile, or commitment timing. |
+| Random branch selection | A failed attempt gives no new knowledge. | Bound the variation and expose the cause of the selected branch. |
+| Instant capture at a blind corner | The player cannot attribute the loss to a decision. | Warning distance, a visible or audible state change, and a retreat or counterplay edge. |
+| Checkpoint before a long unskippable setup | Repetition replaces learning. | Preserve solved preparation and restart at the first meaningful decision. |
+| Generated floor plan treated as proof | Visual polish hides impossible geometry. | Versioned graph, collision/navmesh trace, perception trace, and runtime capture. |
+
+If a requested chase still contains three or more of these shortcuts, stop adding spectacle. Rewrite the route promise and the earliest affected lock first.
+
+## Tune the decision, not only the speed
+
+When a playtest fails, change one variable from the table at a time and rerun the same trace:
+
+| Symptom | First variable to inspect | Do not “fix” it by |
+| --- | --- | --- |
+| Player sprints past every landmark | Cue lead time, landmark contrast, or safe rehearsal | Adding a louder monster or more damage. |
+| Player waits in one corner | Pursuer search expiry, recovery edge, or cost of waiting | Teleporting the pursuer into the hiding place. |
+| Player chooses correctly but feels no ownership | Alternative route cost and immediate feedback | Adding lore or a scripted camera. |
+| Player dies without changing the next attempt | Failure evidence and checkpoint distance | Making the player faster. |
+| Player memorizes a single line and ignores the building | Branch merge state and landmark grammar | Adding more corridors. |
+| Assisted input removes all pressure | Cue timing and interaction duration | Removing the route decision from accessibility modes. |
+
+Record the player’s observed action, the suspected cause, the one changed variable, and the resulting route decision. A timing improvement is only successful when the player can explain what they learned, not when the capture looks smoother.
+
 ## Perception, sound, microphone, and sanity
 
 ### Pursuer evidence
@@ -272,4 +333,3 @@ External tools/assets: <provider, permission, license, fallback>
 ```
 
 Do not describe a rendered screenshot, generated floor plan, or planned branch as a tested game behavior.
-

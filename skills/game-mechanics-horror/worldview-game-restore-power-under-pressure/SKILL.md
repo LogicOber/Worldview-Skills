@@ -192,6 +192,54 @@ Do not invent random arrival solely to create fear. Variation is acceptable when
 
 If the project already owns a pursuer or hazard, integrate through its public state or events. Do not duplicate its state machine inside the objective. The objective may ask “is repair currently interrupted?” but should not secretly teleport or retarget the threat to force drama.
 
+## Make every component trip earn a decision
+
+The player should never collect a part simply because the counter is short by one. For each component, write a trip card before placing the mesh:
+
+```text
+component ID and visible identity:
+blocked consequence it explains:
+route taken from the last recovery anchor:
+what the player must notice before leaving:
+ordinary route cost:
+pressure change on the outward trip:
+pressure change on the return trip:
+safe alternative or information trade:
+what can be abandoned without losing the component:
+what failure teaches:
+what state survives the return:
+```
+
+Use the following judgment table to review the cards:
+
+| Design question | A strong answer | A weak answer that needs rewriting |
+| --- | --- | --- |
+| Why is this part here? | Its location teaches a route, a hazard, an authority boundary, or a consequence of restoring the system. | “It fills the required count.” |
+| Why does the player carry it back? | Carrying changes speed, visibility, sound, access, or the player's willingness to take a route. | The player carries an invisible number with no changed risk. |
+| Why can the player not repair immediately? | The repair point is exposed and the missing part or route must be understood first. | A door is arbitrarily locked until the counter reaches three. |
+| What can the player decide? | Search now, return, hide, redirect pressure, spend a resource, or accept a longer route. | Walk to the glowing object and press the same button three times. |
+| What does interruption mean? | The player loses exposed repair progress while keeping understandable preparation. | The game silently deletes parts or resets an unrelated puzzle. |
+| What proves restoration? | A route, machine, hazard boundary, or capability changes and can be used. | Lights brighten and the objective text changes. |
+
+Reject the design when two component trips have the same route, risk, information, and consequence. Reuse art when useful, but make the player-facing work differ. One part may require observing a patrol gap, another may expose a noisy shortcut, and another may force the player to decide whether to repair while the threat is nearby.
+
+## Remove the common fuse-objective failures
+
+Mark each pattern in the contract before implementation:
+
+| Failure pattern | Player experience | Repair |
+| --- | --- | --- |
+| Three identical glowing fuses | The objective is a counter disguised as exploration. | Give each part a stable identity and a distinct route question. |
+| Arbitrary locked repair door | The player cannot form a causal model. | Show the disabled consequence and let the player inspect why repair is required. |
+| Full progress reset after one hit | The pressure punishes preparation instead of creating a decision. | Preserve collected parts; reset only the declared exposed transaction. |
+| Monster teleports to the repair point | The player cannot plan or redirect danger. | Use the existing threat authority, bounded evidence, and a recoverable interruption edge. |
+| Power restoration only changes lighting | The objective ends as decoration. | Unlock a route or capability and require the player to use it. |
+| Component can be collected through a wall | The map and interaction rules disagree. | Validate reach, line of access, collision, and the prompt against one spatial authority. |
+| Save/load duplicates a part or restoration event | The objective becomes exploitable or contradictory. | Serialize stable IDs and publish one idempotent restoration transition. |
+| Repair requires a long unskippable animation | Repeated attempts become chores. | Expose progress, allow a declared interruption, and place the retry near the decision. |
+
+If the only reason to keep the objective is “players expect a fuse hunt,” remove it or combine it with a stronger route, social, or procedural decision.
+
 ## Treat repair as an exposed transaction
 
 Implement the repair transitions from the Objective State Lock and the safe/failing intervals from the Pressure Window Lock. Repair is a commitment with preconditions, progress, interruption, and one authoritative commit. Define all four.

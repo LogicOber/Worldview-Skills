@@ -85,6 +85,28 @@ Attach the current diagram here or record its path, version, coordinate scale, a
 - First-attempt learning beat:
 - Merge landmark:
 
+## Edge decision audit
+
+Complete this for every edge that can change success, capture, resource, or route knowledge. Do not leave “cue,” “cost,” or “recovery” as generic words; name the actual object, sound, landmark, input, and state.
+
+| Edge | Notice before commitment | Player hypotheses | Commitment and cost | Pursuer knowledge/response | Immediate feedback | Wrong but useful result | Recovery anchor | Next-attempt change |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| R01 | | | | | | | | |
+| R02 | | | | | | | | |
+| R03 | | | | | | | | |
+
+### Shortcut review
+
+Mark each as `absent`, `present with repair`, or `accepted with reason`:
+
+- [ ] Live-transform pursuit through walls.
+- [ ] Decorative corridors with no route trade.
+- [ ] One correct door with no safe rehearsal.
+- [ ] Key/fuse fetch that does not change a route variable.
+- [ ] Random branch or capture with no observable cause.
+- [ ] Checkpoint that repeats solved setup.
+- [ ] Generated diagram used as runtime proof.
+
 ## Player and pursuer timing
 
 Record world units, not only seconds. Include acceleration, door/lever animations, camera or interaction locks, sound generation, and the narrowest turn.
@@ -137,4 +159,3 @@ For microphone input, define permission, fallback input, sampling, privacy behav
 - [ ] Checkpoint retries do not repeat solved busywork.
 - [ ] No branch or capture state soft-locks the player.
 - [ ] Screenshot and runtime URL (if available) point to the tested build.
-

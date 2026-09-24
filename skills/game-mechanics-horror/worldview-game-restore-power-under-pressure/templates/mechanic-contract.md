@@ -70,6 +70,18 @@ State how the player learns this relationship before collection becomes a detach
 - Duplicate request rule:
 - Drop/disconnect rule:
 
+## Component trip cards — Dependency Route and Pressure Window Locks
+
+Complete one card per required component. Two cards may share art, but they must not silently share the same player-facing decision.
+
+| Stable ID | What it teaches | Outward route decision | Return route decision | Pressure change | Safe alternative or information trade | Failure teaches | State carried home |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+
+Reject a card that only says “find the part” or “return to the machine.” Name the landmark, cue, route edge, risk, and recovery behavior.
+
 ## Authoritative state — Objective State Lock
 
 ```text
