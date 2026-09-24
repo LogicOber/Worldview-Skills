@@ -153,6 +153,11 @@ Select no more mechanics than the route can teach, combine, and verify. Use this
 
 | Desired player decision | Route to detailed Skill |
 | --- | --- |
+| Shape orientation, anomaly, pressure, cost, recovery, and payoff across a chapter | `/worldview-game-horror-experience-rhythm` |
+| Make a familiar room or social hub change meaning on every return | `/worldview-game-horror-returning-place-escalation` |
+| Turn serving, driving, studying, sleeping, cooking, or playing into a corrupted routine | `/worldview-game-horror-mundane-routine-corruption` |
+| Make the player's professional or social duty force an inspection after an incident | `/worldview-game-horror-procedural-duty-and-incident` |
+| Make role, recognition, authority, or identity a fair social threat | `/worldview-game-horror-role-and-identity-pressure` |
 | Choose a main, risky, failure, and recovery path through a designed pursuit | `/worldview-game-chase-route-architecture` |
 | Create a false point of interest, break observation, hide, and escape | `/worldview-game-lure-hide-escape` |
 | Make a threat advance only when observation is invalid | `/worldview-game-observation-gated-stalker` |
@@ -262,4 +267,3 @@ Horror production handoff
 ```
 
 Do not call a proposal an implementation, a contact sheet a playtest, a generated image a map proof, or a single successful run a complete game.
-

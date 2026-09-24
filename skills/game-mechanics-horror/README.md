@@ -1,6 +1,6 @@
 # Horror Game Mechanics
 
-Eighteen standalone Agent Skills cover familiar horror-game situations with implementable rules and direct tests. They describe what the player understands and does, what the simulation is allowed to know, how pressure changes a decision, what survives failure, and what evidence is needed before an encounter can be called playable.
+Twenty-three standalone Agent Skills cover familiar horror-game situations and the composition layers that make them feel like one experience. They describe what the player understands and does, what the simulation is allowed to know, how pressure changes a decision, what survives failure, and what evidence is needed before an encounter can be called playable.
 
 Every package contains an original method written for this repository or a documented transformation of the user's own supplied mechanics material. `SOURCE.md` records that boundary. Examples use original fictional settings and demonstrate completed fields; their maps and values never become silent defaults.
 
@@ -80,11 +80,27 @@ The package template gives the Agent a fillable layer-lock record. Its example s
 | [`worldview-game-death-loop-persistent-clues`](worldview-game-death-loop-persistent-clues/README.md) | Failure should reset a bounded world while preserving knowledge that changes the next decision. | Reset/persist/transform ledger, clue dependency graph, two-pass proof, honest save operations, and data-safety evidence. |
 | [`worldview-game-asymmetric-information-cooperation`](worldview-game-asymmetric-information-cooperation/README.md) | Different players should combine partial information and role-specific actions under pressure. | Role contracts, information-action graph, accessible communication vocabulary, acknowledgement, authority, and reconnect tests. |
 
+### Experience composition and social pressure
+
+| Skill | Use it when | Primary result |
+| --- | --- | --- |
+| [`worldview-game-horror-experience-rhythm`](worldview-game-horror-experience-rhythm/README.md) | Existing rooms or mechanics feel flat, rushed, exhausting, or like disconnected scares. | Dual-clock timeline, attention budget, pressure/cost/recovery/payoff rhythm, sensory cue contract, and beat verification. |
+| [`worldview-game-horror-returning-place-escalation`](worldview-game-horror-returning-place-escalation/README.md) | A familiar room, street, workplace, or social hub should change meaning on each return. | Stable landmark grammar, return-state graph, changed physical/social facts, recovery edge, persistence, and payoff tests. |
+| [`worldview-game-horror-mundane-routine-corruption`](worldview-game-horror-mundane-routine-corruption/README.md) | Serving, driving, studying, sleeping, cooking, cleaning, or playing should become a rule-based horror loop. | Normal routine, exception ladder, comply/inspect/refuse/leave choices, state consequences, recovery, and reset evidence. |
+| [`worldview-game-horror-procedural-duty-and-incident`](worldview-game-horror-procedural-duty-and-incident/README.md) | The player's job should make an abnormal scene worth approaching and inspecting. | Duty/authority contract, teachable procedure, inspectable incident, response modes, route consequences, and verification. |
+| [`worldview-game-horror-role-and-identity-pressure`](worldview-game-horror-role-and-identity-pressure/README.md) | Recognition, social position, appearance, or a claimed role should become a fair horror decision. | Stable identity tests, contaminated evidence rules, social choices, presentation conflicts, accessibility, and safety checks. |
+
 ## Compose without hiding dependencies
 
 A larger horror game may use several Skills, but one giant invocation should not blur their contracts. Build and verify them in an order that respects the project:
 
 ```text
+composition layer
+  horror experience rhythm
+  -> mundane routine corruption or procedural duty
+  -> returning-place escalation or role/identity pressure
+  -> detailed survival, investigation, or pursuit mechanic
+
 survival route
   scarce inventory triage
   -> key-item backtracking
@@ -126,8 +142,8 @@ Each package has its own `SOURCE.md` with the exact input and rewrite boundary.
 
 | Source | Skills | How it was used |
 | --- | --- | --- |
-| User-supplied `mechanics-pack-2026-09-11.tar.gz` | `worldview-game-lure-hide-escape`, `worldview-game-observation-gated-stalker`, `worldview-game-restore-power-under-pressure` | These packages record the exact internal file or brief consulted. Their expanded methods, lock sequences, templates, and public examples are repository-authored. |
-| The user's 2026-09-18 request for original horror mechanics | The other 15 Skills in this category | The mechanic methods and fictional examples were written from the requested design problem. No external Skill supplied their content. |
+| User-supplied mechanics brief | `worldview-game-lure-hide-escape`, `worldview-game-observation-gated-stalker`, `worldview-game-restore-power-under-pressure` | These packages record the internal brief consulted. Their expanded methods, lock sequences, templates, and public examples are repository-authored. |
+| The user's original horror-game design requests and private qualitative observations | The other 20 Skills in this category | The mechanic methods and fictional examples were written from the requested design problems and transformed player-facing relationships. No external Skill supplied their content. |
 
 ## Collection boundaries
 

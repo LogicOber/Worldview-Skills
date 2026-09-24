@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-2f80ed?style=for-the-badge" alt="Apache 2.0 license"></a>
-  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-65-111827?style=for-the-badge" alt="65 Skills"></a>
+  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-70-111827?style=for-the-badge" alt="70 Skills"></a>
   <a href="https://skills.sh"><img src="https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex-111827?style=for-the-badge" alt="Works with Claude Code and Codex"></a>
 </p>
 
@@ -16,10 +16,10 @@ Build playable games, high-fidelity game scenes, films, reusable visual assets, 
 
 Give an Agent this repository URL and a sentence describing what you want. It installs the relevant Skills, chooses the production path, reads the contract, asks only questions that change the result, builds and verifies the work, and reports exactly what is ready. You do not need to learn a node graph, assemble a workflow by hand, or remember which internal Skill to trigger next. Slash entries remain available when you want precise control over one stage.
 
-The repository currently includes **65 installable Skills** for:
+The repository currently includes **70 installable Skills** for:
 
 - expanding a short premise into a complete horror experience or a researched single-ending game campaign, building a new playable slice, or rebuilding an existing game's presentation;
-- implementing horror mechanics such as pursuit, hiding, sound detection, scarce saves, investigation, and death loops;
+- composing horror experiences and implementing mechanics such as pursuit, hiding, sound detection, scarce saves, investigation, routine corruption, procedural incidents, and death loops;
 - studying games from screenshots and videos, reconstructing lived player experience, turning observed chase architecture into route contracts, and selecting a safe 3D asset-production route;
 - designing boss fights, ability kits, levels, puzzles, branching choices, and playable 2D formats;
 - creating consistent characters, bosses, environments, props, sprites, and visual effects;
@@ -41,7 +41,7 @@ The repository currently includes **65 installable Skills** for:
 
 ## Install and update
 
-Install all 65 Skills for every supported Agent:
+Install all 70 Skills for every supported Agent:
 
 ```bash
 npx skills add LogicOber/Worldview-Skills --all
@@ -89,7 +89,7 @@ Image generation, Blender MCP, another DCC, browser or engine automation, and pr
 
 ## Horror game mechanics
 
-Eighteen standalone Skills implement complete, testable horror-game situations, including route architecture for designed indoor pursuits. Use [`/worldview-game-horror-production`](skills/game-production/worldview-game-horror-production/README.md) when the Agent should compose those situations into one complete game.
+Twenty-three standalone Skills implement complete, testable horror-game situations and composition layers, including route architecture for designed indoor pursuits. Use [`/worldview-game-horror-production`](skills/game-production/worldview-game-horror-production/README.md) when the Agent should compose those situations into one complete game.
 
 | Family | Included mechanics |
 | --- | --- |
