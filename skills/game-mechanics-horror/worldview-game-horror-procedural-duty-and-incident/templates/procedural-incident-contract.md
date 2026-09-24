@@ -8,9 +8,9 @@
 
 ## Incident
 
-| Time/state | Visible anomaly | Sound/camera cue | Evidence the player can inspect | Threat implication |
-| --- | --- | --- | --- | --- |
-| | | | | |
+| Time/state | Duty expectation | Visible anomaly | Inspection action | Evidence result | Threat implication |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
 
 ## Response choices
 

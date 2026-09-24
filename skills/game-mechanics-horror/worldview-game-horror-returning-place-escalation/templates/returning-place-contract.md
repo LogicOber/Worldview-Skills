@@ -8,11 +8,11 @@
 
 ## Return ledger
 
-| Visit | Trigger | Changed physical fact | Changed person/relationship | Changed route | New player question | Recovery edge |
-| --- | --- | --- | --- | --- | --- | --- |
-| First | | | | | | |
-| Return 1 | | | | | | |
-| Return 2 | | | | | | |
+| Visit | Trigger | Stable anchor | Changed fact | Comparison action | New player question | State consequence | Recovery edge |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| First | | | | | | | |
+| Return 1 | | | | | | | |
+| Return 2 | | | | | | | |
 
 ## Layer lock record
 

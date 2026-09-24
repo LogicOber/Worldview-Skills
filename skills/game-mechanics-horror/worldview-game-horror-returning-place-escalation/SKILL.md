@@ -91,6 +91,32 @@ When an NPC changes, specify the spatial evidence: a blocked desk, moved chair, 
 
 For social horror, let the player ask, trust, refuse, or seek help. Do not make every changed occupant an enemy; uncertainty is more useful when relationships have different consequences.
 
+## Audit each return as a comparison decision
+
+Complete this ledger before adding a fourth or later return:
+
+| Return check | Required record | Rewrite when |
+| --- | --- | --- |
+| Stable anchor | Three to five landmarks that prove this is the same place. | The player cannot tell whether the space changed or was replaced. |
+| Changed fact | One physical, social, route, sensory, or knowledge change. | The only change is more debris, darker color, or extra lore. |
+| Player question | What the player now wants to verify, avoid, confront, or use. | The return is required only because a marker says so. |
+| Comparison action | Look, listen, speak, inspect, cross, wait, or test an old affordance. | The comparison happens in a cutscene or automatically. |
+| Consequence | Access, trust, route, threat, resource, or knowledge changes after the test. | The player can perform the test without changing any state. |
+| Recovery edge | A reliable anchor or route that lets a wrong reading remain useful. | A wrong interpretation traps the player or resets the whole place. |
+| Payoff | The earlier question is answered, reversed, or made more specific. | The return only delays the next new room. |
+
+The same place should not become “scarier” by merely adding enemies. Make the player compare a remembered relation: a chair now faces the wrong door, the person who granted access is absent, a safe shortcut now exposes a sound source, or an earlier landmark still works while its social meaning has changed.
+
+## Remove empty backtracking
+
+| Empty pattern | Player experience | Repair |
+| --- | --- | --- |
+| Return only to fetch a key | The place is a corridor between objectives. | Change the returner's question and make the old key location answer it. |
+| Random prop rearrangement | The player cannot infer a rule. | Change one authored fact at a time and preserve a truthful anchor. |
+| All anchors disappear | Mystery becomes disorientation. | Keep at least one stable visual, acoustic, or tactile landmark. |
+| NPC teleports without relationship evidence | Social escalation feels like a script error. | Track where the person could have gone and what their absence changes. |
+| Every return is more hostile | There is no recovery or interpretation phase. | Alternate escalation with a return that grants knowledge or route control. |
+
 ## 5. Persist and verify
 
 The same return state must survive the intended save boundary. Test:

@@ -42,6 +42,18 @@
 | --- | --- | --- | --- | --- |
 | | | | | |
 
+## Beat decision audit
+
+| Beat | Player hypothesis before action | Commitment | Immediate state change | Wrong but useful reading | Recovery action | Next question |
+| --- | --- | --- | --- | --- | --- | --- |
+| Orientation | | | | | | |
+| Invitation | | | | | | |
+| Confirmation | | | | | | |
+| Complication | | | | | | |
+| Peak | | | | | | |
+| Recovery | | | | | | |
+| Payoff | | | | | | |
+
 ## Verification
 
 - [ ] Quiet beats contain a player action or question.

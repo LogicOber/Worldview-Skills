@@ -63,6 +63,42 @@ Change one layer at a time: face, light, voice, subtitle, clothing, posture, loc
 
 Trust, question, refuse, follow, seek help, and report can trade time, access, route, evidence, or threat attention. Do not make the correct choice obvious from a red outline. Let the player use a test and accept a cost.
 
+## Audit identity as a fair test
+
+For each role claim or recognition problem, complete this chain:
+
+| Identity check | Required record | Rewrite when |
+| --- | --- | --- |
+| Role claim | What the person says they are allowed to do and what the player is expected to do. | Identity is only a face or costume. |
+| Stable evidence | Two non-face anchors such as route position, tool use, phrase, timing, ownership, or prior knowledge. | One glance can solve the whole situation. |
+| Contaminated cue | One presentation layer that can lie or change. | Everything is unreliable and no test can work. |
+| Social pressure | Who asks the player to trust, refuse, report, follow, or help. | The player can ignore the conflict without consequence. |
+| Verification action | The concrete question, comparison, object check, or route test the player can perform. | Verification is a hidden stat check or automatic reveal. |
+| Consequence | Access, authority, trust, evidence, route, threat attention, or relationship change. | All social choices return to the same state. |
+| Recovery | How a wrong recognition remains understandable and playable. | A mistaken trust choice permanently removes the ability to learn. |
+
+Example action chain:
+
+```text
+the attendant claims authority over a locked service door
+→ the player checks the ticket mark and the route position, not the face
+→ the voice conflicts with one anchor
+→ the player can question, comply, refuse, or seek a witness
+→ each response changes access and attention
+→ a later stable test confirms which evidence was contaminated
+```
+
+## Remove arbitrary identity horror
+
+| Arbitrary pattern | Why it fails | Repair |
+| --- | --- | --- |
+| Face-only guessing | The player is judged on visual luck. | Use two stable non-face tests and one contaminated presentation layer. |
+| Every person may be fake | No relationship or evidence can be trusted. | Declare which anchors remain reliable in the current chapter. |
+| Accent, disability, diagnosis, or appearance marks danger | A real-world trait becomes a moral shortcut. | Make behavior, authority, and evidence conflict carry the danger. |
+| Correct choice is marked in red | Social judgment becomes a reflex test. | Let the player verify and accept a cost. |
+| Refusal has no route consequence | The social decision is only dialogue flavor. | Change access, time, evidence, trust, or threat attention. |
+| Hallucination removes all feedback | The player cannot learn the replacement rule. | Announce the reliable test before it becomes necessary. |
+
 ## 4. Safety boundary
 
 Do not frame a real diagnosis, disability, accent, identity, or appearance as proof that a person is dangerous or less real. If the fiction uses impersonation, make the danger the entity's behavior and evidence conflict, not a real group trait.

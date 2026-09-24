@@ -143,6 +143,45 @@ Audio activity is not automatically fear. A loud moment can announce a transitio
 
 Do not route a beat until its player decision is written in one sentence.
 
+## Audit every beat for the decision it creates
+
+Use this table for every transition that is meant to affect play. A beat may be short, but it cannot be approved because it looks frightening in isolation.
+
+| Beat check | Required record | Rewrite when |
+| --- | --- | --- |
+| Baseline | The ordinary job, landmark, and confirmation the player can repeat. | The player has no stable behavior to compare against. |
+| Contradiction | One changed field and the evidence that makes it noticeable. | Every rule changes at once or the anomaly exists only in a caption. |
+| Hypothesis | The question the player can ask and at least one plausible wrong reading. | The intended interpretation is obvious before the player acts. |
+| Choice | The actual input, route, resource, social response, or wait that commits the player. | The “choice” is only a dialogue label or a forced camera moment. |
+| Consequence | The world, route, relationship, body, resource, or knowledge state that changes. | The consequence is only a louder sting or a new paragraph. |
+| Recovery | The action that lets the player reorganize knowledge while preserving a meaningful cost. | Recovery erases the cost or only waits for the next scare. |
+| Payoff | The earlier question, object, place, or rule that returns in changed form. | The ending introduces a new answer with no earlier preparation. |
+
+For each beat, write this action chain in project nouns:
+
+```text
+player performs the ordinary job
+→ notices one contradiction
+→ tests a concrete explanation
+→ commits to an action with a declared cost
+→ receives a state change and readable feedback
+→ uses recovery to form a revised question
+→ meets the earlier fact again at the payoff
+```
+
+Do not use “tension rises,” “the player is immersed,” or “a scare lands” as the final row. Those phrases describe a hoped-for reaction, not a design decision.
+
+## Remove shallow rhythm fixes
+
+| Shallow fix | Why it fails | Required decision change |
+| --- | --- | --- |
+| Add another monster encounter | Attention becomes fatigue without new understanding. | Change what the player must notice, remember, or trade. |
+| Insert a silent hallway after every scare | Silence becomes a predictable reset button. | Give recovery an action that reorganizes the next route or hypothesis. |
+| Use a loud cue for every anomaly | The player learns volume, not meaning. | Give each cue a state cause and an accessible equivalent. |
+| Explain the rule in a note | The player can recite it without testing it. | Let an ordinary action reveal the rule and let a later choice challenge it. |
+| Make every beat darker and faster | Intensity loses contrast and control. | Alternate social, spatial, sensory, bodily, and interpretive demands. |
+| End on a twist unrelated to the baseline | The ending cannot pay back the player's attention. | Reuse an earlier anchor and change its meaning through a playable state. |
+
 ## 7. Verify the curve
 
 Run named journeys:

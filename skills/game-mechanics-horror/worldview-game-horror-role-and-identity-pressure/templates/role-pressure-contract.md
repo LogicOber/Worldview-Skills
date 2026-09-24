@@ -6,6 +6,12 @@
 | --- | --- | --- | --- | --- |
 | | | | | |
 
+## Identity decision audit
+
+| Role claim | Stable test 1 | Stable test 2 | Contaminated cue | Verification action | Choice cost | Consequence | Recovery |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | |
+
 ## Evidence matrix
 
 | Observation | Supports | Contradicts | Contaminated by | Player can verify through |

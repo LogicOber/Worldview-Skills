@@ -11,11 +11,11 @@
 
 ## Exception ladder
 
-| Level | Violated field | Evidence before choice | Player choices | State consequence | Recovery |
-| --- | --- | --- | --- | --- | --- |
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
+| Level | Normal confirmation | Violated field | Evidence before choice | Player choices | State consequence | Recovery | Next known rule |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | | | | | | | |
+| 2 | | | | | | | |
+| 3 | | | | | | | |
 
 ## Layer lock record
 

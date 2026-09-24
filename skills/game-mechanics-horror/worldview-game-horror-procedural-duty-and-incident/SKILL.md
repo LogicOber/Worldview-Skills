@@ -78,6 +78,43 @@ Use the modes appropriate to the role:
 
 The modes should converge on the canonical ending while preserving different evidence, relationships, timing, or recovery positions.
 
+## Audit why the player approaches the incident
+
+The incident must be a playable responsibility, not a cutscene that happens near a professional costume:
+
+| Incident check | Required record | Rewrite when |
+| --- | --- | --- |
+| Duty baseline | The ordinary task, authority, protected evidence, and completion signal. | The role has no action the player would perform before danger. |
+| Visible break | One abnormal object, person, route, sound, or record the player can inspect. | The narrator declares the incident while the player only watches. |
+| Obligation | The rule, person, contract, or consequence that makes inspection worthwhile. | The player approaches only because the next marker says so. |
+| Evidence action | Stop, photograph, identify, repair, call, carry, compare, or return. | “Investigate” has no concrete input or observable result. |
+| Response trade | Follow procedure, improvise, or retreat with different state consequences. | One response is correct and the others are decorative. |
+| Responsibility shift | What “doing the job correctly” means after the anomaly. | The incident ends the job instead of changing its meaning. |
+| Recovery | How the player preserves a useful fact after a wrong response. | Failure deletes evidence or forces an unrelated reload. |
+
+Write the player-facing chain:
+
+```text
+player completes the ordinary duty
+→ sees an inspectable break
+→ knows why ignoring it has a cost
+→ chooses procedure, improvisation, or retreat
+→ changes evidence, access, authority, route, or threat state
+→ receives a recoverable consequence
+→ performs the duty again under the new rule
+```
+
+## Remove fake procedural horror
+
+| Fake pattern | Why it fails | Repair |
+| --- | --- | --- |
+| Job title with no job action | The role is flavor text. | Teach one repeatable procedure before the incident. |
+| Accident as a video-only reveal | The player has no investigative ownership. | Put the evidence in reach and make inspection alter state. |
+| Checklist with no authority | The steps do not constrain anything. | Define what the player may touch, report, repair, or refuse. |
+| Retreat treated as cowardice | The system punishes the safe information strategy. | Let retreat preserve knowledge while costing time, access, or trust. |
+| Monster appears after the incident with no causal link | The duty is discarded when horror starts. | Make the duty expose, contain, redirect, or worsen the threat. |
+| Procedure always overrides improvisation | There is no judgment under pressure. | Make improvisation faster, louder, less authoritative, or more informative. |
+
 ## 4. Connect to detailed Skills
 
 Route to entity identification when the incident requires a testable candidate matrix; interrupted puzzle when the duty is interrupted by danger; wounds when the incident creates bodily cost; sound when the evidence is acoustic; chase architecture only after the duty has become a route pressure.
