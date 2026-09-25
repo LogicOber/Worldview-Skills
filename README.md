@@ -28,18 +28,21 @@ The repository currently includes **74 installable Skills** for:
 
 ## Contents
 
-- [Install and update](#install-and-update)
-- [High-fidelity game production](#high-fidelity-game-production)
-- [Horror game mechanics](#horror-game-mechanics)
-- [Game analysis](#game-analysis)
-- [Game design and 2D game creation](#game-design-and-2d-game-creation)
-- [3D asset creation](#3d-asset-creation)
-- [Film and video production](#film-and-video-production)
-- [Story writing](#story-writing)
-- [Repository layout](#repository-layout)
-- [License and sources](#license-and-sources)
+- [1. Install and update](#1-install-and-update)
+- [2. Game creation](#2-game-creation)
+  - [2.1 High-fidelity game production](#21-high-fidelity-game-production)
+  - [2.2 Game categories](#22-game-categories)
+    - [2.2.1 Horror games](#221-horror-games)
+  - [2.3 Game analysis](#23-game-analysis)
+  - [2.4 General game design and 2D creation](#24-general-game-design-and-2d-creation)
+  - [2.5 3D asset creation](#25-3d-asset-creation)
+- [3. Film and video production](#3-film-and-video-production)
+- [4. Story writing](#4-story-writing)
+- [5. Repository layout](#5-repository-layout)
+- [6. License and sources](#6-license-and-sources)
+- [7. Sponsor](#7-sponsor)
 
-## Install and update
+## 1. Install and update
 
 Install all 74 Skills for every supported Agent:
 
@@ -72,7 +75,11 @@ Build a five-minute third-person chapter about a courier carrying a glass seed
 through a tide station while the water rises. Use the current repository.
 ```
 
-## High-fidelity game production
+## 2. Game creation
+
+Game Skills are grouped by production scope, game category, analysis, general design, and asset creation. New genres belong under **2.2 Game categories**, beside horror games, rather than being mixed into the mechanic or asset lists.
+
+### 2.1 High-fidelity game production
 
 | Slash entry | Use it for | Result |
 | --- | --- | --- |
@@ -87,16 +94,20 @@ Image generation, Blender MCP, another DCC, browser or engine automation, and pr
 
 [Choose a game-production Skill →](skills/game-production/README.md)
 
-## Horror game mechanics
+### 2.2 Game categories
+
+Each game category has its own complete-production entry followed by numbered mechanic chapters. Horror is the first category; future categories will use the same structure.
+
+#### 2.2.1 Horror games
 
 Describe the game you want; the Agent can choose and combine the relevant Skills, establish their shared state, implement them in a safe order, and verify the result. The 27 mechanic Skills below are available when you want precise control, but **you do not need to memorize or call them one by one**.
 
 > [!TIP]
 > For the simplest workflow, give the Agent this repository URL and your premise. Tell it to read the repository, install what it needs, and choose the Skills itself. Slash calls are optional controls for a specific mechanic—not a workflow the user must assemble manually.
 
-**In this section:** [complete game](#-start-with-a-complete-horror-game) · [pursuit and hiding](#-pursuit-hiding-and-threat-behavior) · [survival](#-survival-resources-and-bodily-risk) · [investigation](#-investigation-instruments-and-interrupted-objectives) · [trust and cooperation](#-trust-memory-and-shared-knowledge) · [journey and pacing](#-journey-pacing-and-social-pressure)
+**Horror chapter guide:** [01 complete game](#01-start-with-a-complete-horror-game) · [02 pursuit and hiding](#02-pursuit-hiding-and-threat-behavior) · [03 survival](#03-survival-resources-and-bodily-risk) · [04 investigation](#04-investigation-instruments-and-interrupted-objectives) · [05 trust and cooperation](#05-trust-memory-and-shared-knowledge) · [06 journey and pacing](#06-journey-pacing-and-social-pressure) · [07 finished-game effects](#07-what-these-skills-change-in-the-finished-game)
 
-### 🎬 Start with a complete horror game
+##### 01. Start with a complete horror game 🎬
 
 Use the main production Skill when you have a story, setting, image, or rough idea and want the Agent to decide which mechanics belong together. It owns the experience timeline, map and route plan, mechanic routing, implementation order, runtime verification, and delivery.
 
@@ -117,7 +128,7 @@ me the playable result. Ask only questions that would materially change it.
 
 The Agent should not turn that prompt into a checklist of every mechanic. It selects the smallest useful set, gives every shared state one owner, and leaves out systems that do not improve the intended experience.
 
-### 🏃 Pursuit, hiding, and threat behavior
+##### 02. Pursuit, hiding, and threat behavior 🏃
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;—&nbsp;optional;&nbsp;the&nbsp;Agent&nbsp;can&nbsp;route&nbsp;here&nbsp;automatically | What it helps the Agent build | Example input |
 | --- | --- | --- |
@@ -129,7 +140,7 @@ The Agent should not turn that prompt into a checklist of every mechanic. It sel
 | [`/worldview-game-barricade-delay-and-route-choice`](skills/game-mechanics-horror/worldview-game-barricade-delay-and-route-choice/README.md) | A barrier that exchanges material, noise, access, or a future route for measured time, with breach, detour, persistence, and reset behavior. | “Let the player chain one stairwell door, buying 18 seconds but permanently losing the shortcut back to the pharmacy.” |
 | [`/worldview-game-chase-route-architecture`](skills/game-mechanics-horror/worldview-game-chase-route-architecture/README.md) | A learnable pursuit built from architecture: main and risky routes, failed loops, sight breaks, interaction locks, recovery pockets, checkpoints, and exact timing margins. | “Design the hospital pursuit as a 2.5D route plan with one correct line, two readable mistakes, a recovery loop, and the final door timing.” |
 
-### 🎒 Survival resources and bodily risk
+##### 03. Survival resources and bodily risk 🎒
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;—&nbsp;optional;&nbsp;the&nbsp;Agent&nbsp;can&nbsp;route&nbsp;here&nbsp;automatically | What it helps the Agent build | Example input |
 | --- | --- | --- |
@@ -139,7 +150,7 @@ The Agent should not turn that prompt into a checklist of every mechanic. It sel
 | [`/worldview-game-wounds-infection-and-treatment`](skills/game-mechanics-horror/worldview-game-wounds-infection-and-treatment/README.md) | A fictional injury sequence with readable symptoms, stabilization, travel constraints, treatment choices, reassessment, reduced-intensity presentation, and persistence. | “A glass wound should slow climbing and worsen over time until the player cleans and binds it at the clinic; keep it fictional rather than medical advice.” |
 | [`/worldview-game-relief-resource-with-hidden-cost`](skills/game-mechanics-horror/worldview-game-relief-resource-with-hidden-cost/README.md) | A resource that truly relieves one immediate problem while creating a separate delayed exposure whose symptoms and alternatives become learnable. | “The tonic should suppress panic long enough to cross the gallery, but repeated use must produce readable light sensitivity and a different later route.” |
 
-### 🔎 Investigation, instruments, and interrupted objectives
+##### 04. Investigation, instruments, and interrupted objectives 🔎
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;—&nbsp;optional;&nbsp;the&nbsp;Agent&nbsp;can&nbsp;route&nbsp;here&nbsp;automatically | What it helps the Agent build | Example input |
 | --- | --- | --- |
@@ -148,7 +159,7 @@ The Agent should not turn that prompt into a checklist of every mechanic. It sel
 | [`/worldview-game-evidence-based-entity-identification`](skills/game-mechanics-horror/worldview-game-evidence-based-entity-identification/README.md) | Candidate hypotheses, positive/negative/inconclusive/contaminated tests, witness and institutional evidence, contradictions, and an action that expresses the conclusion. | “Let the player distinguish three possible visitors through access logs, residue, behavior, and one unreliable witness before choosing the containment method.” |
 | [`/worldview-game-threat-interrupted-puzzle`](skills/game-mechanics-horror/worldview-game-threat-interrupted-puzzle/README.md) | A world-space puzzle whose declared progress persists, rolls back, or changes when danger forces disengagement, with a warning window and recovery route. | “The tidewheel puzzle takes four physical steps; the stalker may interrupt after step two, but the player must understand what stayed solved.” |
 
-### 🧠 Trust, memory, and shared knowledge
+##### 05. Trust, memory, and shared knowledge 🧠
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;—&nbsp;optional;&nbsp;the&nbsp;Agent&nbsp;can&nbsp;route&nbsp;here&nbsp;automatically | What it helps the Agent build | Example input |
 | --- | --- | --- |
@@ -157,7 +168,7 @@ The Agent should not turn that prompt into a checklist of every mechanic. It sel
 | [`/worldview-game-asymmetric-information-cooperation`](skills/game-mechanics-horror/worldview-game-asymmetric-information-cooperation/README.md) | Different active participants with partial knowledge, role-specific actions, acknowledgements, communication loss, reconnect rules, and deterministic fallbacks. | “One player reads the bell sequence while the other operates valves in another room; neither can solve it alone, and missed messages need visible acknowledgement.” |
 | [`/worldview-game-character-handoff-and-shared-evidence`](skills/game-mechanics-horror/worldview-game-character-handoff-and-shared-evidence/README.md) | Sequential playable viewpoints where actions, custody, facts, residue, mistakes, and consequences cross an atomic character handoff without cloning world state. | “Play the first chapter as the inspector who hides evidence, then the second as the sister who finds the moved objects and inherits only what was actually recorded.” |
 
-### 🛣️ Journey, pacing, and social pressure
+##### 06. Journey, pacing, and social pressure 🛣️
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;—&nbsp;optional;&nbsp;the&nbsp;Agent&nbsp;can&nbsp;route&nbsp;here&nbsp;automatically | What it helps the Agent build | Example input |
 | --- | --- | --- |
@@ -169,7 +180,7 @@ The Agent should not turn that prompt into a checklist of every mechanic. It sel
 | [`/worldview-game-horror-procedural-duty-and-incident`](skills/game-mechanics-horror/worldview-game-horror-procedural-duty-and-incident/README.md) | A legitimate duty that teaches useful procedure, makes an abnormal incident worth approaching, preserves interrupted work, and changes authority, witnesses, or routes. | “As the night inspector, teach the evacuation check during a calm round, then interrupt it with one room whose occupant should not exist.” |
 | [`/worldview-game-horror-role-and-identity-pressure`](skills/game-mechanics-horror/worldview-game-horror-role-and-identity-pressure/README.md) | Horror built from claimed roles, permissions, expected conduct, schedules, access history, observer belief, accusation risk, and recourse—not face matching alone. | “Two attendants look alike; let the player judge them through key access, schedule, private knowledge, and behavior, with a cost for accusing the wrong one.” |
 
-### What these Skills change in the finished game
+##### 07. What these Skills change in the finished game
 
 - The player performs or inspects the normal version of a routine before the game asks them to notice a violation.
 - A chase is a route the player can learn, misread, recover within, and eventually master—not an enemy reading the hidden player transform.
@@ -191,7 +202,7 @@ Then implement and verify the route in the current project.
 
 [Choose from all horror mechanics →](skills/game-mechanics-horror/README.md)
 
-## Game analysis
+### 2.3 Game analysis
 
 Use the analysis Skill before implementation when you want the Agent to learn from a set of gameplay videos, screenshots, a creator's channel, or a reference style. It treats the footage as design evidence: player decisions, hesitation, route discovery, camera language, architecture, objects, threat state, sound, and the connection between them. It does not merely summarize the plot or imitate another game's assets.
 
@@ -200,9 +211,9 @@ Use the analysis Skill before implementation when you want the Agent to learn fr
 | [`/worldview-gameplay-video-analysis`](skills/game-analysis/worldview-gameplay-video-analysis/README.md) | A timestamped observation ledger, screenshot/style board, route and mechanism diagrams, tagged design patterns and failure modes, and cross-video clusters that can feed a new horror game's contracts. |
 | [`/worldview-gameplay-experience-study`](skills/game-analysis/worldview-gameplay-experience-study/README.md) | A first-person reconstruction, third-person design critique, quality judgment, routed qualitative cases, and original transfer cards built from evidence. |
 
-## Game design and 2D game creation
+### 2.4 General game design and 2D creation
 
-### Gameplay, encounters, and levels
+#### 2.4.1 Gameplay, encounters, and levels
 
 | Slash entry | What it creates |
 | --- | --- |
@@ -214,7 +225,7 @@ Use the analysis Skill before implementation when you want the Agent to learn fr
 | [`/roguelike-generator`](skills/game-design/roguelike-generator/SKILL.md) | Room grammar, risk/reward structure, upgrades, and a closing boss for a run. |
 | [`/narrative-choice`](skills/game-design/narrative-choice/SKILL.md) | Branching decisions with state, delayed consequences, and honest reconvergence. |
 
-### Playable 2D formats and sprites
+#### 2.4.2 Playable 2D formats and sprites
 
 | Slash entry | What it creates |
 | --- | --- |
@@ -224,7 +235,7 @@ Use the analysis Skill before implementation when you want the Agent to learn fr
 | [`/visual-novel`](skills/2d-game/visual-novel/SKILL.md) | A playable dialogue scene with characters, expressions, backgrounds, and branches. |
 | [`/pixel-art-sprite`](skills/2d-game/pixel-art-sprite/SKILL.md) | A locked pixel grid, palette, character animations, and matching tiles. |
 
-## 3D asset creation
+### 2.5 3D asset creation
 
 These Skills create consistent design sheets, multi-angle references, production specifications, and—when a compatible 3D tool is available—editable models or scene assets.
 
@@ -237,7 +248,7 @@ These Skills create consistent design sheets, multi-angle references, production
 | [`/vfx-effect`](skills/3d-assets/vfx-effect/SKILL.md) | A reusable effect with shape, palette, timing, causality, and a reviewable loop. |
 | [`/worldview-3d-asset-production-route`](skills/3d-assets/worldview-3d-asset-production-route/README.md) | A decision and verification route for hand-authored, procedural, or image-to-3D assets, including static-mesh use, topology and rigging checks, Tripo-style generation limits, rights, and runtime integration. |
 
-## Film and video production
+## 3. Film and video production
 
 | Slash entry | What it creates |
 | --- | --- |
@@ -269,7 +280,7 @@ These Skills create consistent design sheets, multi-angle references, production
 
 </details>
 
-## Story writing
+## 4. Story writing
 
 | Slash entry | What it creates |
 | --- | --- |
@@ -278,7 +289,7 @@ These Skills create consistent design sheets, multi-angle references, production
 | [`/romance-arc`](skills/narrative/romance-arc/SKILL.md) | A relationship built from incompatible wants, intimacy, rupture, and chosen reunion. |
 | [`/mystery-detective`](skills/narrative/mystery-detective/SKILL.md) | A fair clue trail, suspect logic, misdirection, and solvable reveal. |
 
-## Repository layout
+## 5. Repository layout
 
 The folder labels below describe the Skills they contain:
 
@@ -299,13 +310,13 @@ docs/                          Maintainer notes for category boundaries and Skil
 
 The `docs/` folder is for maintainers. It explains how the repository is organized and how new Skills are written; an Agent normally needs only the matching `SKILL.md` and its companion files. Future game-perspective Skills—first-person, third-person, 2.5D, isometric, and side-view—have their own reserved branch in the [game Skill architecture](docs/game-skill-architecture.md), separate from gameplay mechanics and production Skills.
 
-## License and sources
+## 6. License and sources
 
 Licensed under [Apache License 2.0](LICENSE). Each newly researched game package includes a `SOURCE.md` file recording its authorship, research inputs, and non-copy boundary.
 
 When a project uses an existing game, film, book, or visual world, keep its attribution visible and obtain the rights required for publication or commercial use.
 
-## Sponsor
+## 7. Sponsor
 
 [Neta](https://neta.art): Give your world its first heartbeat. Describe it. Neta brings your world to life, and lets you step inside.
 

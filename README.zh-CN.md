@@ -28,18 +28,21 @@
 
 ## 目录
 
-- [安装与更新](#安装与更新)
-- [高保真游戏制作](#高保真游戏制作)
-- [恐怖游戏机制](#恐怖游戏机制)
-- [游戏分析](#游戏分析)
-- [游戏设计与 2D 游戏制作](#游戏设计与-2d-游戏制作)
-- [3D 资产制作](#3d-资产制作)
-- [电影与视频制作](#电影与视频制作)
-- [故事写作](#故事写作)
-- [GitHub 文件结构](#github-文件结构)
-- [许可证与来源](#许可证与来源)
+- [1. 安装与更新](#1-安装与更新)
+- [2. 游戏制作](#2-游戏制作)
+  - [2.1 高保真游戏制作](#21-高保真游戏制作)
+  - [2.2 游戏类别](#22-游戏类别)
+    - [2.2.1 恐怖游戏](#221-恐怖游戏)
+  - [2.3 游戏分析](#23-游戏分析)
+  - [2.4 通用游戏设计与 2D 制作](#24-通用游戏设计与-2d-制作)
+  - [2.5 3D 资产制作](#25-3d-资产制作)
+- [3. 电影与视频制作](#3-电影与视频制作)
+- [4. 故事写作](#4-故事写作)
+- [5. GitHub 文件结构](#5-github-文件结构)
+- [6. 许可证与来源](#6-许可证与来源)
+- [7. 赞助商](#7-赞助商)
 
-## 安装与更新
+## 1. 安装与更新
 
 为所有受支持的 Agent 安装全部 74 个 Skill：
 
@@ -72,7 +75,11 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 水位持续上升。使用当前仓库完成实现。
 ```
 
-## 高保真游戏制作
+## 2. 游戏制作
+
+游戏 Skill 按完整制作、游戏类别、分析、通用设计和资产制作分层。以后新增的游戏类型会放在 **2.2 游戏类别** 下，与恐怖游戏并列，不会混入机制或资产列表。
+
+### 2.1 高保真游戏制作
 
 | Slash 入口 | 适合用来做什么 | 得到什么 |
 | --- | --- | --- |
@@ -87,16 +94,20 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 
 [选择适合的游戏制作 Skill →](skills/game-production/README.md)
 
-## 恐怖游戏机制
+### 2.2 游戏类别
+
+每个游戏类别先提供完整制作入口，再按编号列出机制章节。恐怖游戏是第一个类别，后续类别会沿用相同结构。
+
+#### 2.2.1 恐怖游戏
 
 直接描述你想做的游戏即可。Agent 会自行选择并组合相关 Skill，建立共享状态，按安全顺序实现并验证。下面 27 个机制入口用于精确控制，但**你不需要记住，也不需要逐个手动调用**。
 
 > [!TIP]
 > 最简单的方式是把本仓库链接和游戏设想交给 Agent，让它自行阅读、安装并选择 Skill。Slash 入口只是控制某个具体机制的可选工具，不是需要用户手工搭建的工作流。
 
-**本节目录：** [制作完整恐怖游戏](#-先制作一款完整的恐怖游戏) · [追逐与躲藏](#-追逐躲藏与威胁行为) · [生存系统](#-生存资源与身体风险) · [调查目标](#-调查工具与被打断的目标) · [信任合作](#-信任记忆与共享知识) · [旅程节奏](#-旅程节奏与社会压力)
+**恐怖游戏章节：** [01 完整制作](#01-先制作一款完整的恐怖游戏) · [02 追逐与躲藏](#02-追逐躲藏与威胁行为) · [03 生存系统](#03-生存资源与身体风险) · [04 调查目标](#04-调查工具与被打断的目标) · [05 信任合作](#05-信任记忆与共享知识) · [06 旅程节奏](#06-旅程节奏与社会压力) · [07 成品变化](#07-这些-skill-会怎样改变最终游戏)
 
-### 🎬 先制作一款完整的恐怖游戏
+##### 01. 先制作一款完整的恐怖游戏 🎬
 
 只有故事、地点、参考图或粗略想法时，优先使用总制作 Skill。它会负责体验时间线、地图与路线、机制选择和路由、实现顺序、运行验证与最终交付。
 
@@ -116,7 +127,7 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 
 Agent 不应该把这段需求变成“每个机制都加一点”的清单。它会选择最小但有效的组合，为共享状态指定唯一所有者，并删掉无法改善目标体验的系统。
 
-### 🏃 追逐、躲藏与威胁行为
+##### 02. 追逐、躲藏与威胁行为 🏃
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;可&#8288;选&#8288;，&#8288;Agent&nbsp;可&#8288;以&#8288;自&#8288;动&#8288;路&#8288;由 | 能帮助 Agent 做什么 | 示例输入 |
 | --- | --- | --- |
@@ -128,7 +139,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/worldview-game-barricade-delay-and-route-choice`](skills/game-mechanics-horror/worldview-game-barricade-delay-and-route-choice/README.md) | 用材料、噪声、通行权或未来路线换取可测量的时间，并处理破坏、绕路、持久化和重置。 | “玩家可以锁住一个楼梯门换取 18 秒，但之后永久失去返回药房的捷径。” |
 | [`/worldview-game-chase-route-architecture`](skills/game-mechanics-horror/worldview-game-chase-route-architecture/README.md) | 用建筑路线设计追逐：主路线、危险备选、失败回路、视线断点、交互锁、恢复区、检查点与精确时间余量。 | “把医院追逐画成 2.5D 路线图，包含一条正确路线、两个可理解的错误、恢复回路和最终门时序。” |
 
-### 🎒 生存资源与身体风险
+##### 03. 生存资源与身体风险 🎒
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;可&#8288;选&#8288;，&#8288;Agent&nbsp;可&#8288;以&#8288;自&#8288;动&#8288;路&#8288;由 | 能帮助 Agent 做什么 | 示例输入 |
 | --- | --- | --- |
@@ -138,7 +149,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/worldview-game-wounds-infection-and-treatment`](skills/game-mechanics-horror/worldview-game-wounds-infection-and-treatment/README.md) | 制作虚构、可读、随时间发展的受伤流程，包括稳定伤势、移动限制、治疗选择、复查、低刺激呈现和持久化。 | “玻璃割伤会让攀爬变慢并逐步恶化，直到玩家在诊所清理和包扎；明确它不是医疗建议。” |
 | [`/worldview-game-relief-resource-with-hidden-cost`](skills/game-mechanics-horror/worldview-game-relief-resource-with-hidden-cost/README.md) | 让资源真正缓解当前问题，同时产生独立的延迟风险，并通过症状、痕迹和替代路线让代价可以学习。 | “药剂能暂时压住恐慌让玩家穿过画廊，但反复使用会产生可读的畏光，并改变后续路线。” |
 
-### 🔎 调查、工具与被打断的目标
+##### 04. 调查、工具与被打断的目标 🔎
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;可&#8288;选&#8288;，&#8288;Agent&nbsp;可&#8288;以&#8288;自&#8288;动&#8288;路&#8288;由 | 能帮助 Agent 做什么 | 示例输入 |
 | --- | --- | --- |
@@ -147,7 +158,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/worldview-game-evidence-based-entity-identification`](skills/game-mechanics-horror/worldview-game-evidence-based-entity-identification/README.md) | 建立候选假设、阳性/阴性/不确定/受污染测试、证人和机构证据、矛盾，以及表达最终结论的实际行动。 | “通过门禁日志、残留物、行为和一名不可靠证人区分三种访客，再选择正确的收容方式。” |
 | [`/worldview-game-threat-interrupted-puzzle`](skills/game-mechanics-horror/worldview-game-threat-interrupted-puzzle/README.md) | 设计会被威胁中断的世界内谜题，明确哪些进度保留、回退或改变，并提供预警窗口和恢复路线。 | “潮轮谜题有四个物理步骤，追踪者可在第二步后打断，但玩家必须清楚哪些步骤仍然有效。” |
 
-### 🧠 信任、记忆与共享知识
+##### 05. 信任、记忆与共享知识 🧠
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;可&#8288;选&#8288;，&#8288;Agent&nbsp;可&#8288;以&#8288;自&#8288;动&#8288;路&#8288;由 | 能帮助 Agent 做什么 | 示例输入 |
 | --- | --- | --- |
@@ -156,7 +167,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/worldview-game-asymmetric-information-cooperation`](skills/game-mechanics-horror/worldview-game-asymmetric-information-cooperation/README.md) | 设计拥有不同知识和动作权限的同时参与者，包括消息确认、通信中断、重连规则和确定性替代方案。 | “一名玩家读取钟声顺序，另一名在别的房间操作阀门；两人都不能独立解决，漏掉的消息必须有可见确认。” |
 | [`/worldview-game-character-handoff-and-shared-evidence`](skills/game-mechanics-horror/worldview-game-character-handoff-and-shared-evidence/README.md) | 设计顺序切换的可玩视角，让行动、物品持有、事实、痕迹、错误和后果通过原子切换传递，而不是复制世界状态。 | “第一章扮演藏起证据的检查员，第二章扮演其妹妹；她只能发现被移动的物体和真正记录下来的内容。” |
 
-### 🛣️ 旅程、节奏与社会压力
+##### 06. 旅程、节奏与社会压力 🛣️
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;可&#8288;选&#8288;，&#8288;Agent&nbsp;可&#8288;以&#8288;自&#8288;动&#8288;路&#8288;由 | 能帮助 Agent 做什么 | 示例输入 |
 | --- | --- | --- |
@@ -168,7 +179,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/worldview-game-horror-procedural-duty-and-incident`](skills/game-mechanics-horror/worldview-game-horror-procedural-duty-and-incident/README.md) | 用合法职责教会有用流程，使异常事件值得接近，并保存被打断工作，同时改变权限、证人或路线。 | “先用一次平静巡查教会夜班检查员疏散流程，再用一间不该有人却有人回应的房间打断它。” |
 | [`/worldview-game-horror-role-and-identity-pressure`](skills/game-mechanics-horror/worldview-game-horror-role-and-identity-pressure/README.md) | 通过角色声明、权限、预期行为、时间表、门禁历史、观察者判断、误判风险和申诉空间制造恐怖，而非只做认脸测试。 | “两名服务员长得一样；让玩家根据钥匙权限、班表、私人知识和行为判断，指错人必须付出代价。” |
 
-### 这些 Skill 会怎样改变最终游戏
+##### 07. 这些 Skill 会怎样改变最终游戏
 
 - 玩家会先亲手执行或检查正常流程，之后才需要发现异常。
 - 追逐是一条可以学习、走错、恢复并最终掌握的路线，而不是怪物读取隐藏的玩家坐标。
@@ -189,7 +200,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 
 [查看全部恐怖机制 →](skills/game-mechanics-horror/README.md)
 
-## 游戏分析
+### 2.3 游戏分析
 
 在实现前，可以让 Agent 从游戏视频、截图、创作者频道或风格参考中提取设计证据。它会记录玩家的决策、犹豫、回头、镜头、建筑、物品、威胁状态、声音及其串联方式，而不只是复述剧情或照抄资产。
 
@@ -198,9 +209,9 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/worldview-gameplay-video-analysis`](skills/game-analysis/worldview-gameplay-video-analysis/README.md) | 带时间戳的观察记录、截图/风格板、路线与机制图、设计模式与失败模式标签，以及可以反哺恐怖游戏契约的跨视频聚类。 |
 | [`/worldview-gameplay-experience-study`](skills/game-analysis/worldview-gameplay-experience-study/README.md) | 从第一人称体验、第三人称设计判断和证据中形成定性案例，并转成可用于原创设计的决策记录。 |
 
-## 游戏设计与 2D 游戏制作
+### 2.4 通用游戏设计与 2D 制作
 
-### 玩法、遭遇与关卡
+#### 2.4.1 玩法、遭遇与关卡
 
 | Slash 入口 | 制作内容 |
 | --- | --- |
@@ -212,7 +223,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/roguelike-generator`](skills/game-design/roguelike-generator/SKILL.md) | 一局游戏的房间语法、风险收益、升级和最终 Boss。 |
 | [`/narrative-choice`](skills/game-design/narrative-choice/SKILL.md) | 带状态、延迟后果和合理合流的分支选择。 |
 
-### 可玩的 2D 游戏形式与像素动画
+#### 2.4.2 可玩的 2D 游戏形式与像素动画
 
 | Slash 入口 | 制作内容 |
 | --- | --- |
@@ -222,7 +233,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/visual-novel`](skills/2d-game/visual-novel/SKILL.md) | 带角色、表情、背景和分支的可玩对话场景。 |
 | [`/pixel-art-sprite`](skills/2d-game/pixel-art-sprite/SKILL.md) | 统一网格、调色板、角色动作和配套地块。 |
 
-## 3D 资产制作
+### 2.5 3D 资产制作
 
 这些 Skill 会制作统一的设计图、多角度参考和生产规格；存在兼容的 3D Tool 时，还可以继续生成可编辑模型或场景资产。
 
@@ -235,7 +246,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/vfx-effect`](skills/3d-assets/vfx-effect/SKILL.md) | 具有形状、配色、时序、因果关系和可审查循环的特效。 |
 | [`/worldview-3d-asset-production-route`](skills/3d-assets/worldview-3d-asset-production-route/README.md) | 在手工建模、程序化建模和图像转 3D 之间做选择，并检查静物网格、拓扑、绑定、变形、授权和运行时集成。 |
 
-## 电影与视频制作
+## 3. 电影与视频制作
 
 | Slash 入口 | 制作内容 |
 | --- | --- |
@@ -267,7 +278,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 
 </details>
 
-## 故事写作
+## 4. 故事写作
 
 | Slash 入口 | 制作内容 |
 | --- | --- |
@@ -276,7 +287,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/romance-arc`](skills/narrative/romance-arc/SKILL.md) | 从冲突欲望、亲密、破裂到主动重聚的关系线。 |
 | [`/mystery-detective`](skills/narrative/mystery-detective/SKILL.md) | 公平线索、嫌疑人逻辑、误导和读者可以推导的揭晓。 |
 
-## GitHub 文件结构
+## 5. GitHub 文件结构
 
 下面每个目录的说明都指向它所包含的 Skill：
 
@@ -297,13 +308,13 @@ docs/                         供维护者使用的分类边界与 Skill 写作�
 
 未来的第一人称、第三人称、2.5D、等距视角和横版视角 Skill 会放在独立的视角分支中，不会和玩法机制或游戏制作 Skill 混在一起。完整规划见 [游戏 Skill 架构](docs/game-skill-architecture.md)。
 
-## 许可证与来源
+## 6. 许可证与来源
 
 仓库采用 [Apache License 2.0](LICENSE)。每个经过外部资料研究的新游戏 Skill 都包含 `SOURCE.md`，记录原创归属、研究输入和禁止复制的边界。
 
 如果项目使用已有游戏、电影、书籍或视觉世界，请保留来源，并在公开发布或商业使用前取得所需权利。
 
-## 赞助商
+## 7. 赞助商
 
 [Neta](https://neta.art): Give your world its first heartbeat. Describe it. Neta brings your world to life, and lets you step inside.
 
