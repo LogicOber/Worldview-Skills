@@ -3,16 +3,20 @@
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-2f80ed?style=for-the-badge" alt="Apache 2.0 license"></a>
-  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-75-111827?style=for-the-badge" alt="75 Skills"></a>
-  <a href="https://skills.sh"><img src="https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex-111827?style=for-the-badge" alt="Works with Claude Code and Codex"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-2f80ed?style=flat-square" alt="Apache 2.0 license"></a>
+  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-75-334155?style=flat-square" alt="75 Skills"></a>
 </p>
 
-<p align="center"><a href="./README.md"><strong>English</strong></a> · <a href="./README.zh-CN.md">简体中文</a></p>
+<p align="center">
+  <a href="./README.md"><img src="https://img.shields.io/badge/English-2563eb?style=flat-square" alt="English — current language"></a>
+  <a href="./README.zh-CN.md"><img src="https://img.shields.io/badge/简体中文-475569?style=flat-square" alt="简体中文"></a>
+  <a href="./README.ja.md"><img src="https://img.shields.io/badge/日本語-475569?style=flat-square" alt="日本語"></a>
+  <a href="./README.ko.md"><img src="https://img.shields.io/badge/한국어-475569?style=flat-square" alt="한국어"></a>
+</p>
 
 # Worldview Skills
 
-Build playable games, high-fidelity game scenes, films, reusable visual assets, and complete stories with Claude Code, Codex, or another Agent that supports `SKILL.md`.
+Turn an idea into a playable game, a detailed game scene, a film, reusable visual assets, or a complete story. Use any agent that supports `SKILL.md`, including Claude Code, Codex, and compatible agents running in Conductor. Installation and tool access depend on the agent you use, not on a specific app.
 
 Give an Agent this repository URL and a sentence describing what you want. It installs the Skills and chooses the relevant ones. If you are still developing a game idea, it starts with the story, player activities, discoveries, and estimated play time, then presents the draft for your review before implementation. If you have already asked it to build the game and choose the details, it can carry that plan through production and verification. You do not need to assemble a workflow or remember which Skill to call next. Slash entries remain available for precise control over one stage.
 
@@ -78,7 +82,7 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 
 These commands follow the official [Vercel Skills CLI](https://github.com/vercel-labs/skills#readme). Re-run the full `add ... --all` command when you also want Skills published after your original installation.
 
-After installation, call a Skill by its Slash name and write the request underneath it:
+Where your agent supports Slash commands, call a Skill by its name and write the request underneath it. Otherwise, name the Skill in your request or ask the agent to read its `SKILL.md`:
 
 ```text
 /worldview-game-high-fidelity-vertical-slice
