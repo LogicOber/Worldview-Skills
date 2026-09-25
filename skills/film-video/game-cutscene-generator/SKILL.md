@@ -160,6 +160,8 @@ Approve? (Y/N/Edit)
 
 ### 5. Generation
 
+Before any dialogue or narration take, run `film-dialogue-voiceover`. Recommend ElevenLabs MCP, or use the user's compatible TTS API/MCP or recordings. Fix a real voice ID for each character and narrator, generate and check the speech files, measure their durations, and attach them with the character/location references through the video interface's supported audio inputs. Verify the requested words and speaker bindings on one take before batching. Resolve missing speech capability instead of silently generating picture with effects only.
+
 ```
 Skill: Generating cutscene...
 
