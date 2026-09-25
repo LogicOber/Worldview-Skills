@@ -111,7 +111,7 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 
 只有故事、地点、参考图或粗略想法时，优先使用总制作 Skill。它会负责体验时间线、地图与路线、机制选择和路由、实现顺序、运行验证与最终交付。
 
-| 🎮&nbsp;主&#8288;要&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;可&#8288;选&#8288;，&#8288;Agent&nbsp;可&#8288;以&#8288;自&#8288;行&#8288;选&#8288;择 | 能完成什么 | 示例输入 |
+| 🎮&nbsp;主&#8288;要&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;从&#8288;这&#8288;里&#8288;开&#8288;始 | 能完成什么 | 示例输入 |
 | --- | --- | --- |
 | [`/worldview-game-horror-production`](skills/game-production/worldview-game-horror-production/README.md) | 把简短设想做成一款完整恐怖游戏，只选择真正改变玩法的机制，连接各自的状态所有者，先完成灰盒，再验证成功、失败、恢复、存档、读档和结局。 | “制作一款约 25 分钟的英文第一人称恐怖游戏，地点是废弃渡轮码头，只有一个正史结局。复用当前项目，自行选择机制，完成实现并给我可玩的 URL。” |
 
@@ -129,7 +129,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 
 ##### 02. 追逐、躲藏与威胁行为 🏃
 
-| 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;可&#8288;选&#8288;，&#8288;Agent&nbsp;可&#8288;以&#8288;自&#8288;动&#8288;路&#8288;由 | 能帮助 Agent 做什么 | 示例输入 |
+| 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;精&#8288;确&#8288;控&#8288;制 | 能帮助 Agent 做什么 | 示例输入 |
 | --- | --- | --- |
 | [`/worldview-game-lure-hide-escape`](skills/game-mechanics-horror/worldview-game-lure-hide-escape/README.md) | 制作有明确边界的诱导—躲藏—逃脱遭遇：制造假声源、脱离观察、进入真实掩体、判断搜索过程并利用经过计算的窗口离开。 | “在旅馆楼层让我扔出瓶子、藏到床底，等怪物搜错房间后从服务门离开。” |
 | [`/worldview-game-observation-gated-stalker`](skills/game-mechanics-horror/worldview-game-observation-gated-stalker/README.md) | 制作只有在未被有效观察时才能移动或伤害玩家的威胁，并处理屏幕边缘、遮挡、多人权限和公平接触时序。 | “雕像只有在所有有效玩家镜头都看不到它时才能前进，让柱子和移开视线成为路线决策。” |
@@ -141,7 +141,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 
 ##### 03. 生存资源与身体风险 🎒
 
-| 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;可&#8288;选&#8288;，&#8288;Agent&nbsp;可&#8288;以&#8288;自&#8288;动&#8288;路&#8288;由 | 能帮助 Agent 做什么 | 示例输入 |
+| 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;精&#8288;确&#8288;控&#8288;制 | 能帮助 Agent 做什么 | 示例输入 |
 | --- | --- | --- |
 | [`/worldview-game-scarce-inventory-triage`](skills/game-mechanics-horror/worldview-game-scarce-inventory-triage/README.md) | 设计有限容量、可行装备组合、受保护的流程道具、丢弃/存放/使用选择、溢出恢复和存档后所有权。 | “进入矿井前只有六个格子，让药品、照明、工具、证据和弹药竞争，但任何选择都不能软锁。” |
 | [`/worldview-game-key-item-backtracking`](skills/game-mechanics-horror/worldview-game-key-item-backtracking/README.md) | 让钥匙或工具重新激活玩家记住的锁，同时改变返程路线、打开捷径，并在存读档后保持可恢复。 | “锅炉房里的黄铜阀门能重新打开被淹档案室，但返程必须出现新的威胁和一条捷径。” |
@@ -151,7 +151,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 
 ##### 04. 调查、工具与被打断的目标 🔎
 
-| 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;可&#8288;选&#8288;，&#8288;Agent&nbsp;可&#8288;以&#8288;自&#8288;动&#8288;路&#8288;由 | 能帮助 Agent 做什么 | 示例输入 |
+| 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;精&#8288;确&#8288;控&#8288;制 | 能帮助 Agent 做什么 | 示例输入 |
 | --- | --- | --- |
 | [`/worldview-game-restore-power-under-pressure`](skills/game-mechanics-horror/worldview-game-restore-power-under-pressure/README.md) | 设计零件搜索、分阶段维修、被打断规则、电路状态、通电后的世界变化、可理解失败与干净重置。 | “玩家寻找两个保险丝并启动被淹发电机，怪物会巡逻，但完成一半的维修在一次中断后仍然保留。” |
 | [`/worldview-game-signal-proximity-tracking`](skills/game-mechanics-horror/worldview-game-signal-proximity-tracking/README.md) | 制作会受到距离、拓扑、遮挡和干扰影响的探测器，同时避免泄露目标实时坐标。 | “无线电表靠近地下发射器时更可靠，但在电梯电缆旁会以可学习的方式误报。” |
@@ -160,7 +160,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 
 ##### 05. 信任、记忆与共享知识 🧠
 
-| 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;可&#8288;选&#8288;，&#8288;Agent&nbsp;可&#8288;以&#8288;自&#8288;动&#8288;路&#8288;由 | 能帮助 Agent 做什么 | 示例输入 |
+| 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;精&#8288;确&#8288;控&#8288;制 | 能帮助 Agent 做什么 | 示例输入 |
 | --- | --- | --- |
 | [`/worldview-game-perception-distortion-and-trust`](skills/game-mechanics-horror/worldview-game-perception-distortion-and-trust/README.md) | 让部分线索变得不可靠，同时分开世界事实、角色理解、玩家看到的内容和保存的证据，并保留至少一个可靠锚点。 | “暴露后走廊指示牌会说谎，但房间几何和盖章维修记录仍足够可靠，玩家可以据此推理。” |
 | [`/worldview-game-death-loop-persistent-clues`](skills/game-mechanics-horror/worldview-game-death-loop-persistent-clues/README.md) | 设计有限循环，明确世界状态、角色记忆、线索、物品变化、已掌握劳动和重试压缩分别如何处理。 | “港口在 04:13 重置；玩家保留一个学会的密码并跳过已掌握的抽水流程，但实体钥匙回到原持有人。” |
@@ -169,7 +169,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 
 ##### 06. 旅程、节奏与社会压力 🛣️
 
-| 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;可&#8288;选&#8288;，&#8288;Agent&nbsp;可&#8288;以&#8288;自&#8288;动&#8288;路&#8288;由 | 能帮助 Agent 做什么 | 示例输入 |
+| 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;精&#8288;确&#8288;控&#8288;制 | 能帮助 Agent 做什么 | 示例输入 |
 | --- | --- | --- |
 | [`/worldview-game-stranded-journey-and-lost-protections`](skills/game-mechanics-horror/worldview-game-stranded-journey-and-lost-protections/README.md) | 在旅程不同阶段依次拿走行动能力、通信、庇护、可信度、同伴或可靠返程，但每一步都保留代价明确的替代方案。 | “巴士抛锚后困住信使，依次失去手机信号、庇护和可靠向导，但每个阶段都保留一种昂贵后路。” |
 | [`/worldview-game-driving-horror-divided-attention`](skills/game-mechanics-horror/worldview-game-driving-horror-divided-attention/README.md) | 连接道路负荷、后视镜、仪表、车内威胁、注视时间、停车节点、控制干扰、检查点与晕动舒适方案。 | “隧道驾驶时让玩家兼顾后视镜和故障温度表，同时保证道路可读，绝不能伪造玩家的转向输入。” |
