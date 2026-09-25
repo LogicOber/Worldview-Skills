@@ -25,7 +25,7 @@ We have the advantage of hindsight. The course taught these lessons one failure 
 | 4b | `film-screen-capture` | real screenshots of web pages/apps that must appear on screens in shots (user-supplied first; browser capture only as fallback) | yes (pick) |
 | 5 | `film-shot-prompt` | one prompt per block (or per split sub-block) with @refs | yes (read prompt) |
 | 5b | `film-action-combat` | action-block prompts: anchors, four-part strikes, causality, density and camera parameters — called by 5 for any fight, chase or stunt | no (automatic) |
-| 5c | `film-dialogue-voiceover` | audio for every line, timing, lip-sync syntax; warns when no TTS is configured — called by 5 for any spoken line | no (automatic) |
+| 5c | `film-dialogue-voiceover` | stable voice cast, verified speech files, measured timing, and actual audio inputs — completed before any voiced video request | resolve missing service or recording before a voiced batch |
 | 6 | `film-generate-review` | parallel takes, per-beat verdicts, locks, assembled scene | yes (lock) |
 | 7 | `film-end-credits` | title, director and brand cards in cinema convention (black, white, still); dissolve spec; appended after the last shot | yes (read) |
 
@@ -41,11 +41,11 @@ The course went scene by scene: assets for scene 1, shoot scene 1, assets for sc
 
 1. **Outline** (`direction.md` + `story.md`: spine, conflict ladder, emotion map) → user approves. The story stage supplies conflict, loss and dilemma even when the user did not ask for them; most users won't.
 2. **Full script**, iterated until every block, shot and line is approved. Nothing is generated until here.
-3. **All assets for the whole film** — every character, variant, location, prop, screen — generated in parallel batches, picked, locked. The script's build list is the checklist.
+3. **All assets for the whole film** — every character, variant, location, prop, screen — generated in parallel batches, picked, locked. For dialogue or narration, use `film-dialogue-voiceover` now: recommend ElevenLabs MCP, resolve each speaker's real voice ID, generate and check the speech files, measure their durations, and verify the video's audio-input route. The script's build list includes these recordings.
 4. **Style check**: block 1 only, `standard` (×4), on the final video model. The user confirms the look is live-action, the motion feels right, the references hold. If not, fix the prompt template, not the film.
 5. **All remaining blocks** fired as one parallel wave (`standard` each; `max` for blocks the user flags as risky).
-6. **Lock by index** — user names take numbers per block; assemble; then the audio pass.
-7. **Audio last**: TTS lines (`higgs-tts` preferred; `qwen-audio-3.0-tts-plus` alternate), music (`suno_music_chirp_fenix`) only after the picture is locked, because timing is set by the cut.
+6. **Lock by index** — review picture and required speech; user names take numbers per block; assemble accepted takes.
+7. **Final mix last, speech preparation first.** After picture lock, add music and effects and balance the mix. Speech that drives a performance is already prepared and attached before video generation. Off-screen narration may be mixed in later using its prepared track; never silently defer requested character voices until after a video batch.
 
 Reasoning: every API call adds variance; every gate closed early removes a class of it. Batching the whole film also means all takes arrive together and the review is one sitting instead of eight.
 
@@ -57,8 +57,10 @@ films/<slug>/
   script.md               stage 1: blocks, shots, justifications, build list
   continuity.md           ledger: per block → exit state of every character (emotion, wardrobe, seat, props in hand)
   asset-map.json          name → locked file/url/desc + which blocks it appears in
+  voice-cast.json         character/narrator → provider, real voice ID, settings, accepted preview
+  speech-lines.json       exact line → speaker, audio file, measured duration, shot, input binding
   assets/
-    characters/  locations/  props/  screens/  candidates/
+    characters/  locations/  props/  screens/  speech/  candidates/
   prompts/
     block-<nn>[<a|b|c>][-v<k>].txt
   takes/
@@ -89,7 +91,7 @@ Reasoning: one 30 s 1080p video take can take 5–20 minutes. Serial rerolls mak
 
 ## Shared scripts (`scripts/` next to this file — resolve absolute path)
 
-- `batch.sh` — fire N parallel async generations from prompt files, record task ids.
+- `batch.sh` — fire N parallel async generations from prompt files, record task ids. This image/parameter-only helper does not upload speech; use a verified audio-capable MCP/API for audio-conditioned takes.
 - `poll.sh` — poll, download, status table.
 - `capture.sh` — screenshot a live web page for use as an on-screen prop.
 
@@ -102,7 +104,7 @@ Reasoning: one 30 s 1080p video take can take 5–20 minutes. Serial rerolls mak
 | Text-only mood exploration | `krea2` | never for a locked asset |
 | Video draft (blocking check) | `seedance-2-0-fast` | 1080p, cheap, ≤15 s |
 | Video final | **`seedance-2-5`** | `--param duration=<4–30> --param resolution=1080p --param ratio=16:9`; ≤30 reference images, **public URLs only**; `first_frame` for match cuts |
-| Dialogue / VO | `higgs-tts` (clone from a prior take) or `qwen-audio-3.0-tts-plus` (design a voice) | audio pass, after picture lock |
+| Dialogue / VO | ElevenLabs MCP recommended; ElevenLabs API, compatible TTS MCP/API, or supplied recordings also work | fixed voice per speaker; prepare and measure before video, attach through the selected provider's audio-input interface |
 | Music | `suno_music_chirp_fenix` | after picture lock; instrumental unless asked |
 
 **Block length with Seedance 2.5: default 30 s.** One generation = one block; fewer calls = less variance. Go shorter (10–15 s) only when a block needs a match cut, a single line that must be isolated, or a physical beat the model must not rush. A ~2 min film ≈ 4–5 blocks of 30 s. Translate any 4K / 21:9 note in a source prompt to 1080p / 16:9 and keep the composition intent.

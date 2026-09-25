@@ -274,6 +274,8 @@ These Skills create consistent design sheets, multi-angle references, production
 
 ## 3. Film and video production
 
+**Want dialogue or narration?** Configure [ElevenLabs MCP](https://elevenlabs.io/mcp) first (recommended), or use ElevenLabs API, another compatible speech service, or your own recordings. The Agent assigns a stable voice to each character and narrator, generates and checks the speech files, then supplies them alongside visual references to an audio-capable Seedance 2.5 or other video interface. It checks the actual spoken words and voice assignments—not just background sound. See [the voice workflow](skills/core-engine/film-dialogue-voiceover/SKILL.md) for provider limitations and alternatives.
+
 | Slash entry | What it creates |
 | --- | --- |
 | [`/cinematic-film`](skills/film-video/cinematic-film/SKILL.md) | A multi-segment narrative short film from one premise. |

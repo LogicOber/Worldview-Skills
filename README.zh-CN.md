@@ -272,6 +272,8 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 
 ## 3. 电影与视频制作
 
+**需要角色对白或旁白？** 推荐先配置 [ElevenLabs MCP](https://elevenlabs.io/mcp)，也可以使用 ElevenLabs API、其他兼容语音服务，或提供自己的录音。Agent 会为每个角色和旁白固定音色，先生成并检查配音文件，再将音频与参考图一起提交给支持音频输入的 Seedance 2.5 或其他视频接口。验收时会核对台词和角色声音，而不只是检查有没有背景音效。不同接口的限制与替代方案见 [配音流程](skills/core-engine/film-dialogue-voiceover/SKILL.md)。
+
 | Slash 入口 | 制作内容 |
 | --- | --- |
 | [`/cinematic-film`](skills/film-video/cinematic-film/SKILL.md) | 从一个故事想法制作多段式叙事短片。 |

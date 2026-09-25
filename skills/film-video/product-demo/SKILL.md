@@ -52,10 +52,12 @@ film-script  → blocks ≤30 s; each product beat justified: "which aha, and
       can a first-time viewer perceive it without narration?" ← gate
 film-screen-capture   → every UI state the script needs, as real captures
 film-character-sheet / film-location / film-prop-sheet
-film-shot-prompt      → screens referenced by exact file; exact on-screen text quoted
-film-dialogue-voiceover (if lines)
+film-dialogue-voiceover → cast voices, checked recordings, measured timing (if lines)
+film-shot-prompt      → screens and speech attached through supported inputs; exact on-screen text quoted
 film-generate-review
 ```
+
+For narration or a speaking presenter, recommend ElevenLabs MCP; API, compatible TTS, and supplied recordings are alternatives. Prepare speech before video, preserve the narrator/presenter's voice ID, and verify actual audio attachments. Missing TTS or an audio-blind video wrapper needs an agreed alternative, not a silently unvoiced demo. Off-screen narration may be mixed later using its prepared track.
 
 ## Rules this entry enforces
 

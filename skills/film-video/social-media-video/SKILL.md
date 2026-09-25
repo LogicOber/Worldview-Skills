@@ -47,13 +47,16 @@ Make a vertical short that earns its second second.
 if project has footage:
   select beats → recompose for 9:16 (reframe or regenerate at ratio=9:16)
 else:
-  film-style-library → film-script (one block, ≤60 s) → assets → film-shot-prompt
+  film-style-library → film-script → assets and prepared speech → film-shot-prompt
 
 hook pass  → 3 candidate first frames + first lines; user picks one
 caption pass → transcript → captions in the middle safe zone
-sound pass → dialogue (film-dialogue-voiceover) or music (after picture lock)
+speech preparation → film-dialogue-voiceover before voiced video generation
 film-generate-review → ×2–3, review, lock, export 1080×1920
+final mix → preserve approved speech; music and effects after picture lock
 ```
+
+When speech is requested, recommend ElevenLabs MCP or a compatible API/service; retain a voice ID per speaker and attach checked recordings with visual references through an audio-capable video interface. Reused footage may receive prepared off-screen narration in the edit. Captions and background effects do not replace requested spoken lines. An explicitly caption-only or silent version does not require TTS.
 
 ## Rules this entry enforces
 

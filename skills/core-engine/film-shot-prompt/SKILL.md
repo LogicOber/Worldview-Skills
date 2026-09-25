@@ -7,6 +7,8 @@ description: Stage 5 of the AI film pipeline — turn one script block plus lock
 
 You are the cinematographer. The user describes the block the way they'd brief a DP; you return one complete prompt for **one generation (default 30 s on Seedance 2.5; shorter only when the block needs it)** plus the exact `cohub generate` command. Read `direction.md`, `script.md` (the block), `continuity.md` (entry state) and `asset-map.json` first.
 
+For dialogue or narration, complete `film-dialogue-voiceover` first and read its voice cast and measured line manifest. Return the configured provider's real audio-capable request, whether that is MCP, API, or website attachments. The image-only command below is insufficient for a voiced request requiring audio inputs.
+
 ## Prompt anatomy (keep this order — the model reads top-down and the header sets priors)
 
 ```text
@@ -66,7 +68,7 @@ The header's own exclusions ("no 3D render", "no music") are style-level priors 
 17. **Spatial lock at the top of every multi-shot block.** Paste the location's `SPATIAL LOCK` text from `asset-map.json` verbatim, before the shots. A video model rebuilds the room on every cut; the lock is the only thing that keeps the door on the left. If the location has no lock yet, write one (door, table, beds, window, lights — each with a screen side) before writing shots.
 18. **Every prop has a source.** An object does not appear in a hand; someone brings it in from somewhere, and the prompt (or a line) says where. "She enters holding a printed page — the department notice, posted an hour ago" survives; "she has a paper" does not.
 19. **Pauses are written as beats.** `BEAT — SILENCE: two seconds. Nobody has noticed.` If a reaction is not in the prompt, in order, with a duration, it does not happen and the next line is spoken over the previous action.
-20. **Route by content.** If the block contains a fight, chase, stunt or boss phase → write it with `film-action-combat` (anchors, four-part strikes, causality, density/camera parameters). If the block contains a spoken line → run `film-dialogue-voiceover` first so the line is generated as audio and referenced with `{line} [AudioN]` syntax; if no TTS is configured, the prompt says the lip-sync will be approximate and the report says so too.
+20. **Route by content.** Use `film-action-combat` for fights, chases, and stunts. For a spoken line, run `film-dialogue-voiceover` first: fix the speaker's voice ID, obtain and check the recording, measure its duration, and attach it through the provider's actual audio fields. Bind it to the correct character and shot using supported reference syntax. Narration remains off-screen. Missing speech inputs require setup or an agreed alternative before generation, not an automatic text-only downgrade.
 21. **Chain long films.** Block N+1 opens on block N's exit state, uses N's last frame as `first_frame`, and keeps the same `reference_image` URLs. The first line of N+1's Context restates where every body is, what it holds and which way it faces.
 22. **One body per identity.** Each character is bound to exactly one reference and named exactly once in the cast list. The Constraints block states: "exactly N characters, each appearing once, never duplicated, no background figures." A character described in two places (a reference plus a fresh text description, or two overlapping references) is how a second copy of her appears in the frame.
 23. **Duration lives in the parameter, not the prose.** Never write "30 seconds" or "(10s)" inside shot text — the model treats it as content. Request 2–3 s more than the edit needs (model start/end is stochastic) and trim in the cut.
@@ -99,15 +101,9 @@ The header's own exclusions ("no 3D render", "no music") are style-level priors 
 | Silhouetted partner | "the adult stays a soft dark silhouette edge (torso/hands) on the extreme left foreground, never his face, silent" | keep a shot about one person |
 | Asymmetry | "subject held hard off-centre every beat, never centred; varied headroom shot to shot" | anti-generic framing |
 
-## VO isolation (audio-only take)
+## Repair a spoken line
 
-When an action take is locked and only the line is missing, do **not** regenerate the action. Write a separate 15 s face take in a quiet room whose only job is the read:
-
-```text
-Context: a voice take. @santiago seated in the office, tight CU 85 mm, static, soft window key. He says: "That kid was sure we'd become world champions. Never doubted for a second." — low, with micro-pauses after "champions" and before "Never"; a little self-resentment; the voice trembles and catches on "second". Lips move only for the line. Diegetic room tone under it. No music.
-```
-
-Its audio is laid over the action take in the edit. Direct the **voice** like a camera move: named, timed, specific — never "make him sound sad".
+For missing off-screen narration, retain the accepted picture and generate the replacement through `film-dialogue-voiceover` using the same cast voice. Fit the measured recording to the intended window and mix it once. Direct pace, pauses, pronunciation, and delivery explicitly. A visible speaking face needs a reviewed lip-sync repair or regenerated shot; replacing its audio alone does not fix mouth timing. Do not generate an extra face video merely to obtain speech when the configured TTS can supply it directly.
 
 ## One-line deltas on a locked take
 
@@ -118,6 +114,8 @@ Once a take is locked, changes are one sentence appended to the same prompt, not
 If a block has >3 beats of dialogue or a physical action plus a dialogue, split at script level into `08a`, `08b`, `08c`, each a full 15 s prompt sharing the same References, Style (scene) and Sound blocks so the takes cut together. Sub-blocks share the anchor wide only in the first one; the others open on the previous exit state.
 
 ## Command
+
+This is an image-only submission example. For audio-conditioned scenes, inspect the live interface and include the speech uploads and output-audio settings it supports. Do not guess audio flags or send speech files as images; use the user's compatible MCP/API when this wrapper cannot carry them.
 
 ```bash
 cohub generate "$(cat films/<slug>/prompts/block-01.txt)" \

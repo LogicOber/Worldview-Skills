@@ -23,7 +23,7 @@ Make a short film from one idea. This is the full pipeline; everything else in t
 - A finished video, 2–5 minutes, in the visual style they picked from reference cards.
 - Every character, location and prop locked so they stay consistent across cuts.
 - A script with a real dramatic spine — want, obstacle, loss, dilemma, change — because a film without one reads as a demo.
-- Dialogue with audio-driven lip-sync when a TTS is configured (the skill says so if one is not).
+- Dialogue and narration with stable cast voices, prepared recordings, and reviewed audio-driven lip sync where the provider supports it.
 - A folder they can rebuild from: direction, story, script, prompts, task IDs, review notes, locks.
 
 ## What the user has to do
@@ -64,6 +64,8 @@ audio pass    → music after picture lock
 ```
 
 Read `core-engine/film-pipeline/SKILL.md` for the stage contract. Read each stage skill when you reach it. Do not work from memory.
+
+For any spoken script, recommend ElevenLabs MCP before video generation; API, compatible third-party TTS, or supplied recordings also work. Run `film-dialogue-voiceover` to fix each character/narrator's real voice ID, produce and measure speech, then attach it with the visual references through a verified audio-capable interface. Resolve missing speech capability before a voiced batch. Music and final mixing can follow picture lock.
 
 ## Rules this entry enforces
 

@@ -7,12 +7,18 @@ metadata:
   title: Anime Action Scene Generator
   category: film-video
   tags: anime; action; combat; aerial-pursuit; impact-frames; key-frame
-  parameters: '[object Object]'
+  parameters: >-
+    {"action_density":{"type":"enum","values":["standard","high","insane"],"default":"high","hidden":true},
+    "camera_intensity":{"type":"enum","values":["stable","dynamic","insane"],"default":"dynamic","hidden":true},
+    "key_frame_style":{"type":"enum","values":["smooth","strong","extreme"],"default":"strong","hidden":true},
+    "causality_mode":{"type":"enum","values":["normal","strict"],"default":"strict","hidden":true}}
 ---
 
 # Anime Action Scene Generator
 
 Generate high-intensity animated action with readable physical causes, deliberate impact frames, and dynamic camera work.
+
+If the scene includes spoken dialogue or narration, run `film-dialogue-voiceover` before video generation. Recommend ElevenLabs MCP or the user's compatible speech service, retain one voice ID per speaker, prepare and measure recordings, and attach them through the video provider's supported audio interface with the visual references. Combat sound effects alone do not satisfy a requested line. Silent action needs no TTS setup.
 
 ## What you get
 
