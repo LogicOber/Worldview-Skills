@@ -1,15 +1,17 @@
 ---
 name: social-media-video
-title: Social Media Video
-description: Entry point for a vertical (9:16) short of 15–60 seconds — a hook in the first second, one idea, captions burned in, sound designed for phones. Reuses any existing project assets or film segments and recuts them for the format. Use when the user says "TikTok", "Reels", "Shorts", "vertical", "9:16", or asks for a short version of something already made.
-category: film-video
-triggers:
-  - "TikTok video"
-  - "Reels"
-  - "Shorts"
-  - "vertical version"
-  - "9:16"
-  - "cut this down to 30 seconds"
+description: >-
+  Entry point for a vertical (9:16) short of 15–60 seconds — a hook in the first
+  second, one idea, captions burned in, sound designed for phones. Reuses any
+  existing project assets or film segments and recuts them for the format. Use
+  when the user says "TikTok", "Reels", "Shorts", "vertical", "9:16", or asks
+  for a short version of something already made.
+metadata:
+  title: Social Media Video
+  category: film-video
+  triggers: >-
+    TikTok video; Reels; Shorts; vertical version; 9:16; cut this down to 30
+    seconds
 ---
 
 # Social Media Video
@@ -64,5 +66,5 @@ film-generate-review → ×2–3, review, lock, export 1080×1920
 
 ## Related entries
 
-- `cinematic-film`, `game-cutscene`, `anime-action-scene` — sources to recut
+- `cinematic-film`, `game-cutscene-generator`, `anime-action-scene` — sources to recut
 - `product-demo` — vertical product teasers

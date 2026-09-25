@@ -1,14 +1,17 @@
 ---
 name: horror-chase
-title: Horror Chase Designer
-description: Entry point for designing a survival-horror chase — the pursuer, the map it is chased through, the hiding spots and escape routes with their success odds, the near-miss the player must survive, and the cutscene or gameplay video that shows it. Use when the user says "chase", "the monster hunts the player", "hide and escape", or describes a horror game with a pursuing enemy.
-category: game-design
-triggers:
-  - "chase sequence"
-  - "the monster chases the player"
-  - "horror chase"
-  - "hide from the enemy"
-  - "escape the mansion"
+description: >-
+  Entry point for designing a survival-horror chase — the pursuer, the map it is
+  chased through, the hiding spots and escape routes with their success odds,
+  the near-miss the player must survive, and the cutscene or gameplay video that
+  shows it. Use when the user says "chase", "the monster hunts the player",
+  "hide and escape", or describes a horror game with a pursuing enemy.
+metadata:
+  title: Horror Chase Designer
+  category: game-design
+  triggers: >-
+    chase sequence; the monster chases the player; horror chase; hide from the
+    enemy; escape the mansion
 ---
 
 # Horror Chase Designer
@@ -120,5 +123,5 @@ The doll is fully seen once: its feet.
 ## Related entries
 
 - `environment-scene` — build the mansion rooms as 3D assets
-- `game-cutscene` — the aftermath, the discovery, the first sighting
+- `game-cutscene-generator` — the aftermath, the discovery, the first sighting
 - `thriller-plot` — the story around the chase

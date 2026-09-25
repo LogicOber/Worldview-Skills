@@ -1,18 +1,15 @@
 ---
 name: worldview-3d-asset-production-route
-title: 3D Asset Production Route
 description: >-
   Route, build, validate, and integrate game-ready 3D assets by choosing
   authored, procedural, generated, or hybrid production per asset risk.
-category: 3d-assets
-triggers:
-  - "choose a 3D asset workflow"
-  - "make game-ready 3D assets"
-  - "use Tripo for this model"
-  - "generate a 3D prop"
-  - "build a character asset"
-  - "create environment assets"
-  - "asset production pipeline"
+metadata:
+  title: 3D Asset Production Route
+  category: 3d-assets
+  triggers: >-
+    choose a 3D asset workflow; make game-ready 3D assets; use Tripo for this
+    model; generate a 3D prop; build a character asset; create environment
+    assets; asset production pipeline
 ---
 
 # 3D Asset Production Route

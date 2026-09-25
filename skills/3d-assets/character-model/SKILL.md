@@ -1,14 +1,18 @@
 ---
 name: character-model
-title: Character Model
-description: Entry point for producing a game-ready character — locked 3-panel reference sheet in the project style, turnaround and expression sheets, wardrobe variants, and (where a 3D model generator is available) a textured mesh with the sheet as its reference. Use when the user says "character model", "3D character", "make a character for my game", or asks for a consistent character across many shots.
-category: 3d-assets
-triggers:
-  - "character model"
-  - "3D character"
-  - "make a character for my game"
-  - "turnaround sheet"
-  - "keep this character consistent"
+description: >-
+  Entry point for producing a game-ready character — locked 3-panel reference
+  sheet in the project style, turnaround and expression sheets, wardrobe
+  variants, and (where a 3D model generator is available) a textured mesh with
+  the sheet as its reference. Use when the user says "character model", "3D
+  character", "make a character for my game", or asks for a consistent character
+  across many shots.
+metadata:
+  title: Character Model
+  category: 3d-assets
+  triggers: >-
+    character model; 3D character; make a character for my game; turnaround
+    sheet; keep this character consistent
 ---
 
 # Character Model

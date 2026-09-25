@@ -1,10 +1,23 @@
 # Game Production
 
-Four standalone Agent Skills turn a short creative brief or an existing project into work that can be played and inspected in the real runtime. One expands a horror premise into a complete fear-driven experience and routes its mechanics. One researches and builds a substantial story campaign with one canonical ending. One starts a bounded game slice. One rebuilds the presentation of a game that already works but still looks like default primitives, flat vectors, stock UI, or unrelated assets placed together.
+Five standalone Agent Skills cover story planning and game production. Story and Play Plan writes the complete story and anticipated player experience before implementation. The four build entries develop a complete horror game, a single-ending campaign, a bounded playable slice, or the presentation of an existing game.
 
-Each entry turns an outcome such as “a complete campaign” or “AAA-style presentation” into a bounded target with working gameplay, project-specific visual decisions, real runtime states, measured behavior, and a handoff that says exactly what is finished. Choose by the result you need; no package requires another one to be installed.
+Each build entry turns an outcome such as “a complete campaign” or “AAA-style presentation” into a bounded target with working gameplay, project-specific visual decisions, real runtime states, measured behavior, and a handoff that says exactly what is finished. The writing entry delivers scenes and estimated player experience before those runtime checks are possible. Choose by the result you need; no package requires another one to be installed.
 
 ## Install and call one Skill
+
+For a story you want to read before starting implementation:
+
+```text
+/worldview-game-story-and-play-plan
+
+I want a game about a hotel preparing for its last night. Write the complete
+story and important dialogue, then plan exploration, surprises, player actions,
+and estimated play time. Show how early guesses and missed clues are handled.
+Finish the writing for my review before starting the game build.
+```
+
+The Agent can select this entry from a plain-language request. Installing all Skills only makes them available; it does not launch all stages. Story-first work is delivered for review, while an already authorized complete build can proceed from the plan.
 
 For a complete horror game whose mechanics, route, pacing, and sensory design should be filled in from a short premise:
 
@@ -77,6 +90,7 @@ The user supplies the story or the visible problem. The Agent recovers the proje
 
 | Skill | Use it when | Smallest useful input | Primary result |
 | --- | --- | --- | --- |
+| [`worldview-game-story-and-play-plan`](worldview-game-story-and-play-plan/README.md) | The story and player experience need to be developed before implementation. | An idea, setting, feeling, character, or unfinished draft. | Complete readable story, key dialogue, scene and clue plan, estimated activity timeline, early-solver and missed-clue review. |
 | [`worldview-game-horror-production`](worldview-game-horror-production/README.md) | A short horror premise should become a complete experience with a fear rhythm, connected mechanics, memorable spaces, recovery, and a tested ending. | A premise, desired fear, setting, perspective, or one reference image. | Horror production contract, experience timeline, map/route plan, selected mechanic contracts, grey-box order, sensory plan, verification journeys, and playable or implementation-ready handoff. |
 | [`worldview-game-single-ending-campaign`](worldview-game-single-ending-campaign/README.md) | A short premise should become a substantial researched game with one canonical ending, a populated world, connected gameplay, and a complete playable route. | A protagonist, conflict, theme, real-world topic, or story idea. Project, platform, duration, and publication constraints are optional. | Dated research and fiction ledgers, one ending designed backward, complete route, maps, NPCs, items, shared state, several forms of play, runtime evidence, and a tested build or authorized deployment. |
 | [`worldview-game-high-fidelity-vertical-slice`](worldview-game-high-fidelity-vertical-slice/README.md) | A story, place, or game idea should become a bounded 2D or 3D playable slice with a high presentation bar. | A premise. An existing project, target platform, references, and time limit are optional. | A playable core, three to five runtime-matched visual states, an original asset plan, integrated presentation, performance evidence, and a truthful handoff. |
@@ -115,7 +129,7 @@ Before implementation, the Agent records which project, runtime, capture, genera
 
 Credentials stay outside source control. Paid calls, uploads of proprietary references, external downloads, and deployment require real authorization; finding an environment key does not supply that authorization.
 
-## What all four methods check
+## What the four build methods check
 
 The four packages have different lock orders, but all distinguish three kinds of evidence:
 
@@ -132,6 +146,14 @@ All four methods use named gameplay states instead of one beauty shot. This prev
 ```text
 skills/game-production/
 ├── README.md
+├── worldview-game-story-and-play-plan/
+│   ├── README.md
+│   ├── SKILL.md
+│   ├── SOURCE.md
+│   ├── references/experience-timeline.md
+│   ├── references/scene-review.md
+│   ├── templates/story-plan.md
+│   └── examples/the-borrowed-kite.md
 ├── worldview-game-horror-production/
 │   ├── README.md
 │   ├── SKILL.md

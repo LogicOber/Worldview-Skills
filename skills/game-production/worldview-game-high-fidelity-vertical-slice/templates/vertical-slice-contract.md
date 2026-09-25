@@ -379,7 +379,7 @@ Copy the state card for every indexed state.
 ### Asset and content-family ledger
 
 | Stable ID / family | Target states and runtime role | Chosen representation | Reason | Owner | Source/origin | Creator/generator/tool and version | Rights/license/redistribution | Editable source | Runtime form/export | Scale/pivot/axes/collision or UI equivalent | Variants/LOD/state coverage | Cost estimate | Fallback | Validation evidence | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `[ID]` | `[states/role]` | `existing / authored DCC / modular / procedural / generated / instanced / shader / particle / sprite / UI / audio` | `[why fit]` | `[owner]` | `[path/URL/original]` | `[record]` | `[record]` | `[path]` | `[path/format]` | `[contract]` | `[coverage]` | `[time/API/memory/size]` | `[fallback]` | `[in-runtime evidence]` | `[planned/ready/accepted/rejected]` |
 
 Every feature in every target-state card must map to at least one ledger row. Every row that ships must have an origin and rights status.

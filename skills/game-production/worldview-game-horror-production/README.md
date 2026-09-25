@@ -2,6 +2,8 @@
 
 Turn a short horror-game idea into a complete, original, single-ending production plan and playable build. The Agent fills in the missing chapters, map logic, NPC roles, items, evidence, pressure, recovery, visuals, audio, state ownership, tests, and ending instead of asking the user to design every detail by hand.
 
+If you are still developing the idea, say “story first.” The Agent uses [Story and Play Plan](../worldview-game-story-and-play-plan/README.md), or its own equivalent writing pass, to finish the story, exploration, surprises, and timing estimates for your review before implementation. A request to finish the writing does not start 3D production.
+
 ## Call this Skill
 ```text
 /worldview-game-horror-production

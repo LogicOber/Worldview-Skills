@@ -1,14 +1,14 @@
 ---
 name: pixel-art-sprite
-title: Pixel Art Sprite
-description: Entry point for 2D pixel assets — a character sprite with a locked palette and grid, idle/walk/attack/hurt animation strips, a tileset that shares the palette, and a style card so every later sprite matches. Use when the user says "pixel art", "sprite", "16-bit", "8-bit", "tileset", "retro 2D".
-category: 2d-game
-triggers:
-  - "pixel art"
-  - "sprite sheet"
-  - "16-bit character"
-  - "tileset"
-  - "retro 2D game"
+description: >-
+  Entry point for 2D pixel assets — a character sprite with a locked palette and
+  grid, idle/walk/attack/hurt animation strips, a tileset that shares the
+  palette, and a style card so every later sprite matches. Use when the user
+  says "pixel art", "sprite", "16-bit", "8-bit", "tileset", "retro 2D".
+metadata:
+  title: Pixel Art Sprite
+  category: 2d-game
+  triggers: pixel art; sprite sheet; 16-bit character; tileset; retro 2D game
 ---
 
 # Pixel Art Sprite

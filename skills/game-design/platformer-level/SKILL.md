@@ -1,13 +1,15 @@
 ---
 name: platformer-level
-title: Platformer Level
-description: Entry point for designing a side-view or 3D platformer level — the movement verbs available, the hazard vocabulary, a difficulty curve built from those two lists, a room-by-room layout with checkpoints, and reference plates for each biome. Use when the user says "level", "platformer", "jump and run", precision platforming, or asks for a stage.
-category: game-design
-triggers:
-  - "platformer level"
-  - "design a level"
-  - "jump and run stage"
-  - "a stage for my game"
+description: >-
+  Entry point for designing a side-view or 3D platformer level — the movement
+  verbs available, the hazard vocabulary, a difficulty curve built from those
+  two lists, a room-by-room layout with checkpoints, and reference plates for
+  each biome. Use when the user says "level", "platformer", "jump and run",
+  precision platforming, or asks for a stage.
+metadata:
+  title: Platformer Level
+  category: game-design
+  triggers: platformer level; design a level; jump and run stage; a stage for my game
 ---
 
 # Platformer Level

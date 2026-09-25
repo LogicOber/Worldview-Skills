@@ -1,14 +1,18 @@
 ---
 name: hero-skill-system
-title: Hero Skill System
-description: Entry point for designing a playable character's ability kit in the MOBA/action-RPG tradition — passive, Q/W/E basics, R ultimate — with role, targeting type, cooldown/cost, counterplay, VFX language that makes each ability visually distinct from a normal attack, and a showcase video per ability. Use when the user says "abilities", "skills", "Q W E R", "kit", "ultimate", or asks what a character can do.
-category: game-design
-triggers:
-  - "design abilities for"
-  - "Q W E R"
-  - "skill kit"
-  - "ultimate ability"
-  - "what can this character do"
+description: >-
+  Entry point for designing a playable character's ability kit in the
+  MOBA/action-RPG tradition — passive, Q/W/E basics, R ultimate — with role,
+  targeting type, cooldown/cost, counterplay, VFX language that makes each
+  ability visually distinct from a normal attack, and a showcase video per
+  ability. Use when the user says "abilities", "skills", "Q W E R", "kit",
+  "ultimate", or asks what a character can do.
+metadata:
+  title: Hero Skill System
+  category: game-design
+  triggers: >-
+    design abilities for; Q W E R; skill kit; ultimate ability; what can this
+    character do
 ---
 
 # Hero Skill System

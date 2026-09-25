@@ -1,14 +1,15 @@
 ---
 name: romance-arc
-title: Romance Arc
-description: Entry point for a relationship story — two people with incompatible wants, a reason they must stay in each other's orbit, escalating intimacy tested by a lie or a wound, a separation that costs both, and a reunion that is a choice rather than a reward. Use when the user says "romance", "love story", "will they won't they", "otome route", "a relationship that…".
-category: narrative
-triggers:
-  - "romance"
-  - "love story"
-  - "will they won't they"
-  - "otome route"
-  - "two people who"
+description: >-
+  Entry point for a relationship story — two people with incompatible wants, a
+  reason they must stay in each other's orbit, escalating intimacy tested by a
+  lie or a wound, a separation that costs both, and a reunion that is a choice
+  rather than a reward. Use when the user says "romance", "love story", "will
+  they won't they", "otome route", "a relationship that…".
+metadata:
+  title: Romance Arc
+  category: narrative
+  triggers: romance; love story; will they won't they; otome route; two people who
 ---
 
 # Romance Arc

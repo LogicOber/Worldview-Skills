@@ -31,7 +31,7 @@ We have the advantage of hindsight. The course taught these lessons one failure 
 
 Stages 2–4b run in parallel with each other. Stage 5 needs locked assets and calls 5b/5c as needed. Stage 6 loops to 5.
 
-**Who calls whom.** Users talk to an entry skill (`cinematic-film`, `game-cutscene`, `boss-battle`, …). Entry skills call these stages. Stages -1 through 6 are internal: they are documented so their decisions are legible, not so users have to invoke them.
+**Who calls whom.** Users talk to an entry skill (`cinematic-film`, `game-cutscene-generator`, `boss-battle`, …). Entry skills call these stages. Stages -1 through 6 are internal: they are documented so their decisions are legible, not so users have to invoke them.
 
 **Never generate video without passing through the gates.** The only exception is the user explicitly saying "just generate it" — then note the skipped gates in `review.md` so the debt is visible.
 

@@ -1,15 +1,18 @@
 ---
 name: weapon-prop
-title: Weapon & Prop
-description: Entry point for any object that must look the same every time it appears — weapons, relics, tools, documents with text, wardrobe on a ghost mannequin. Produces a locked single-object sheet on grey, a held/in-use variant, a text pass for anything with writing on it, and an optional 3D mesh. Use when the user names an object that recurs, is held in close-up, carries text, or is a story clue.
-category: 3d-assets
-triggers:
-  - "the sword"
-  - "the artifact"
-  - "a prop for"
-  - "the letter says"
-  - "the costume"
-  - "weapon design"
+description: >-
+  Entry point for any object that must look the same every time it appears —
+  weapons, relics, tools, documents with text, wardrobe on a ghost mannequin.
+  Produces a locked single-object sheet on grey, a held/in-use variant, a text
+  pass for anything with writing on it, and an optional 3D mesh. Use when the
+  user names an object that recurs, is held in close-up, carries text, or is a
+  story clue.
+metadata:
+  title: Weapon & Prop
+  category: 3d-assets
+  triggers: >-
+    the sword; the artifact; a prop for; the letter says; the costume; weapon
+    design
 ---
 
 # Weapon & Prop

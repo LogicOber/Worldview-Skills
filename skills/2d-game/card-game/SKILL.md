@@ -1,13 +1,15 @@
 ---
 name: card-game
-title: Card Game
-description: Entry point for a card-game slice — the core loop (resource, play, resolve), a starter set of 20–40 cards with costs and effects tuned against each other, a card frame and illustration style card, illustrated card art in that style, and a playable web prototype. Use when the user says "card game", "deckbuilder", "TCG", or asks for a strategic card battler.
-category: 2d-game
-triggers:
-  - "card game"
-  - "deckbuilder"
-  - "TCG"
-  - "card battler"
+description: >-
+  Entry point for a card-game slice — the core loop (resource, play, resolve), a
+  starter set of 20–40 cards with costs and effects tuned against each other, a
+  card frame and illustration style card, illustrated card art in that style,
+  and a playable web prototype. Use when the user says "card game",
+  "deckbuilder", "TCG", or asks for a strategic card battler.
+metadata:
+  title: Card Game
+  category: 2d-game
+  triggers: card game; deckbuilder; TCG; card battler
 ---
 
 # Card Game

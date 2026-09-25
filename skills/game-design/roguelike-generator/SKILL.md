@@ -1,14 +1,15 @@
 ---
 name: roguelike-generator
-title: Roguelike Generator
-description: Entry point for a run-based game's systems — the room grammar that procedural generation draws from, the loot and upgrade economy, the risk/reward beats per floor, and the boss that closes each floor. Produces the design plus reference plates for room archetypes and item sheets. Use when the user says "roguelike", "roguelite", "procedural dungeon", "runs", "permadeath".
-category: game-design
-triggers:
-  - "roguelike"
-  - "roguelite"
-  - "procedural dungeon"
-  - "run-based game"
-  - "random levels"
+description: >-
+  Entry point for a run-based game's systems — the room grammar that procedural
+  generation draws from, the loot and upgrade economy, the risk/reward beats per
+  floor, and the boss that closes each floor. Produces the design plus reference
+  plates for room archetypes and item sheets. Use when the user says
+  "roguelike", "roguelite", "procedural dungeon", "runs", "permadeath".
+metadata:
+  title: Roguelike Generator
+  category: game-design
+  triggers: roguelike; roguelite; procedural dungeon; run-based game; random levels
 ---
 
 # Roguelike Generator

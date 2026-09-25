@@ -1,36 +1,13 @@
 ---
 name: anime-action-scene
-title: Anime Action Scene Generator
-description: Generate high-intensity anime action sequences with key frame impact and dynamic camera work
-category: film-video
-tags:
-  - anime
-  - action
-  - combat
-  - aerial-pursuit
-  - impact-frames
-  - key-frame
-parameters:
-  action_density:
-    type: enum
-    values: [standard, high, insane]
-    default: high
-    hidden: true
-  camera_intensity:
-    type: enum
-    values: [stable, dynamic, insane]
-    default: dynamic
-    hidden: true
-  key_frame_style:
-    type: enum
-    values: [smooth, strong, extreme]
-    default: strong
-    hidden: true
-  causality_mode:
-    type: enum
-    values: [normal, strict]
-    default: strict
-    hidden: true
+description: >-
+  Generate high-intensity anime action sequences with key frame impact and
+  dynamic camera work
+metadata:
+  title: Anime Action Scene Generator
+  category: film-video
+  tags: anime; action; combat; aerial-pursuit; impact-frames; key-frame
+  parameters: '[object Object]'
 ---
 
 # Anime Action Scene Generator
@@ -185,7 +162,7 @@ Expected deliverable: a reviewable restrained duel sequence.
 
 - [Boss Battle](../../game-design/boss-battle/) - Design complete boss encounters
 - [Hero Skill System](../../game-design/hero-skill-system/) - Create Q/W/E/R abilities
-- [Game Cutscene](../../film-video/game-cutscene/) - Cinematic cutscenes
+- [Game Cutscene](../game-cutscene-generator/) - Cinematic cutscenes
 
 ## Tips
 

@@ -1,14 +1,17 @@
 ---
 name: environment-scene
-title: Environment Scene
-description: Entry point for a location asset — a 3/4-angle plate in the project style, a multi-angle coverage set (main, reverse, detail), a written spatial lock naming every fixed landmark, time-of-day and damage variants, and an optional 3D scene. Use when the user says "environment", "location", "scene", "arena", "room", "build the place where...".
-category: 3d-assets
-triggers:
-  - "environment for my game"
-  - "build the location"
-  - "the arena"
-  - "the room where"
-  - "3D scene"
+description: >-
+  Entry point for a location asset — a 3/4-angle plate in the project style, a
+  multi-angle coverage set (main, reverse, detail), a written spatial lock
+  naming every fixed landmark, time-of-day and damage variants, and an optional
+  3D scene. Use when the user says "environment", "location", "scene", "arena",
+  "room", "build the place where...".
+metadata:
+  title: Environment Scene
+  category: 3d-assets
+  triggers: >-
+    environment for my game; build the location; the arena; the room where; 3D
+    scene
 ---
 
 # Environment Scene

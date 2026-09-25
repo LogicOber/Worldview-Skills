@@ -1,19 +1,16 @@
 ---
 name: boss-model
-title: Boss Model
 description: >-
-  Entry point for a large-scale enemy asset — the boss reference sheet with scale
-  reference, a 4-panel action board (idle, signature skill, taking damage, phase
-  break), damage-state variants, and an optional 3D mesh. Built on character-model
-  with the additions a boss needs: readable silhouette at distance, a core or weak
-  point, and a visual story of what it used to be. Use when the user says "boss
-  model", "giant enemy", or "monster design".
-category: 3d-assets
-triggers:
-  - "boss model"
-  - "giant enemy"
-  - "monster design"
-  - "design the final boss's look"
+  Entry point for a large-scale enemy asset — the boss reference sheet with
+  scale reference, a 4-panel action board (idle, signature skill, taking damage,
+  phase break), damage-state variants, and an optional 3D mesh. Built on
+  character-model with the additions a boss needs: readable silhouette at
+  distance, a core or weak point, and a visual story of what it used to be. Use
+  when the user says "boss model", "giant enemy", or "monster design".
+metadata:
+  title: Boss Model
+  category: 3d-assets
+  triggers: boss model; giant enemy; monster design; design the final boss's look
 ---
 
 # Boss Model

@@ -1,14 +1,17 @@
 ---
 name: thriller-plot
-title: Thriller Plot
-description: Entry point for a suspense story — a ticking clock, an antagonist with a plan the audience partly sees, escalating reversals, a midpoint that changes what the protagonist wants, and a climax where the plan and the counter-plan collide. Use when the user says "thriller", "suspense", "a race against time", "someone is hunting", "conspiracy".
-category: narrative
-triggers:
-  - "thriller"
-  - "suspense story"
-  - "race against time"
-  - "someone is hunting the protagonist"
-  - "conspiracy plot"
+description: >-
+  Entry point for a suspense story — a ticking clock, an antagonist with a plan
+  the audience partly sees, escalating reversals, a midpoint that changes what
+  the protagonist wants, and a climax where the plan and the counter-plan
+  collide. Use when the user says "thriller", "suspense", "a race against time",
+  "someone is hunting", "conspiracy".
+metadata:
+  title: Thriller Plot
+  category: narrative
+  triggers: >-
+    thriller; suspense story; race against time; someone is hunting the
+    protagonist; conspiracy plot
 ---
 
 # Thriller Plot

@@ -1,14 +1,17 @@
 ---
 name: vfx-effect
-title: VFX Effect
-description: Entry point for a reusable visual-effect design — an ability, an explosion, a spell, a transformation, a weather event — defined as a shape grammar, a palette, a timing envelope and a causality rule, then produced as a reference board and a short loop or one-shot clip. Use when the user names an effect, an ability's look, a magic system, or asks "what does it look like when…".
-category: 3d-assets
-triggers:
-  - "the effect when"
-  - "what does the spell look like"
-  - "explosion"
-  - "magic VFX"
-  - "the ability's visual"
+description: >-
+  Entry point for a reusable visual-effect design — an ability, an explosion, a
+  spell, a transformation, a weather event — defined as a shape grammar, a
+  palette, a timing envelope and a causality rule, then produced as a reference
+  board and a short loop or one-shot clip. Use when the user names an effect, an
+  ability's look, a magic system, or asks "what does it look like when…".
+metadata:
+  title: VFX Effect
+  category: 3d-assets
+  triggers: >-
+    the effect when; what does the spell look like; explosion; magic VFX; the
+    ability's visual
 ---
 
 # VFX Effect

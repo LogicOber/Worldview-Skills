@@ -1,14 +1,15 @@
 ---
 name: mystery-detective
-title: Mystery / Detective
-description: Entry point for a fair-play mystery — a crime or disappearance, a closed cast of suspects each with motive, means and a lie, a clue trail the reader can solve, at least one honest misdirection, and a reveal that recontextualises an earlier scene. Use when the user says "mystery", "detective", "whodunit", "who took the…", "solve the case".
-category: narrative
-triggers:
-  - "mystery story"
-  - "detective"
-  - "whodunit"
-  - "who did it"
-  - "solve the case"
+description: >-
+  Entry point for a fair-play mystery — a crime or disappearance, a closed cast
+  of suspects each with motive, means and a lie, a clue trail the reader can
+  solve, at least one honest misdirection, and a reveal that recontextualises an
+  earlier scene. Use when the user says "mystery", "detective", "whodunit", "who
+  took the…", "solve the case".
+metadata:
+  title: Mystery / Detective
+  category: narrative
+  triggers: mystery story; detective; whodunit; who did it; solve the case
 ---
 
 # Mystery / Detective
