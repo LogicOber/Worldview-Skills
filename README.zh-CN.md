@@ -89,26 +89,95 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 
 ## 恐怖游戏机制
 
-27 个独立 Skill 可以实现完整、可测试的恐怖游戏情境，包括追逐路线、角色切换后的共享证据、逐步失去保护的受困旅程、驾驶分心压力，以及即时缓解但产生延迟代价的资源系统。
+直接描述你想做的游戏即可。Agent 会自行选择并组合相关 Skill，建立共享状态，按安全顺序实现并验证。下面 27 个机制入口用于精确控制，但**你不需要记住，也不需要逐个手动调用**。
 
-| 类别 | 包含的机制 |
-| --- | --- |
-| **追逐与躲藏** | 诱导—躲藏—逃脱、注视限制追踪者、声音诱导、游荡追踪者、安全屋和路障。 |
-| **生存决策** | 稀缺背包、关键物品折返、有限存档风险、虚构伤势治疗，以及具有延迟代价的缓解资源。 |
-| **调查与目标** | 恢复电力、距离信号追踪、实体识别和威胁打断谜题。 |
-| **感知与合作** | 感知失真、死亡循环中的持久线索、非对称信息合作，以及跨可玩角色保存证据与后果。 |
-| **旅程与体验编排** | 逐步失去保护的受困路线、驾驶分心压力、体验节奏、重复地点、日常流程异变、职业职责与身份压力。 |
+> [!TIP]
+> 最简单的方式是把本仓库链接和游戏设想交给 Agent，让它自行阅读、安装并选择 Skill。Slash 入口只是控制某个具体机制的可选工具，不是需要用户手工搭建的工作流。
+
+**本节目录：** [制作完整恐怖游戏](#-先制作一款完整的恐怖游戏) · [追逐与躲藏](#-追逐躲藏与威胁行为) · [生存系统](#-生存资源与身体风险) · [调查目标](#-调查工具与被打断的目标) · [信任合作](#-信任记忆与共享知识) · [旅程节奏](#-旅程节奏与社会压力)
+
+### 🎬 先制作一款完整的恐怖游戏
+
+只有故事、地点、参考图或粗略想法时，优先使用总制作 Skill。它会负责体验时间线、地图与路线、机制选择和路由、实现顺序、运行验证与最终交付。
+
+| 🎮 主要 Slash Skill——可选，Agent 可以自行选择 | 能完成什么 | 示例输入 |
+| --- | --- | --- |
+| [`/worldview-game-horror-production`](skills/game-production/worldview-game-horror-production/README.md) | 把简短设想做成一款完整恐怖游戏，只选择真正改变玩法的机制，连接各自的状态所有者，先完成灰盒，再验证成功、失败、恢复、存档、读档和结局。 | “制作一款约 25 分钟的英文第一人称恐怖游戏，地点是废弃渡轮码头，只有一个正史结局。复用当前项目，自行选择机制，完成实现并给我可玩的 URL。” |
+
+不写任何 Slash 也可以直接使用：
 
 ```text
-/worldview-game-lure-hide-escape
-
-使用当前项目里的旅馆楼层。让玩家投掷物体、脱离怪物视线、藏到床底，
-等怪物搜索错误声源时，从第二扇门离开。
+阅读 https://github.com/LogicOber/Worldview-Skills，安装需要的 Skills，
+根据这个设想制作一款约 30 分钟的英文恐怖游戏：夜间信使带着一个密封箱
+穿过被洪水淹没的城区，熟悉的安全地点逐渐不再承认她。只设一个正史结局。
+自行选择机制，复用当前项目，完成实现，测试失败与重启，并交付可玩的结果。
+只有答案会实质改变作品时才提问。
 ```
 
-[查看全部恐怖机制 →](skills/game-mechanics-horror/README.md)
+Agent 不应该把这段需求变成“每个机制都加一点”的清单。它会选择最小但有效的组合，为共享状态指定唯一所有者，并删掉无法改善目标体验的系统。
 
-如果追逐的紧张感必须来自玩家可以学习的建筑和路线，而不是怪物无脑追在身后：
+### 🏃 追逐、躲藏与威胁行为
+
+| 🧩 Slash Skill——可选，Agent 可以自动路由 | 能帮助 Agent 做什么 | 示例输入 |
+| --- | --- | --- |
+| [`/worldview-game-lure-hide-escape`](skills/game-mechanics-horror/worldview-game-lure-hide-escape/README.md) | 制作有明确边界的诱导—躲藏—逃脱遭遇：制造假声源、脱离观察、进入真实掩体、判断搜索过程并利用经过计算的窗口离开。 | “在旅馆楼层让我扔出瓶子、藏到床底，等怪物搜错房间后从服务门离开。” |
+| [`/worldview-game-observation-gated-stalker`](skills/game-mechanics-horror/worldview-game-observation-gated-stalker/README.md) | 制作只有在未被有效观察时才能移动或伤害玩家的威胁，并处理屏幕边缘、遮挡、多人权限和公平接触时序。 | “雕像只有在所有有效玩家镜头都看不到它时才能前进，让柱子和移开视线成为路线决策。” |
+| [`/worldview-game-sound-detection-and-distraction`](skills/game-mechanics-horror/worldview-game-sound-detection-and-distraction/README.md) | 建立脚步、材质、动作、装置、诱饵声、传播、每个听者的记忆，以及可读的听见/没听见结果，而不是把玩家坐标直接送给敌人。 | “金属地面会暴露玩家，地毯较安静，发条收音机能把一名守卫引到东侧走廊。” |
+| [`/worldview-game-roaming-stalker-pressure`](skills/game-mechanics-horror/worldview-game-roaming-stalker-pressure/README.md) | 制作在连通地图中真实移动、记住证据、搜索合理地点、退出并再次施压的唯一持续追踪者，不让它瞬移到玩家身边。 | “让一只怪物在病房、洗衣房和地下室之间游荡，但必须经过真实连接点，并尊重安全屋边界。” |
+| [`/worldview-game-safe-room-pressure-reset`](skills/game-mechanics-horror/worldview-game-safe-room-pressure-reset/README.md) | 制作允许规划、整理背包、存档和恢复的临时安全区，同时保留门外累积的危险。 | “把档案室做成临时安全屋；玩家可以整理和存档，但离开后压力恢复，而不是怪物被永久删除。” |
+| [`/worldview-game-barricade-delay-and-route-choice`](skills/game-mechanics-horror/worldview-game-barricade-delay-and-route-choice/README.md) | 用材料、噪声、通行权或未来路线换取可测量的时间，并处理破坏、绕路、持久化和重置。 | “玩家可以锁住一个楼梯门换取 18 秒，但之后永久失去返回药房的捷径。” |
+| [`/worldview-game-chase-route-architecture`](skills/game-mechanics-horror/worldview-game-chase-route-architecture/README.md) | 用建筑路线设计追逐：主路线、危险备选、失败回路、视线断点、交互锁、恢复区、检查点与精确时间余量。 | “把医院追逐画成 2.5D 路线图，包含一条正确路线、两个可理解的错误、恢复回路和最终门时序。” |
+
+### 🎒 生存资源与身体风险
+
+| 🧩 Slash Skill——可选，Agent 可以自动路由 | 能帮助 Agent 做什么 | 示例输入 |
+| --- | --- | --- |
+| [`/worldview-game-scarce-inventory-triage`](skills/game-mechanics-horror/worldview-game-scarce-inventory-triage/README.md) | 设计有限容量、可行装备组合、受保护的流程道具、丢弃/存放/使用选择、溢出恢复和存档后所有权。 | “进入矿井前只有六个格子，让药品、照明、工具、证据和弹药竞争，但任何选择都不能软锁。” |
+| [`/worldview-game-key-item-backtracking`](skills/game-mechanics-horror/worldview-game-key-item-backtracking/README.md) | 让钥匙或工具重新激活玩家记住的锁，同时改变返程路线、打开捷径，并在存读档后保持可恢复。 | “锅炉房里的黄铜阀门能重新打开被淹档案室，但返程必须出现新的威胁和一条捷径。” |
+| [`/worldview-game-limited-save-risk`](skills/game-mechanics-horror/worldview-game-limited-save-risk/README.md) | 将主动存档次数做成生存决策，同时把它和崩溃恢复分开，并保证事务写入、辅助选项和数据安全。 | “用稀缺录音筒进行手动存档，但自动保存必要恢复数据，程序崩溃不能毁掉整个流程。” |
+| [`/worldview-game-wounds-infection-and-treatment`](skills/game-mechanics-horror/worldview-game-wounds-infection-and-treatment/README.md) | 制作虚构、可读、随时间发展的受伤流程，包括稳定伤势、移动限制、治疗选择、复查、低刺激呈现和持久化。 | “玻璃割伤会让攀爬变慢并逐步恶化，直到玩家在诊所清理和包扎；明确它不是医疗建议。” |
+| [`/worldview-game-relief-resource-with-hidden-cost`](skills/game-mechanics-horror/worldview-game-relief-resource-with-hidden-cost/README.md) | 让资源真正缓解当前问题，同时产生独立的延迟风险，并通过症状、痕迹和替代路线让代价可以学习。 | “药剂能暂时压住恐慌让玩家穿过画廊，但反复使用会产生可读的畏光，并改变后续路线。” |
+
+### 🔎 调查、工具与被打断的目标
+
+| 🧩 Slash Skill——可选，Agent 可以自动路由 | 能帮助 Agent 做什么 | 示例输入 |
+| --- | --- | --- |
+| [`/worldview-game-restore-power-under-pressure`](skills/game-mechanics-horror/worldview-game-restore-power-under-pressure/README.md) | 设计零件搜索、分阶段维修、被打断规则、电路状态、通电后的世界变化、可理解失败与干净重置。 | “玩家寻找两个保险丝并启动被淹发电机，怪物会巡逻，但完成一半的维修在一次中断后仍然保留。” |
+| [`/worldview-game-signal-proximity-tracking`](skills/game-mechanics-horror/worldview-game-signal-proximity-tracking/README.md) | 制作会受到距离、拓扑、遮挡和干扰影响的探测器，同时避免泄露目标实时坐标。 | “无线电表靠近地下发射器时更可靠，但在电梯电缆旁会以可学习的方式误报。” |
+| [`/worldview-game-evidence-based-entity-identification`](skills/game-mechanics-horror/worldview-game-evidence-based-entity-identification/README.md) | 建立候选假设、阳性/阴性/不确定/受污染测试、证人和机构证据、矛盾，以及表达最终结论的实际行动。 | “通过门禁日志、残留物、行为和一名不可靠证人区分三种访客，再选择正确的收容方式。” |
+| [`/worldview-game-threat-interrupted-puzzle`](skills/game-mechanics-horror/worldview-game-threat-interrupted-puzzle/README.md) | 设计会被威胁中断的世界内谜题，明确哪些进度保留、回退或改变，并提供预警窗口和恢复路线。 | “潮轮谜题有四个物理步骤，追踪者可在第二步后打断，但玩家必须清楚哪些步骤仍然有效。” |
+
+### 🧠 信任、记忆与共享知识
+
+| 🧩 Slash Skill——可选，Agent 可以自动路由 | 能帮助 Agent 做什么 | 示例输入 |
+| --- | --- | --- |
+| [`/worldview-game-perception-distortion-and-trust`](skills/game-mechanics-horror/worldview-game-perception-distortion-and-trust/README.md) | 让部分线索变得不可靠，同时分开世界事实、角色理解、玩家看到的内容和保存的证据，并保留至少一个可靠锚点。 | “暴露后走廊指示牌会说谎，但房间几何和盖章维修记录仍足够可靠，玩家可以据此推理。” |
+| [`/worldview-game-death-loop-persistent-clues`](skills/game-mechanics-horror/worldview-game-death-loop-persistent-clues/README.md) | 设计有限循环，明确世界状态、角色记忆、线索、物品变化、已掌握劳动和重试压缩分别如何处理。 | “港口在 04:13 重置；玩家保留一个学会的密码并跳过已掌握的抽水流程，但实体钥匙回到原持有人。” |
+| [`/worldview-game-asymmetric-information-cooperation`](skills/game-mechanics-horror/worldview-game-asymmetric-information-cooperation/README.md) | 设计拥有不同知识和动作权限的同时参与者，包括消息确认、通信中断、重连规则和确定性替代方案。 | “一名玩家读取钟声顺序，另一名在别的房间操作阀门；两人都不能独立解决，漏掉的消息必须有可见确认。” |
+| [`/worldview-game-character-handoff-and-shared-evidence`](skills/game-mechanics-horror/worldview-game-character-handoff-and-shared-evidence/README.md) | 设计顺序切换的可玩视角，让行动、物品持有、事实、痕迹、错误和后果通过原子切换传递，而不是复制世界状态。 | “第一章扮演藏起证据的检查员，第二章扮演其妹妹；她只能发现被移动的物体和真正记录下来的内容。” |
+
+### 🛣️ 旅程、节奏与社会压力
+
+| 🧩 Slash Skill——可选，Agent 可以自动路由 | 能帮助 Agent 做什么 | 示例输入 |
+| --- | --- | --- |
+| [`/worldview-game-stranded-journey-and-lost-protections`](skills/game-mechanics-horror/worldview-game-stranded-journey-and-lost-protections/README.md) | 在旅程不同阶段依次拿走行动能力、通信、庇护、可信度、同伴或可靠返程，但每一步都保留代价明确的替代方案。 | “巴士抛锚后困住信使，依次失去手机信号、庇护和可靠向导，但每个阶段都保留一种昂贵后路。” |
+| [`/worldview-game-driving-horror-divided-attention`](skills/game-mechanics-horror/worldview-game-driving-horror-divided-attention/README.md) | 连接道路负荷、后视镜、仪表、车内威胁、注视时间、停车节点、控制干扰、检查点与晕动舒适方案。 | “隧道驾驶时让玩家兼顾后视镜和故障温度表，同时保证道路可读，绝不能伪造玩家的转向输入。” |
+| [`/worldview-game-horror-experience-rhythm`](skills/game-mechanics-horror/worldview-game-horror-experience-rhythm/README.md) | 将首次游玩时间与剪辑参考时长分开，编排定向、日常、调查、压力、恢复、回报和事后余波。 | “重排这个 35 分钟章节，让玩家能在两次追逐之间形成计划，并在最终逃生后保留五分钟可玩的余波。” |
+| [`/worldview-game-horror-returning-place-escalation`](skills/game-mechanics-horror/worldview-game-horror-returning-place-escalation/README.md) | 多次返回同一地点，用稳定地标支持每次新的问题、行动、路线、权限、人员或解释变化。 | “四次回到同一个站台，地标保持稳定，但每次都改变一个可检查事实和一个玩家决策。” |
+| [`/worldview-game-horror-mundane-routine-corruption`](skills/game-mechanics-horror/worldview-game-horror-mundane-routine-corruption/README.md) | 让玩家先亲手学会正常工作或生活流程，再一次改变一个字段，并让变化影响后续路线、承诺、资源或关系。 | “先完成两次正常的面包店打烊班次，再让订单、烤箱和顾客权限一次改变一条规则。” |
+| [`/worldview-game-horror-procedural-duty-and-incident`](skills/game-mechanics-horror/worldview-game-horror-procedural-duty-and-incident/README.md) | 用合法职责教会有用流程，使异常事件值得接近，并保存被打断工作，同时改变权限、证人或路线。 | “先用一次平静巡查教会夜班检查员疏散流程，再用一间不该有人却有人回应的房间打断它。” |
+| [`/worldview-game-horror-role-and-identity-pressure`](skills/game-mechanics-horror/worldview-game-horror-role-and-identity-pressure/README.md) | 通过角色声明、权限、预期行为、时间表、门禁历史、观察者判断、误判风险和申诉空间制造恐怖，而非只做认脸测试。 | “两名服务员长得一样；让玩家根据钥匙权限、班表、私人知识和行为判断，指错人必须付出代价。” |
+
+### 这些 Skill 会怎样改变最终游戏
+
+- 玩家会先亲手执行或检查正常流程，之后才需要发现异常。
+- 追逐是一条可以学习、走错、恢复并最终掌握的路线，而不是怪物读取隐藏的玩家坐标。
+- 真实事件、角色判断、玩家看到的内容和保存的证据分别记录，让模糊性仍然公平。
+- 高压之后保留足够长的恢复段供玩家形成计划，结局之后也有可玩的余波，而不是在最高潮直接切黑。
+- 不会把剪辑视频的时长直接当成真实游玩时长；首次游玩、重复游玩和运行事件顺序分别规划。
+- 失败会指出遗漏的线索、路线、权限、时间窗口或资源选择，让下一次尝试变得更聪明，而不仅是更快。
+
+如果只想精确控制一次追逐，可以直接调用对应机制：
 
 ```text
 /worldview-game-chase-route-architecture
@@ -117,6 +186,8 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 失败回路、视线断点、声音事件、道具门、检查点，以及最终门的准确时间余量。
 然后在当前项目实现并验证这条路线。
 ```
+
+[查看全部恐怖机制 →](skills/game-mechanics-horror/README.md)
 
 ## 游戏分析
 

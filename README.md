@@ -89,17 +89,96 @@ Image generation, Blender MCP, another DCC, browser or engine automation, and pr
 
 ## Horror game mechanics
 
-Twenty-seven standalone Skills implement complete, testable horror-game situations and composition layers, including route architecture for designed pursuits, sequential character handoffs, stranded journeys, divided-attention driving, and relief resources with learnable downstream costs. Use [`/worldview-game-horror-production`](skills/game-production/worldview-game-horror-production/README.md) when the Agent should compose those situations into one complete game.
+Describe the game you want; the Agent can choose and combine the relevant Skills, establish their shared state, implement them in a safe order, and verify the result. The 27 mechanic Skills below are available when you want precise control, but **you do not need to memorize or call them one by one**.
 
-| Family | Included mechanics |
-| --- | --- |
-| **Pursuit and hiding** | Lure–hide–escape, observation-gated stalkers, sound distraction, roaming stalkers, safe rooms, and barricades. |
-| **Survival decisions** | Scarce inventory, key-item backtracking, limited-save risk, fictional wound treatment, and relief resources with delayed costs. |
-| **Investigation and objectives** | Power restoration, proximity tracking, entity identification, and threat-interrupted puzzles. |
-| **Perception and cooperation** | Perception distortion, persistent death-loop clues, asymmetric-information cooperation, and evidence carried across playable-character handoffs. |
-| **Journey and composition** | Stranded routes that lose protections, divided-attention driving, experience rhythm, returning places, corrupted routines, procedural duty, and role/identity pressure. |
+> [!TIP]
+> For the simplest workflow, give the Agent this repository URL and your premise. Tell it to read the repository, install what it needs, and choose the Skills itself. Slash calls are optional controls for a specific mechanic—not a workflow the user must assemble manually.
 
-For a chase whose tension must come from a learnable building and route rather than an omniscient enemy sprinting behind the player:
+**In this section:** [complete game](#-start-with-a-complete-horror-game) · [pursuit and hiding](#-pursuit-hiding-and-threat-behavior) · [survival](#-survival-resources-and-bodily-risk) · [investigation](#-investigation-instruments-and-interrupted-objectives) · [trust and cooperation](#-trust-memory-and-shared-knowledge) · [journey and pacing](#-journey-pacing-and-social-pressure)
+
+### 🎬 Start with a complete horror game
+
+Use the main production Skill when you have a story, setting, image, or rough idea and want the Agent to decide which mechanics belong together. It owns the experience timeline, map and route plan, mechanic routing, implementation order, runtime verification, and delivery.
+
+| 🎮 Main Slash Skill — optional; the Agent can select it for you | What it does | Example input |
+| --- | --- | --- |
+| [`/worldview-game-horror-production`](skills/game-production/worldview-game-horror-production/README.md) | Turns a short premise into one coherent horror game, chooses only mechanics that change play, connects their state owners, builds the graybox before polish, and verifies success, failure, recovery, save/load, and the ending. | “Make a 25-minute English first-person horror game in an abandoned ferry terminal. One canonical ending. Reuse this project, choose the mechanics yourself, implement it, and give me a playable URL.” |
+
+You can use the repository without naming any Skill:
+
+```text
+Read https://github.com/LogicOber/Worldview-Skills, install the Skills you need,
+and make a 30-minute English horror game from this premise: a night courier must
+deliver one sealed case through a flooded district while familiar safe places
+stop recognizing her. Use one canonical ending. Choose the mechanics yourself,
+reuse the current project, implement the game, test failure and restart, and give
+me the playable result. Ask only questions that would materially change it.
+```
+
+The Agent should not turn that prompt into a checklist of every mechanic. It selects the smallest useful set, gives every shared state one owner, and leaves out systems that do not improve the intended experience.
+
+### 🏃 Pursuit, hiding, and threat behavior
+
+| 🧩 Slash Skill — optional; the Agent can route here automatically | What it helps the Agent build | Example input |
+| --- | --- | --- |
+| [`/worldview-game-lure-hide-escape`](skills/game-mechanics-horror/worldview-game-lure-hide-escape/README.md) | A bounded encounter where the player creates a false sound, breaks observation, enters real cover, judges the search, and escapes through a measured opening. | “On the hotel floor, let me throw a bottle, hide beneath the bed, and leave by the service door while the creature searches the wrong room.” |
+| [`/worldview-game-observation-gated-stalker`](skills/game-mechanics-horror/worldview-game-observation-gated-stalker/README.md) | A threat that freezes or loses permission to harm while genuinely observed, including camera edges, occlusion, multiplayer authority, and fair contact timing. | “The statue may advance only when no active player camera can see its body; make pillars and looking away part of the route.” |
+| [`/worldview-game-sound-detection-and-distraction`](skills/game-mechanics-horror/worldview-game-sound-detection-and-distraction/README.md) | Causal footsteps, surfaces, devices, distractions, propagation, per-listener memory, and readable heard/unheard outcomes without giving enemies the player's transform. | “Make metal floors dangerous, carpet quiet, and a wind-up radio strong enough to redirect one guard through the east corridor.” |
+| [`/worldview-game-roaming-stalker-pressure`](skills/game-mechanics-horror/worldview-game-roaming-stalker-pressure/README.md) | One persistent stalker that travels a connected map, remembers evidence, searches plausible places, withdraws, and creates pressure without teleporting onto the player. | “Add one creature that can roam between the ward, laundry, and basement, but must use real connectors and respect safe-room exclusions.” |
+| [`/worldview-game-safe-room-pressure-reset`](skills/game-mechanics-horror/worldview-game-safe-room-pressure-reset/README.md) | A protected room that permits planning, inventory work, saving, and recovery while preserving the danger waiting outside. | “Turn the records office into a temporary safe room; let me reorganize and save, then make leaving restore pressure rather than erase it.” |
+| [`/worldview-game-barricade-delay-and-route-choice`](skills/game-mechanics-horror/worldview-game-barricade-delay-and-route-choice/README.md) | A barrier that exchanges material, noise, access, or a future route for measured time, with breach, detour, persistence, and reset behavior. | “Let the player chain one stairwell door, buying 18 seconds but permanently losing the shortcut back to the pharmacy.” |
+| [`/worldview-game-chase-route-architecture`](skills/game-mechanics-horror/worldview-game-chase-route-architecture/README.md) | A learnable pursuit built from architecture: main and risky routes, failed loops, sight breaks, interaction locks, recovery pockets, checkpoints, and exact timing margins. | “Design the hospital pursuit as a 2.5D route plan with one correct line, two readable mistakes, a recovery loop, and the final door timing.” |
+
+### 🎒 Survival resources and bodily risk
+
+| 🧩 Slash Skill — optional; the Agent can route here automatically | What it helps the Agent build | Example input |
+| --- | --- | --- |
+| [`/worldview-game-scarce-inventory-triage`](skills/game-mechanics-horror/worldview-game-scarce-inventory-triage/README.md) | Limited carrying capacity with viable loadouts, protected progression items, leave/store/use decisions, overflow recovery, and save-safe ownership. | “Give the player six slots before entering the mine; medicine, light, tools, evidence, and ammunition must compete without allowing a softlock.” |
+| [`/worldview-game-key-item-backtracking`](skills/game-mechanics-horror/worldview-game-key-item-backtracking/README.md) | A key or tool that makes a remembered lock newly meaningful while changing the return route, opening a shortcut, and remaining recoverable after save/load. | “The brass valve found in the boiler room should reopen the flooded archive route, but the return trip must reveal a new threat and shortcut.” |
+| [`/worldview-game-limited-save-risk`](skills/game-mechanics-horror/worldview-game-limited-save-risk/README.md) | A deliberate manual-save economy separated from crash recovery, with transactional writes, accessibility overrides, and no corrupted or duplicated progress. | “Use scarce recording cylinders for manual saves, while autosaving essential recovery data so a crash never destroys the campaign.” |
+| [`/worldview-game-wounds-infection-and-treatment`](skills/game-mechanics-horror/worldview-game-wounds-infection-and-treatment/README.md) | A fictional injury sequence with readable symptoms, stabilization, travel constraints, treatment choices, reassessment, reduced-intensity presentation, and persistence. | “A glass wound should slow climbing and worsen over time until the player cleans and binds it at the clinic; keep it fictional rather than medical advice.” |
+| [`/worldview-game-relief-resource-with-hidden-cost`](skills/game-mechanics-horror/worldview-game-relief-resource-with-hidden-cost/README.md) | A resource that truly relieves one immediate problem while creating a separate delayed exposure whose symptoms and alternatives become learnable. | “The tonic should suppress panic long enough to cross the gallery, but repeated use must produce readable light sensitivity and a different later route.” |
+
+### 🔎 Investigation, instruments, and interrupted objectives
+
+| 🧩 Slash Skill — optional; the Agent can route here automatically | What it helps the Agent build | Example input |
+| --- | --- | --- |
+| [`/worldview-game-restore-power-under-pressure`](skills/game-mechanics-horror/worldview-game-restore-power-under-pressure/README.md) | Component search, repair stages, interruption rules, circuit state, newly powered spaces, understandable failure, and clean reset. | “Make the player find two fuses and prime a flooded generator while the creature patrols; partial repair must survive one interruption.” |
+| [`/worldview-game-signal-proximity-tracking`](skills/game-mechanics-horror/worldview-game-signal-proximity-tracking/README.md) | A detector whose bands reflect distance, topology, occlusion, and interference without leaking the target's live coordinates. | “Build a radio meter that becomes more reliable near the buried transmitter but lies beside powered elevator cables in a learnable way.” |
+| [`/worldview-game-evidence-based-entity-identification`](skills/game-mechanics-horror/worldview-game-evidence-based-entity-identification/README.md) | Candidate hypotheses, positive/negative/inconclusive/contaminated tests, witness and institutional evidence, contradictions, and an action that expresses the conclusion. | “Let the player distinguish three possible visitors through access logs, residue, behavior, and one unreliable witness before choosing the containment method.” |
+| [`/worldview-game-threat-interrupted-puzzle`](skills/game-mechanics-horror/worldview-game-threat-interrupted-puzzle/README.md) | A world-space puzzle whose declared progress persists, rolls back, or changes when danger forces disengagement, with a warning window and recovery route. | “The tidewheel puzzle takes four physical steps; the stalker may interrupt after step two, but the player must understand what stayed solved.” |
+
+### 🧠 Trust, memory, and shared knowledge
+
+| 🧩 Slash Skill — optional; the Agent can route here automatically | What it helps the Agent build | Example input |
+| --- | --- | --- |
+| [`/worldview-game-perception-distortion-and-trust`](skills/game-mechanics-horror/worldview-game-perception-distortion-and-trust/README.md) | Selected unreliable cues while world truth, character interpretation, player presentation, retained evidence, and at least one dependable anchor remain separate. | “Make the corridor signs unreliable after exposure, but keep room geometry and the stamped maintenance log trustworthy enough to reason from.” |
+| [`/worldview-game-death-loop-persistent-clues`](skills/game-mechanics-horror/worldview-game-death-loop-persistent-clues/README.md) | A bounded reset where world state, character memory, clues, transformed objects, mastered labor, and retry compression have explicit rules. | “At 04:13 the harbor resets; the player keeps one learned code and skips the mastered pump sequence, but physical keys return to their owners.” |
+| [`/worldview-game-asymmetric-information-cooperation`](skills/game-mechanics-horror/worldview-game-asymmetric-information-cooperation/README.md) | Different active participants with partial knowledge, role-specific actions, acknowledgements, communication loss, reconnect rules, and deterministic fallbacks. | “One player reads the bell sequence while the other operates valves in another room; neither can solve it alone, and missed messages need visible acknowledgement.” |
+| [`/worldview-game-character-handoff-and-shared-evidence`](skills/game-mechanics-horror/worldview-game-character-handoff-and-shared-evidence/README.md) | Sequential playable viewpoints where actions, custody, facts, residue, mistakes, and consequences cross an atomic character handoff without cloning world state. | “Play the first chapter as the inspector who hides evidence, then the second as the sister who finds the moved objects and inherits only what was actually recorded.” |
+
+### 🛣️ Journey, pacing, and social pressure
+
+| 🧩 Slash Skill — optional; the Agent can route here automatically | What it helps the Agent build | Example input |
+| --- | --- | --- |
+| [`/worldview-game-stranded-journey-and-lost-protections`](skills/game-mechanics-horror/worldview-game-stranded-journey-and-lost-protections/README.md) | A journey whose segments remove mobility, communication, shelter, credibility, companionship, or a trusted return path one at a time while preserving alternatives. | “Strand the courier after the bus fails; remove phone service, then shelter, then the trusted guide, but keep one costly fallback at every stage.” |
+| [`/worldview-game-driving-horror-divided-attention`](skills/game-mechanics-horror/worldview-game-driving-horror-divided-attention/README.md) | Road demand, mirrors, instruments, cabin threats, glance budgets, stop nodes, control interference, checkpoints, and motion-comfort alternatives. | “During the tunnel drive, make the player check mirrors and a failing temperature gauge while keeping the road readable and never faking steering input.” |
+| [`/worldview-game-horror-experience-rhythm`](skills/game-mechanics-horror/worldview-game-horror-experience-rhythm/README.md) | A chapter timeline that separates expected first-play time from edited reference time and balances orientation, routine, investigation, pressure, recovery, payoff, and aftermath. | “Reshape this 35-minute chapter so the player can form a plan between pursuits and the final escape has a five-minute playable aftermath.” |
+| [`/worldview-game-horror-returning-place-escalation`](skills/game-mechanics-horror/worldview-game-horror-returning-place-escalation/README.md) | Repeated visits to one place where stable landmarks support a new question, changed action, route edge, permission, occupant, or interpretation each time. | “Return to the same station platform four times; keep its landmarks stable, but change one inspectable fact and one player decision on every visit.” |
+| [`/worldview-game-horror-mundane-routine-corruption`](skills/game-mechanics-horror/worldview-game-horror-mundane-routine-corruption/README.md) | A normal job or household routine learned through action before one field changes at a time and later affects a route, promise, resource, or relationship. | “Let the player complete two normal bakery closing shifts before orders, oven behavior, and customer permissions begin changing one rule at a time.” |
+| [`/worldview-game-horror-procedural-duty-and-incident`](skills/game-mechanics-horror/worldview-game-horror-procedural-duty-and-incident/README.md) | A legitimate duty that teaches useful procedure, makes an abnormal incident worth approaching, preserves interrupted work, and changes authority, witnesses, or routes. | “As the night inspector, teach the evacuation check during a calm round, then interrupt it with one room whose occupant should not exist.” |
+| [`/worldview-game-horror-role-and-identity-pressure`](skills/game-mechanics-horror/worldview-game-horror-role-and-identity-pressure/README.md) | Horror built from claimed roles, permissions, expected conduct, schedules, access history, observer belief, accusation risk, and recourse—not face matching alone. | “Two attendants look alike; let the player judge them through key access, schedule, private knowledge, and behavior, with a cost for accusing the wrong one.” |
+
+### What these Skills change in the finished game
+
+- The player performs or inspects the normal version of a routine before the game asks them to notice a violation.
+- A chase is a route the player can learn, misread, recover within, and eventually master—not an enemy reading the hidden player transform.
+- Event truth, character belief, player-facing presentation, and retained evidence are stored separately so ambiguity remains fair.
+- Pressure has recovery long enough to form a plan, and the ending includes playable aftermath instead of cutting away at peak danger.
+- Edited video time is never copied directly into expected play time; first-play, repeat-play, and runtime event order are planned separately.
+- Failure identifies the missed cue, route, permission, timing window, or resource decision so a second attempt can become smarter rather than merely faster.
+
+For direct control over a designed chase, call one mechanic yourself:
 
 ```text
 /worldview-game-chase-route-architecture
@@ -108,14 +187,6 @@ Design the hospital pursuit as an architectural route. Produce a 2.5D plan with
 the main escape line, one risky alternate, failed loops, sight breaks, sound
 events, item gates, checkpoints, and the exact timing margin for the final door.
 Then implement and verify the route in the current project.
-```
-
-```text
-/worldview-game-lure-hide-escape
-
-Use the hotel floor in this project. Let the player throw an object, break line
-of sight, hide beneath the bed, and escape through the second door while the
-creature searches the false sound source.
 ```
 
 [Choose from all horror mechanics →](skills/game-mechanics-horror/README.md)
