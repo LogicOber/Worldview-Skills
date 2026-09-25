@@ -40,8 +40,9 @@ The repository currently includes **75 installable Skills** for:
   - [2.5 3D asset creation](#25-3d-asset-creation)
 - [3. Film and video production](#3-film-and-video-production)
 - [4. Story writing](#4-story-writing)
-- [5. Repository layout](#5-repository-layout)
-- [6. License and sources](#6-license-and-sources)
+- [5. Community showcase](#5-community-showcase)
+- [6. Repository layout](#6-repository-layout)
+- [7. License and sources](#7-license-and-sources)
 
 ## Sponsor
 
@@ -317,7 +318,24 @@ For a story that players will explore and act through, use [Story and Play Plan]
 | [`/romance-arc`](skills/narrative/romance-arc/SKILL.md) | A relationship built from incompatible wants, intimacy, rupture, and chosen reunion. |
 | [`/mystery-detective`](skills/narrative/mystery-detective/SKILL.md) | A fair clue trail, suspect logic, misdirection, and solvable reveal. |
 
-## 5. Repository layout
+## 5. Community showcase
+
+Discover games, films, stories, and visual projects made with these Skills.
+
+**Featured work:** Community submissions are open. Selected demos will appear here with creator credit; the selection may rotate as new work arrives.
+
+[Browse all showcases →](showcase/README.md) · [Submit your work →](CONTRIBUTING.md#submit-a-showcase)
+
+Each submission is one project folder with a video-first `showcase.md` and optional supporting files. You can ask your Agent to prepare and submit the PR:
+
+```text
+Read https://github.com/LogicOber/Worldview-Skills/blob/main/CONTRIBUTING.md
+and follow “Submit a showcase” to submit my project and demo video.
+Use only files I authorize for publication. Ask for missing credits or media
+permissions, check the submission, and open a PR. Return its URL; do not merge it.
+```
+
+## 6. Repository layout
 
 The folder labels below describe the Skills they contain:
 
@@ -333,13 +351,17 @@ skills/
 ├── core-engine/              Skills for executing individual film-production stages
 └── narrative/                Skills for writing complete story structures
 
+showcase/                      Community projects, demo videos, and supporting files
+CONTRIBUTING.md                Showcase submission and PR instructions
 docs/                          Maintainer notes for category boundaries and Skill-writing conventions
 ```
 
 The `docs/` folder is for maintainers. It explains how the repository is organized and how new Skills are written; an Agent normally needs only the matching `SKILL.md` and its companion files. Future game-perspective Skills—first-person, third-person, 2.5D, isometric, and side-view—have their own reserved branch in the [game Skill architecture](docs/game-skill-architecture.md), separate from gameplay mechanics and production Skills.
 
-## 6. License and sources
+## 7. License and sources
 
 Licensed under [Apache License 2.0](LICENSE). Each newly researched game package includes a `SOURCE.md` file recording its authorship, research inputs, and non-copy boundary.
 
 When a project uses an existing game, film, book, or visual world, keep its attribution visible and obtain the rights required for publication or commercial use.
+
+Showcase media retains the terms stated on its project page; linked projects retain their own licenses.

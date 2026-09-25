@@ -40,8 +40,9 @@
   - [2.5 3D 资产制作](#25-3d-资产制作)
 - [3. 电影与视频制作](#3-电影与视频制作)
 - [4. 故事写作](#4-故事写作)
-- [5. GitHub 文件结构](#5-github-文件结构)
-- [6. 许可证与来源](#6-许可证与来源)
+- [5. 社区作品展示](#5-社区作品展示)
+- [6. GitHub 文件结构](#6-github-文件结构)
+- [7. 许可证与来源](#7-许可证与来源)
 
 ## 赞助商
 
@@ -315,7 +316,24 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/romance-arc`](skills/narrative/romance-arc/SKILL.md) | 从冲突欲望、亲密、破裂到主动重聚的关系线。 |
 | [`/mystery-detective`](skills/narrative/mystery-detective/SKILL.md) | 公平线索、嫌疑人逻辑、误导和读者可以推导的揭晓。 |
 
-## 5. GitHub 文件结构
+## 5. 社区作品展示
+
+看看大家用这些 Skills 做出的游戏、视频、故事和视觉作品。
+
+**精选作品：** 现已开放投稿。入选作品的视频会在这里展示并署名，后续可随新投稿更新。
+
+[浏览全部作品 →](showcase/README.md) · [提交你的作品 →](CONTRIBUTING.md#submit-a-showcase)
+
+每件作品提交一个文件夹，包含开头展示视频的 `showcase.md`，也可以附带少量相关文件。把下面这段话和作品、演示视频交给 AI 即可：
+
+```text
+阅读 https://github.com/LogicOber/Worldview-Skills/blob/main/CONTRIBUTING.md，
+按照“Submit a showcase”说明，为我的作品和演示视频准备投稿并提交 PR。
+只提交我允许公开的文件；缺少署名或素材授权时先问我。
+检查投稿内容和链接后，返回 PR 地址，不要自行合并。
+```
+
+## 6. GitHub 文件结构
 
 下面每个目录的说明都指向它所包含的 Skill：
 
@@ -331,13 +349,17 @@ skills/
 ├── core-engine/              用于执行各个电影制作阶段的 Skills
 └── narrative/                用于写作完整故事结构的 Skills
 
+showcase/                     社区作品、演示视频与相关附件
+CONTRIBUTING.md               作品投稿与 PR 说明
 docs/                         供维护者使用的分类边界与 Skill 写作规范
 ```
 
 未来的第一人称、第三人称、2.5D、等距视角和横版视角 Skill 会放在独立的视角分支中，不会和玩法机制或游戏制作 Skill 混在一起。完整规划见 [游戏 Skill 架构](docs/game-skill-architecture.md)。
 
-## 6. 许可证与来源
+## 7. 许可证与来源
 
 仓库采用 [Apache License 2.0](LICENSE)。每个经过外部资料研究的新游戏 Skill 都包含 `SOURCE.md`，记录原创归属、研究输入和禁止复制的边界。
 
 如果项目使用已有游戏、电影、书籍或视觉世界，请保留来源，并在公开发布或商业使用前取得所需权利。
+
+Showcase 媒体素材遵循各作品页面注明的使用条款；链接指向的项目保留各自的许可证。
