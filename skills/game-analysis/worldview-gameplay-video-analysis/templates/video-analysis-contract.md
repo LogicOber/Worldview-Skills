@@ -129,8 +129,8 @@ Use `unavailable` when voice, face-cam, chat, or commentary is absent. Do not in
 Do not promote a tag or an attractive interpretation into a design rule until this ledger is filled for the major beats.
 
 | Beat | Evidence | Player knowledge/resources/hypothesis/likely misread | Spatial affordance and route grammar | Coupled camera/sound/object/enemy/objective systems | Hypothesis transaction and room purpose | Attention budget and information regime | Emotional/pacing function | Player behavior produced | What would break this explanation? | New rule, tunables, and falsifiable test |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| | | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | | | | |
 
 Use at least one explicit `because` and one `what would break it` for every high-confidence finding. If a field is unknown, preserve the unknown and lower confidence rather than filling it with genre knowledge.
 

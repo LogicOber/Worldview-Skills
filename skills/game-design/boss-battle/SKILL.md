@@ -1,14 +1,17 @@
 ---
 name: boss-battle
-title: Boss Battle Designer
-description: Entry point for designing a complete boss encounter — the boss itself, its arena, its phases and signature skills, the specific hero abilities that counter each phase, and the cutscene or gameplay video that shows it. Use when the user says "boss", "boss fight", "final enemy", or describes a large enemy with phases.
-category: game-design
-triggers:
-  - "design a boss"
-  - "boss fight"
-  - "boss battle"
-  - "final boss for my game"
-  - "a giant enemy with phases"
+description: >-
+  Entry point for designing a complete boss encounter — the boss itself, its
+  arena, its phases and signature skills, the specific hero abilities that
+  counter each phase, and the cutscene or gameplay video that shows it. Use when
+  the user says "boss", "boss fight", "final enemy", or describes a large enemy
+  with phases.
+metadata:
+  title: Boss Battle Designer
+  category: game-design
+  triggers: >-
+    design a boss; boss fight; boss battle; final boss for my game; a giant
+    enemy with phases
 ---
 
 # Boss Battle Designer
@@ -112,5 +115,5 @@ Phase → duration → density → camera → key frames
 ## Related entries
 
 - `hero-skill-system` — design the abilities that counter the boss
-- `game-cutscene` — the intro and the aftermath as cutscenes
+- `game-cutscene-generator` — the intro and the aftermath as cutscenes
 - `environment-scene` — build the arena as a 3D asset

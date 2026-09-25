@@ -1,14 +1,17 @@
 ---
 name: product-demo
-title: Product Demo Film
-description: Entry point for a product or app video that is shot like a film — a person with a problem, the product entering as the thing that changes what is possible, real UI captured from the product (never invented), and a story beat the viewer remembers. Use when the user says "demo video", "product trailer", "launch video", "show my app", or uploads screenshots of a product.
-category: film-video
-triggers:
-  - "demo video for my app"
-  - "product trailer"
-  - "launch video"
-  - "show what my product does"
-  - "make a video from these screenshots"
+description: >-
+  Entry point for a product or app video that is shot like a film — a person
+  with a problem, the product entering as the thing that changes what is
+  possible, real UI captured from the product (never invented), and a story beat
+  the viewer remembers. Use when the user says "demo video", "product trailer",
+  "launch video", "show my app", or uploads screenshots of a product.
+metadata:
+  title: Product Demo Film
+  category: film-video
+  triggers: >-
+    demo video for my app; product trailer; launch video; show what my product
+    does; make a video from these screenshots
 ---
 
 # Product Demo Film
@@ -66,4 +69,4 @@ film-generate-review
 
 - `cinematic-film` — when the demo becomes a full narrative
 - `social-media-video` — vertical cut of the same material
-- `game-cutscene` — when the product is a game
+- `game-cutscene-generator` — when the product is a game

@@ -10,7 +10,13 @@ description: "Turn a short horror-game premise into a complete, original, playab
 /worldview-game-horror-production
 ```
 
-Treat everything after the command as the creative brief. Do not require the user to enumerate rooms, NPCs, items, mechanics, scares, or tests. Infer reversible details, record assumptions, and continue. Ask only when the answer changes ending count, platform, content boundary, runtime, publication, or external-service authority.
+Treat everything after the command as the creative brief. Do not require the user to enumerate rooms, NPCs, items, mechanics, scares, or tests. Infer reversible details, record assumptions, and continue. Ask when an unresolved creative direction materially changes the work or when ending count, platform, content boundary, runtime, publication, or external-service authority needs a decision.
+
+## Story before implementation
+
+For a creator who is still finding the idea or asks to see the story first, route to `/worldview-game-story-and-play-plan` when installed. Deliver the complete readable story, key dialogue, scene actions, exploration and clue sequence, early-solver and missed-clue paths, and estimated activity durations before runtime or asset work. A synopsis and a duration label are insufficient. If that Skill is unavailable, perform those writing tasks here and preserve the same scope.
+
+Finish all writing already requested without pausing after each chapter. A story-first request ends with the concrete draft for review; implement after the creator confirms that next step. When the user has already authorized an end-to-end build and delegated story decisions, consume the writing package and proceed within that authority. Installation alone does not authorize production. Record proposed and approved decisions separately.
 
 ## Result and ownership
 

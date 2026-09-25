@@ -1,13 +1,17 @@
 ---
 name: puzzle-mechanic
-title: Puzzle Mechanic
-description: Entry point for designing a puzzle system — the single rule the player learns, the minimal puzzle that teaches it, the escalation ladder that combines it with earlier rules, the "aha" the designer intends, and reference plates for the puzzle objects. Use when the user says "puzzle", "riddle room", "the player has to figure out", or describes a mechanic with a solution.
-category: game-design
-triggers:
-  - "puzzle mechanic"
-  - "puzzle room"
-  - "the player has to figure out"
-  - "a mechanic like Portal"
+description: >-
+  Entry point for designing a puzzle system — the single rule the player learns,
+  the minimal puzzle that teaches it, the escalation ladder that combines it
+  with earlier rules, the "aha" the designer intends, and reference plates for
+  the puzzle objects. Use when the user says "puzzle", "riddle room", "the
+  player has to figure out", or describes a mechanic with a solution.
+metadata:
+  title: Puzzle Mechanic
+  category: game-design
+  triggers: >-
+    puzzle mechanic; puzzle room; the player has to figure out; a mechanic like
+    Portal
 ---
 
 # Puzzle Mechanic

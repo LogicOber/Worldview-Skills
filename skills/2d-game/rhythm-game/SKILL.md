@@ -1,13 +1,15 @@
 ---
 name: rhythm-game
-title: Rhythm Game
-description: Entry point for a rhythm-game slice — an original music track with a known BPM and structure, a note chart derived from the track's onsets, lane and visual design in the project style, and a playable web prototype with timing windows. Use when the user says "rhythm game", "music game", "beat map", or describes performance driven by timed input.
-category: 2d-game
-triggers:
-  - "rhythm game"
-  - "music game"
-  - "beat map"
-  - "note chart"
+description: >-
+  Entry point for a rhythm-game slice — an original music track with a known BPM
+  and structure, a note chart derived from the track's onsets, lane and visual
+  design in the project style, and a playable web prototype with timing windows.
+  Use when the user says "rhythm game", "music game", "beat map", or describes
+  performance driven by timed input.
+metadata:
+  title: Rhythm Game
+  category: 2d-game
+  triggers: rhythm game; music game; beat map; note chart
 ---
 
 # Rhythm Game

@@ -1,13 +1,15 @@
 ---
 name: side-scroller
-title: Side-Scroller
-description: Entry point for a 2D side-scrolling game slice — parallax background layers, a playable level built from the platformer curve, the sprite set, and a playable HTML prototype when a runtime is available. Use when the user says "side-scroller", "2D platformer", "Metroidvania", "run and gun", "horizontal level".
-category: 2d-game
-triggers:
-  - "side-scroller"
-  - "2D platformer"
-  - "Metroidvania"
-  - "horizontal scrolling level"
+description: >-
+  Entry point for a 2D side-scrolling game slice — parallax background layers, a
+  playable level built from the platformer curve, the sprite set, and a playable
+  HTML prototype when a runtime is available. Use when the user says
+  "side-scroller", "2D platformer", "Metroidvania", "run and gun", "horizontal
+  level".
+metadata:
+  title: Side-Scroller
+  category: 2d-game
+  triggers: side-scroller; 2D platformer; Metroidvania; horizontal scrolling level
 ---
 
 # Side-Scroller

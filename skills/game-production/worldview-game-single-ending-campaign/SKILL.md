@@ -13,7 +13,13 @@ The public invocation is:
 /worldview-game-single-ending-campaign
 ```
 
-Treat everything below the Slash command as the seed. A few sentences about the protagonist, conflict, tone, or real-world subject are enough. Recover missing context through project inspection and research, make reversible decisions autonomously, and implement the largest complete campaign that the available runtime and budget can honestly support.
+Treat everything below the Slash command as the seed. A few sentences about the protagonist, conflict, tone, or real-world subject are enough. Recover missing context through project inspection and research, make reversible decisions autonomously, and complete the campaign work within the user's current writing or implementation scope.
+
+## Story-first requests
+
+When the creator is finding an idea, asks to write the story, or wants a story review before production, use `/worldview-game-story-and-play-plan` when available. Complete readable scenes, key dialogue, one ending, exploration and clue paths, early-solver and missed-clue alternatives, and estimated play time before implementation. If installed alone, produce those artifacts with this Skill's research and campaign method instead of requiring a missing sibling.
+
+A request to finish the story authorizes the full writing pass, not automatic engine setup or asset generation. Present the completed draft at a requested story review boundary. If the user already delegated the story and authorized a complete build, continue from the plan through the implementation phases below without inventing another approval step. Retain accepted story decisions and keep new proposals visibly provisional.
 
 Do not make the user enumerate every character, joke, item, room, quest, visual treatment, or test. The purpose of this Skill is to perform that expansion while preserving the user's central idea.
 

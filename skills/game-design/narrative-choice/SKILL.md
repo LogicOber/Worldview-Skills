@@ -1,14 +1,17 @@
 ---
 name: narrative-choice
-title: Narrative Choice System
-description: Entry point for branching story design — choices that cost something, consequences that surface later, a branch map that reconverges without cheating, state variables the writer can reason about, and the dialogue trees with character voice. Use when the user says "branching story", "choices matter", "multiple endings", "dialogue tree", "visual novel logic".
-category: game-design
-triggers:
-  - "branching story"
-  - "choices that matter"
-  - "multiple endings"
-  - "dialogue tree"
-  - "the player decides"
+description: >-
+  Entry point for branching story design — choices that cost something,
+  consequences that surface later, a branch map that reconverges without
+  cheating, state variables the writer can reason about, and the dialogue trees
+  with character voice. Use when the user says "branching story", "choices
+  matter", "multiple endings", "dialogue tree", "visual novel logic".
+metadata:
+  title: Narrative Choice System
+  category: game-design
+  triggers: >-
+    branching story; choices that matter; multiple endings; dialogue tree; the
+    player decides
 ---
 
 # Narrative Choice System

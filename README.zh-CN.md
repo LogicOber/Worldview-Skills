@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-2f80ed?style=for-the-badge" alt="Apache 2.0 license"></a>
-  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-74-111827?style=for-the-badge" alt="74 Skills"></a>
+  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-75-111827?style=for-the-badge" alt="75 Skills"></a>
   <a href="https://skills.sh"><img src="https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex-111827?style=for-the-badge" alt="Works with Claude Code and Codex"></a>
 </p>
 
@@ -14,10 +14,11 @@
 
 让 Claude Code、Codex 或其他支持 `SKILL.md` 的 Agent，从一句需求开始制作可玩的游戏、高保真游戏场景、电影、可复用视觉资产和完整故事。
 
-把仓库链接和一句需求交给 Agent 即可。它会自行安装相关 Skill、选择制作路径、读取契约，只在答案会改变结果时提问，完成制作、验证和交付。你不需要先学节点工作流，也不需要记住内部 Skill 的触发顺序；需要精细控制时，再直接使用对应的 Slash 入口。
+把仓库链接和一句需求交给 Agent 即可。它会安装 Skill 并自行选择需要的入口。还在构思游戏时，会先写故事、玩家行动、发现和预计游玩时间，交给你看过再进入实现；已经明确要求它自行设计并制作时，则可以继续完成制作与验证。你不需要手工搭工作流，也不需要记住每个 Skill；需要精细控制时，再使用对应的 Slash 入口。
 
-仓库目前包含 **74 个可安装 Skill**，可以用来：
+仓库目前包含 **75 个可安装 Skill**，可以用来：
 
+- 在开始制作前写完游戏故事，安排探索、惊喜、选择和预计游玩时间；
 - 把简短想法扩展成经过调研的单结局游戏，制作新的可玩切片，或重建现有游戏的视觉呈现；
 - 实现追逐、躲藏、声音侦测、稀缺存档、调查和死亡循环等恐怖玩法；
 - 从游戏截图和视频提取设计证据，把追逐建筑转成路线契约，并选择合适的 3D 资产制作路线；
@@ -28,9 +29,10 @@
 
 ## 目录
 
+- [赞助商](#赞助商)
 - [1. 安装与更新](#1-安装与更新)
 - [2. 游戏制作](#2-游戏制作)
-  - [2.1 高保真游戏制作](#21-高保真游戏制作)
+  - [2.1 故事策划与游戏制作](#21-故事策划与游戏制作)
   - [2.2 游戏类别](#22-游戏类别)
     - [2.2.1 恐怖游戏](#221-恐怖游戏)
   - [2.3 游戏分析](#23-游戏分析)
@@ -40,11 +42,16 @@
 - [4. 故事写作](#4-故事写作)
 - [5. GitHub 文件结构](#5-github-文件结构)
 - [6. 许可证与来源](#6-许可证与来源)
-- [7. 赞助商](#7-赞助商)
+
+## 赞助商
+
+[Neta](https://neta.art): Give your world its first heartbeat. Describe it. Neta brings your world to life, and lets you step inside.
+
+[![Neta.art 官网截图](.github/assets/neta-art-homepage.png)](https://neta.art)
 
 ## 1. 安装与更新
 
-为所有受支持的 Agent 安装全部 74 个 Skill：
+为所有受支持的 Agent 安装全部 75 个 Skill：
 
 ```bash
 npx skills add LogicOber/Worldview-Skills --all
@@ -79,10 +86,13 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 
 游戏 Skill 按完整制作、游戏类别、分析、通用设计和资产制作分层。以后新增的游戏类型会放在 **2.2 游戏类别** 下，与恐怖游戏并列，不会混入机制或资产列表。
 
-### 2.1 高保真游戏制作
+### 2.1 故事策划与游戏制作
+
+**还没确定故事？** 先使用 Story and Play Plan。Agent 会写出场景和结局，安排玩家探索什么、做什么，估算时长，并检查提前猜到答案和漏线索的情况。要求“先看故事”时，会先交付完整文字稿供你确认；已明确授权自行设计并制作时，可以继续后续制作。安装全部 Skill 本身不会启动所有制作阶段。
 
 | Slash 入口 | 适合用来做什么 | 得到什么 |
 | --- | --- | --- |
+| [`/worldview-game-story-and-play-plan`](skills/game-production/worldview-game-story-and-play-plan/README.md) | 从一句想法写出完整游戏故事，在实现前安排玩家体验。 | 可阅读的场景与对白、探索与揭晓顺序、首次游玩和重试时长估算，以及提前解题、漏线索和结局逻辑检查。 |
 | [`/worldview-game-horror-production`](skills/game-production/worldview-game-horror-production/README.md) | 把简短的恐怖游戏设想扩展成机制互相连接、空间可记忆、威胁可学习、节奏与恢复完整并经过结局验证的完整体验。 | 恐怖游戏制作契约、体验时间线、地图与路线方案、机制路由、灰盒顺序、感官设计、验证流程，以及可玩或可直接实现的交付。 |
 | [`/worldview-game-single-ending-campaign`](skills/game-production/worldview-game-single-ending-campaign/README.md) | 把简短设想扩展成原创、经过调研、只有一个正史结局并拥有完整可玩世界的剧情游戏。 | 带日期的调研记录、原创虚构化方案、完整路线、互相关联的玩法系统、地图、NPC、物品、状态与存档逻辑、运行证据，以及验证过的构建或部署 URL。 |
 | [`/worldview-game-high-fidelity-vertical-slice`](skills/game-production/worldview-game-high-fidelity-vertical-slice/README.md) | 把故事、地点或游戏想法制作成一段精致的 2D 或 3D 可玩章节。 | 可玩核心、3–5 个真实游玩状态、原创资产方案、完整视觉呈现、运行时截图、性能证据和交付说明。 |
@@ -100,12 +110,16 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 
 #### 2.2.1 恐怖游戏
 
+只有粗略想法时，Agent 可以先用 [Story and Play Plan](skills/game-production/worldview-game-story-and-play-plan/README.md) 写好故事；进入已授权的制作阶段后，再交给 Horror Production。
+
 直接描述你想做的游戏即可。Agent 会自行选择并组合相关 Skill，建立共享状态，按安全顺序实现并验证。下面 27 个机制入口用于精确控制，但**你不需要记住，也不需要逐个手动调用**。
 
 > [!TIP]
 > 最简单的方式是把本仓库链接和游戏设想交给 Agent，让它自行阅读、安装并选择 Skill。Slash 入口只是控制某个具体机制的可选工具，不是需要用户手工搭建的工作流。
 
 **恐怖游戏章节：** [01 完整制作](#01-先制作一款完整的恐怖游戏) · [02 追逐与躲藏](#02-追逐躲藏与威胁行为) · [03 生存系统](#03-生存资源与身体风险) · [04 调查目标](#04-调查工具与被打断的目标) · [05 信任合作](#05-信任记忆与共享知识) · [06 旅程节奏](#06-旅程节奏与社会压力) · [07 成品变化](#07-这些-skill-会怎样改变最终游戏)
+
+<a id="01-先制作一款完整的恐怖游戏"></a>
 
 ##### 01. 先制作一款完整的恐怖游戏 🎬
 
@@ -127,6 +141,8 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 
 Agent 不应该把这段需求变成“每个机制都加一点”的清单。它会选择最小但有效的组合，为共享状态指定唯一所有者，并删掉无法改善目标体验的系统。
 
+<a id="02-追逐躲藏与威胁行为"></a>
+
 ##### 02. 追逐、躲藏与威胁行为 🏃
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;精&#8288;确&#8288;控&#8288;制 | 能帮助 Agent 做什么 | 示例输入 |
@@ -139,6 +155,8 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/worldview-game-barricade-delay-and-route-choice`](skills/game-mechanics-horror/worldview-game-barricade-delay-and-route-choice/README.md) | 用材料、噪声、通行权或未来路线换取可测量的时间，并处理破坏、绕路、持久化和重置。 | “玩家可以锁住一个楼梯门换取 18 秒，但之后永久失去返回药房的捷径。” |
 | [`/worldview-game-chase-route-architecture`](skills/game-mechanics-horror/worldview-game-chase-route-architecture/README.md) | 用建筑路线设计追逐：主路线、危险备选、失败回路、视线断点、交互锁、恢复区、检查点与精确时间余量。 | “把医院追逐画成 2.5D 路线图，包含一条正确路线、两个可理解的错误、恢复回路和最终门时序。” |
 
+<a id="03-生存资源与身体风险"></a>
+
 ##### 03. 生存资源与身体风险 🎒
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;精&#8288;确&#8288;控&#8288;制 | 能帮助 Agent 做什么 | 示例输入 |
@@ -149,6 +167,8 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/worldview-game-wounds-infection-and-treatment`](skills/game-mechanics-horror/worldview-game-wounds-infection-and-treatment/README.md) | 制作虚构、可读、随时间发展的受伤流程，包括稳定伤势、移动限制、治疗选择、复查、低刺激呈现和持久化。 | “玻璃割伤会让攀爬变慢并逐步恶化，直到玩家在诊所清理和包扎；明确它不是医疗建议。” |
 | [`/worldview-game-relief-resource-with-hidden-cost`](skills/game-mechanics-horror/worldview-game-relief-resource-with-hidden-cost/README.md) | 让资源真正缓解当前问题，同时产生独立的延迟风险，并通过症状、痕迹和替代路线让代价可以学习。 | “药剂能暂时压住恐慌让玩家穿过画廊，但反复使用会产生可读的畏光，并改变后续路线。” |
 
+<a id="04-调查工具与被打断的目标"></a>
+
 ##### 04. 调查、工具与被打断的目标 🔎
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;精&#8288;确&#8288;控&#8288;制 | 能帮助 Agent 做什么 | 示例输入 |
@@ -158,6 +178,8 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/worldview-game-evidence-based-entity-identification`](skills/game-mechanics-horror/worldview-game-evidence-based-entity-identification/README.md) | 建立候选假设、阳性/阴性/不确定/受污染测试、证人和机构证据、矛盾，以及表达最终结论的实际行动。 | “通过门禁日志、残留物、行为和一名不可靠证人区分三种访客，再选择正确的收容方式。” |
 | [`/worldview-game-threat-interrupted-puzzle`](skills/game-mechanics-horror/worldview-game-threat-interrupted-puzzle/README.md) | 设计会被威胁中断的世界内谜题，明确哪些进度保留、回退或改变，并提供预警窗口和恢复路线。 | “潮轮谜题有四个物理步骤，追踪者可在第二步后打断，但玩家必须清楚哪些步骤仍然有效。” |
 
+<a id="05-信任记忆与共享知识"></a>
+
 ##### 05. 信任、记忆与共享知识 🧠
 
 | 🧩&nbsp;Slash&nbsp;Skill&nbsp;——&nbsp;精&#8288;确&#8288;控&#8288;制 | 能帮助 Agent 做什么 | 示例输入 |
@@ -166,6 +188,8 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | [`/worldview-game-death-loop-persistent-clues`](skills/game-mechanics-horror/worldview-game-death-loop-persistent-clues/README.md) | 设计有限循环，明确世界状态、角色记忆、线索、物品变化、已掌握劳动和重试压缩分别如何处理。 | “港口在 04:13 重置；玩家保留一个学会的密码并跳过已掌握的抽水流程，但实体钥匙回到原持有人。” |
 | [`/worldview-game-asymmetric-information-cooperation`](skills/game-mechanics-horror/worldview-game-asymmetric-information-cooperation/README.md) | 设计拥有不同知识和动作权限的同时参与者，包括消息确认、通信中断、重连规则和确定性替代方案。 | “一名玩家读取钟声顺序，另一名在别的房间操作阀门；两人都不能独立解决，漏掉的消息必须有可见确认。” |
 | [`/worldview-game-character-handoff-and-shared-evidence`](skills/game-mechanics-horror/worldview-game-character-handoff-and-shared-evidence/README.md) | 设计顺序切换的可玩视角，让行动、物品持有、事实、痕迹、错误和后果通过原子切换传递，而不是复制世界状态。 | “第一章扮演藏起证据的检查员，第二章扮演其妹妹；她只能发现被移动的物体和真正记录下来的内容。” |
+
+<a id="06-旅程节奏与社会压力"></a>
 
 ##### 06. 旅程、节奏与社会压力 🛣️
 
@@ -251,7 +275,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 | Slash 入口 | 制作内容 |
 | --- | --- |
 | [`/cinematic-film`](skills/film-video/cinematic-film/SKILL.md) | 从一个故事想法制作多段式叙事短片。 |
-| [`/game-cutscene-generator`](skills/film-video/game-cutscene/SKILL.md) | 制作游戏里的出场、对话、转场或胜利过场。 |
+| [`/game-cutscene-generator`](skills/film-video/game-cutscene-generator/SKILL.md) | 制作游戏里的出场、对话、转场或胜利过场。 |
 | [`/anime-action-scene`](skills/film-video/anime-action-scene/SKILL.md) | 制作动作清楚、镜头节奏明确的短动作场面。 |
 | [`/product-demo`](skills/film-video/product-demo/SKILL.md) | 使用真实 UI 和明确使用情境制作产品短片。 |
 | [`/social-media-video`](skills/film-video/social-media-video/SKILL.md) | 制作 15–60 秒、开头立即进入重点并带手机字幕的竖屏短视频。 |
@@ -280,6 +304,8 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 
 ## 4. 故事写作
 
+要把故事写成玩家能探索和行动的游戏，使用 [Story and Play Plan](skills/game-production/worldview-game-story-and-play-plan/README.md)。下面这些入口分别处理特定的故事结构。
+
 | Slash 入口 | 制作内容 |
 | --- | --- |
 | [`/hero-journey`](skills/narrative/hero-journey/SKILL.md) | 离开、考验、归来和有意义的角色改变。 |
@@ -293,7 +319,7 @@ Agent 不应该把这段需求变成“每个机制都加一点”的清单。�
 
 ```text
 skills/
-├── game-production/          用于制作或重建可玩游戏的 Skills
+├── game-production/          用于策划游戏故事、制作游戏与重建视觉的 Skills
 ├── game-mechanics-horror/    用于实现恐怖游戏机制的 Skills
 ├── game-analysis/            用于从游戏与游玩媒体提取设计证据的 Skills
 ├── game-design/              用于设计遭遇、技能、关卡和选择的 Skills
@@ -313,9 +339,3 @@ docs/                         供维护者使用的分类边界与 Skill 写作�
 仓库采用 [Apache License 2.0](LICENSE)。每个经过外部资料研究的新游戏 Skill 都包含 `SOURCE.md`，记录原创归属、研究输入和禁止复制的边界。
 
 如果项目使用已有游戏、电影、书籍或视觉世界，请保留来源，并在公开发布或商业使用前取得所需权利。
-
-## 7. 赞助商
-
-[Neta](https://neta.art): Give your world its first heartbeat. Describe it. Neta brings your world to life, and lets you step inside.
-
-[![Neta.art 官网截图](.github/assets/neta-art-homepage.png)](https://neta.art)

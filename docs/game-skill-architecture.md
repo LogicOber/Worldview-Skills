@@ -8,7 +8,9 @@ Game Skills are organized by the decision they help a creator make. The director
 skills/
 ├── game-mechanics-horror/   released pursuit, scarcity, investigation, vulnerability
 ├── game-analysis/            released gameplay-media observation and design extraction
-├── game-production/         released campaign, playable-slice, and fidelity-rebuild methods
+├── game-production/         released story planning, campaign, slice, and rebuild methods
+│   ├── worldview-game-story-and-play-plan/
+│   ├── worldview-game-horror-production/
 │   ├── worldview-game-single-ending-campaign/
 │   ├── worldview-game-high-fidelity-vertical-slice/
 │   └── worldview-game-runtime-visual-fidelity-rebuild/
@@ -44,22 +46,24 @@ Give each Skill one primary home based on the question it closes:
 - “How does the player see, aim, move through, or understand space?” belongs under `game-perspectives/`.
 - “Which reusable state persists across encounters?” belongs under `game-systems/`.
 - “What complete kind of playable product is being assembled?” belongs under `game-formats/`.
-- “How is a playable result built, tested, or handed off?” belongs under `game-production/`.
+- “How are the story and player experience planned, then built, tested, or handed off?” belongs under `game-production/`.
 - “What can be learned from observed gameplay footage, screenshots, or a reference corpus?” belongs under `game-analysis/`.
 
 Do not duplicate the same Skill under several branches. Explain important secondary relationships in its README and description instead.
 
 ## Released game-production boundaries
 
-The released production branch contains three outcome-level jobs:
+The released production branch contains one writing entry and four build entries:
 
 | Standalone Skill | Decision boundary |
 | --- | --- |
+| [`worldview-game-story-and-play-plan`](../skills/game-production/worldview-game-story-and-play-plan/README.md) | Writes a complete readable story and maps it to exploration, player actions, discoveries, estimated duration, mistakes, and an earned ending before implementation. Completes the writing within the requested scope and returns a reviewable draft. |
+| [`worldview-game-horror-production`](../skills/game-production/worldview-game-horror-production/README.md) | Owns the complete horror experience, selects focused mechanics, connects their state and pacing, and verifies the playable result. Routes story-first requests to writing before runtime work. |
 | [`worldview-game-single-ending-campaign`](../skills/game-production/worldview-game-single-ending-campaign/README.md) | Starts from a short premise or researched subject and owns a complete route to one canonical ending. It may define original fictionalization, maps, NPCs, items, connected gameplay systems, campaign state, presentation, and release proof. It reduces scope rather than presenting unfinished content as a vast finished world. |
 | [`worldview-game-high-fidelity-vertical-slice`](../skills/game-production/worldview-game-high-fidelity-vertical-slice/README.md) | Starts from a story, place, or game idea and may define one bounded slice's loop, route, camera, signature event, ending, presentation, and proof. It stops at a short complete slice rather than claiming delivery of an unbounded commercial game. |
 | [`worldview-game-runtime-visual-fidelity-rebuild`](../skills/game-production/worldview-game-runtime-visual-fidelity-rebuild/README.md) | Starts from a game that already works. It records a protected behavior baseline, diagnoses visible runtime defects, and rebuilds presentation without silently changing controls, collision, timing, scoring, save behavior, or other locked rules. |
 
-The three Skills can recommend each other, but none is an automatic stage of another. A campaign must prove a full narrative route; a slice deliberately stops after a short bounded chapter; a rebuild protects rules that the other two may be allowed to create. Each therefore ships as a complete, independently installable leaf with its own method, provenance, reasoning, contract, and fictional example under the [game-production category](../skills/game-production/README.md).
+The writing entry can precede any genre's production. A story-first request ends with a completed draft for review; a previously authorized end-to-end build can consume the draft and proceed. A campaign proves a full narrative route, a slice stops after a bounded chapter, and a rebuild protects existing rules. Each leaf remains independently useful; production entries provide a writing fallback when the story Skill is not installed. The [game-production category](../skills/game-production/README.md) explains these handoffs.
 
 ## Public naming
 

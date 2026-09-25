@@ -1,14 +1,17 @@
 ---
 name: cinematic-film
-title: Cinematic Film
-description: Entry point for making a short film (2–5 minutes) from an idea. Routes through direction, story, script, locked assets, per-block prompts, parallel generation and review. Use when the user wants a short film, a narrative video, a product film with a story, or asks to turn a premise into a finished video.
-category: film-video
-triggers:
-  - "make a short film"
-  - "turn this idea into a film"
-  - "narrative video"
-  - "product film with a story"
-  - "I have an idea about..."
+description: >-
+  Entry point for making a short film (2–5 minutes) from an idea. Routes through
+  direction, story, script, locked assets, per-block prompts, parallel
+  generation and review. Use when the user wants a short film, a narrative
+  video, a product film with a story, or asks to turn a premise into a finished
+  video.
+metadata:
+  title: Cinematic Film
+  category: film-video
+  triggers: >-
+    make a short film; turn this idea into a film; narrative video; product film
+    with a story; I have an idea about...
 ---
 
 # Cinematic Film
@@ -85,6 +88,6 @@ films/<slug>/
 
 ## Related entries
 
-- Shorter, single-scene work: `game-cutscene`, `anime-action-scene`
+- Shorter, single-scene work: `game-cutscene-generator`, `anime-action-scene`
 - No story, just a product: `product-demo`
 - Vertical: `social-media-video`

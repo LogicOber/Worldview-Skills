@@ -1,14 +1,15 @@
 ---
 name: visual-novel
-title: Visual Novel
-description: Entry point for a visual novel or adventure-game (AVG) scene set — character sprites with expression sets, backgrounds by time of day, a script with branching from narrative-choice, voiced lines when TTS is available, and a playable web build. Absorbs the earlier create-avg skill. Use when the user says "visual novel", "AVG", "otome", "dating sim", "text adventure with art".
-category: 2d-game
-triggers:
-  - "visual novel"
-  - "AVG"
-  - "otome game"
-  - "dating sim"
-  - "text adventure with pictures"
+description: >-
+  Entry point for a visual novel or adventure-game (AVG) scene set — character
+  sprites with expression sets, backgrounds by time of day, a script with
+  branching from narrative-choice, voiced lines when TTS is available, and a
+  playable web build. Absorbs the earlier create-avg skill. Use when the user
+  says "visual novel", "AVG", "otome", "dating sim", "text adventure with art".
+metadata:
+  title: Visual Novel
+  category: 2d-game
+  triggers: visual novel; AVG; otome game; dating sim; text adventure with pictures
 ---
 
 # Visual Novel

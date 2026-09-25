@@ -150,7 +150,7 @@ Knowledge states and transitions: `<unaware / suspicious / investigating / confi
 ## Search release and withdrawal — Stalker-knowledge and Encounter-and-warning locks
 
 | Encounter shape | Confirmation-loss cause | Last-known evidence retained | Search sites / maximum breadth | Release condition | Withdrawal connector | End cue in supported modes | Reacquisition during release | Cooldown begins when |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |  |  |
 
 - Why timer expiry alone cannot release the stalker:

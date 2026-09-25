@@ -1,26 +1,20 @@
 ---
 name: game-cutscene-generator
-title: Game Cutscene Generator
-description: Generate cinematic in-game cutscenes with character consistency and real-time engine aesthetics
-category: film-video
-tags:
-  - cutscene
-  - game
-  - cinematic
-  - unreal-engine
-  - unity
-  - character-animation
-triggers:
-  - "generate game cutscene"
-  - "create cinematic"
-  - "make in-game video"
-  - "cutscene for my game"
-  - "boss intro cutscene"
-  - "dialogue scene"
-examples:
-  - "Generate a 30-second boss intro cutscene"
-  - "Create a dialogue scene between two characters"
-  - "Make a victory celebration cutscene"
+description: >-
+  Generate cinematic in-game cutscenes with character consistency and real-time
+  engine aesthetics. Use for boss introductions, character conversations,
+  story transitions, or victory scenes that need camera direction and an
+  editable script and shot list.
+metadata:
+  title: Game Cutscene Generator
+  category: film-video
+  tags: cutscene; game; cinematic; unreal-engine; unity; character-animation
+  triggers: >-
+    generate game cutscene; create cinematic; make in-game video; cutscene for
+    my game; boss intro cutscene; dialogue scene
+  examples: >-
+    Generate a 30-second boss intro cutscene; Create a dialogue scene between
+    two characters; Make a victory celebration cutscene
 ---
 
 # Game Cutscene Generator

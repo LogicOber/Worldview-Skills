@@ -15,6 +15,8 @@ The public invocation is:
 
 Treat the text below the Slash command as the creative brief. A story premise is enough to begin. Do not make the user translate a scene into shader names, polygon counts, engine architecture, or a long production prompt before work starts.
 
+If the user is still choosing the story or asks to review it first, begin with `/worldview-game-story-and-play-plan` when installed. Deliver readable scenes, player actions, discoveries, ending, and estimated play time; finish the requested writing before handing back for review. Without that sibling, write the same bounded story and play plan here. Start runtime and asset work only within the user's implementation authorization. An explicit end-to-end build with delegated story choices can proceed from this plan without another approval. Preserve a story that the creator already accepted.
+
 ## Read only the companion files the task needs
 
 - Read and fill [vertical-slice-contract.md](templates/vertical-slice-contract.md) before extensive asset production. If the project already records every equivalent decision and test, update that record instead of duplicating it.

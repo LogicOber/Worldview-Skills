@@ -5,7 +5,7 @@ description: >-
   close a film using the cinema convention of a black background, white text, no
   italics, no avatars, and no decoration, in English unless the film uses another
   language. Produces locked card images plus timing and dissolve specifications for
-  the edit. Called by cinematic-film, game-cutscene, and product-demo at assembly
+  the edit. Called by cinematic-film, game-cutscene-generator, and product-demo at assembly
   time.
 ---
 

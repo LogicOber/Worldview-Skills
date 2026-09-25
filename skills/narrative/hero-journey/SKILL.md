@@ -1,14 +1,18 @@
 ---
 name: hero-journey
-title: Hero's Journey
-description: Entry point for a complete story built on the monomyth — ordinary world, call, refusal, threshold, trials, ordeal, reward, road back, return with the elixir — with the conflict ladder, loss and dilemma that film-story requires, mapped to blocks or chapters. Use when the user says "hero's journey", "an adventure story", "coming of age", "a quest", or gives a premise with a protagonist who must leave home.
-category: narrative
-triggers:
-  - "hero's journey"
-  - "an adventure story about"
-  - "a quest"
-  - "coming of age"
-  - "the chosen one"
+description: >-
+  Entry point for a complete story built on the monomyth — ordinary world, call,
+  refusal, threshold, trials, ordeal, reward, road back, return with the elixir
+  — with the conflict ladder, loss and dilemma that film-story requires, mapped
+  to blocks or chapters. Use when the user says "hero's journey", "an adventure
+  story", "coming of age", "a quest", or gives a premise with a protagonist who
+  must leave home.
+metadata:
+  title: Hero's Journey
+  category: narrative
+  triggers: >-
+    hero's journey; an adventure story about; a quest; coming of age; the chosen
+    one
 ---
 
 # Hero's Journey

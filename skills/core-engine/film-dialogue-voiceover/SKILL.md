@@ -1,17 +1,13 @@
 ---
 name: film-dialogue-voiceover
-title: Film Dialogue & Voiceover Generator
-description: Generate perfect lip-sync dialogue videos with automatic voice generation and audio-driven lip-sync
-category: core-engine
-tags:
-  - dialogue
-  - voiceover
-  - lip-sync
-  - tts
-  - elevenlabs
-dependencies:
-  - elevenlabs-tts (optional, recommended)
-  - seedance-2.5
+description: >-
+  Generate perfect lip-sync dialogue videos with automatic voice generation and
+  audio-driven lip-sync
+metadata:
+  title: Film Dialogue & Voiceover Generator
+  category: core-engine
+  tags: dialogue; voiceover; lip-sync; tts; elevenlabs
+  dependencies: 'elevenlabs-tts (optional, recommended); seedance-2.5'
 ---
 
 # Film Dialogue & Voiceover Generator
@@ -561,7 +557,7 @@ Result: Video generated, but mouth movements are guessed
 
 ## Related Skills
 
-- [Game Cutscene](../../film-video/game-cutscene/) - Uses this skill for dialogue
+- [Game Cutscene](../../film-video/game-cutscene-generator/) - Uses this skill for dialogue
 - [Cinematic Film](../../film-video/cinematic-film/) - Uses this skill for all dialogue
 - [Film Shot Prompt](../film-shot-prompt/) - Integrates lip-sync syntax
 

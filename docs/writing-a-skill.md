@@ -8,14 +8,16 @@ A skill is a `SKILL.md` an agent reads before doing a job. It is not documentati
 ---
 name: kebab-case-id
 description: One paragraph. What the skill produces, when to use it, and the words a user would say that should trigger it. This is what routing reads.
-title: Optional human-facing title
-category: Optional repository category
-triggers:
-  - "optional phrases a user would actually type"
+metadata:
+  title: Optional human-facing title
+  category: Optional repository category
+  triggers: "Optional phrases a user would actually type, separated by semicolons."
 ---
 ```
 
 `description` is the most important field. It is read by whatever decides which skill to load. Put the trigger words in it.
+
+Match `name` to the Skill folder. Keep it within 64 lowercase letters, digits, and hyphens, and keep `description` non-empty and within 1024 characters. Store repository-specific fields under `metadata` as string values, following the [Agent Skills specification](https://agentskills.io/specification). Metadata does not replace the trigger language in `description`.
 
 ## The body — what every entry skill has
 
