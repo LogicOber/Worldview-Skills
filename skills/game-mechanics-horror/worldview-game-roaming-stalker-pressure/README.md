@@ -1,8 +1,8 @@
 # Worldview Game — Roaming Stalker Pressure
 
-Build a persistent threat that moves through an interconnected world, leaves interpretable signs, interrupts the player's plans, and withdraws often enough for anticipation to return. The player cannot reduce it to one scripted chase, but can still reason about where it may be, why it arrived, and which counterplay remains available.
+Build a persistent threat whose territory can be predicted before first sight, whose location and search follow declared evidence, and whose release, withdrawal, capture recovery, and return remain readable across connected objectives.
 
-> **This Skill builds sustained pressure from spatial continuity.** It does not make an enemy “unpredictable” by spawning it anywhere the player is not currently facing.
+> **This Skill builds sustained pressure from spatial continuity.** Local claims about the stalker remain separate from observed behavior, and a pressure episode ends only through a declared release condition—not because a hidden timer silently expires.
 
 ## Call this Skill
 

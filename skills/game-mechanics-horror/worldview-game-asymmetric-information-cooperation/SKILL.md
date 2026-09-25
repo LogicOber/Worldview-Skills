@@ -1,6 +1,6 @@
 ---
 name: worldview-game-asymmetric-information-cooperation
-description: "Use when a horror game needs a cooperative encounter where different players possess necessary but incomplete information, tools, positions, or authority and must communicate to produce one shared action under pressure. Produces role and information contracts, a communication vocabulary, recovery and assistance rules, an implementation when a runtime is available, and direct multi-role and network verification. Do not use for symmetric co-op, hidden-traitor deception, inaccessible voice-only puzzles, or a companion who performs the player's reasoning."
+description: "Use when a horror game needs simultaneously active players or declared AI partners to combine incomplete observations, possessions, locations, tasks, or authority under pressure. Produces participant task and last-known-state records, provenance-bearing communication and acknowledgement, recovery and pathing fallbacks, save/disconnect rules, an implementation when a runtime exists, and direct multi-role verification. Do not use for symmetric co-op, sequential single-player viewpoint handoffs, hidden-traitor deception, inaccessible voice-only puzzles, or a companion who performs the player's reasoning."
 ---
 
 # Worldview Game — Asymmetric Information Cooperation
@@ -37,7 +37,7 @@ Use this Skill when:
 6. Horror pressure limits attention or time without making exchange impossible.
 7. Mistakes lead to readable consequences, recovery, or an explicit terminal failure.
 
-Do not use it merely because players occupy different characters. Symmetric combat, social deduction, secret betrayal, unrestricted party chat, and AI companions that reveal the answer close different questions.
+Do not use it merely because players occupy different characters. Symmetric combat, social deduction, secret betrayal, unrestricted party chat, and AI companions that reveal the answer close different questions. When one player controls characters sequentially and the difficult problem is preserving earlier actions, possessions, memories, or evidence into a later viewpoint, route to `/worldview-game-character-handoff-and-shared-evidence` when installed. This Skill owns live exchange between active participants.
 
 ## What the user gives
 
@@ -58,8 +58,8 @@ Separate what was observed in the project, what the user declared, what is newly
 Deliver as much as the project supports:
 
 1. An inventory of existing session, replication, input, UI, audio, camera, interaction, threat, and persistence systems.
-2. A role contract listing what each player can perceive, infer, communicate, confirm, and change.
-3. An information graph showing the source, owner, encoding, channel, receiver, acknowledgement, action, and shared consequence of every required fact.
+2. A role contract listing each participant's current task, required capability, last verified location and condition, possession, knowledge, perception, communication, confirmation, fallback, and allowed change.
+3. An information graph showing the source, observer, provenance, physical holder, knowledge holder, encoding, channel, receiver, acknowledgement, action, and shared consequence of every required fact.
 4. A compact communication vocabulary with accessible equivalents and localization notes.
 5. Tunables for windows, channel limits, acknowledgement, threat pacing, recovery, and assistance.
 6. One complete encounter in the project's actual runtime when possible.
@@ -126,6 +126,24 @@ For each role, define:
 - consequence they can observe after a shared action;
 - behavior when the other role disconnects, becomes unavailable, or requests assistance.
 
+Also give every participant a live responsibility record:
+
+```text
+current task and reason
+required capability
+last verified location and time
+last verified physical condition
+physical objects held
+knowledge personally acquired
+communication method and last acknowledgement
+success, delay, injury, and failure transitions
+fallback when movement, pathfinding, or a handoff fails
+```
+
+“Following the player” is not a sufficient task. A participant repairing a lift, guarding an access point, searching a room, carrying an irreplaceable tool, or maintaining a signal has a state the other role can reason about. Update last-known state only from an observation, accepted message, or authoritative event the receiving role is allowed to know. Do not expose a live quest marker when the fiction says communication is lost.
+
+Keep physical possession separate from knowledge. A role may hold a part without knowing its use; another may understand the target but lack the part or permission. Inventory/world authority owns the physical item. This contract owns who observed its transfer, who was told its purpose, and whether receipt was acknowledged.
+
 No role should exist only to read text aloud. If one player sees the answer while another enters it, the observer also needs decisions about interpretation, timing, validation, navigation, threat, or which part to reveal. The operator needs more than transcription: order, commitment, position, resource, or risk should make their agency matter.
 
 ## Build an information-action graph
@@ -136,6 +154,8 @@ Represent every required exchange:
 
 ```text
 authoritative fact
+  -> source observation and provenance
+  -> physical holder and knowledge holder, when relevant
   -> role-specific cue
   -> player interpretation
   -> communication token or phrase
@@ -148,6 +168,8 @@ authoritative fact
 If any edge depends on designer knowledge, repair it. The observer must be able to distinguish the cue. The channel must express it. The receiver must map the message to an action. Both players must see enough consequence to know whether their shared model was correct.
 
 Do not allow private client state to decide shared success. The authoritative simulation validates the action and broadcasts the consequence.
+
+Record the transmission history rather than storing only the latest shared value: observation ID, sender, sender knowledge version, channel, send time, intended recipient, delivered time, acknowledgement, expiry or phase, and any distortion. A late message can remain historically true while being unsafe for the current phase. A missing acknowledgement remains unknown delivery, not automatic refusal.
 
 ## Create a finite, learnable vocabulary
 
@@ -218,6 +240,8 @@ Choose one policy rather than drifting among them:
 
 An AI partner is not a cheap substitute for a person. If the project does not already support one, do not invent broad companion intelligence merely to complete this encounter.
 
+For an existing AI partner, pathing failure must enter a declared transition rather than freezing the objective. Choose a deterministic response: move to a reachable fallback node, report `ROUTE BLOCKED` through an accessible channel, transfer a recoverable object to a named cache, or pause the dependent commit. Never teleport the partner, its knowledge, or its inventory unless the project already owns that visible rule.
+
 ## Keep network authority narrow and testable
 
 This section completes **Session authority** and enforces the acceptance rules fixed by **Commit protocol**.
@@ -229,6 +253,8 @@ Protect against duplicate messages and inputs, stale clue versions, out-of-order
 Define late join and host migration explicitly even when the answer is “unsupported.” A rejected late join needs a stable lobby or retry destination. Unsupported host migration needs a protected pause or abort boundary that cannot promote a client with partial authority. If reconnect is supported, restore shared state to every returning participant but replay private clues only to the role that owns them.
 
 Define latency tolerance and test realistic delay, jitter, loss, duplication, and disconnect. “Multiplayer works” requires at least two independent clients observing the same authoritative outcome.
+
+Save and restore shared phase, current tasks, last verified locations and conditions, physical-owner references, actor-specific knowledge, transmission history, acknowledgements, staged actions, operation IDs, and fallback state. Reload must not turn a sent-but-unacknowledged message into shared knowledge, duplicate a transferred object, heal an injured participant, or advance an AI task twice. On death or restart, clear or retain each field according to the declared checkpoint rather than a global co-op reset.
 
 ## Preserve accessibility and consent
 
@@ -250,6 +276,7 @@ Implement one loop before a long sequence:
 6. Apply one shared success or readable failure.
 7. Update both roles with consistent feedback.
 8. Recover, advance, or restart without stale messages or timers.
+9. Exercise one missed acknowledgement and one path or handoff failure; the declared fallback must preserve state ownership and identify what remains unknown.
 
 ## Verify from every role
 
@@ -271,6 +298,9 @@ Run and record:
 12. Test captions, no-audio communication, non-color cues, text scale, reduced motion, input alternatives, and narrow viewports.
 13. If solo mode is claimed, test its redesigned timing separately; do not infer it from co-op success.
 14. Capture evidence from all clients and the authoritative state.
+15. Save and reload after observation, transmission, acknowledgement, physical transfer, injury/delay, and fallback; confirm participant-specific knowledge and world ownership do not merge.
+16. Force an AI or navigation failure when an AI partner is claimed; verify the declared fallback and ensure the objective cannot freeze silently.
+17. Compare the sender's transmission history with the receiver's acknowledged knowledge; sent, delivered, and understood must remain distinct.
 
 ## Work within the current Harness
 

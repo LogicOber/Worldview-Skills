@@ -27,8 +27,9 @@ Existing pursuit mechanics can specify what the pursuer believes, but they do no
 - deliberate first-attempt failure, checkpoints, and soft-lock tests;
 - a required analysis pass for player reactions, terrain, objects, and linked mechanics before implementation;
 - optional image/API/MCP use that remains subordinate to runtime evidence.
+- calm route rehearsal, sequential branch rejection, explicit recovery and no-return boundaries, and a learned lure or containment threshold;
+- explicit routing boundaries that leave vehicle attention and progressive journey-protection state to their dedicated owners.
 
 ## Non-claims
 
 The method does not promise that an image model will produce a buildable floor plan, that a generated 3D asset is rig-safe, or that one route is universally fun. It requires a playable test, measured evidence, and a visible limitations report. It is not legal, architectural, accessibility, or safety certification.
-

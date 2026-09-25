@@ -115,9 +115,9 @@ Before implementation, the Agent records which project, runtime, capture, genera
 
 Credentials stay outside source control. Paid calls, uploads of proprietary references, external downloads, and deployment require real authorization; finding an environment key does not supply that authorization.
 
-## What all three methods check
+## What all four methods check
 
-The three packages have different lock orders, but all distinguish three kinds of evidence:
+The four packages have different lock orders, but all distinguish three kinds of evidence:
 
 | Evidence | What it can prove | What it cannot prove alone |
 | --- | --- | --- |
@@ -125,7 +125,7 @@ The three packages have different lock orders, but all distinguish three kinds o
 | Runtime capture from a named state | Camera, silhouette, composition, surface, lighting, effects, UI, and visible artifacts at one moment. | Reachability, correct collision, reset, or sustained performance. |
 | Performance trace with environment record | Frame timing, loading, work queues, renderer counts, and the effect of a controlled change. | Artistic coherence, control feel, or performance on untested hardware. |
 
-Both methods use three to five named gameplay states instead of one beauty shot. This prevents a project from being optimized for a single camera while ordinary play, transitions, failure states, or dense effects remain unfinished.
+All four methods use named gameplay states instead of one beauty shot. This prevents a project from being optimized for a single camera while ordinary play, transitions, failure states, or dense effects remain unfinished.
 
 ## Repository structure
 

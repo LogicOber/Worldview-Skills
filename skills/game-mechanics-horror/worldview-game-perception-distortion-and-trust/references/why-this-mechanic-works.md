@@ -21,6 +21,8 @@ Distortion belongs primarily in presentation. Changing a sign is not the same as
 
 Keeping the layers explicit prevents accidental rule changes and makes tests possible. A test can assert that the exit remained east while presentation showed a false western label. A player can compare that label with a protected compass. The contradiction becomes authored evidence rather than a bug.
 
+Cue interpretation is a fourth record. A character may see the true event and infer the wrong cause; another may receive a fabricated cue but correctly distrust it. Storing event, cue interpretation, presentation, and evidence separately preserves those differences through later dialogue, investigation, and save/load. This package owns interpretation of the cue only; beliefs about an actor's role, identity, permission, or culpability belong to role-and-identity pressure.
+
 ## An anchor creates agency without removing fear
 
 A reliable anchor is sometimes mistaken for a solution that makes the encounter easy. It need not be. The compass may require a hand that would otherwise hold a light. A protected map may be readable only in exposed stations. A companion's code may consume scarce radio power. A physical landmark may require the player to stop and look behind them.
@@ -51,6 +53,14 @@ Games ask players to trust save confirmations, accessibility controls, pause sta
 
 The fiction can imitate an in-world terminal. It should not imitate the operating system or lie about whether progress was saved. This boundary is both an ethical rule and a technical one: players need a dependable way to stop, configure, and resume the experience.
 
+## Trust grows from permissions and destinations
+
+A guide is not trustworthy because a hidden score rises. The player learns what the guide can access, what they personally witnessed, where previous directions led, which promises they kept, and what unusual exception they request now. A later betrayal becomes causal when the guide uses an access right the player already understood.
+
+Scope matters. A person can be dependable about building routes and mistaken about the entity. A recording can be authentic and obsolete. A guide can provide real rescue while increasing dependence. Store those histories separately instead of flipping the entire character between “trusted” and “evil.”
+
+Avoid guide betrayal that has no destination pattern, access history, promise, or independent trace. It produces surprise but gives the player no basis for a different decision.
+
 ## Representation is not a texture
 
 Using psychiatric language as a synonym for supernatural evil turns real people into atmosphere and claims a realism the mechanic does not possess. A fictional force should be named by its fictional rule: signal saturation, dream pressure, memory bleed, spore exposure, or another precise term.
@@ -65,6 +75,9 @@ Do not use this method when:
 - all information must remain strictly reliable for the intended audience or context;
 - the scene is a non-interactive film sequence;
 - the design depends on undetectable random punishment;
+- every guide can betray the player for any reason without a permission or behavior history;
+- evidence disappears without a prior snapshot or an authored state transition;
+- ambiguity consists of disconnected images that cannot support two causal readings;
 - the requested subject is a real diagnosis requiring responsible representation;
 - the effect must spoof real saves, platform UI, purchases, or accessibility controls.
 

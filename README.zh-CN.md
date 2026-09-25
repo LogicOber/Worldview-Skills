@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-2f80ed?style=for-the-badge" alt="Apache 2.0 license"></a>
-  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-63-111827?style=for-the-badge" alt="63 Skills"></a>
+  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-74-111827?style=for-the-badge" alt="74 Skills"></a>
   <a href="https://skills.sh"><img src="https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex-111827?style=for-the-badge" alt="Works with Claude Code and Codex"></a>
 </p>
 
@@ -16,7 +16,7 @@
 
 把仓库链接和一句需求交给 Agent 即可。它会自行安装相关 Skill、选择制作路径、读取契约，只在答案会改变结果时提问，完成制作、验证和交付。你不需要先学节点工作流，也不需要记住内部 Skill 的触发顺序；需要精细控制时，再直接使用对应的 Slash 入口。
 
-仓库目前包含 **63 个可安装 Skill**，可以用来：
+仓库目前包含 **74 个可安装 Skill**，可以用来：
 
 - 把简短想法扩展成经过调研的单结局游戏，制作新的可玩切片，或重建现有游戏的视觉呈现；
 - 实现追逐、躲藏、声音侦测、稀缺存档、调查和死亡循环等恐怖玩法；
@@ -41,7 +41,7 @@
 
 ## 安装与更新
 
-为所有受支持的 Agent 安装全部 63 个 Skill：
+为所有受支持的 Agent 安装全部 74 个 Skill：
 
 ```bash
 npx skills add LogicOber/Worldview-Skills --all
@@ -76,6 +76,7 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 
 | Slash 入口 | 适合用来做什么 | 得到什么 |
 | --- | --- | --- |
+| [`/worldview-game-horror-production`](skills/game-production/worldview-game-horror-production/README.md) | 把简短的恐怖游戏设想扩展成机制互相连接、空间可记忆、威胁可学习、节奏与恢复完整并经过结局验证的完整体验。 | 恐怖游戏制作契约、体验时间线、地图与路线方案、机制路由、灰盒顺序、感官设计、验证流程，以及可玩或可直接实现的交付。 |
 | [`/worldview-game-single-ending-campaign`](skills/game-production/worldview-game-single-ending-campaign/README.md) | 把简短设想扩展成原创、经过调研、只有一个正史结局并拥有完整可玩世界的剧情游戏。 | 带日期的调研记录、原创虚构化方案、完整路线、互相关联的玩法系统、地图、NPC、物品、状态与存档逻辑、运行证据，以及验证过的构建或部署 URL。 |
 | [`/worldview-game-high-fidelity-vertical-slice`](skills/game-production/worldview-game-high-fidelity-vertical-slice/README.md) | 把故事、地点或游戏想法制作成一段精致的 2D 或 3D 可玩章节。 | 可玩核心、3–5 个真实游玩状态、原创资产方案、完整视觉呈现、运行时截图、性能证据和交付说明。 |
 | [`/worldview-game-runtime-visual-fidelity-rebuild`](skills/game-production/worldview-game-runtime-visual-fidelity-rebuild/README.md) | 为玩法已经正常、但画面通用或不统一的游戏重建视觉呈现。 | 玩法保护基线，以及重建后的镜头、资产、材质、灯光、特效、UI、音频、同状态对比、回归测试和性能测量。 |
@@ -88,14 +89,15 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 
 ## 恐怖游戏机制
 
-18 个独立 Skill 可以实现完整、可测试的恐怖游戏情境，其中包括专门为室内追逐设计路线和建筑空间的 Skill。
+27 个独立 Skill 可以实现完整、可测试的恐怖游戏情境，包括追逐路线、角色切换后的共享证据、逐步失去保护的受困旅程、驾驶分心压力，以及即时缓解但产生延迟代价的资源系统。
 
 | 类别 | 包含的机制 |
 | --- | --- |
 | **追逐与躲藏** | 诱导—躲藏—逃脱、注视限制追踪者、声音诱导、游荡追踪者、安全屋和路障。 |
-| **生存决策** | 稀缺背包、关键物品折返、有限存档风险和虚构伤势治疗。 |
+| **生存决策** | 稀缺背包、关键物品折返、有限存档风险、虚构伤势治疗，以及具有延迟代价的缓解资源。 |
 | **调查与目标** | 恢复电力、距离信号追踪、实体识别和威胁打断谜题。 |
-| **感知与合作** | 感知失真、死亡循环中的持久线索和非对称信息合作。 |
+| **感知与合作** | 感知失真、死亡循环中的持久线索、非对称信息合作，以及跨可玩角色保存证据与后果。 |
+| **旅程与体验编排** | 逐步失去保护的受困路线、驾驶分心压力、体验节奏、重复地点、日常流程异变、职业职责与身份压力。 |
 
 ```text
 /worldview-game-lure-hide-escape
@@ -123,6 +125,7 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 | Slash 入口 | 制作内容 |
 | --- | --- |
 | [`/worldview-gameplay-video-analysis`](skills/game-analysis/worldview-gameplay-video-analysis/README.md) | 带时间戳的观察记录、截图/风格板、路线与机制图、设计模式与失败模式标签，以及可以反哺恐怖游戏契约的跨视频聚类。 |
+| [`/worldview-gameplay-experience-study`](skills/game-analysis/worldview-gameplay-experience-study/README.md) | 从第一人称体验、第三人称设计判断和证据中形成定性案例，并转成可用于原创设计的决策记录。 |
 
 ## 游戏设计与 2D 游戏制作
 
@@ -210,12 +213,15 @@ npx skills update worldview-game-high-fidelity-vertical-slice
 skills/
 ├── game-production/          用于制作或重建可玩游戏的 Skills
 ├── game-mechanics-horror/    用于实现恐怖游戏机制的 Skills
+├── game-analysis/            用于从游戏与游玩媒体提取设计证据的 Skills
 ├── game-design/              用于设计遭遇、技能、关卡和选择的 Skills
 ├── 2d-game/                  用于制作可玩 2D 游戏形式和像素动画的 Skills
 ├── 3d-assets/                用于制作角色、环境、道具和特效的 Skills
 ├── film-video/               用于制作完整电影和视频形式的 Skills
 ├── core-engine/              用于执行各个电影制作阶段的 Skills
 └── narrative/                用于写作完整故事结构的 Skills
+
+docs/                         供维护者使用的分类边界与 Skill 写作规范
 ```
 
 未来的第一人称、第三人称、2.5D、等距视角和横版视角 Skill 会放在独立的视角分支中，不会和玩法机制或游戏制作 Skill 混在一起。完整规划见 [游戏 Skill 架构](docs/game-skill-architecture.md)。

@@ -19,7 +19,7 @@ The method is an original synthesis written for this repository from:
 3. general software and game-production responsibilities independently expressed for a longer single-ending campaign: state ownership, level flow, content budgeting, integration, failure recovery, performance observation, and clean-build verification;
 4. generally applicable editorial responsibilities for distinguishing sourced facts, attributed claims, interpretation, community discourse, and invented fiction.
 
-No external Skill was used to generate, outline, rewrite, or validate these files. No Skill generator or `skill-creator` was invoked. The package does not call another Skill at runtime.
+The method, structure, and prose were authored directly for this repository. Other packages may be routed during a project, but they are not hidden runtime dependencies of this package.
 
 ## Original decisions introduced here
 

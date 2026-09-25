@@ -1,6 +1,6 @@
 ---
 name: worldview-game-horror-procedural-duty-and-incident
-description: "Use when a horror game should make the player's job—driving, patrol, rescue, repair, delivery, inspection, or recording—the reason an abnormal scene must be approached. Produces a duty contract, teachable procedure, inspectable incident, response choices, evidence and route consequences, recovery, and verification. Do not use for a non-interactive cutscene or a chase that has no procedural responsibility."
+description: "Use when a professional, civic, family, or social responsibility should force the player to approach, inspect, preserve, report, repair, transfer, or abandon an incident while ordinary obligations remain live. Builds duty purpose, authority limits, live-task state, inspectable evidence, witness knowledge, response trades, retained work, responsibility shifts, recovery, persistence, and runtime proof."
 ---
 
 # Worldview Game — Horror Procedural Duty and Incident
@@ -11,118 +11,122 @@ description: "Use when a horror game should make the player's job—driving, pat
 /worldview-game-horror-procedural-duty-and-incident
 ```
 
-Everything after the Slash command is the role and incident brief. Recover project authority before adding a new checklist, evidence system, or vehicle controller.
+Inspect current task, actor, schedule, route, evidence, save, and authority owners first. The player’s role must create a real reason to approach the incident and a meaningful cost for leaving ordinary work unfinished.
 
 ## What this Skill owns
 
 ```text
-ordinary duty → checklist/rule learned → incident interrupts duty
-→ player inspects evidence → follow / improvise / retreat
-→ responsibility changes → route and threat state respond
+perform duty → confirm normal result → incident becomes eligible
+→ obligation and authority constrain response
+→ follow procedure / improvise / retreat-report / transfer
+→ evidence, work, access, public safety, or responsibility changes
+→ recover and perform the role under a revised rule
 ```
 
-The incident must be something the player is obligated or motivated to investigate. A monster reveal without a duty is a different design.
+It owns duty-specific obligation, the actions authorized by the current procedure, task continuation, transfer, and audit. `/worldview-game-horror-role-and-identity-pressure` owns whether the actor legitimately holds the role or permission from which that procedural authority is derived. This Skill imports that permission, narrows it to the active duty, and records its use; it does not redefine the actor's role. It also does not own entity truth, puzzle commit state, wounds, hearing, identity presentation, or pursuit route.
 
 ## Lock sequence
 
-### 1. Duty and authority
-Close when the player role, normal checklist, authority, and protected evidence are concrete.
+1. **Duty-purpose lock:** the normal task earns a later gameplay function.
+2. **Authority lock:** allowed, required, forbidden, and transferable actions are explicit.
+3. **Live-work lock:** deadlines, partial progress, observers, and ownership survive interruption.
+4. **Incident lock:** one inspectable break has eligibility, residue, and competing explanations.
+5. **Response lock:** procedure, improvisation, retreat/report, and transfer have causal consequences.
+6. **Audit lock:** failure, recovery, save/load, accessibility, ending, and aftermath prove the role remained meaningful.
 
-### 2. Incident evidence
-Close when one abnormal detail is visible, inspectable, and connected to a new question.
+## 1. Make the duty earn its time
 
-### 3. Response modes
-Close when procedure, improvisation, and retreat each alter state, route, or evidence.
+The ordinary procedure must own at least one later function:
 
-### 4. Recovery and persistence
-Close when the incident consequences survive or reset at the declared boundary without soft-locking.
+- rehearse an emergency route;
+- teach an affordance used under pressure;
+- prove a relationship or authorization;
+- create protected evidence;
+- establish a promise or public obligation;
+- place a resource or change a system used later.
 
-### 5. Runtime proof
-Close after normal duty, incident, responses, evidence, failure, accessibility, save/load, and ending are tested or marked unverified.
+Write the normal transaction as actor, input, location, object, authoritative result, confirmation, observer, deadline, and state owner. If the player only follows markers and the result is never read again, redesign the duty.
 
-### 6. Handoff
-Close when implementation, proposal, and unknowns are separated.
+## 2. Define authority, obligation, and recourse
 
-## 1. Define authority and duty
+For the player and every relevant actor record:
 
-Write:
+- actions they may, must, and must not take;
+- locations, records, objects, and people they can access;
+- who can override, transfer, witness, or audit their action;
+- what happens if they refuse, report, or seek help;
+- what recourse should work and why it may fail in this incident.
 
-- who the player is in the fiction;
-- what they are authorized to touch, report, repair, or ignore;
-- what a normal successful procedure looks like;
-- what evidence the job protects;
-- what failure means before any supernatural element appears.
+Authority is capability and history, not a uniform or job title. A legitimate permission can create danger; an unauthorized act can still be the humane response. Keep culpability separate from role.
 
-Teach only actions that later matter: stop, photograph, identify, repair, call, carry, check, or return.
+## 3. Snapshot live work before the incident
 
-## 2. Author the incident
+Record the active task, step, location, remaining duration, deadline, protected evidence, public or dependent consequence, current operator, alternate operator, and persistence tier. Decide what continues while the player investigates and what pauses for a declared reason.
 
-The incident needs one visible anomaly and one inspectable consequence. A collision, missing person, wrong delivery, broken lamp, corrupted message, or impossible object should make the player ask a new question.
+For an interaction that occupies hands or view, record cancel time, blind zones, live timers, and safe warning margin. Partial work must persist, revert to a stable commit, or transfer explicitly. Never reset it silently.
 
-For the incident record:
+## 4. Author an incident the player can inspect
 
-```text
-normal expectation → visible break → sound/camera cue
-→ evidence surface → available response → consequence
-```
-
-Do not make the anomaly readable only through a narrator. Let the player look, move, compare, or perform the duty.
-
-## 3. Give three response modes
-
-Use the modes appropriate to the role:
-
-- **Follow procedure:** safer authority, slower route, less immediate knowledge.
-- **Improvise:** faster or more revealing, but spends resource or creates exposure.
-- **Retreat/report:** preserves the player but leaves a state, clue, or route cost.
-
-The modes should converge on the canonical ending while preserving different evidence, relationships, timing, or recovery positions.
-
-## Audit why the player approaches the incident
-
-The incident must be a playable responsibility, not a cutscene that happens near a professional costume:
-
-| Incident check | Required record | Rewrite when |
-| --- | --- | --- |
-| Duty baseline | The ordinary task, authority, protected evidence, and completion signal. | The role has no action the player would perform before danger. |
-| Visible break | One abnormal object, person, route, sound, or record the player can inspect. | The narrator declares the incident while the player only watches. |
-| Obligation | The rule, person, contract, or consequence that makes inspection worthwhile. | The player approaches only because the next marker says so. |
-| Evidence action | Stop, photograph, identify, repair, call, carry, compare, or return. | “Investigate” has no concrete input or observable result. |
-| Response trade | Follow procedure, improvise, or retreat with different state consequences. | One response is correct and the others are decorative. |
-| Responsibility shift | What “doing the job correctly” means after the anomaly. | The incident ends the job instead of changing its meaning. |
-| Recovery | How the player preserves a useful fact after a wrong response. | Failure deletes evidence or forces an unrelated reload. |
-
-Write the player-facing chain:
+An incident needs:
 
 ```text
-player completes the ordinary duty
-→ sees an inspectable break
-→ knows why ignoring it has a cost
-→ chooses procedure, improvisation, or retreat
-→ changes evidence, access, authority, route, or threat state
-→ receives a recoverable consequence
-→ performs the duty again under the new rule
+normal state → eligibility cause → visible break → inspection verb
+→ residue or measurement → competing explanations → response window
 ```
 
-## Remove fake procedural horror
+Examples of useful breaks include a gauge disagreeing with a log, an object in an impossible custody state, a person outside an authorized route, a service completed without an operator, or a public request that conflicts with physical evidence. Do not announce the answer through narration.
 
-| Fake pattern | Why it fails | Repair |
-| --- | --- | --- |
-| Job title with no job action | The role is flavor text. | Teach one repeatable procedure before the incident. |
-| Accident as a video-only reveal | The player has no investigative ownership. | Put the evidence in reach and make inspection alter state. |
-| Checklist with no authority | The steps do not constrain anything. | Define what the player may touch, report, repair, or refuse. |
-| Retreat treated as cowardice | The system punishes the safe information strategy. | Let retreat preserve knowledge while costing time, access, or trust. |
-| Monster appears after the incident with no causal link | The duty is discarded when horror starts. | Make the duty expose, contain, redirect, or worsen the threat. |
-| Procedure always overrides improvisation | There is no judgment under pressure. | Make improvisation faster, louder, less authoritative, or more informative. |
+Record every observer: location, sightline, attention state, fact witnessed, confidence, later response, and whether the player knows they were seen. An invisible witness cannot fairly drive later accusation.
 
-## 4. Connect to detailed Skills
+## 5. Price response modes
 
-Route to entity identification when the incident requires a testable candidate matrix; interrupted puzzle when the duty is interrupted by danger; wounds when the incident creates bodily cost; sound when the evidence is acoustic; chase architecture only after the duty has become a route pressure.
+Use only responses that fit the role:
 
-## 5. Verify
+- **Follow procedure:** preserves authority or evidence, but may cost time or access.
+- **Improvise:** acts faster or reveals more, but may spend a resource, break custody, or create exposure.
+- **Retreat/report:** preserves safety and transmitted knowledge, but leaves work, route, or dependent risk.
+- **Transfer:** assigns a bounded subtask to an eligible actor or system, preserving ownership and last-known state.
 
-Run the normal procedure, first incident, all responses, evidence inspection, failure/retry, save/load, accessibility, and ending. Confirm that the player can say why they are still involved after the incident.
+For each response write exact task, evidence, access, observer, public/dependent, threat, resource, and schedule deltas. Paths may reconverge on one ending only through a visible causal event while retaining local consequences.
+
+## 6. Shift responsibility after the incident
+
+After the first response, define what “doing the job correctly” now means. The role may change from maintaining to containing, from serving to documenting, from rescuing to signaling, or from obeying procedure to proving it has been compromised. Preserve the original skill: the final action should use a route, tool, record, or authority learned during normal duty.
+
+The end-of-shift audit records completed, abandoned, transferred, falsified, damaged, and still-live tasks; evidence custody; observers; public effect; and the actor now responsible.
+
+## 7. Route focused systems
+
+| Need | Owner |
+| --- | --- |
+| Candidate tests and evidence provenance | `/worldview-game-evidence-based-entity-identification` |
+| Interrupt/cancel/resume transaction | `/worldview-game-threat-interrupted-puzzle` |
+| Role, identity, and permission conflict | `/worldview-game-horror-role-and-identity-pressure` |
+| Acoustic evidence or alert | `/worldview-game-sound-detection-and-distraction` |
+| Injury and treatment | `/worldview-game-wounds-infection-and-treatment` |
+| Designed pursuit route | `/worldview-game-chase-route-architecture` |
+| Cross-character task and evidence handoff | `/worldview-game-character-handoff-and-shared-evidence` |
+
+Record state read, state written, owner, reset order, and returned evidence for each handoff. Duty may trigger another system but does not redefine it.
+
+## 8. Implement and verify
+
+Build normal duty first, then one incident, at least two responses, recovery, revised duty, and canonical ending. Use stable task and actor IDs. UI reads authoritative state. Save task ownership, commits, evidence custody, and observer knowledge separately.
+
+Run:
+
+- normal procedure and confirmation;
+- incident eligibility before/after required baseline;
+- every response and local consequence;
+- interruption/cancel at every task phase;
+- alternate operator success, delay, failure, and missing-path fallback;
+- observer present, absent, occluded, and distracted;
+- deadline expiry while investigating;
+- wrong response and recovery;
+- save/load before incident, during partial work, after transfer, and after consequence;
+- restart without duplicate completion, evidence, or accusation;
+- accessibility variants and canonical ending from two response histories.
 
 ## Handoff
 
-Return duty/authority, incident evidence, response/state table, route consequences, recovery, implementation proof, and unknowns.
+Return duty/authority tables, live-work snapshots, incident evidence, witness ledger, response/state matrix, transfer history, revised-role rule, end-of-shift audit, implementation evidence, runtime traces, gaps, and next revision.

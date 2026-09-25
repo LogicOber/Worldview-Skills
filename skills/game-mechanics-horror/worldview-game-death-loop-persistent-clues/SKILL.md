@@ -197,6 +197,26 @@ Provide options for reduced repetition, extended windows, clue review, subtitle 
 
 Never punish a player for using accessibility assistance by withholding canonical progression or labeling the outcome invalid.
 
+## Require new information and actor-specific memory
+
+Every authored pass needs a `pass_objective`, at least one `new_information` result, and an `actionable_difference` for the next pass. Once routine labor is demonstrated, classify it as `mastered_labor` and give it a declared `compression_rule`. Compression may shorten travel, dialogue, setup, or solved manipulation; it must return control before the new inference or choice.
+
+Store memory per actor and per fact:
+
+| Field | Meaning |
+| --- | --- |
+| `actor_id` | the character or participant who can remember |
+| `fact_id` | stable fact identity |
+| `source_event` | what the actor observed or was told |
+| `confidence` | uncertain, supported, or confirmed |
+| `acquired_pass` | pass in which the memory became valid |
+| `persistence_rule` | reset, persist, transform, or external player knowledge |
+| `action_enabled` | action this memory can change |
+
+Do not grant every actor a global `loop_knowledge` flag. A companion who never witnessed a failure does not become omniscient after reset. If the player knows a fact but the current character does not, permit direct demonstration where fiction allows or require a visible transmission step.
+
+A bounded counterfactual replay is allowed only when it changes interpretation or action: replay one earlier event with one declared difference, show which actor remembers it, and record the changed consequence. A full timed investigation with hypotheses, isolated variables, confounds, actor schedules, and an outcome matrix belongs to the deferred time-loop investigation method; this Skill remains the owner of reset, persistence, transformation, and replay compression.
+
 ## Handle save, quit, resume, and new game honestly
 
 This section closes **Storage transaction** and its user-facing data boundaries.

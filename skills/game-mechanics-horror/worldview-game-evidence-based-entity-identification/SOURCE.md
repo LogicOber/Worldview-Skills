@@ -10,6 +10,8 @@ No external Skill, named game, character, published entity taxonomy, commercial 
 
 The **Wrenfall Conservatory** example, candidate names, instruments, evidence matrix, and setting were created for this repository. They do not record an existing implementation and must remain labeled as proposals until built.
 
+The later claimant, witness, mixed-behavior, institutional-trace, ownership, and operational-conclusion additions were also authored for this package. They do not reproduce an external case, published plot, research archive, or another repository's file structure.
+
 ## Problem reconstructed for this Skill
 
 The Skill addresses several linked failures common to an identification loop:
@@ -45,9 +47,7 @@ These are implementation and design proposals. They are not claims about every i
 
 ## Writing method
 
-The package follows the user-provided Writing 2 principles: reconstruct why the rules are needed, keep facts separate from proposals and judgments, preserve counterexamples and invalid cases beside the relevant claim, and explain the causal chain from test conditions to observation to conclusion.
-
-No Writing 2 text is copied. No Skill-generation Skill or skill-creator was used.
+The package reconstructs why the rules are needed, keeps facts separate from proposals and judgments, preserves counterexamples and invalid cases beside the relevant claim, and explains the causal chain from test conditions to observation to conclusion. The wording and structure are original to this repository.
 
 ## Self-contained loading boundary
 

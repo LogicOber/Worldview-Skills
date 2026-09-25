@@ -254,6 +254,18 @@ Different evidence proves different claims:
 
 Evidence belongs to a build. A changed state schema invalidates old save tests. A changed route invalidates old completion traces. A changed camera, material, lighting system, or asset invalidates affected captures and performance observations. Keeping stale proof is not documentation; it is a false claim about the delivered artifact.
 
+## Convergence fails when understanding never changes action
+
+Reject these patterns:
+
+- **Lore-only convergence:** routes deliver different documents, but none changes a playable decision or the final procedure.
+- **Untaught finale genre:** the last encounter introduces a new combat, rhythm, driving, aiming, or puzzle grammar absent from earlier play.
+- **Empty menu variation:** the player chooses a final line or label that changes nothing locally, then the project advertises meaningful choice.
+- **Last-minute answer:** the canonical explanation arrives in the final scene without earlier residue, competing interpretation, or corrective evidence.
+- **Restored-everything victory:** the threat ends and every relationship, permission, institution, injury, and place returns to its opening condition despite the campaign's costs.
+
+One ending still needs visible consequence. Build a correction chain from an original event through mistaken interpretation and corrective evidence to a changed action. Teach every final verb earlier. Preserve local route history through the reconvergence point and commit an aftermath state that survives reload.
+
 ## Completion test
 
 The campaign is ready for an honest handoff when a clean checkout or declared starting state produces a runnable build; a player can begin, learn the mechanics, traverse every required chapter, survive or recover from representative failure, and reach the one declared ending; optional paths rejoin without contradiction; required NPC, item, map, threat, and knowledge states persist correctly; the ending is understandable through play; runtime appearance and performance have been observed in a named environment; all shipped material has an origin and usage status; researched claims remain separated from allegations, interpretation, jokes, and invention; and the deployment URL has been tested when deployment was authorized.

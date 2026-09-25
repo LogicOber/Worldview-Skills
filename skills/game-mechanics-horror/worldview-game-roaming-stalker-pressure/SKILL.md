@@ -1,6 +1,6 @@
 ---
 name: worldview-game-roaming-stalker-pressure
-description: "Use when a horror game needs one persistent stalker to create pressure across connected zones and objectives while preserving spatial continuity, warning, counterplay, cooldown, save/load identity, and explainable success or failure. Produces a bounded implementation when a runtime is available plus a zone graph, pressure contract, tunables, and verification. Do not use for one scripted chase, a fixed patrol, a horde director, continuous omniscient pursuit, or arbitrary off-camera spawning."
+description: "Use when a horror game needs one persistent stalker whose territory, approach, knowledge, search release, capture recovery, and return remain understandable across connected zones and objectives. Produces a bounded implementation when a runtime exists plus territory and zone graphs, observed-behavior and local-claim records, pressure and withdrawal contracts, save/load rules, tunables, and verification. Do not use for one scripted chase, a fixed patrol, a horde director, continuous omniscient pursuit, or arbitrary off-camera spawning."
 ---
 
 # Worldview Game — Roaming Stalker Pressure
@@ -178,6 +178,31 @@ Abstract travel may be necessary when distant zones are unloaded. Advance along 
 
 If relocation is required for recovery from invalid state, distinguish it from normal roaming. Log the reason, constrain the candidate, keep it unobserved, preserve minimum time and distance, and report it in verification.
 
+## Be the single behavior owner in a composed threat
+
+When this Skill is selected, it is the authoritative writer for the persistent `threat_id`, durable knowledge, world route, movement, search, attack intent and commitment, withdrawal, and save reconstruction. The project combat or pursuit contract remains the sole writer for reach validation, hit, damage, capture, and contact result. Neighbor mechanics contribute bounded facts and permissions; they do not run parallel monster brains.
+
+| Input or state | Owner | Roaming responsibility |
+| --- | --- | --- |
+| Immutable sound event, propagation, reception, and sound-specific listener memory | `/worldview-game-sound-detection-and-distraction` | Consume `sound_received`; decide whether and how durable knowledge changes |
+| Observation predicate and movement/harm permission | `/worldview-game-observation-gated-stalker` | Obey the current permission version before moving or resolving attack |
+| Lure use, cover state, escape boundary, encounter lifecycle, and escape-success/reset aggregation | `/worldview-game-lure-hide-escape` | Accept or reject encounter requests; execute investigation, commitment, search, and release through this authoritative record |
+| Persistent identity, knowledge, route, movement, search, attack intent/commitment, withdrawal, and reconstruction | This Skill | Remain the only writer for threat behavior |
+| Reach validation, hit, damage, capture, and contact result | Project combat or pursuit contract | Consume the permitted attack commitment without bypassing its own rules |
+
+Run the composed transaction in a fixed order:
+
+1. Sound commits the event, propagation, reception, and `sound_received` handoff.
+2. Observation commits its predicate, hysteresis, and permission version.
+3. The bounded encounter commits cover state and requests investigate, commit, search, or release.
+4. This owner consumes all eligible inputs, resolves sensory precedence, and writes durable knowledge once.
+5. This owner selects the route and performs permitted movement or search, or issues one permitted attack commitment.
+6. The combat or pursuit owner validates reach and resolves hit, damage, capture, or contact once; the bounded encounter aggregates escape success or reset, and presentation consumes the results without rewriting threat state.
+
+Save a transaction version, shared `threat_id`, pending handoff IDs, and each domain version so load cannot replay a sound or apply old permission. On reset, stop behavior; clear or expire transient sound, observation, cover, and encounter requests according to their owners; restore the persistent snapshot; rebuild cameras, world routes, and reception; then resume only after fresh permission is published.
+
+If this Skill is absent, exactly one bounded encounter may provide a clearly declared local fallback controller. Sound and observation never both supply one. If this Skill is introduced later, migrate the fallback state once, remove its writers, and verify that one active `threat_id` remains.
+
 ## Keep knowledge separate from pressure desire
 
 Use only evidence and memory fields in the **Stalker-knowledge lock**.
@@ -242,7 +267,7 @@ recovery
 
 Not every encounter must enter pursuit. A corridor crossing, interrupted objective, trace discovery, or distant passage can increase pressure without contact. States should remain inspectable so the director cannot skip warning and force a hit.
 
-Movement uses valid navigation and connector rules. Attack, reach, and failure remain owned by the project's combat or pursuit contract. The roaming layer requests those behaviors; it does not bypass their requirements.
+Movement uses valid navigation and connector rules. This roaming layer owns attack intent, commitment, and its AI phase. Reach validation, hit, damage, capture, and contact result remain owned by the project's combat or pursuit contract; the roaming layer requests resolution and cannot bypass those requirements. A bounded encounter may aggregate that contact result with its escape boundary into capture, escape success, or reset without rewriting combat state.
 
 ## Give the pressure director limited authority
 
@@ -308,6 +333,27 @@ Write these as candidate rejection rules, not soft preferences:
 If no candidate passes, remain roaming or present a non-contact trace. Do not progressively relax hard constraints until something appears.
 
 Recent visibility needs memory. Record zones, portals, or candidate anchors the player could meaningfully inspect, with time and confidence. A point just behind the camera is not automatically unobserved if the player cleared that dead end one second ago.
+
+## Teach territory before first contact
+
+Territory is the set of spaces, connectors, traces, and conditions in which the stalker can plausibly operate. It is not a texture painted over the map. Before the first contact-capable encounter, give the player enough evidence to predict at least one thing the stalker can or cannot reach.
+
+Build a territory grammar:
+
+```text
+stable territory cue
+connector or boundary it implies
+first safe observation of behavior
+local claim or warning about the stalker
+observed confirmation or contradiction
+route or counterplay decision the player can make
+```
+
+Examples of useful cues include a repeated residue on only stalker-compatible doors, a physical change at a crossed connector, a distant passage through an otherwise inaccessible route, a sound that follows the actual travel graph, or a disabled ward that visibly changes the territory. Purely decorative scratches or a global music sting do not teach reachability.
+
+Keep claims separate from behavior. A note may say the stalker cannot cross water; observed footprints on the far bank contradict it. A local warning may be sincere but obsolete after an objective unlocks a shutter. Store claimant, context, and the behavior actually observed. The stalker controller reads world rules, not folklore; the evidence system may later use the contradiction.
+
+The first safe observation should expose one locomotion, inspection, or withdrawal rule without demanding immediate survival. It may be a distant crossing, a view through protected glass, or a trace created while the player occupies excluded geometry. Do not reveal the entire state machine, but give a player something concrete to predict before direct pressure.
 
 ## Foreshadow before contact
 
@@ -392,6 +438,22 @@ Use minimum cooldown plus state conditions rather than time alone. If the stalke
 
 Do not punish slow navigation, menu use, controller remapping, accessibility settings, or refuge occupancy by accumulating an enormous immediate encounter debt.
 
+Declare release separately from director cooldown. Release answers why the stalker no longer has current contact or a valid search reason. Cooldown answers when another full episode may become eligible. A timer reaching zero cannot release a stalker that still sees the player or has not completed its bounded search.
+
+For every encounter shape, record:
+
+- confirmation-loss cause;
+- last-known evidence retained;
+- search sites and maximum breadth;
+- search-complete or counterplay release condition;
+- withdrawal connector and visible/audible cue;
+- state retained after withdrawal;
+- director spend and cooldown start;
+- what can reacquire the player during release;
+- proof that the episode is over from the player's supported presentation modes.
+
+A declared end cue might be a retreat through a named shutter, a stopped search cadence plus a visible connector crossing, a ward returning to its stable state, or a confirmed route departure. Silence alone is insufficient when the player cannot distinguish withdrawal from waiting outside a hiding place.
+
 ## Preserve success, failure, save/load, and restart
 
 Use the snapshot and reset fields in the **Persistence-and-authority lock**, including abstract connector progress and any pending materialization transaction.
@@ -407,9 +469,13 @@ The first implementation should contain three connected zones and a bounded obje
 - save/load or checkpoint behavior appropriate to the project;
 - restart from every important director and stalker state.
 
+Define capture recovery as a state transition, not merely a death screen. Record checkpoint, retained route knowledge, objective progress, spent/restored counterplay, stalker zone and knowledge, pressure budget, repeated-encounter exclusion, and any accessibility assist. A modifier may help the next attempt—such as retaining an observed connector—or impose a declared cost, but it must not create an unexplained difficulty spiral.
+
 Save persistent stalker identity, physical or abstract location, connector progress, behavior and knowledge, history, altered abilities, pressure budget/phase, cooldown, selected encounter and seed, world connectors, objectives, resources, and outcome. Avoid saving halfway through an unsafe materialization transaction; define a stable reconstruction point.
 
 Restart clears pending opportunities, warning events, materialization locks, routes, timers, searches, attacks, director debt, audio, camera effects, UI, network messages, and outcomes. It restores intended initial identity and world state rather than creating a second stalker.
+
+Verify capture before warning, during approach, during confirmed pursuit, during search, and after release begins. Save/load at the same points must reproduce territory cues, local claims, observed behavior, last-known evidence, release progress, withdrawal route, capture modifier, and encounter-history exclusions without duplicating the stalker.
 
 ## Accessibility without converting pressure into punishment
 
@@ -433,7 +499,7 @@ Use the **Persistence-and-authority lock**. A changed relevant-player set or hos
 
 Do not add networking without a project requirement. In multiplayer, define whose position and progress influence pressure, whether the stalker can split attention, and whether the party shares success and failure.
 
-The authoritative host owns stalker identity, zone, knowledge, route, pressure budget, encounter choice, materialization, movement, attacks, objectives, and outcomes. Clients receive enough reason state to present warnings consistently without learning hidden transforms. Candidate selection must consider every relevant player's camera, recent visibility, collision, safe state, and unavoidable routes.
+This Skill's authoritative host owns stalker identity, zone, knowledge, route, pressure budget, encounter choice, materialization, movement, and attack intent/commitment. Combat or pursuit authority owns reach, hit, damage, capture, and contact result; objective and bounded-encounter authorities own their objective state and escape-success/reset aggregation. Clients receive enough reason state to present warnings consistently without learning hidden transforms. Candidate selection must consider every relevant player's camera, recent visibility, collision, safe state, and unavoidable routes.
 
 Test players in different zones, contradictory visibility, simultaneous objective events, one player inside a safe room, disconnect during staging, latency at warning/contact boundaries, reconnect, and host migration if supported. Never spawn the stalker behind one player merely because another player's camera cannot see the point.
 

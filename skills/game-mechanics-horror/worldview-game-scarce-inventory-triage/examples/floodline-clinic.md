@@ -46,6 +46,7 @@ The field bag holds five spaces. The contact block does not consume those spaces
 | Short pry tool | 2 | Access | Opens a noisy but direct treatment-bay bypass. |
 | Noise capsule | 1 | Defensive interruption | Draws the threat away from one crossing. |
 | Barrier wedge | 1 | Defensive interruption | Delays one door transition. |
+| Stillcloth veil | 1 | Immediate perceptual relief; effect owned elsewhere | Reduces reported sound overlap, while a separate damp-fiber trace is handed to the relief and threat systems. |
 
 The lift cache preserves all stored supplies. A world pickup declined while full remains at its authored location. An explicit swap leaves the displaced object there. Discard is disabled for the protected contact block and requires a named confirmation for ordinary supplies.
 
@@ -64,6 +65,23 @@ The player carries the pry tool, dressing packet, and two noise capsules. The to
 The cost is poorer visibility. The advantage is a shorter second half and a repeatable escape route.
 
 Neither loadout receives hidden adaptive supplies. Their differences remain visible in the path taken.
+
+## Attractive resource with a separate owner
+
+The optional **Stillcloth veil** is found beside a wall notice showing two facts: wet fibers reduce the room's overlapping echoes, and the clinic's old tracking sensors register damp textile traces. Inventory owns its one-space instance and accepted consumption. `worldview-game-relief-resource-with-hidden-cost` owns the immediate overlap reduction and delayed trace coupling; the threat-detection system owns whether that trace changes search behavior.
+
+| Field | Example value |
+| --- | --- |
+| subjective benefit | clearer sound labels during the records-room crossing |
+| objective effect owner | relief ledger for coupling; threat detection for search update |
+| forecast cue | wall notice plus a harmless sensor blink when the sealed veil is inspected |
+| delayed cost visibility | damp footprint icon appears after the first wet crossing |
+| alternative | lamp reveals the dry ledge and avoids both overlap and damp trace |
+| exhaustion | used veil cannot provide another relief event; route remains playable |
+| threshold handoff | `damp_trace_emitted` with stable use-event ID |
+| recovery after wrong forecast | return to the lift cache before the no-return line or rinse the trace at the noisy treatment-bay drain |
+
+This does not make the veil mandatory or automatically harmful. A third viable preparation carries the veil, pry tool, dressing, and noise capsule; it gains clear audio labels and the direct bypass but must manage the visible trace. If the player misreads the forecast, the nearby cache supports exchange, while the drain trades recovery for noise. Quantity never becomes proof that the veil was used or that a threat detected it.
 
 ## Full-inventory decision
 

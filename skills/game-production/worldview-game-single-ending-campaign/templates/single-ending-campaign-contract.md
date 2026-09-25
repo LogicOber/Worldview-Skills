@@ -188,6 +188,43 @@ Placement: `[store page, start screen, credits, website, marketing as appropriat
 | Final playable input and point of control removal | `[value]` |
 | Credits / post-ending boundary | `[value]` |
 
+### Final ontology and correction chain
+
+- `final_ontology`: `[one authoritative answer about the original event, governing rule, and consequence]`
+
+| `unresolved_question` | `original_event` | `earlier_interpretation` | `corrective_evidence` | `revised_interpretation` | `changed_action` | Owner / proof |
+| --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | |
+
+`convergence_dependencies`:
+
+| Dependency | Producing system / Skill | Required state | Missing-state recovery | Save / reload proof |
+| --- | --- | --- | --- | --- |
+| | | | | |
+
+### Finale teaching and reconvergence
+
+| Finale verb or rule | `prior_tutorial_beat` | Pressured earlier use | Failure / recovery learned | Final use | Verification |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
+
+- `reconvergence_point`:
+
+| Earlier choice | `local_variation` before rejoin | State retained after rejoin | Final invariant preserved | Aftermath echo |
+| --- | --- | --- | --- | --- |
+| | | | | |
+
+### Mandatory aftermath
+
+- `aftermath_state`:
+- Place / institution that remains changed:
+- Relationship that remains changed:
+- Threat or rule that remains changed:
+- Resource, evidence, injury, or permission variation retained:
+- Post-ending save/load behavior:
+- New-game reset behavior:
+- Evidence that the ending cannot recommit or revert:
+
 ### Variation without alternate endings
 
 | Earlier choice or state | What changes during the journey | What may echo in the finale | Ending invariant that cannot change |

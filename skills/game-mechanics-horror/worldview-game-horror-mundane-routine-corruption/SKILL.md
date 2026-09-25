@@ -1,6 +1,6 @@
 ---
 name: worldview-game-horror-mundane-routine-corruption
-description: "Use when serving, driving, studying, sleeping, cleaning, cooking, or playing should become a learnable horror loop whose ordinary rule is broken one variable at a time. Produces a normal-loop contract, exception ladder, player choices, state consequences, recovery, accessibility, and verification. Do not use for a generic quest list, decorative job, or random jump scare without a teachable routine."
+description: "Use when ordinary work, travel, study, care, cooking, cleaning, rest, or play should establish a reliable rule and then become a testable horror loop. Builds an authoritative before-state, mastery and skip-safe teaching, attention/blind-interval analysis, one-field exception ladder, meaningful responses, persistent consequences, recovery, accessibility, and runtime verification."
 ---
 
 # Worldview Game — Horror Mundane Routine Corruption
@@ -11,109 +11,147 @@ description: "Use when serving, driving, studying, sleeping, cleaning, cooking, 
 /worldview-game-horror-mundane-routine-corruption
 ```
 
-Start by inspecting the project interaction, inventory, NPC, timer, route, and save authority. The routine must be shorter and clearer than the horror built on top of it.
+Inspect the current interaction, route, NPC, item, clock, save, and feedback owners before writing anomalies. The routine must be shorter and clearer than the horror built on it, and it must earn later value.
 
 ## What this Skill owns
 
+This Skill owns baseline mastery and controlled violation:
+
 ```text
-normal action → normal confirmation → repeated baseline
-→ one exception → inspect/comply/refuse/delay/leave
-→ visible consequence → recovery or changed routine
+perform ordinary verb → receive authoritative confirmation → predict result
+→ observe one changed field → verify / comply / refuse / delay / leave
+→ world state changes → recover with the learned rule intact
 ```
 
-It owns the player's understanding of the ordinary loop and the rule-breaking exception. It does not own a universal inventory, customer AI, or puzzle framework.
+It does not own professional authority, repeated-place comparison, identity truth, inventory capacity, or threat AI. Route those to `/worldview-game-horror-procedural-duty-and-incident`, `/worldview-game-horror-returning-place-escalation`, `/worldview-game-horror-role-and-identity-pressure`, or the relevant focused mechanic after this package has established the normal rule.
 
 ## Lock sequence
 
-### 1. Baseline loop
-Close when the player can repeat the normal routine and explain its confirmation.
+1. **Baseline authority:** verb, actor, object, place, expected result, confirmation, and state owner agree.
+2. **Mastery and purpose:** the player can predict the result, and the routine earns a later route, affordance, relationship, evidence, promise, or resource.
+3. **Attention coverage:** task position, visible/blind zones, live timers, and allowable unseen change are recorded.
+4. **Exception ladder:** one field changes at a time while enough anchors remain stable.
+5. **Response and consequence:** each supported response changes authoritative state and still converges on the canonical ending.
+6. **Persistence and proof:** skipped teaching, ordinary play, exceptions, failure, recovery, save/load, accessibility, and ending are verified.
 
-### 2. Exception ladder
-Close when each violation changes one readable field and has a cause.
+## 1. Recover the routine as state
 
-### 3. Choice contract
-Close when comply, inspect, refuse, delay, and leave have declared consequences.
+For every ordinary cycle write:
 
-### 4. Recovery and reset
-Close when a mistake teaches the violated rule and reload restores one coherent state.
+| Field | Question |
+| --- | --- |
+| Verb | What input does the player perform? |
+| Place | Where does it legally happen? |
+| Actor | Who requests, performs, witnesses, or receives it? |
+| Object | What stable ID or state is acted on? |
+| Expected result | What should change? |
+| Confirmation | What observable proof follows? |
+| Owner | Which system commits the result? |
+| Later purpose | Which later decision consumes this knowledge or state? |
 
-### 5. Runtime proof
-Close after normal cycles, exceptions, choices, accessibility, save/load, and ending are tested or marked unverified.
+Presentation may display the result, but it cannot define it. A label, sound, animation, or subtitle reads the authoritative transaction.
 
-### 6. Handoff
-Close when implementation, proposal, and unknowns are separated.
+## 2. Teach until the player can predict, not until a counter expires
 
-## 1. Teach the baseline
+Use the fewest cycles that allow a first-time player to perform the verb and predict its confirmation. Usually this means one guided cycle and one independently completed variation, but measure it. A third cycle is justified only when it introduces a route, person, or object needed later.
 
-Choose two to four actions that express the job: receive, prepare, perform, deliver, confirm, close. Complete at least three ordinary cycles unless the project is intentionally short. Each cycle needs:
+Define mastery through behavior: the player selects the right station without a marker, prepares the correct object, anticipates the confirmation, or notices a missing result. Do not use elapsed time alone.
 
-- an input the player can repeat;
-- a response that confirms success;
-- a visible object, NPC, or route state;
-- a cost or resource only if it will matter later.
+If the player skips optional teaching, provide a second fair comparison before failure matters: a coworker demonstration, a visible completed state, a low-cost retry, or an inspectable manual paired with a real object. Never punish missing knowledge the game made optional.
 
-Do not hide the normal rule in a tutorial paragraph. Let the player perform it.
+## 3. Make ordinary play carry later value
 
-## 2. Corrupt one field at a time
+Each routine action must own at least one later function:
 
-Possible fields include identity, ingredient, destination, time, quantity, voice, room, customer, object position, or closing condition. The first exception should be visible before the player commits. Later exceptions may combine two known fields, but never introduce all of them at once.
+- rehearse a route used under pressure;
+- teach an affordance later used differently;
+- prove a relationship or permission;
+- create evidence or residue;
+- establish a promise the horror can violate;
+- place, consume, or protect a resource;
+- reveal an object's stable identity.
+
+If removing the routine changes no later decision, compress or remove it.
+
+## 4. Audit attention and blind intervals
+
+Some work fixes the camera or hands on a task. Record player position, view direction, visible zones, blind zones, interaction duration, cancel time, live threat/timer states, and permissible unseen changes.
+
+An unseen change is fair when the player first knows the before-state, the change obeys a declared eligibility rule, and residue remains. Do not spawn a lethal threat inside a forced blind interval before the warning language has been taught.
+
+## 5. Build the exception ladder
+
+Choose one primary field per early exception:
+
+- actor or claimed identity;
+- object identity, quantity, ownership, or condition;
+- place or destination;
+- time or order;
+- requested verb;
+- expected result;
+- confirmation;
+- permission or closing condition.
 
 For each exception record:
 
 ```text
-normal value → observed contradiction → player choices
-→ state changed by each choice → feedback → recovery
+canonical before-state → exact changed field → unchanged anchors
+→ recognition window → verification action → supported responses
+→ state delta per response → feedback → recovery → later payoff
 ```
 
-## 3. Preserve agency
+Later exceptions may combine two previously learned fields. Do not keep adding unrelated rules. Escalate by changing what the player must decide: notice, verify, trust, contain, refuse, or use the corrupted verb against the source.
 
-The player must be able to comply, inspect, refuse, delay, or leave when those choices fit the fiction. Choices can have unequal costs; they should not be cosmetic. A refusal may close a public route, an inspection may reveal evidence, and compliance may keep the job open while moving the threat.
+## 6. Give responses local consequence without multiplying endings
 
-## 4. Connect the routine to the world
+Support only fiction-valid choices. Typical choices are inspect, comply, refuse, quarantine, delay, report, redirect, or leave. Each must affect at least one of route, evidence, relationship, resource, schedule, access, or threat attention.
 
-The corrupted routine should affect a route, person, object, timer, sound, resource, or threat state. If the loop ends in a cutscene no matter what the player does, call it presentation and remove false choice language.
+Choices may reconverge on one ending while retaining local state. A player who accepts a suspicious object may reach the same ending through a contaminated route; a player who quarantines it may lose time but preserve evidence. Reconvergence happens through a visible cause, not a silent state reset.
 
-## Audit the routine as a state machine
+## 7. Separate state owners
 
-For every cycle, record the exact field that changes and the decision it creates:
+At minimum separate:
 
-| Cycle check | Required record | Rewrite when |
-| --- | --- | --- |
-| Baseline action | Input, object, actor, confirmation, and completion condition. | The player cannot repeat the ordinary loop without a tutorial paragraph. |
-| First violation | One changed identity, quantity, time, destination, voice, object, or room field. | Several unknown rules arrive in one exception. |
-| Recognition window | The cue shown before the player commits. | The player learns only after punishment. |
-| Response choice | Comply, inspect, refuse, delay, leave, or another fiction-valid action. | The response is cosmetic or only one option is technically accepted. |
-| State consequence | Route, customer, resource, relationship, threat, or schedule change for each response. | Every response returns to the same state. |
-| Recovery | What the player can do to understand and continue after a wrong reading. | Recovery removes the exception or repeats the full tutorial. |
-| Escalation | Which known field combines with one new field later. | New rules keep arriving without rehearsal. |
+- authoritative routine transaction;
+- object and actor identity;
+- player-inspected evidence;
+- presentation cues;
+- route/access consequence;
+- threat knowledge;
+- save/checkpoint state.
 
-Use this concrete chain in the contract:
+The anomaly system requests a legal state change from the relevant owner. It must not rewrite every subsystem directly or infer truth from presentation.
 
-```text
-player receives the normal order
-→ confirms the expected item and destination
-→ notices one field is wrong before delivery
-→ inspects, complies, refuses, delays, or leaves
-→ sees a different customer/route/resource state
-→ recovers with the violated rule still known
-→ meets the same routine with one additional field changed
-```
+## 8. Implement the smallest complete loop
 
-## Remove decorative job mechanics
+1. Implement one ordinary cycle with stable IDs and confirmation.
+2. Add a second variation and mastery check.
+3. Persist the baseline through the required unload/save boundary.
+4. Add one exception that changes one field.
+5. Add two materially different responses and one recoverable error.
+6. Connect the result to a later route or decision.
+7. Add one escalated exception using a known field.
+8. Complete canonical-ending and aftermath state.
 
-| Decorative pattern | Why it fails | Repair |
-| --- | --- | --- |
-| Repeated fetches with no confirmation | The work is walking between markers. | Give the player a visible completion check and a later reason it matters. |
-| Random wrong orders | The player cannot learn the rule. | Change one field and expose the contradiction before commitment. |
-| Refusal always equals death | Agency is an illusion. | Trade access, time, trust, evidence, or threat attention across responses. |
-| A timer starts before the routine is learned | Pressure hides the baseline. | Complete enough safe cycles for the player to form a prediction. |
-| The exception exists only in dialogue | The player cannot inspect or test it. | Put the contradiction in an object, route, actor, or state the player can act on. |
-| The loop resets without memory | Repetition becomes a chore. | Preserve the learned rule or a changed route while resetting only declared transient state. |
+Proxy art is acceptable for proving state. A frightening animation is not evidence that the comparison works.
 
-## 5. Verify
+## 9. Verify
 
-Test normal cycles, first exception, each supported choice, failure, retry, save/load, muted audio/subtitles, reduced intensity, and the canonical ending. A player should be able to explain what normal behavior was violated and why the next action matters.
+Run:
+
+- guided and independent normal cycles;
+- efficient player who skips optional teaching;
+- first exception recognized before commitment;
+- every supported response and exact state delta;
+- likely wrong reading and recovery;
+- task canceled at every interaction phase;
+- save/load before baseline completion, after mastery, before exception, and after consequence;
+- restart without duplicated objects, actors, timers, or confirmations;
+- muted audio, subtitle, non-color, reduced-intensity, and input-assistance paths;
+- canonical ending from at least two local response histories.
+
+The acceptance question is: can the player state what was normal, what exact field changed, how they verified it, and why the next action matters?
 
 ## Handoff
 
-Return the baseline loop, exception ladder, choice/state table, cues, recovery and reset rules, implementation evidence, and unknowns.
+Return the baseline state table, mastery proof, later-purpose map, attention coverage, exception ladder, response/state matrix, owner map, implementation evidence, save/reset traces, accessibility results, and unknowns.

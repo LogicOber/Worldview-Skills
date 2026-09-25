@@ -1,8 +1,8 @@
 # Worldview Game — Sound Detection and Distraction
 
-Build a playable horror-stealth encounter in which noise has a source, travels through the map, changes what a threat believes, and can be used deliberately to open a route. The player learns not only that sound is dangerous, but also that controlled sound is a tool.
+Build a playable horror-stealth encounter in which every sound keeps an immutable source, travels through the map, reaches intended and unintended listeners independently, and can redirect a threat, summon a witness, or expose the player to both at once.
 
-> **This Skill builds causal hearing, not an enemy with access to the player's live position.** A decoy matters only when the threat investigates the event it could hear and the player can exploit the resulting commitment.
+> **This Skill builds causal hearing, not an enemy with access to the player's live position.** Environmental and entity-authored cues remain distinguishable; silence and false localization have declared rules; every required sound has an accessible equivalent that preserves the same uncertainty.
 
 ## Call this Skill
 
@@ -27,9 +27,11 @@ A strong fit usually includes several of these needs:
 - player movement or interaction creates different noise risks;
 - doors, walls, floors, or zones affect propagation;
 - a placed, thrown, timed, or environmental sound can redirect a threat;
+- a shout, alarm, impact, or device should summon a witness or helper while possibly alerting someone else;
 - the threat investigates a source location rather than tracking the hidden player;
 - visual confirmation overrides uncertain sound evidence;
 - the map supplies a route that becomes safer while the listener is committed elsewhere.
+- missing an expected sound or hearing an apparent direction should change a decision without rewriting the event's true origin.
 
 Do not use it for decorative audio, voice transcription, music systems, a purely visual lure, an omniscient chase, or a universal acoustics simulation. If the output is a cinematic scene rather than interactive behavior, use a film or video workflow instead.
 

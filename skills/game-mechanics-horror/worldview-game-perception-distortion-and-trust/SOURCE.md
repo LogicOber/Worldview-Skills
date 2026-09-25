@@ -36,6 +36,8 @@ These are original design proposals, not clinical claims or measured statements 
 
 `examples/the-brass-north.md` and the Silt Archive setting were written for this Skill. They are not adaptations of an existing game, story, film, or external Skill.
 
+The event/cue-interpretation/presentation/evidence separation and the guide-permission history added in the later revision were authored for this repository. They do not reproduce an external character, plot, dialogue, route, screenshot, or Skill structure.
+
 ## Revision rule
 
 Future work must keep external research clearly cited and outside the repository's claim of authorship. Representation involving a real condition requires appropriate subject-matter review; this Skill must not be treated as medical guidance.

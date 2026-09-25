@@ -48,6 +48,18 @@ blocked consequence:
 
 State how the player learns this relationship before collection becomes a detached counter.
 
+## Operation and beneficiary matrix — Restoration Consequence Lock
+
+| Operation/state | Preconditions | Beneficiary | Threat benefit/loss | Route or hazard effect | Mechanical proof | Presentation proof | Remaining unavailable/cost |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Restore | | | | | | | |
+| Isolate | | | | | | | |
+| Disable | | | | | | | |
+| Reroute | | | | | | | |
+| Partial energize | | | | | | | |
+
+List only operations the project supports. State how unsupported operations reject.
+
 ## Player verbs
 
 | Verb | Input | Preconditions | Authoritative change | Feedback |
@@ -112,6 +124,16 @@ For a newly authored objective, default to resetting only current repair progres
 | Inventory behavior on interruption |  |  |
 | Atomic completion actions |  |  |
 
+### Staged work, ownership, and rollback
+
+| Stage | Required object/knowledge | Current operator | Stable commit | Partial world effect | Active interruption result | Rollback boundary | Handoff/fallback | Save representation |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | | |
+
+- Component custody during active work:
+- Player reclaim rule:
+- Final reconciliation/version:
+
 ## Pressure contract — Pressure Window Lock
 
 - Pressure source:
@@ -151,6 +173,8 @@ For a newly authored objective, default to resetting only current repair progres
 | Audio |  |  |  |
 | Navigation/hazard |  |  |  |
 | Objective UI |  |  |  |
+
+For every supported non-full outcome, add its subscribers, threat effects, and visible mechanical proof instead of reusing full-restoration presentation.
 
 ## Success
 
@@ -229,3 +253,6 @@ Complete only when the objective is actually networked.
 - [ ] Screenshot and behavioral evidence were captured separately.
 - [ ] Untested environments and limitations are recorded.
 - [ ] No implementation, tuning, or evidence change bypassed a lock's reopen rule; invalidated dependent work was rerun.
+- [ ] Every supported restore/isolate/disable/reroute/partial state changes exactly its declared beneficiary, threat capability, route, and proof.
+- [ ] Unsupported operations reject without consuming components or changing state.
+- [ ] Each staged commit, active-stage rollback, component custody, helper handoff, and save/load state was tested.

@@ -1,112 +1,111 @@
 ---
 name: worldview-game-horror-role-and-identity-pressure
-description: "Use when recognition, social position, appearance, authority, or a claimed role should become a fair horror decision. Produces role and authority contracts, stable identity tests, contaminated evidence rules, social choices, presentation changes, accessibility, and verification. Do not use for random hallucination, face-only guessing, or a real-world diagnosis metaphor."
+description: "Use when recognition, authorization, trust, replacement, or misuse of a role should create a fair horror decision. Separates actual actor, body/form, presented identity, assigned role, permissions, schedule, private knowledge, observer belief, and culpability; builds verification actions, social choices, accusation costs, false-positive recovery, persistence, accessibility, and runtime proof."
 ---
 
 # Worldview Game — Horror Role and Identity Pressure
 
 ## Call this Skill
-
 ```text
 /worldview-game-horror-role-and-identity-pressure
 ```
 
-Use this Skill when the player's fear comes from “who is this, who am I allowed to trust, and what happens if I recognize the wrong person?” Inspect existing NPC, dialogue, perception, evidence, save, and accessibility systems first.
+Inspect actor, role, permission, schedule, dialogue, evidence, presentation, relationship, save, and observer-knowledge systems before adding identity uncertainty.
 
 ## What this Skill owns
 
 ```text
-role claim → stable test → social pressure
-→ one presentation conflict → verify/refuse/help/trust
-→ access, route, threat, or relationship consequence
+role claim + permission request → stable behavioral/history tests
+→ one contaminated presentation or testimony cue
+→ question / comply / refuse / verify / report / seek witness
+→ access, relationship, evidence, route, or threat consequence
+→ later corroboration and false-positive recovery
 ```
 
-It differs from perception distortion: the central decision is social or authoritative recognition, not simply whether a cue is visually true.
+It owns assigned role, legitimate actor permissions, expected conduct and schedule, social pressure, verification choices, and accusation consequence. A selected duty/incident Skill may narrow those permissions into actions authorized by one active procedure, but it cannot grant the underlying role or permission. Entity state owns actual actor; perception owns presentation; evidence owns observations; cross-character handoff owns physical/knowledge custody. This Skill reads those states without collapsing them.
 
 ## Lock sequence
+1. **Identity-layer lock:** actor, body, presentation, role, permissions, belief, and culpability are separate.
+2. **Permission-history lock:** access, schedule, witnessed actions, kept/broken promises, and requested exception are recorded.
+3. **Verification lock:** at least two non-likeness tests and one contaminated cue support a concrete action.
+4. **Choice lock:** trust, question, refuse, verify, report, and witness paths change state.
+5. **Recovery lock:** false accusations and mistaken trust remain understandable and playable.
+6. **Proof lock:** identity states, save/load, viewpoint, accessibility, ending, and aftermath are verified.
 
-### 1. Role and authority
-Close when each role claim has an authority source, expected action, and stable evidence.
+## 1. Separate identity layers
 
-### 2. Identity evidence
-Close when at least two non-face tests and one contaminated observation are defined.
+For every significant claim, record:
 
-### 3. Presentation conflict
-Close when one presentation layer changes while a declared anchor remains usable.
+| Layer | Meaning |
+| --- | --- |
+| Authoritative actor | The persistent entity/person ID. |
+| Body or form | Current physical vessel or model. |
+| Presented identity | Name, face, voice, label, uniform, or claimed history shown now. |
+| Assigned role | Social or institutional position. |
+| Legitimate permissions | Locations, objects, records, commands, transfers, and contacts allowed. |
+| Expected schedule | Where the actor should be and what task should be active. |
+| Observer belief | What each observer currently believes and why. |
+| Private knowledge | Facts learned through shared play or witnessed history. |
+| Culpability | Responsibility supported by behavior and evidence, not appearance. |
 
-### 4. Social choices and safety
-Close when trust, question, refusal, and help paths have consequences and content boundaries.
+A change in one layer never silently writes another. A copied coat does not grant permission; legitimate access does not prove innocence; altered presentation does not replace authoritative actor state.
 
-### 5. Runtime proof
-Close after identity states, cues, choices, failure, accessibility, save/load, and ending are tested or marked unverified.
+## 2. Build trust from permission and history
 
-### 6. Handoff
-Close when implementation, proposal, and unknowns are separated.
+Track what the actor can access, alter, transfer, command, or call; what they personally witnessed; what promises they made and kept; where they were expected; and what exception they request now.
 
-## 1. Define role and authority
+The frightening act should use a capability the player understood. A trusted person opening the correct cage but asking for an unprecedented evacuation route is stronger than a generic “creepy” animation because the conflict is actionable.
 
-For each person or role state:
+## 3. Design fair tests
 
-- what grants authority;
-- what the player is expected to do around them;
-- what they can open, forbid, request, or change;
-- what stable evidence supports the role;
-- what happens if the player refuses or asks for help.
+Use at least two tests independent of face, accent, disability, diagnosis, ethnicity, gender, or other real-world traits. Useful tests include:
 
-Never require likeness alone. Use at least two stable tests such as ticket mark, route position, repeated phrase, tool use, object ownership, timing, or knowledge of a prior event.
+- object custody or tool operation;
+- schedule and last verified location;
+- a private fact earned in prior play;
+- a repeated phrase with context, not a password alone;
+- access behavior and permission limit;
+- knowledge of an event the actor witnessed;
+- residue from an action they claim to have performed.
 
-## 2. Control presentation conflict
+Include one contaminated cue: voice, label, uniform, lighting, testimony, location, or relationship presentation. Keep a stable anchor and announce any replacement anchor before it is required.
 
-Change one layer at a time: face, light, voice, subtitle, clothing, posture, location, or relationship label. Keep one anchor truthful enough for a fair decision. If the project intentionally makes an anchor unreliable, declare the replacement anchor before the player needs it.
+Every test needs an input, opportunity, result classes, observer access, and consequence. Do not make verification an invisible stat check.
 
-## 3. Make social choices playable
+## 4. Price social choices
 
-Trust, question, refuse, follow, seek help, and report can trade time, access, route, evidence, or threat attention. Do not make the correct choice obvious from a red outline. Let the player use a test and accept a cost.
+Choices can include question, comply, refuse, verify, follow, report, seek witness, grant temporary access, or revoke access. For each write access, evidence, relationship, route, time, resource, witness, and threat deltas.
 
-## Audit identity as a fair test
+A legitimate actor may request a dangerous exception. An imitation may perform kindness. Mixed behavior prevents role from becoming a morality label, but the player still needs bounded evidence.
 
-For each role claim or recognition problem, complete this chain:
+## 5. Model replacement and transformation explicitly
 
-| Identity check | Required record | Rewrite when |
-| --- | --- | --- |
-| Role claim | What the person says they are allowed to do and what the player is expected to do. | Identity is only a face or costume. |
-| Stable evidence | Two non-face anchors such as route position, tool use, phrase, timing, ownership, or prior knowledge. | One glance can solve the whole situation. |
-| Contaminated cue | One presentation layer that can lie or change. | Everything is unreliable and no test can work. |
-| Social pressure | Who asks the player to trust, refuse, report, follow, or help. | The player can ignore the conflict without consequence. |
-| Verification action | The concrete question, comparison, object check, or route test the player can perform. | Verification is a hidden stat check or automatic reveal. |
-| Consequence | Access, authority, trust, evidence, route, threat attention, or relationship change. | All social choices return to the same state. |
-| Recovery | How a wrong recognition remains understandable and playable. | A mistaken trust choice permanently removes the ability to learn. |
+When fiction permits replacement, possession, copied form, or reclassification, record event cause, original actor state, new body/form, inherited permissions, inherited knowledge, missing knowledge, physical residue, observer updates, and reversibility. Declare limits. Unlimited copying makes every test meaningless.
 
-Example action chain:
+Use `/worldview-game-character-handoff-and-shared-evidence` when a playable viewpoint or item/knowledge custody changes. Use `/worldview-game-perception-distortion-and-trust` when presentation itself becomes unreliable.
 
-```text
-the attendant claims authority over a locked service door
-→ the player checks the ticket mark and the route position, not the face
-→ the voice conflicts with one anchor
-→ the player can question, comply, refuse, or seek a witness
-→ each response changes access and attention
-→ a later stable test confirms which evidence was contaminated
-```
+## 6. Protect false-positive recovery
 
-## Remove arbitrary identity horror
+A wrong accusation should cost trust, time, access, help, or evidence, but it must not permanently erase the ability to learn unless that irreversible consequence is clearly previewed. Preserve independent residue, another witness, a bounded appeal, or a later behavior test.
 
-| Arbitrary pattern | Why it fails | Repair |
-| --- | --- | --- |
-| Face-only guessing | The player is judged on visual luck. | Use two stable non-face tests and one contaminated presentation layer. |
-| Every person may be fake | No relationship or evidence can be trusted. | Declare which anchors remain reliable in the current chapter. |
-| Accent, disability, diagnosis, or appearance marks danger | A real-world trait becomes a moral shortcut. | Make behavior, authority, and evidence conflict carry the danger. |
-| Correct choice is marked in red | Social judgment becomes a reflex test. | Let the player verify and accept a cost. |
-| Refusal has no route consequence | The social decision is only dialogue flavor. | Change access, time, evidence, trust, or threat attention. |
-| Hallucination removes all feedback | The player cannot learn the replacement rule. | Announce the reliable test before it becomes necessary. |
+Mistaken trust should produce attributable evidence: the actor uses a granted permission, violates a known limit, leaves residue, or fails a private-knowledge test. Do not punish trust with a scripted reveal unrelated to the decision.
 
-## 4. Safety boundary
+## 7. Safety and privacy
 
-Do not frame a real diagnosis, disability, accent, identity, or appearance as proof that a person is dangerous or less real. If the fiction uses impersonation, make the danger the entity's behavior and evidence conflict, not a real group trait.
+Do not use a real diagnosis, disability, accent, ethnicity, gender expression, religion, appearance, or other protected trait as evidence that someone is dangerous, fake, corrupt, or less human. Do not require biometric identification, real faces, private contacts, or uploaded voice samples. Use fictional roles, behaviors, permissions, and world evidence.
 
-## 5. Verify
+## 8. Implement and persist
 
-Test each identity state, stable evidence, presentation conflict, trust/question/refusal/help path, failure, save/load, subtitles and nonvisual cue, and canonical ending. Record what the player can know before each commitment.
+Keep actor ID, body/form, presented identity, role assignment, permission set, observer beliefs, evidence, and culpability in separate records. Save transformations and permission changes atomically. Rebuild presentation from authoritative state on load. Network authority must prevent clients from granting access or changing identity truth locally.
+
+Implement one normal permission use, one claim conflict, two tests, one contaminated cue, two consequential choices, false-positive recovery, and the canonical ending before adding more actors.
+
+## 9. Verify
+
+Test every authoritative actor/form/presentation combination; each permission and violation; schedules; private-knowledge test with learned/not-learned states; every social choice; mistaken trust; false accusation and recovery; witness present/absent; save/load before and after transformation or access grant; restart; multiplayer authority if claimed; subtitles, nonvisual cues, non-color cues, reduced intensity, and input assistance; canonical ending from trust and refusal histories.
+
+The player should explain what was claimed, which permission mattered, which evidence was stable, why one cue was contaminated, and what their decision changed.
 
 ## Handoff
 
-Return role/authority table, evidence matrix, presentation states, choices, consequences, accessibility and content boundary, implementation evidence, and unknowns.
+Return identity-layer table, permission/history matrix, schedule, evidence tests, observer beliefs, transformation rules, choice consequences, false-positive recovery, safety boundary, persistence traces, runtime evidence, unknowns, and ending aftermath.

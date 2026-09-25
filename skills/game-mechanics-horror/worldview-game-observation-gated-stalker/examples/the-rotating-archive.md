@@ -1,4 +1,4 @@
-# Original example — The Lantern Index
+# Original example — The Rotating Archive
 
 This fictional example was created for this repository. It is not a copied level, character, or scene, and it is not evidence that an implementation already exists. It demonstrates the decisions the Skill should make visible.
 
@@ -37,7 +37,7 @@ These rows are a filled design proposal, not runtime evidence. Each named eviden
 
 | Lock | Concrete locked content | Lock condition and evidence path | Still mutable | Reopen trigger and invalidated work |
 | --- | --- | --- | --- | --- |
-| Observer and occlusion lock | Active first-person camera; head, upper-torso, and pelvis samples; one clear in-frustum first-hit sample observes; four curved shelves block all three rays | Close after sample/first-hit traces at `gameplay/lantern-index/verification.md#obs-01-to-03` | Frustum margin within the tested edge range | A second camera or a shelf material that no longer blocks rays invalidates observation, state, route, and edge traces |
+| Observer and occlusion lock | Active first-person camera; head, upper-torso, and pelvis samples; one clear in-frustum first-hit sample observes; four curved shelves block all three rays | Close after sample/first-hit traces at `gameplay/rotating-archive/verification.md#obs-01-to-03` | Frustum margin within the tested edge range | A second camera or a shelf material that no longer blocks rays invalidates observation, state, route, and edge traces |
 | Permission-order lock | Fixed step resolves camera, observation, permission, navigation, then reach; states are `frozen_observed`, `release_grace`, `pursuing_unobserved`, `attack_windup`, `caught` | Close after displacement-source audit and `#obs-04-to-05` traces | Release grace, travel speed, and windup within tested ranges | Adding root motion or moving damage before observation invalidates movement, contact, restart, and timing evidence |
 | Attention-route lock | Entry view -> rotating shelf occlusion -> lens drawer -> two shelf-gap reacquisition lines -> entry-side exit | Close after collision/navigation/sight agreement and route traces at `#obs-06-to-07` | Non-blocking dressing and feedback | Moving the drawer, either gap, a shelf, or the exit invalidates route and timing traces |
 | Contact-timing lock | At drawer activation: 3.6 m path distance, 2.0 m/s travel, 1.1 m reach, 0.14 s release grace, 0.45 s windup; earliest windup is `0.14 + (3.6 - 1.1) / 2.0 = 1.39 s`, earliest uncanceled hit is `1.84 s` | Close only after just-before/after traces at `#obs-05-to-07`; values remain proposals here | Named timing assist within its separately verified range | A distance, drawer duration, speed, reach, or clock change invalidates the 1.39/1.84-second boundaries and both outcome traces |
@@ -99,4 +99,4 @@ The player turns during the reach windup. A torso sample becomes visible with a 
 - restart from release grace, travel, reach, caught, and success;
 - one screenshot showing the actual route, labeled only as scene evidence.
 
-Until those checks run in the named environment, **The Lantern Index** remains an implementation example rather than a verified build.
+Until those checks run in the named environment, **The Rotating Archive** remains an implementation example rather than a verified build.

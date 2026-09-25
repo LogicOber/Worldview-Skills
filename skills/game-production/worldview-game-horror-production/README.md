@@ -1,38 +1,40 @@
 # Worldview Game — Horror Production
 
-Turn a short horror-game idea into a complete, playable experience with a clear fear rhythm, memorable spaces, concrete player decisions, and a tested ending.
+Turn a short horror-game idea into a complete, original, single-ending production plan and playable build. The Agent fills in the missing chapters, map logic, NPC roles, items, evidence, pressure, recovery, visuals, audio, state ownership, tests, and ending instead of asking the user to design every detail by hand.
 
 ## Call this Skill
-
 ```text
 /worldview-game-horror-production
 
-Build an English-language single-ending first-person horror game about a night
-operator who must reopen a flooded archive. Make the building memorable, give
-the player a route they can learn, use investigation before the main pursuit,
-and deliver a playable browser build with failure, recovery, and ending tests.
+Build an English-language first-person horror game about a night courier who
+reaches an isolated reservoir settlement after the bridge closes. I want one
+canonical ending, a memorable connected place, rich investigation before the
+main pursuit, meaningful companions and items, and a playable browser build.
+Fill in the story, chapters, mechanics, assets, failure, recovery, and tests.
 ```
 
-Use this entry when the user has a horror premise but does not want to design every mechanic, room, state, and production step by hand. The Agent expands the premise, chooses a small set of connected mechanics, and routes detailed work to the relevant Skills.
+A premise, mood, protagonist, place, one image, or a few desired moments is enough. The Agent states reversible assumptions and asks only when a missing answer changes the product, safety boundary, platform, ending policy, or external-service authority.
 
-## What it delivers
+For a production of this scope, GPT-6 Astra with Max reasoning or Ultra orchestration is recommended. Other compatible Agents can use the method, but should reduce scope rather than claim unverified breadth.
 
-- a one-page promise for the player's fear, knowledge, objective, and ending;
-- a chapter route with landmarks, returns, gates, safe beats, pressure beats, and recovery;
-- a threat contract that states what the threat can know and how the player can learn it;
-- concrete interaction loops for investigation, movement, hiding, sound, resources, puzzles, or pursuit;
-- an experience timeline showing what the player notices, expects, does, learns, and feels at each beat;
-- an original visual, spatial, audio, accessibility, and asset plan;
-- a grey-box route before expensive art and a verification pass for ordinary play, failure, reset, and ending;
-- a running build or an honest implementation package when no runtime is available.
+## What the Agent delivers
 
-## Route to a narrower Skill when needed
+- a concise creative promise and one canonical ending designed backward;
+- original research and reference boundaries, including visual targets when provided;
+- chapter clocks showing player task, expectation, emotion hypothesis, decision, state change, cost, recovery, and aftermath;
+- maps with landmarks, return states, routes, protections gained/lost, and grey-box proof;
+- NPC, role, item, evidence, viewpoint, threat-knowledge, and save-state ledgers;
+- a small set of connected mechanics, each routed to one authoritative owner;
+- an original asset plan with make/reuse/generate/acquire decisions and validation;
+- implementation order, performance and accessibility budgets, failure/restart/save tests, and ending convergence;
+- a runnable build or an honest implementation package when the runtime cannot be completed.
 
-Use this Skill as the lead. It may call the detailed contracts for chase routes, lure/hide/escape, observation-gated threats, sound detection, safe rooms, barricades, scarce inventory, wounds, evidence identification, interrupted puzzles, perception distortion, and death-loop clues. It must not call every mechanic by default: each selected mechanic needs a named player decision and a route consequence.
+## Reference input
 
-For a single polished chapter, use `/worldview-game-high-fidelity-vertical-slice`. For a complete story with substantial world research and one canonical ending, use `/worldview-game-single-ending-campaign`; this Skill can supply its horror-specific experience plan.
+One to three screenshots or a short video can help define visual density, camera, material, light, and motion. If none is supplied, the Agent proposes an original visual target and labels it as an assumption. References guide qualities; they do not authorize copying protected characters, maps, assets, dialogue, logos, or distinctive scene composition.
 
-## Minimum input
+## Use a narrower entry when appropriate
 
-A premise, a desired perspective, or even one image is enough. The Agent infers ordinary details, states assumptions, and asks only when a missing decision would change the product: ending policy, platform, content boundary, runtime, or external-service permission.
+Use `/worldview-game-high-fidelity-vertical-slice` to prove one polished short chapter. Use `/worldview-game-single-ending-campaign` alone when research, fictional transformation, and a large story campaign are the main challenge. When Horror Production routes to Single Ending, Horror Production remains the parent and owns horror-mechanic selection, integration, verification, and delivery; Single Ending returns the research, fiction, one-ending spine, final ontology, reconvergence, and aftermath.
 
+Read [SKILL.md](SKILL.md), fill [the production contract](templates/horror-production-contract.md), review [why horror productions fail](references/why-horror-games-fail.md), and see [the original worked example](examples/the-last-service-floor.md).

@@ -86,6 +86,15 @@ Mechanic success is demonstrated when the player makes either save-timing choice
 
 No death, capture, timeout, or restart operation deletes saves. Starting a separate new run does not overwrite this one without explicit slot selection and confirmation.
 
+## Lifecycle traces
+
+1. **Failed write before acceptance:** at the second desk, a disposable-profile fault rejects the candidate during integrity verification. The prior office record remains selected, the seal remains carried, and the UI reports that no new record was accepted.
+2. **Successful durable record:** retry under a new operation ID verifies and selects the instrument-hall record, retains the office recovery version, then commits the absolute post-save seal count once.
+3. **Reload after route transition:** the player crosses onto the rotating floor, changes its alignment, then reloads the accepted instrument-hall record. The player returns to the near-side safe anchor with the recorded pre-crossing alignment, threat, inventory, and route state; no transition callback survives.
+4. **Authorized reset:** `Reset Closed Observatory test profile` is visible only in the test Harness, names the disposable slot, requires confirmation, and cannot touch settings, another profile, or production records.
+
+Normal quit creates or updates the no-cost suspend channel at a safe boundary. Crash recovery offers the conservative recovery checkpoint. Relaunch labels manual, recovery, and suspend sources. Post-ending load restores the declared observatory aftermath record rather than silently returning to a pre-ending world. Reinstall recovery is claimed only on environments where platform backup was directly tested.
+
 ## Expected saved output
 
 ```text

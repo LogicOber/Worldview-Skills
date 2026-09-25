@@ -149,6 +149,23 @@ For each item, record acquisition, size, stack rule, consumption rule, feedback,
 
 Avoid false variety. Several differently named supplies with identical effects do not produce more decisions. Conversely, avoid making one object strictly superior in effect, size, availability, and use time. A strong general-purpose object needs a real constraint or it collapses the triage problem.
 
+### Classify attractive resources with effects owned elsewhere
+
+Some carried resources feel helpful immediately while a different system owns an objective later effect. Inventory still owns count, capacity, storage, transfer, and consumption; it must not become the authority for bodily condition, permission, detection, perception, or narrative consequence.
+
+For each such item, record:
+
+- `subjective_benefit`: why a player would rationally carry or use it now;
+- `objective_effect_owner`: the package or runtime system that owns the later result;
+- `forecast_cue`: evidence available before preparation;
+- `delayed_cost_visibility`: when the separate effect becomes readable;
+- `alternative_item_or_action`: another viable preparation;
+- `exhaustion_result`: what happens at zero quantity;
+- `threshold_handoff`: the exact event sent to the receiving owner;
+- `recovery_after_misallocation`: a costly but viable correction after a mistaken loadout.
+
+Route a true dual-axis relief/cost progression to `worldview-game-relief-resource-with-hidden-cost`. This Skill records that a unit was carried and accepted for use; it does not infer relief, symptoms, social judgment, or downstream exposure from remaining quantity.
+
 ## Choose a capacity model the player can predict
 
 This section uses the **Item Competition Lock** and may not change an item's role merely to make a preferred capacity number work.
@@ -194,6 +211,8 @@ Give the player evidence about upcoming needs without revealing every result. En
 After the decision, make the consequence legible. A player who brought a light source sees a safer route; one who brought a tool opens a bypass; one who kept treatment can absorb an error. Do not secretly adjust the encounter to make every loadout identical, and do not turn every omitted item into automatic failure.
 
 The target is at least two credible strategies. Record why each succeeds, what it gives up, and where it can recover from a mistake. If testing shows that one loadout dominates, change item roles, route evidence, placement, or capacity before adding more scarcity.
+
+Forecasts must cover tempting cross-owned effects. Unknown delayed cost is not balance. Before irreversible preparation, expose the item class, likely benefit, at least one uncertainty cue, and an alternative. After a mistaken forecast, provide a declared recovery such as returning to a cache, converting the item, taking a slower route, or spending another visible resource. Recovery may hurt; it cannot require author-only knowledge or an older save.
 
 ## Separate carried state, world state, and presentation
 

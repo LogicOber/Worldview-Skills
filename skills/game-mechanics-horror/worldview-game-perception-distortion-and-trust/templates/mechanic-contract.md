@@ -43,6 +43,29 @@ Owner: **World truth**.
 | Time/exposure | | | | |
 | Completion/save | | | | |
 
+## Event, cue-interpretation, presentation, and evidence ledger
+
+| Cue/event ID | Authoritative event | Observer and cue interpretation | Player-facing presentation | Channel / cue author | Stable anchor | Competing explanation | Later verification | Consequence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |  |
+
+- Interpretation A causal chain:
+- Interpretation B causal chain:
+- Facts both interpretations must preserve:
+- Testable difference:
+- Event that resolves or deliberately preserves ambiguity:
+
+## Guide and permission history
+
+| Guide/actor | Legitimate access and capability | Personally witnessed facts | Destination produced | Promise made | Kept/broken/untested | Exception requested now | Independent verification | Cost to follow/refuse |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |  |
+
+- Role/permission authority outside this Skill:
+- Evidence-ledger handoff:
+- Communication/acknowledgement handoff:
+- Trust scope that must not become a universal score:
+
 ## Presentation channels
 
 Owner: **Distortion scope**.
@@ -137,12 +160,21 @@ active authored substitution identifiers
 deterministic seed or sequence position
 recovery state and remaining duration
 committed decisions and consequences
+cue-interpretation versions
+guide history and promise state
+permission references, not duplicated permissions
+active competing explanations
+evidence snapshot identifiers
+one-shot access or betrayal consequences already applied
 ```
 
 - Single-player authority:
 - Private versus shared multiplayer presentation:
 - Server-owned consequences:
 - Late join/reconnect:
+- Missing actor/object reference behavior:
+- Rule preventing retroactive knowledge after reload:
+- Rule preventing a committed cue or guide history from rerolling:
 - Spectator policy:
 - Deferred effects cancelled on restart:
 
@@ -205,6 +237,10 @@ Before delivery, confirm that no late cue, setting, save, or authority change by
 | Restart clears presentation residue | | | | | |
 | Accessibility alternatives preserve decision | | | | | |
 | System UI remains truthful | | | | | |
+| Event, cue interpretation, presentation, and evidence remain separate | | | | | |
+| Two intended interpretations preserve the same retained facts | | | | | |
+| Guide trust follows permission and promise history | | | | | |
+| Reload preserves cue authorship, knowledge, and applied consequence | | | | | |
 
 ## Handoff
 

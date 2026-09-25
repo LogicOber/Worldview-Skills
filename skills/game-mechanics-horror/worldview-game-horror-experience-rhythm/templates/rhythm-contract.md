@@ -1,64 +1,108 @@
 # Horror experience rhythm contract
 
+## Status and evidence
+
+- Project / chapter:
+- Playable entry:
+- Target duration:
+- Canonical ending:
+- Measured facts:
+- Observed facts:
+- Estimated targets:
+- Unknowns:
+
 ## Promise
 
-| Field | Decision |
-| --- | --- |
-| Player question | |
-| First ordinary job | |
-| First contradiction | |
-| Main pressure | |
-| Cost | |
-| Recovery action | |
-| Payoff | |
-| Canonical ending connection | |
+- Ordinary job and expected result:
+- First contradiction:
+- Testable question:
+- Pressure:
+- Persistent cost:
+- Recovery action:
+- Earlier fact paid off by ending:
+- Aftermath state:
 
-## Layer lock record
+## State ownership
 
-| Lock | Artifact | Locked when | Reopen trigger | Dependent work to invalidate |
-| --- | --- | --- | --- | --- |
-| Promise | | | | |
-| Beat map | | | | |
-| Attention contract | | | | |
-| Recovery contract | | | | |
-| Runtime proof | | | | |
-| Handoff | | | | |
+| State | Authoritative owner | Readers | Writer | Reset/load order | Forbidden inference |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
+
+## Experience budget
+
+| Activity | Novice range | Experienced range | Assisted range | Evidence label | Scope response if over budget |
+| --- | ---: | ---: | ---: | --- | --- |
+| Orientation | | | | | |
+| Ordinary routine | | | | | |
+| Navigation/search | | | | | |
+| Reading/dialogue | | | | | |
+| Testing suspicion | | | | | |
+| Active pressure | | | | | |
+| Failure/restart | | | | | |
+| Recovery/preparation | | | | | |
+| Replayed labor | | | | | |
+| Ending/aftermath | | | | | |
 
 ## Beat ledger
 
-| Beat | Source time | Experience time | Player task | New information | Pressure | Cost | Recovery | Cue | Evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Orientation | | | | | | | | | |
-| Invitation | | | | | | | | | |
-| Confirmation | | | | | | | | | |
-| Complication | | | | | | | | | |
-| Peak | | | | | | | | | |
-| Recovery | | | | | | | | | |
-| Payoff | | | | | | | | | |
+| Beat ID | Time range | Job/location | Entry question | Expected state | Changed field | Primary/secondary attention | Choice/input | State owner + delta | Feedback + equivalent | Emotion hypothesis | Control lost/regained | Cost | Exit question |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | | | | | | | |
 
-## Attention budget
+## Attention blind intervals
 
-| Interval | Primary attention demand | Secondary demand | What can be safely hidden | Player anchor |
-| --- | --- | --- | --- | --- |
-| | | | | |
+| Task | Player/camera position | Visible zones | Blind zones | Blind duration | Live timers | Allowed unseen change | Residue left | Recovery |
+| --- | --- | --- | --- | ---: | --- | --- | --- | --- |
+| | | | | | | | | |
 
-## Beat decision audit
+## Pressure and recovery pairs
 
-| Beat | Player hypothesis before action | Commitment | Immediate state change | Wrong but useful reading | Recovery action | Next question |
+| Peak | Learned warning | Required decision | Persistent cost | Recovery action | What recovery does not erase | Next plan enabled |
 | --- | --- | --- | --- | --- | --- | --- |
-| Orientation | | | | | | |
-| Invitation | | | | | | |
-| Confirmation | | | | | | |
-| Complication | | | | | | |
-| Peak | | | | | | |
-| Recovery | | | | | | |
-| Payoff | | | | | | |
+| | | | | | | |
+
+## False closure, replay, and humor
+
+- Unresolved evidence before false closure:
+- New information regime / verb / tempo after it:
+- Mastered labor compressed:
+- Changed information that stops fast-forward:
+- Humor function and prohibited placement:
+
+## Focused mechanic handoffs
+
+| Beat | Slash Skill | Player decision | State read | State written by owner | Tunables owner | Reset order | Evidence returned |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | |
+
+## Ending and aftermath
+
+- Final verb taught earlier at:
+- Earlier object/place/rule/relationship paid off:
+- Alive/injured/missing/changed:
+- Evidence private/shared/public/destroyed:
+- Route/institution/protection changed:
+- Relationship that cannot reset:
+- Ordinary action with changed meaning:
 
 ## Verification
 
-- [ ] Quiet beats contain a player action or question.
-- [ ] Every peak changes a rule, state, route, relationship, or resource.
-- [ ] The player can identify the recovery action.
-- [ ] Audio, camera, light, and UI cues have accessible equivalents.
-- [ ] Source cuts and omitted retries are marked unknown.
-- [ ] The ending pays off an earlier question.
+| Journey | Entry state | Expected decisions | Expected duration | Direct evidence | Result / gap |
+| --- | --- | --- | ---: | --- | --- |
+| First-time | | | | | |
+| Efficient/skips optional material | | | | | |
+| Likely novice mistake | | | | | |
+| Recovery | | | | | |
+| Lost landmark | | | | | |
+| Save/load transition | | | | | |
+| Accessibility variants | | | | | |
+| Ending and aftermath | | | | | |
+
+## Handoff
+
+- Implemented:
+- Grey-boxed:
+- Proposed:
+- Unverified:
+- Evidence paths:
+- Next smallest valuable revision:

@@ -17,7 +17,7 @@ The Skill addresses the general design problem of making manual save timing a re
 
 ## Repository writing method
 
-The structure follows the user's supplied Writing 2 principles without copying their prose. It restores the problem before prescribing a system, keeps facts and test observations separate from proposals, places reasons beside safeguards, retains counterexamples, and requires evidence before making persistence claims.
+The structure restores the problem before prescribing a system, keeps facts and test observations separate from proposals, places reasons beside safeguards, retains counterexamples, and requires evidence before making persistence claims.
 
 ## New design decisions
 

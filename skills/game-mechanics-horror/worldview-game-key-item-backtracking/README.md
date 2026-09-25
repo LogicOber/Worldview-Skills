@@ -37,6 +37,7 @@ The Skill can begin with a running project, a level scene, a graph or floor plan
 - existing key items, objective state, doors, shortcuts, navigation, and saves;
 - the first route to the item and candidate return routes;
 - threats, environmental changes, and story facts that may recontextualize known rooms;
+- valid and invalid target classes, known holders, operators, or item handoffs;
 - accessibility, input, and multiplayer requirements.
 
 The Agent records what the project declares, what was observed in the runtime, and what remains a proposal. It does not assume that a door visible in a scene has functioning collision, persistence, or navigation.
@@ -45,7 +46,7 @@ The Agent records what the project declares, what was observed in the runtime, a
 
 ```text
 gameplay/<return-route-slug>/
-├── mechanic.md       gate, key, route-state and feedback contract
+├── mechanic.md       gate, compatibility, ownership, route and feedback
 ├── route-states.md   reachable graph before and after each progression change
 ├── tunables.yaml     interaction, traversal, threat and reminder values
 └── verification.md   recognition, return, softlock, save and restart evidence

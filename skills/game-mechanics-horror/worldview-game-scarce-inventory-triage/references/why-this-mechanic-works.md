@@ -51,3 +51,12 @@ One authoritative transfer, stable identity, crash-safe persistence, and explici
 Dragging tiny shapes quickly is not the same decision as choosing which resource to leave behind. Alternative controls, paused management, expanded capacity, and stronger forecasts can preserve or intentionally adjust the cognitive trade without demanding the same motor, visual, or auditory performance from every player.
 
 These options should state what they change and remain free of stigma. Scarcity is an authored pressure, not a test of whether someone can operate a particular menu under time stress.
+
+## Reject hidden cost as inventory balance
+
+- A false choice asks the player to choose between mandatory survival and mandatory progression with no alternative.
+- An unknown delayed cost is treated as the balancing downside of an otherwise dominant item.
+- One comfort item is smaller, faster, more available, and more useful than every preparation it competes with.
+- Inventory count is used as proof of bodily condition, relief, permission, guilt, or narrative truth.
+
+Inventory can record acquisition and accepted consumption. It cannot decide what another state means. Put the immediate subjective benefit and objective receiving owner in the resource audit, expose a forecast cue, keep another preparation viable, and provide recovery after a plausible mistaken loadout. A genuine relief-now/cost-later curve belongs to the relief-resource owner.

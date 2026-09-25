@@ -52,6 +52,22 @@ Separating observed, interpreted, and hypothesized layers allows the interface t
 
 Provenance makes disagreements inspectable in multiplayer. Two players can see that a reading was contaminated or that they observed the same test event rather than arguing over a duplicated checkbox.
 
+## Diagnostic value matters more than clue volume
+
+Ten notes that repeat “the entity is dangerous” do less investigative work than one access record that rules out a claimed location. A clue earns space by changing a candidate, prediction, route, tool, permission, or final action. Otherwise it is optional context and should not occupy the critical evidence path.
+
+This applies to human and institutional traces as much as instruments. A key proves potential access, not actual entry. A payment proves a transaction, not motive. A schedule establishes an expected location, not an alibi unless the observation window and witness are valid. The ledger retains these limits so the notebook cannot turn correlation into certainty.
+
+## Testimony can be sincere, useful, and wrong
+
+A witness reports what they perceived from their position and history. Fear, partial access, old rules, loyalty, or a changed entity can make a sincere account incorrect. Store the claimant, declared basis, interest, time, place, and testable prediction. Then let behavior or residue support or contradict it.
+
+Do not use one final testimony to overwrite everything the player observed. A sympathetic history may explain why a dangerous being acted, but it does not erase damage already established. Likewise, one harmful act does not prove every hostile claim about it. Keeping help and harm as separate evidence gives the player an operational relationship to choose: avoid, contain, expose, cooperate under a condition, or release after a concrete safeguard.
+
+## Ownership is evidence only when its limits are explicit
+
+Holding an object and understanding it are different. A person may possess a seal without knowing whom it protects; another may know the rule but lack access to act. The inventory or world system remains authoritative for possession, while the evidence ledger records who knew what and when. This prevents a shared notebook from turning every character omniscient or duplicating an item after a handoff.
+
 ## Commitment turns interpretation into consequence
 
 Without commitment, players can click every candidate until one succeeds. Submission needs a rule and consequence. An early risky guess can be valid design; so can a minimum evidence threshold. What matters is that authority compares the choice to the actual case and does not allow the UI to set the answer.
@@ -69,3 +85,5 @@ Restart must clear more than position. The hidden identity or seed, entity oppor
 The unknown can be supernatural, biological, artificial, human, environmental, or entirely fictional. Evidence can be physical traces, instrument readings, behavior, language, spatial effects, or changes produced by an experiment. Pressure can come from the entity, another hazard, limited time, or resource exposure.
 
 The reusable structure remains: multiple candidates begin plausible, valid protocols produce bounded observations, the ledger preserves facts without inventing them, pressure makes observation costly, and a supported commitment has a real consequence.
+
+The method fails when the last document supplies an answer key, a face or silhouette is treated as identity proof, every witness repeats the same authorial truth, mixed behavior is flattened into innocence, or accepted evidence never changes what the player can do.

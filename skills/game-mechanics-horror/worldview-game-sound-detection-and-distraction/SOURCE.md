@@ -4,7 +4,7 @@
 
 `worldview-game-sound-detection-and-distraction` is an original Skill created for this repository from the user's 2026-09-18 request to turn classic horror play patterns into detailed, all-English Skills that Claude and Codex can load. The package was written from the underlying design problem rather than by renaming or rewriting another person's Skill.
 
-No external Skill, named commercial game, published character, level, walkthrough, or distinctive prose was used. **The Resonant Vault**, its bell-glass setting, caretaker, routes, and values are original fictional material created for the example.
+No external Skill, named commercial game, published character, level, encounter, or distinctive prose was used. **The Resonant Vault**, its bell-glass setting, caretaker, routes, and values are original fictional material created for the example.
 
 ## Source boundary
 
@@ -23,14 +23,15 @@ The package was built around these independently stated decisions:
 5. Listener priority and commitment are declared rather than hidden behind arbitrary switching.
 6. Accessibility communicates the same evidence through additional channels without granting secret simulation knowledge.
 7. Screenshots support scene review, while temporal logs or reproducible traces support behavioral claims.
+8. Source actor, authorship, true origin, and event identity remain immutable while each listener owns reception, estimated origin, memory, and response.
+9. A sound may summon a witness or helper while independently alerting unintended listeners.
+10. Valid silence and false localization are bounded interpretations with accessible equivalents, not rewrites of event truth.
 
 These are repository method choices. A target project may require different units or algorithms, but must preserve explicit causality or explain the alternative.
 
 ## Writing method
 
-The Skill follows the user's Writing 2 preference: it restores the hidden problem before listing implementation rules, separates facts from proposals and judgments, explains why constraints exist, retains counterexamples, and uses detailed prose when terse instructions would force an Agent to guess.
-
-No Writing 2 text is copied into the Skill.
+The Skill restores the hidden problem before listing implementation rules, separates facts from proposals and judgments, explains why constraints exist, retains counterexamples, and uses detailed prose when terse instructions would force an Agent to guess.
 
 ## Future provenance
 

@@ -1,6 +1,6 @@
 ---
 name: worldview-game-evidence-based-entity-identification
-description: "Use when a game needs a playable investigation in which players identify an unknown dangerous entity by running valid tests, recording positive, negative, inconclusive, and contaminated observations, narrowing a solvable candidate matrix, and committing a conclusion under pressure. Produces an implemented case when a runtime is available, plus its mechanic contract, tunables, evidence, and handoff. Do not use for lore trivia, arbitrary clue pickups, or a scripted reveal disconnected from player observations."
+description: "Use when a game needs a playable investigation in which players distinguish an unknown entity, person, institution, or cause by testing claims, behavior, physical residue, records, and instrument readings under pressure. Produces a solvable candidate case, provenance-bearing evidence ledger, implemented investigation when a runtime exists, and verification across correct, wrong, contaminated, save/load, and accessible paths. Do not use for lore trivia, arbitrary clue pickups, or a scripted reveal disconnected from player observations."
 ---
 
 # Worldview Game — Evidence-Based Entity Identification
@@ -41,6 +41,8 @@ The mechanic needs:
 - a final commitment resolved against authoritative case state;
 - success, wrong identification, failure, and restart paths.
 
+The case may include testimony and social or institutional evidence. A claimant saying that a presence never crosses running water is not the same record as a player observing it stop at a channel. A staff key, changed payment, access log, duty schedule, or missing object can distinguish candidates even when no instrument is involved. Preserve who made the claim, why they might be mistaken, who could observe the event, and what action the finding enables.
+
 Do not use this Skill for a predetermined linear reveal, a scavenger hunt in which “evidence” is only an item count, a broad narrative mystery, or a universal journal system. If the task is primarily to design combat against a known creature, the identity loop is not the correct scope.
 
 ## What the user gives
@@ -64,7 +66,7 @@ If no project exists, create the smallest test case that proves the loop: three 
 Complete as much as the environment permits:
 
 1. A reuse inventory for case state, entity behavior, map, tools, interactions, journal, pressure, audio, UI, and input.
-2. A case contract containing candidates, evidence signatures, test protocols, result validity, ledger semantics, pressure integration, commitment, outcome, restart, accessibility, and authority.
+2. A case contract containing candidates, evidence signatures, claimant and witness provenance, observed behavior, physical and institutional traces, test protocols, result validity, ledger semantics, pressure integration, commitment, outcome, restart, accessibility, and authority.
 3. Tunables outside control flow: ranges, durations, cooldowns, sample stability, pressure windows, cue thresholds, and any supported uncertainty bounds.
 4. A working investigation in the existing runtime when available, with one case selected from authoritative data and tools reading that same simulation.
 5. A playable entry, controls, debug seed or reproducible case selector when appropriate, and one screenshot from the running investigation.
@@ -169,6 +171,38 @@ Do not let the journal read the hidden identity and prefill matching clues. Do n
 
 If identity is randomized, store or expose a debug seed in development evidence. Production presentation need not reveal it. Repeatability is necessary to diagnose a failed case.
 
+## Build a case from claims, behavior, traces, and effects
+
+The candidate matrix is broader than a creature-stat table. Before placing clues, record the dimensions that could change the player's next action:
+
+| Dimension | Required question |
+| --- | --- |
+| Identity or cause | Which candidate or combination is actually present? |
+| Capability | What can it do under declared conditions? |
+| Behavior | What did it do here, to whom, and after which player action? |
+| Relationship | Is the behavior protective, exploitative, defensive, imitative, or mixed? |
+| Witness | Who directly observed the event, from which position, and with what limitation? |
+| Claim | Who described the rule, what did they personally know, and what interest or bias may affect it? |
+| Chronology | What occurred before, during, and after the disputed event? |
+| Access and concealment | Who could enter, alter a record, move an object, or hide a trace? |
+| Physical ownership | Who actually holds or controls an item now? |
+| Knowledge ownership | Who understands its meaning or the rule it tests? |
+| Objective effect | Which route, tool, permission, containment, refusal, or relationship becomes available or forbidden? |
+
+Do not collapse mixed behavior into innocence or guilt. A dangerous entity may warn the player once, a trusted official may provide real help while concealing a different fact, and a frightened witness may be sincere but wrong. Preserve observed help and observed harm as separate rows. Sympathetic testimony can revise motive; it cannot delete retained harm.
+
+Every essential entry must do at least one of these: eliminate or support a candidate, predict a behavior that can be tested, change a route or tool choice, grant or challenge permission, or change the final operational relationship. If removing a clue changes only lore volume, it is not essential evidence.
+
+### Neighbor handoffs
+
+- This Skill owns claim provenance, accepted observations, confidence, contradictions, and operational conclusions.
+- `/worldview-game-perception-distortion-and-trust` owns whether a presentation channel or guide is reliable. This ledger records the resulting inspected cue and its provenance; it does not redefine the channel's distortion rule.
+- `/worldview-game-horror-role-and-identity-pressure` owns actor, role, permission, expected schedule, and observer-belief rules. This ledger may cite an access or schedule violation as evidence but does not redefine the role.
+- `/worldview-game-asymmetric-information-cooperation` owns live transmission and acknowledgement between active roles. This ledger records which observations each role accepted.
+- Inventory or world state owns physical possession. The evidence ledger references the holder and transfer event; it never becomes a second inventory.
+
+The Skill remains self-contained when neighbors are not installed: write the required handoff fields into the case contract, implement only the evidence-side behavior, and identify the unresolved external owner rather than inventing it here.
+
 ## Treat evidence as a protocol
 
 Implement each artifact fixed by the Test Protocol Lock. For every evidence family, define:
@@ -247,6 +281,12 @@ test instance ID
 simulation time
 relevant conditions
 player/team owner where applicable
+claim source and declared basis
+observer and observation position
+physical holder and knowledge holders when relevant
+related behavior, residue, or institutional trace
+confidence and contradiction links
+prediction and unlocked/forbidden action
 ```
 
 The journal presents that record and may show candidate implications. It must not own entity identity or create evidence through checkbox state alone. Separate three layers in the interface:
@@ -256,6 +296,8 @@ The journal presents that record and may show candidate implications. It must no
 - **hypothesized:** what the player currently believes or plans to submit.
 
 Let the player inspect why a result was marked inconclusive or contaminated. This is especially important when pressure ends a window early.
+
+Save authoritative entries by stable evidence ID and case version. Save claimant, observer, holder reference, knowledge-holder references, contradiction links, confidence class, and the objective effect already applied. Reload must not promote testimony into observation, duplicate a transferred item, erase retained harm, or rerun a one-shot access consequence. When a referenced actor or object no longer exists, retain its stable ID and last verified state rather than silently rebinding the evidence to a replacement.
 
 ## Resolve identification from authoritative state
 
@@ -319,6 +361,8 @@ Attach every result to the Candidate Matrix Lock, Test Protocol Lock, Evidence L
 10. Restart during active testing, delayed results, journal review, submission, success, and failure; no prior case event survives.
 11. Test supported inputs, viewports, captions, color-independent cues, reduced motion, and adjusted timing.
 12. In multiplayer, verify hidden-answer authority and ledger consistency on actual clients under delay.
+13. Save after a claim, witnessed behavior, physical transfer, contradiction, and objective unlock; reload and confirm provenance, ownership references, knowledge boundaries, and applied effects remain exact.
+14. Exercise one sincere-but-wrong claim, one mixed helpful/harmful behavior, and one institutional trace; confirm none is silently promoted into the final answer.
 
 Save the matrix-validation output, selected case or seed, event/ledger trace, and reproducible playthrough. A screenshot can prove presentation but not that evidence came from a valid test.
 

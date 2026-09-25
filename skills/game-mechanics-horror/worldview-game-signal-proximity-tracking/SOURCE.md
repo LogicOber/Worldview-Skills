@@ -42,9 +42,7 @@ These are method proposals to be validated in receiving projects. They are not c
 
 ## Writing method
 
-The package follows the user-provided Writing 2 approach: restore the problem before prescribing rules, explain why each boundary exists, separate facts from proposals and judgments, retain counterexamples near the claims they limit, and complete the causal explanation before summarizing output.
-
-No text from the Writing 2 archive is reproduced. No skill-creator or Skill-generating Skill was used.
+The package restores the problem before prescribing rules, explains why each boundary exists, separates facts from proposals and judgments, retains counterexamples near the claims they limit, and completes the causal explanation before summarizing output. The wording and structure are original to this repository.
 
 ## Self-contained loading boundary
 

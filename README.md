@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-2f80ed?style=for-the-badge" alt="Apache 2.0 license"></a>
-  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-70-111827?style=for-the-badge" alt="70 Skills"></a>
+  <a href="https://github.com/LogicOber/Worldview-Skills"><img src="https://img.shields.io/badge/Skills-74-111827?style=for-the-badge" alt="74 Skills"></a>
   <a href="https://skills.sh"><img src="https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex-111827?style=for-the-badge" alt="Works with Claude Code and Codex"></a>
 </p>
 
@@ -16,7 +16,7 @@ Build playable games, high-fidelity game scenes, films, reusable visual assets, 
 
 Give an Agent this repository URL and a sentence describing what you want. It installs the relevant Skills, chooses the production path, reads the contract, asks only questions that change the result, builds and verifies the work, and reports exactly what is ready. You do not need to learn a node graph, assemble a workflow by hand, or remember which internal Skill to trigger next. Slash entries remain available when you want precise control over one stage.
 
-The repository currently includes **70 installable Skills** for:
+The repository currently includes **74 installable Skills** for:
 
 - expanding a short premise into a complete horror experience or a researched single-ending game campaign, building a new playable slice, or rebuilding an existing game's presentation;
 - composing horror experiences and implementing mechanics such as pursuit, hiding, sound detection, scarce saves, investigation, routine corruption, procedural incidents, and death loops;
@@ -41,7 +41,7 @@ The repository currently includes **70 installable Skills** for:
 
 ## Install and update
 
-Install all 70 Skills for every supported Agent:
+Install all 74 Skills for every supported Agent:
 
 ```bash
 npx skills add LogicOber/Worldview-Skills --all
@@ -89,14 +89,15 @@ Image generation, Blender MCP, another DCC, browser or engine automation, and pr
 
 ## Horror game mechanics
 
-Twenty-three standalone Skills implement complete, testable horror-game situations and composition layers, including route architecture for designed indoor pursuits. Use [`/worldview-game-horror-production`](skills/game-production/worldview-game-horror-production/README.md) when the Agent should compose those situations into one complete game.
+Twenty-seven standalone Skills implement complete, testable horror-game situations and composition layers, including route architecture for designed pursuits, sequential character handoffs, stranded journeys, divided-attention driving, and relief resources with learnable downstream costs. Use [`/worldview-game-horror-production`](skills/game-production/worldview-game-horror-production/README.md) when the Agent should compose those situations into one complete game.
 
 | Family | Included mechanics |
 | --- | --- |
 | **Pursuit and hiding** | Lure–hide–escape, observation-gated stalkers, sound distraction, roaming stalkers, safe rooms, and barricades. |
-| **Survival decisions** | Scarce inventory, key-item backtracking, limited-save risk, and fictional wound treatment. |
+| **Survival decisions** | Scarce inventory, key-item backtracking, limited-save risk, fictional wound treatment, and relief resources with delayed costs. |
 | **Investigation and objectives** | Power restoration, proximity tracking, entity identification, and threat-interrupted puzzles. |
-| **Perception and cooperation** | Perception distortion, persistent death-loop clues, and asymmetric-information cooperation. |
+| **Perception and cooperation** | Perception distortion, persistent death-loop clues, asymmetric-information cooperation, and evidence carried across playable-character handoffs. |
+| **Journey and composition** | Stranded routes that lose protections, divided-attention driving, experience rhythm, returning places, corrupted routines, procedural duty, and role/identity pressure. |
 
 For a chase whose tension must come from a learnable building and route rather than an omniscient enemy sprinting behind the player:
 

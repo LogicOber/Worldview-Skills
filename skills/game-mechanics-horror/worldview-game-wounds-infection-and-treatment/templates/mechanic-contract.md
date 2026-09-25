@@ -74,6 +74,21 @@ Fill these rows in order. A later implementation detail cannot silently change a
 | Systemic strain |  |  |  |  |
 | Recovery |  |  |  |  |
 
+## Symptom, condition, transformation, and belief ledger
+
+| Event / assessment | `felt_symptom` | `physical_state` | `transformation_state` | `social_interpretation` | `onset_cause` | Evidence / provenance | `confidence` | Alternative interpretation | `reassessment` |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | | | |
+
+| Intervention | `treatment_effect` | `relief_only_effect` | Receiving owner | `route_cost` | `reduced_intensity_equivalent` | State it must not change |
+| --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | |
+
+- Relief-resource handoff, if applicable:
+- Accepted event and transaction ID:
+- Separate delayed-cost owner:
+- Non-medical framing:
+
 ## Transition model — Condition Model / Clock Policy Locks
 
 | From | To | Cause and clock | Evidence | Valid intervention | Exception/interruption |

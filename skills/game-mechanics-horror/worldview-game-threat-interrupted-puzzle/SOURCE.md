@@ -46,9 +46,9 @@ These are design and implementation proposals to be validated in each receiving 
 
 ## Writing method
 
-The package follows the user-supplied Writing 2 method: reconstruct the practical problem before listing rules, retain the reason each rule exists, distinguish verified facts from proposals and judgments, keep failure cases near the claims they constrain, and explain complete causal transitions.
+The package reconstructs the practical problem before listing rules, retains the reason each rule exists, distinguishes verified facts from proposals and judgments, keeps failure cases near the claims they constrain, and explains complete causal transitions. The wording and structure are original to this repository.
 
-No Writing 2 wording is copied. No Skill-generation Skill or skill-creator was used.
+The task-ownership, cancel/resume, partial-effect, compatibility, and handoff extensions are repository-authored abstractions. They do not reproduce an external puzzle, route, prop, character, or encounter.
 
 ## Self-contained loading boundary
 

@@ -51,6 +51,20 @@ The central desk and its short approach are excluded while saving. Instrument in
 
 The player and cartographer share stairs and main doors. The west maintenance bridge is cartographer-only until the player repairs its floor after calibrating the cloud lens. The relationship is communicated by an earlier distant crossing.
 
+## Territory grammar, claim, and first safe observation
+
+Before the first contact-capable episode, the route teaches three territory cues:
+
+| Cue | What it predicts | Safe proof |
+| --- | --- | --- |
+| a straight ash line beneath a latch | the cartographer physically crossed that compatible door; it does not prove current presence | the player inspects the east-stair line while the central desk exclusion is active |
+| a slate rotated toward a connector | the cartographer inspected or selected that route during a prior pass | from protected desk glass, the player sees it rotate a lower-gallery slate and leave north |
+| two narrow parallel prints at a maintenance rail | the cartographer can use the narrow west bridge that is not yet player-safe | the player watches one distant crossing through the cloud lens before any west encounter is eligible |
+
+A handwritten station warning claims, “The cartographer never crosses a working rain channel.” The writer is a former technician describing an earlier configuration and appears sincere. The first safe observation contradicts the universal claim: the cartographer crosses above the channel on the maintenance rail without touching its water. The authoritative rule is narrower—the wet floor slows its main-door traversal but does not block the overhead rail.
+
+The warning remains in the evidence history with its claimant and context. It is not rewritten as a lie. The player can now predict that flooding the main lower-gallery threshold buys time but cannot make the west rail safe.
+
 ## Pressure proposal
 
 Pressure uses a 0–100 scheduling budget. The following values are example proposals rather than proven balance:
@@ -86,6 +100,8 @@ Calibrating the rain drum raises the budget and signals the lower gallery. The l
 
 If the player closes the gate before the cartographer commits to the connector, its path is invalidated and it reroutes through the gallery. The player spends gate position: only one manual gate can remain locked, so this counterplay changes later options.
 
+If confirmation is broken at the pump stair, the cartographer searches the rain-drum alcove, north-gate recess, and last-heard pump landing in that order. It releases only after those three declared sites are clear or the remote wind cup supplies newer evidence. It then withdraws through the central-gallery north connector. The player receives the end state through receding directional steps, the visible central slate turning north, and the caption `ASH ROUTE: NORTHBOUND`. The 35-second recovery starts only after that connector crossing commits.
+
 ### Recovery and choice
 
 The cartographer crosses the central gallery at a distance rather than starting pursuit. It enters recovery and continues toward the east dome. The player may visit the desk only after the episode closes. Saving retains its current connector and used encounter history.
@@ -95,6 +111,8 @@ The cartographer crosses the central gallery at a distance rather than starting 
 Completing the lens rings the east bell. The cartographer learns `east_dome_signal`, not the player transform. The player can remain and risk the final shutter opening, hide using the project's declared sight rules, or spend the wind-cup charge in the central gallery. The remote event redirects investigation only if the cartographer has no current sight.
 
 When the lens completes, shutter passages become valid stalker connectors and the change is shown by the cartographer opening one at a distance. This new ability is not enabled silently.
+
+Breaking sight inside the dome starts a two-site search of the lens cradle and east shutter. Closing the shutter before approach removes the second site and causes immediate withdrawal down the east stair; a timer alone cannot end the search while either legal site remains unchecked.
 
 ### Wind vane — stronger search
 
@@ -124,6 +142,12 @@ The player recognizes the lower-gallery warning, closes the north gate, complete
 
 The player continues calibrating the vane through the minimum warning, remains in a clear sight line when the cartographer enters, and fails to break sight before the valid attack windup resolves. The trace records warning, route, confirmation, windup, and contact.
 
+### Capture recovery with retained route knowledge
+
+Capture at the vane returns the player to the central desk after the rain drum and cloud lens. Completed instruments, repaired west bridge, gate state, and the single cartographer identity persist. Immediate confirmation, attack, search, and in-flight warning clear. The cartographer reconstructs halfway along the west-to-central withdrawal connector with no player position evidence; the director enters the full 35-second recovery and cannot select the west bridge for the next episode.
+
+The player's route notebook retains the observed maintenance-rail crossing and adds the exact connector that produced the vane warning. This is the retry modifier: it improves territory knowledge without opening a door or revealing live position. The spent wind-cup charge remains spent if the authoritative event had already emitted; a capture before emission restores the staged item. No hidden pressure debt, increased speed, or extra stalker copy is added.
+
 ### Canceled opportunity
 
 The budget reaches exactly 60 while the player stands at the only west-bridge exit and the other connector is locked. Every candidate either blocks the mandatory step or offers no counterplay. The director retains budget 60, starts no cooldown, chooses no encounter, and does not spawn behind the player.
@@ -131,6 +155,8 @@ The budget reaches exactly 60 while the player stands at the only west-bridge ex
 ### Save/load continuity
 
 The player saves after the rain-drum episode with the cartographer halfway through abstract east-stair travel and the east dome unloaded. Loading restores the same identity, connector progress, gate state, encounter history, spent budget, and recovery time without a local stalker instance. Loading the east dome later runs the physical anchor predicate once; it does not instantiate a second cartographer or begin an encounter before the anchor passes.
+
+Saving during rain-drum search restores the exact remaining sites and last-known evidence. Saving after release restores the selected north withdrawal connector and end cue state; it does not place the cartographer back outside the hiding place. Saving after capture restores the retained notebook cue, west-bridge exclusion, resource transaction, and recovery state exactly.
 
 ## Accessibility behavior
 
@@ -149,6 +175,10 @@ The player saves after the rain-drum episode with the cartographer halfway throu
 - warning-to-contact measurements for every supported presentation mode;
 - proof that objective signals reveal zones rather than the live player position;
 - gate, wind-cup, hiding, search, withdrawal, and cooldown state traces;
+- territory-cue and first-safe-observation traces proving one route prediction before contact;
+- local-warning provenance plus observed contradiction without rewriting the warning;
+- release traces proving search sites, withdrawal connector, end cue, and cooldown occur in order;
+- capture traces from warning, pursuit, search, and release with the declared retained knowledge and resource boundary;
 - seeded route replays with legal variation;
 - save/load during roaming, abstract travel, recovery, and post-objective state;
 - restart from staging, warning, pursuit, search, success, and failure;

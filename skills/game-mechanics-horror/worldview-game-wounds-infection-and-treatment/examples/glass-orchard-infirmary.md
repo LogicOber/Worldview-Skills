@@ -48,6 +48,21 @@ treatment state: none
 
 The condition screen names those states in text. A neutral diagram and patterned icon replace graphic imagery when reduced intensity is enabled.
 
+## Symptom, state, transformation, and belief
+
+The reported symptom **“warm prickling under the forearm band”** has two plausible authored causes. Immediately after the cracked tube contact, it can reflect the unresolved physical wound and nearby heated irrigation mist. Later, the same report can coincide with fictional growth-medium activity. The symptom alone confirms neither state.
+
+| Observation | Felt symptom | Physical state | Transformation state | Social interpretation | Confidence / reassessment |
+| --- | --- | --- | --- | --- | --- |
+| before contact near heated mist | warm prickling | none | none | maintenance attendant believes the mist is irritating | low; leave the mist and inspect |
+| after contact, before inspection | warm prickling | unresolved wound | not established | attendant fears contamination but lacks evidence | uncertain; inspect wound and scan residue |
+| after valid stabilization | prickling may remain | stable wound | not established | attendant sees that immediate physical risk improved | supported; infirmary reassessment still required |
+| delayed route with growth-medium evidence | stronger prickling | stable wound with contamination present | separate transformation remains `none` in this example | infirmary scanner reports localized escalation | confirmed only after scanner evidence |
+
+The stabilization wrap changes `physical_state` from unresolved to stable and updates the condition log. It does not erase the felt symptom, remove fictional medium, prove infection, alter personhood, or change another actor's confidence without visible evidence.
+
+An optional shaded sleeve reduces the felt warmth and neutral presentation pulse for forty seconds but changes no physical state. Its use is sent to the relief-resource ledger, which visibly records a separate moisture-retention cost; this example's body authority accepts no hidden transformation delta. The player can decline it, use neutral status text instead, or remove it at the next safe point. Comfort never becomes proof of recovery, and its separate cost never derives from the wound stage.
+
 ## Treatment decisions
 
 The player carries one compact stabilization wrap with one charge. Applying it takes `3.0 s` of unpaused simulation time in a safe position and changes the immediate physical state to stable for travel. The wrap charge is reserved at stage start and decremented atomically with the `stable` transition at completion. It does not remove contamination or claim to treat infection.

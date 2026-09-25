@@ -1,3 +1,5 @@
-# Source and authorship
+# Source record
 
-This original Skill was written for Worldview Skills after private gameplay observation showed that repeated public spaces can carry escalation through changed occupants, objects, routes, and relationships. It does not copy a source game's hub, map, character, dialogue, or asset.
+This original Worldview Skills package was authored for the repository and refined through private cross-case research into stable landmarks, recurring places, observer knowledge, route protection, and changed questions.
+
+No external Skill, code, plot, dialogue, map, prop arrangement, character, title, timing, or file structure is reproduced. The shared-ID method, delta separation, safe-return history, tests, and fictional tram-depot example are repository-authored.

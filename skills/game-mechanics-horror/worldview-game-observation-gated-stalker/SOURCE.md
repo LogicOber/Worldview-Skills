@@ -4,7 +4,7 @@
 
 `worldview-game-observation-gated-stalker` is an original synthesis written for this repository in response to the user's 2026-09-18 request to turn classic horror play patterns into detailed, loadable Skills. Its structure, explanation, implementation method, contract, and fictional example were written for this package. It does not rename, adapt, or redistribute an external author's Skill.
 
-No named commercial game, external Skill, character, creature, level, prose passage, or distinctive scenario was used as a source. The example **The Lantern Index** is new fiction created to demonstrate the method.
+No named commercial game, external Skill, character, creature, level, prose passage, or distinctive scenario was used as a source. The example **The Rotating Archive** is new fiction created to demonstrate the method.
 
 ## User-supplied mechanic brief consulted
 
@@ -34,9 +34,7 @@ These additions are editorial and technical judgments made for this repository. 
 
 ## Writing method
 
-The presentation follows the user's internal Writing 2 preference: restore the underlying problem before giving rules, keep facts separate from proposals and judgments, retain the reason for constraints, include counterexamples, and allow the reasoning to remain detailed when compression would make the method harder to apply.
-
-No text from the Writing 2 materials is reproduced here.
+The presentation restores the underlying problem before giving rules, keeps facts separate from proposals and judgments, retains the reason for constraints, includes counterexamples, and remains detailed when compression would make the method harder to apply.
 
 ## Revision rule
 

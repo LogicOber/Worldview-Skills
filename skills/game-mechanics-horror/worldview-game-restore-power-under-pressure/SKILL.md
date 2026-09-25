@@ -1,6 +1,6 @@
 ---
 name: worldview-game-restore-power-under-pressure
-description: "Use when a game needs a playable find-components, restore-system, unlock-route objective in which unique pickups, an interruptible repair, persistent world state, and a real pressure source form one causal loop. Works with an existing project or a small authored prototype. Produces an implemented objective when a runtime is available, plus a mechanic contract, tunables, evidence, and handoff. Do not use for a decorative blackout, a one-switch cutscene, or a game-wide inventory framework."
+description: "Use when collecting dependencies and performing exposed work should restore, isolate, disable, reroute, or partially energize a system under pressure. Defines beneficiaries and threats, staged ownership, partial effects, rollback, visible proof, persistent consequences, recovery, and runtime verification instead of a decorative fuse hunt."
 ---
 
 # Worldview Game — Restore Power Under Pressure
@@ -145,6 +145,8 @@ missing components -> system cannot be restored
 restored system -> persistent world change -> route becomes usable
 ```
 
+Do not assume full restoration is correct. Before collection, choose and preview the legal operations: **restore** intended service, **isolate** a dangerous branch, **disable** a system that benefits the threat, **reroute** limited capacity, or **partially energize** one bounded function. For each supported operation name the beneficiary, threat capability gained or lost, route change, unavailable remainder, and visible proof. “Power on” is not one universal truth when separate buses, valves, or permissions exist.
+
 Show or communicate the disabled system early enough that the first component is recognized as useful. This can be done through spatial framing, a failed interaction, an objective note, environmental feedback, or world-specific dialogue. Avoid a detached counter whose meaning arrives only after the final pickup.
 
 The route must actually reject completion before restoration. A closed-door animation is insufficient if the player can cross its trigger, interact through the wall, or enter the destination another unintended way. Conversely, do not place the player in a softlock when the objective begins; every required component and the repair point must remain reachable under the declared pressure rules.
@@ -278,6 +280,10 @@ publish one restoration event
 
 Effects subscribe to that accepted transition. Repeated input, reconnects, and late callbacks must not consume again or publish duplicate completion.
 
+For staged work, assign an owner and stable commit to every stage. Record installed components, current operator, partial output, unstable working state, cancel time, and rollback boundary. Interruption may revert only the active stage, return one uncommitted component, or preserve a completed isolation step; it must not silently undo earlier physical work.
+
+If a helper or world system can finish a stage, record assignment, object custody, knowledge, last-known state, acknowledgement, success/delay/failure, and player reclaim. Final operation revalidates all committed stages and reconciles partial subscribers once.
+
 ## Let restored power have concrete consequences
 
 Use the subscriber matrix fixed by the Restoration Consequence Lock. The renderer does not own power. Keep an authoritative restoration state from which systems derive their behavior. Depending on the project, subscribers may include:
@@ -292,6 +298,13 @@ Use the subscriber matrix fixed by the Restoration Consequence Lock. The rendere
 Separate guaranteed mechanical consequences from presentation. The route unlocking is a gameplay fact. Lights brightening, fans spinning, and music changing communicate it. If lighting deliberately remains unreliable after repair, the route must still expose some accessible confirmation.
 
 Crossing the actual destination boundary, activating the powered device, or completing another explicit post-repair action should produce success. Repair completion alone is not automatically level completion unless the brief says it is. This final step proves the unlocked consequence is usable rather than cosmetic.
+
+## Audit beneficiaries, threat effects, and partial proof
+
+| Operation/state | Beneficiary | Threat benefit or loss | Route/hazard effect | Visible mechanical proof | Presentation proof | Remaining cost |
+| --- | --- | --- | --- | --- | --- | --- |
+
+Every partial state needs mechanical proof, not only brighter light: a stopped fan, moving gauge, changed interlock, silent transmitter, reduced hazard lane, active pump, or reachable control. If restoration strengthens a threat, preview that relationship before consequential commitment or give a recoverable first demonstration. Unsupported operation branches reject explicitly rather than falling through to “on.”
 
 ## Keep geometry and state consistent
 
@@ -378,6 +391,8 @@ Attach each result to the Dependency Route Lock, Objective State Lock, Pressure 
 11. Unload/reload and save/load at every supported persistent boundary; verify collected IDs, repair policy, restored latch, and route subscribers reconstruct coherently.
 12. Restart during collection, repair, restoration effects, success, and failure; no state or callback may survive.
 13. Check supported controls, narrow viewport behavior, non-audio cues, and reduced-motion presentation.
+14. Exercise every supported restore, isolate, disable, reroute, and partial state; verify beneficiary, threat capability, route effect, and proof.
+15. Interrupt every staged repair before and after commit; verify active-stage rollback, retained prior work, component custody, helper handoff, and save/load.
 
 For fixed-step simulations, repeat a deterministic trace under more than one render schedule. For networked projects, verify authority and replication with actual multiple clients. A screenshot proves rendering only; pair it with tests, logs, state captures, or reproducible playthrough steps.
 

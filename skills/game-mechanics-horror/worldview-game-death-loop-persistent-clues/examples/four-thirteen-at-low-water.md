@@ -72,6 +72,15 @@ The beacon rotates toward the service lock before the 4:18 pulse. When the lower
 
 Entering the wrong rhythm turns the beacon toward the chart room and advances the warden schedule. The phrase remains reviewable, so the failure diagnoses execution or interpretation rather than erasing the clue.
 
+## Pass learning and actor memory
+
+| Pass | Objective | Actor memory | Mastered labor / compression | New information | Actionable difference |
+| --- | --- | --- | --- | --- | --- |
+| first | learn why the lower route becomes fatal | the player-character records the calibrated tide interval and complete signal phrase; the warden remembers nothing | waking, chart walk, and tutorial prompts are not yet mastered | black gauge at 4:17:40 predicts the 4:18 pulse; the phrase controls beacon orientation | next pass can act before descent |
+| second | redirect the beacon before the pulse | the player-character retains the chart and phrase; other actors receive no knowledge | waking and chart approach compress to a brief controllable route; control returns before choosing beacon or descent | redirected light denies the warden's service-lock approach | open the upper maintenance route |
+
+The shorter second pass does not automate the beacon choice. The retained clue changes the route rather than merely adding lore. Quit, crash, and reload after the chart commit must restore this actor's memory and no one else's. A tester bypass may seed the chart and phrase only in a disposable profile; it may not edit settings, another logbook, or the ending state.
+
 ## User-facing save actions
 
 - `Resume at 4:13` loads the last validated pass and persistent ledger.

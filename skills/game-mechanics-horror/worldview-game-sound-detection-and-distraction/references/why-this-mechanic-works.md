@@ -16,6 +16,8 @@ Capturing an immutable origin prevents a common cheat: the investigation target 
 
 Memory makes the difference visible. The listener can orient, travel to the source, search the surrounding area, then abandon or revise the belief. Each phase is grounded in what it received.
 
+Provenance also distinguishes authorship. A pipe knock produced by ordinary machinery, a player's deliberate alarm, and an entity copying the same cadence are separate events even if the mixer plays similar audio. Presentation may invite uncertainty; the source actor, origin, and time remain immutable for simulation and later evidence.
+
 ## Propagation gives architecture meaning
 
 A wall, closed door, ventilation link, or open stairwell can change both risk and opportunity. That makes route choice more than distance. The player may choose a slower soft surface, open a door to create an acoustic link before placing a device, or time a loud objective while machinery masks it.
@@ -46,6 +48,20 @@ It should not draw the exact hidden navigation path or display a listener's priv
 
 Accessibility follows the same principle. Captions, haptics, and visual pulses can communicate event kind, approximate strength, and direction without changing AI behavior or requiring audio hardware.
 
+## A sound can summon help and danger together
+
+Threat redirection is only one response. A shout, alarm, impact, or machine signal can create a witness, request help, authenticate the player's location, or cause an authorized actor to open a route. The useful design question is not “who was this sound for?” but “which listeners could receive it through this map, and what does each know after reception?”
+
+The intended helper and unintended threat need separate thresholds, travel times, acknowledgement, and abandonment rules. A helper arriving does not erase the threat's memory. This overlap creates a real decision: make enough sound to gain assistance while preparing for the other listener it may attract.
+
+Improvised alarms also interact with credibility. A responder may need a recognizable cadence, a prior agreement, or physical evidence before acting. If the player repeats an alarm without cause, the helper's response may change only through a declared history—not an arbitrary refusal.
+
+## Silence and direction are interpretations
+
+The absence of an expected sound matters only after a valid opportunity. A lift that should chime after power returns can fail to chime; that is evidence if the power state and observation window are known. Machinery masking, interruption, a closed propagation link, or an unavailable audio device must remain distinct from world silence.
+
+Likewise, a listener may localize an echo, vent path, or copied voice incorrectly. Store the estimate separately from the true origin and provide a later correction path. Rewriting the event origin makes audit and save/load impossible; revealing the exact true origin through accessibility UI removes the intended uncertainty.
+
 ## Common counterexamples
 
 ### “Play a loud clip and alert every nearby enemy”
@@ -67,6 +83,14 @@ Unlimited immediate events can hold a listener forever. Retrieval, cadence, char
 ### “The enemy walked over there, so hearing works”
 
 It may have followed a scripted point or live player transform. Evidence must show event identity, propagation, reception, stored origin, and selected behavior across time.
+
+### “A loud sound alerts everyone”
+
+Listeners occupy different zones, use different thresholds, recognize different categories, and may have conflicting commitments. A global alert flag erases architecture and makes witness/helper use indistinguishable from threat attraction.
+
+### “The helper arrived, so the alarm worked”
+
+The helper may have followed a script or objective flag. Prove event reception, acknowledgement, response route, arrival deadline, and the state they were authorized to change. Also prove what unintended listeners did with the same event.
 
 ## What a fair outcome sounds like in the player's explanation
 

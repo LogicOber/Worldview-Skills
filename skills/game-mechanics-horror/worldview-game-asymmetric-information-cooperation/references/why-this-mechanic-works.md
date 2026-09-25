@@ -53,6 +53,20 @@ After the action, both roles need evidence about what changed. The observer may 
 
 If only the server knows success, players repeat inputs. If only one client sees it, their models diverge. Feedback can remain role-specific, but it must point to one authoritative transition.
 
+## Cooperation includes task and last-known-state ownership
+
+A companion or remote player becomes more than a quest marker when they have a current task, a reason, a required capability, a last verified location and condition, knowledge carried, and visible success, delay, injury, or failure transitions. Communication loss then creates a concrete question: are they still repairing the lift, did they retreat to the fallback node, or did the last acknowledged state expire?
+
+Do not reveal a live position through UI after the fiction removes contact. Last known means last verified. Updating it requires direct sight, an accepted message, or another authoritative event the receiving role is permitted to know.
+
+Physical possession and knowledge also differ. One participant can hold a tool without knowing its purpose; another can understand the target without being able to act. A magical shared journal erases that cooperation by giving every role the latest truth regardless of observation or transmission.
+
+## Live cooperation differs from sequential viewpoint ownership
+
+This method serves participants who are active in the same problem and must transmit or acknowledge information. A single player switching to a later protagonist creates a different persistence problem: earlier actions and knowledge must become later world state or evidence even when no live exchange occurs. Route that problem to the character-handoff Skill when available instead of stretching the co-op protocol across an asynchronous campaign.
+
+The boundary matters for save/load. Live cooperation restores session roles, task state, messages, acknowledgements, and shared consequences. Sequential viewpoint design restores character chronology, residues, and later discovery conditions. Combining both in one ledger makes every character appear connected and omniscient.
+
 ## Failure should diagnose the broken edge
 
 A good failure distinguishes wrong clue, ambiguous message, stale phase, incorrect control, late commit, or ignored threat. It need not expose the entire solution. It should tell the group which part of its process to change.
@@ -74,6 +88,9 @@ Do not use this method when:
 - one player merely reads a complete answer to another;
 - only voice can express a required distinction but the platform does not require voice;
 - a single-player companion is expected to solve the reasoning invisibly;
+- participant locations update through an omniscient quest marker after communication is lost;
+- a shared journal grants observations that were never transmitted;
+- the main problem is an earlier playable character leaving evidence for a later playable character rather than live cooperation;
 - the project has no multiplayer or role-switching capability and only a design document is requested.
 
 ## The smallest complete proof

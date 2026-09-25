@@ -1,6 +1,6 @@
 # Worldview Game — Chase Route Architecture
 
-Turn a horror pursuit into a designed spatial encounter: a readable building, a pursuer with imperfect information, a route the player can learn, and a failure that teaches rather than merely kills.
+Turn a horror pursuit into a designed spatial encounter: a building rehearsed before peak pressure, branches rejected through readable evidence, a pursuer with imperfect information, recovery pockets, and a final escape, lure, or containment threshold that uses the learned route.
 
 ## Call this Skill
 
@@ -20,6 +20,8 @@ Everything after the Slash command is the creative brief. A room sketch, screens
 ## When to use it
 
 Use this Skill when a chase should be a level rather than an enemy that simply follows the player's transform. It fits indoor pursuit, escape sequences, recurring mini-bosses, and a final chase whose tension comes from route choice, timing, and learning.
+
+Use the dedicated driving-horror Skill when steering a moving vehicle and looking into mirrors, passenger space, or cargo compete for attention. Use the stranded-journey Skill when the main structure is progressive loss of transport, communication, shelter, legitimacy, companions, or a safe return rather than the pursuit geometry itself.
 
 Use a different method for a cinematic-only chase, a boss fight built around combat arenas, or a creature that is intentionally omniscient. If the requested scene has no map, this Skill authors a small, testable floor plan first instead of pretending that a corridor is a level.
 
@@ -45,4 +47,3 @@ An image model, GPT Image, browser, Blender, Tripo, microphone API, or other MCP
 - [why-chase-routes-fail.md](references/why-chase-routes-fail.md) — failure patterns and design tests
 - [the-red-service-corridor.md](examples/the-red-service-corridor.md) — original fictional filled example
 - [SOURCE.md](SOURCE.md) — provenance and originality record
-

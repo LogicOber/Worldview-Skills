@@ -153,6 +153,38 @@ Route history changes the finale’s pressure, not its ending:
 | Quota Works | Mara carries a copper bypass; one ring turns cheaply, but Warden Noell arrives early because the works route stamped Mara’s lamp. Tern physically holds one shutter if previously helped. | Same organ commit, city propagation, roof image, and meaning. |
 | Whisper Reservoir | Mara carries a cold-glass echo; hidden auditors are visible, but each ring consumes more wick. Sella calls the safe harmonic interval if previously helped. | Same organ commit, city propagation, roof image, and meaning. |
 
+### Final ontology and correction chain
+
+`final_ontology`: the Index does not measure inherent brightness. Its failed sensor recognizes registered lineage, and copied light can carry the hidden calibration grammar without central permission.
+
+| Unresolved question | Original event | Earlier interpretation | Corrective evidence | Revised interpretation | Changed action |
+| --- | --- | --- | --- | --- | --- |
+| Why do bright public lamps fail certification? | restored market lamps reject copied patterns | storm damage makes the Index miscount brightness | route plates show meters assigned before testing; reservoir patterns remain stable outside registration | certification measures lineage rather than light quality | stop repairing brightness and build a carrier for copied grammar |
+| Why can the Office revoke every lamp? | one central calibration wave disables unregistered patterns | the center contains a uniquely necessary signal | Peer Vault shelves teach identical patterns laterally when one lamp shares with the next | the center monopolizes distribution, not capability | install the copied grammar in the dawn organ and make each ring teach another |
+
+### Finale teaching and learned containment
+
+| Final action or rule | Prior tutorial beat | Pressured rehearsal | Finale use |
+| --- | --- | --- | --- |
+| tune reveal / bind / mute bands | three quiet market lamps accept one band each | Meter Court floor changes while Noell searches | align each organ ring under pursuit |
+| share one wick and copied pattern | Mara relights Tern's shelter lamp and sees it relay to a second lamp | Peer Vault shelves must pass a pattern before Noell extinguishes the source | each ring teaches the next instead of asking the Index |
+| contain a listener with a closed calibration path | a harmless auditor loops between two test lamps in Tallow Market until Mara breaks the path | a Peer Vault shelf loop delays Noell but spends one wick | route-specific carrier closes a temporary decoy loop around the Audit Choir, creating time for the same organ commit |
+
+The containment path is not a new finale genre. The player learned its landmark, cost, release rule, and recovery earlier. Ignoring it leaves a harder but viable ring sequence; using it changes pursuit pressure, not the ending.
+
+### Local humane decision
+
+In Act I, Mara may spend one scarce wick to relight Tern's public shelter before printing a route plate. This is locally costly and never required for the ending. If done, Tern later holds a Spire shutter long enough to widen one recovery window, and the aftermath shows the shelter teaching light to its neighboring stairwell. If skipped, Mara uses a taught manual shutter crank and the shelter remains dark in the fixed roof view. Both histories commit the same grammar, disable exclusive calibration, and reach the same title return.
+
+### Mandatory aftermath state
+
+- `endingCommitted=true` and `indexExclusiveCalibration=false` persist.
+- The Index remains physically present, so the ending does not pretend the institution vanished.
+- Public lamps retain peer-teaching state after reload.
+- Route carrier, remaining wick, Tern shelter state, and surviving evidence remain as local aftermath variation.
+- Reloading the post-ending record returns to the roof look state and cannot recommit the organ transaction.
+- Starting a new campaign requires the explicit new-run flow and clears campaign state without changing settings.
+
 Capture, extinguishment, falling, quitting, declining an optional conversation, and allowing an NPC to leave are failure or state variations, never endings.
 
 ### Lock control

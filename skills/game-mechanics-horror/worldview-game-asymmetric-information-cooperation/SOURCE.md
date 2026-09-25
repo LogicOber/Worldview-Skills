@@ -37,6 +37,8 @@ These are original design proposals, not universal claims about group psychology
 
 `examples/the-bellhouse-interval.md`, the Drowned Bellhouse, its roles, vocabulary, threat, and sequence were written for this Skill.
 
+The later task ownership, last-known-state, physical-versus-knowledge ownership, transmission-history, and deterministic-fallback additions were authored for this repository. They do not reproduce an external puzzle, multiplayer protocol, character pair, map, dialogue, or Skill structure.
+
 ## Revision rule
 
 External cooperative games may inform broad research, but their distinctive puzzles, role language, content, and tuning must not be renamed or paraphrased into this package. New sources and new repository decisions must remain explicit.

@@ -1,6 +1,6 @@
 ---
 name: worldview-game-threat-interrupted-puzzle
-description: "Use when a game needs a playable world-space puzzle whose attention, position, or interaction commitment is repeatedly interrupted by a real threat, with fair warning, immediate disengagement, explicit partial-progress persistence, safe recovery, completion consequences, and rigorous restart verification. Works with an existing project or compact prototype. Do not use for pause-screen puzzles, arbitrary countdown locks, scripted cutscene interruptions, or a game-wide puzzle framework."
+description: "Use when a game needs a world-space puzzle repeatedly interrupted by a real threat. Defines task ownership, bounded cancel/resume, committed and working progress, partial world effects, ally or system handoff, fair warning, recovery, completion consequences, save/load, accessibility, and rigorous runtime verification."
 ---
 
 # Worldview Game — Threat-Interrupted Puzzle
@@ -184,6 +184,29 @@ Never trap the player in a long interaction while the threat can attack unless t
 
 If the puzzle uses a close camera, retain enough threat warning through peripheral world cues, interface indicators, subtitles, controller feedback, or a quick-look action. Do not require players to monitor information the interaction has physically hidden without an alternative.
 
+## Assign task ownership and handoff explicitly
+
+A puzzle step is not ownerless because several actors can touch it. For every bounded action record:
+
+```text
+task ID → eligible operators → current owner or lease → last stable commit
+→ knowledge required → physical object required → cancel/resume policy
+→ handoff event → attribution → failure fallback
+```
+
+Separate who can operate from who understands the step and who holds its object. A helper, companion, or world machine may complete a subtask only when the player initiates or authorizes a declared handoff and receives readable confirmation. Do not let an ally silently solve the puzzle off-screen because danger arrived.
+
+Preserve task, operator, start state, commit boundary, last-known location, communication, completion or failure, and result recipient. If pathing or communication fails, follow a declared pause, revert, or reclaim rule. Use `/worldview-game-character-handoff-and-shared-evidence` when the main design problem spans playable viewpoints or long-lived physical and knowledge custody.
+
+## Give committed subparts partial world effects
+
+A milestone should do more than fill a progress bar. Name one bounded subscriber and visible proof for each committed subpart: reduce one hazard lane, unlock one recovery pocket, stop one threat capability, power one route light, expose one clue, or change one machine state.
+
+| Completed subpart | Valid target | Effect | Invalid-target feedback | Threat/route consequence | Rollback rule |
+| --- | --- | --- | --- | --- | --- |
+
+The effect must be authoritative, idempotent, reconstruct after load, and remain too narrow to bypass the final solve. If one coupling stops a sweep arm, show that arm stop while other threat behavior remains.
+
 ## Integrate a real threat at a narrow boundary
 
 Use the integration events fixed by the Threat Window Lock without moving threat authority into the puzzle. The threat system owns movement, perception, attack, and recovery. The puzzle owns puzzle state and interaction. Connect them through declared observations and events:
@@ -251,6 +274,8 @@ Subscribers may open a route, restore a machine, disable a hazard, expose an ite
 
 Require a concrete follow-through when appropriate. Crossing the opened route or using the activated machine proves the puzzle consequence is functional. A success overlay alone does not.
 
+Completion reconciles every task lease, handed-off subtask, partial subscriber, and installed object. It either preserves valid partial effects in solved state or replaces them through an explicit versioned transition. It may not leave a helper active, replay a subtask reward, or restore a capability that a committed milestone removed.
+
 ## Work with the current Harness instead of assuming tools
 
 Choose tools only after the Puzzle State Lock, Interruption Policy Lock, Threat Window Lock, and Completion Consequence Lock artifacts exist; Harness limitations may withhold a verification claim but cannot silently rewrite the design. This Skill bundles no engine, browser, asset generator, AI service, backend, or deployment account. Inspect what the current Harness and project expose.
@@ -308,6 +333,8 @@ Use the Puzzle State Lock, Interruption Policy Lock, Threat Window Lock, and Com
 11. Save/load at initial, working, committed, interrupted, solved, and world-consequence states; verify declared reconstruction and no duplicated completion.
 12. Restart from every action, milestone, interruption, completion, route, success, and failure state.
 13. Test supported input, viewport, non-audio warning, color-independent puzzle state, reduced motion, timing modes, and network paths.
+14. Transfer each handoff-capable task; test success, delay, interruption, failure, disconnect, pathing fallback, and player reclamation without duplicate commits.
+15. Verify every committed subpart changes exactly its compatible subscriber, rejects invalid targets legibly, and reconstructs after save/load and final completion.
 
 Save state/event traces beside reproducible playthrough steps. A screenshot proves the device rendered, not that interruption preserved the correct state.
 

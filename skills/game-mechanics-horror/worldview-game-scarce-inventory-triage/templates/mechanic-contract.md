@@ -50,6 +50,17 @@ Fill these rows in order. A later row cannot silently revise an earlier artifact
 | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |
 
+## Cross-owned benefit and cost classification
+
+| Item | `subjective_benefit` | `objective_effect_owner` | `forecast_cue` | `delayed_cost_visibility` | `alternative_item_or_action` | `exhaustion_result` | `threshold_handoff` | `recovery_after_misallocation` |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | | |
+
+- Inventory-owned fields:
+- Fields inventory must never derive:
+- Relief-resource handoff, if dual-axis progression exists:
+- Receiving-owner acknowledgement:
+
 ## Capacity model — Capacity and Overflow Lock
 
 - Model: fixed slots / shapes / weight-bulk / body-plus-pack / existing project model
