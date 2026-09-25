@@ -88,6 +88,26 @@ For each working action, choose and explain revert, pause, checkpoint, or commit
 | --- | --- | ---: | --- | --- | --- |
 |  |  |  |  |  |  |
 
+## Task ownership and handoff — Puzzle State and Interruption Policy Locks
+
+| Task | Physical holder | Knowledge holder | Authorized operator/current lease | Assignment event | Last known location/state | Success/delay/failure | Communication | Fallback or reclaim | Attribution |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | | | |
+
+- Save/load reconstruction order:
+- Disconnect or actor-removal rule:
+- Handoff acknowledgement:
+
+## Partial world effects and compatibility — Completion Consequence Lock
+
+| Committed subpart | Valid target/subscriber | Authoritative effect | Visible proof | Invalid-target feedback | Threat capability/route changed | Persistence | Rollback/final replacement |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | |
+
+- Why partial effects cannot bypass final solve:
+- Idempotent publication/version:
+- Subscriber load order:
+
 ## Disengagement sequence — Interruption Policy Lock
 
 1. Stop puzzle input:
@@ -226,3 +246,7 @@ Complete only when actually networked.
 - [ ] Screenshot, state trace, timing data, and playthrough evidence are separate.
 - [ ] Untested environments and limitations are recorded.
 - [ ] No late state, persistence, timing, or completion change bypassed a lock's reopen rule; invalidated dependent evidence was rerun.
+- [ ] Every task has one owner or lease; handoff success, delay, failure, reclaim, disconnect, and fallback were tested.
+- [ ] Physical possession, operation permission, and solution knowledge stay separate across handoff.
+- [ ] Each subpart produces exactly its compatible world effect; invalid targets reject without consuming state.
+- [ ] Partial effects reconstruct after save/load and reconcile once at final completion.

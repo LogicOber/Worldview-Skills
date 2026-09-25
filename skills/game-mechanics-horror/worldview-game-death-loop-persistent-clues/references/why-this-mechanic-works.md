@@ -73,3 +73,17 @@ Do not use this method when:
 ## The smallest complete proof
 
 Two passes are enough. The first establishes the snapshot, exposes one fact, and resets cleanly. The second applies the fact earlier, changes one authoritative consequence, and exits or advances. Test quit/resume and an attempted sequence break. A longer story should not be built until that state relationship is trustworthy.
+
+## Persistence is not controlled causal experimentation
+
+This mechanic answers what resets, persists, transforms, or is remembered. A full controlled experiment answers a different question: which isolated variable caused an outcome across a timed actor and location schedule. Do not inflate every death loop into an experiment matrix. Route there only when hypotheses, confounds, counterfactual outcomes, and schedule deviations are the core play rather than one bounded replay that changes interpretation.
+
+## Reject these failure patterns
+
+- **Repeated chores:** a mastered setup remains mandatory at full length even though no decision changed.
+- **Global omniscience:** every actor receives knowledge because the player saw it in another pass.
+- **Lore-only replay:** the second pass adds explanation but unlocks no different action.
+- **Simultaneous unexplained changes:** several routes, actors, and threats change after reset with no declared transformed state.
+- **Fake permanence:** a clue appears persistent in memory, then disappears after quit and relaunch.
+
+Record pass objective, new information, actionable difference, and compression rule. If one row cannot be completed, the pass probably does not earn its repetition.

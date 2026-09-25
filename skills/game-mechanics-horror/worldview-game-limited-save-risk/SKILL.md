@@ -128,6 +128,24 @@ The recovery checkpoint should not become a hidden optimization that invalidates
 
 Suspend behavior supports real life. Do not force someone to leave a game running to preserve progress. A suspend record may be marked superseded only after a later load and subsequent durable save are verified; never delete the sole recoverable record immediately on opening it.
 
+## Separate save scarcity from world-state persistence
+
+The limited opportunity controls only when the player requests a durable manual record. It does not own whether wounds, loop knowledge, world changes, accessibility preferences, or ending aftermath persist. Record a `persistence_scope` for every authoritative subsystem and route each field to its real owner.
+
+Declare lifecycle behavior before tuning scarcity:
+
+| Transition | Required policy |
+| --- | --- |
+| normal quit | use the declared suspend or last-valid path; never require spending the scarce resource to stop playing |
+| crash / forced termination | offer the documented recovery result without charging a manual opportunity |
+| relaunch | identify which channel is offered and why |
+| reinstall / local-data loss | state platform backup limits honestly; never promise recovery that was not tested |
+| authorized profile reset | name the exact profile, require confirmation, and keep it outside fictional failure |
+| post-ending load | restore the declared aftermath or pre-ending return point without silently undoing the ending |
+| tester bypass | operate only on disposable test data, name what it can seed/reset, and never ship as an undeclared player path |
+
+The `save_opportunity_owner` may validate a request, but success begins only at the `durable_acceptance_point`: a complete candidate has been verified, atomically selected, and its guarded transaction fields are coherent. Warn truthfully before any irreversible persistence change, including explicit overwrite, profile reset, ending-state replacement, or migration that cannot preserve a recoverable prior version.
+
 ## Publish the projected state atomically
 
 This section implements the **Durable Publication Lock** against the already locked snapshot boundary.

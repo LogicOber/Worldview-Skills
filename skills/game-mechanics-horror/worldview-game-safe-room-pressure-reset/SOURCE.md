@@ -28,9 +28,7 @@ These decisions are proposals for target projects until implemented and tested t
 
 ## Writing method
 
-The Skill follows the user's Writing 2 preferences: begin from the unresolved problem, keep source facts, project facts, proposals, and judgments distinct, explain why rules exist, preserve counterexamples, and provide enough reasoning for another Agent to implement without filling important gaps by assumption.
-
-No text from the Writing 2 material is copied here.
+The Skill begins from the unresolved problem, keeps project facts, proposals, and judgments distinct, explains why rules exist, preserves counterexamples, and gives another Agent enough detail to implement without inventing important gaps.
 
 ## Maintenance rule
 

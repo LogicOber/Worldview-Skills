@@ -1,6 +1,6 @@
 ---
 name: worldview-game-perception-distortion-and-trust
-description: "Use when a horror game needs an interactive perception-distortion system in which selected sights, sounds, labels, memories, or spatial cues become unreliable while declared anchors remain truthful enough for fair decisions. Produces a truth-and-presentation contract, escalation and recovery rules, tunables, an implementation when a runtime is available, and direct fairness and accessibility verification. Do not use to simulate a real diagnosis, moralize mental illness, randomize controls without consent, hide all required information, or add effects that never influence play."
+description: "Use when a horror game needs players to decide which sights, sounds, labels, memories, instructions, or guides deserve trust while declared anchors keep reasoning fair. Produces separate event, cue-interpretation, presentation, and evidence records; channel and permission histories; escalation, recovery, save/load, accessibility, and verification rules; and an implementation when a runtime exists. Do not use to simulate a real diagnosis, moralize mental illness, randomize controls without consent, hide all required information, or add effects that never influence play."
 ---
 
 # Worldview Game — Perception Distortion and Trust
@@ -35,6 +35,7 @@ Use this Skill when:
 4. The player makes a consequential choice based on comparing cue and anchor.
 5. Exposure can escalate, recede, or be managed through an action with a cost.
 6. Failure follows from a readable trust decision rather than arbitrary input theft.
+7. A guide's credibility, when relevant, can be tested through destinations, access, witnessed facts, promises, and requested exceptions rather than a hidden trust score.
 
 Do not use it for an ornamental vignette filter, a surprise control reversal, complete sensory denial, a real-world psychiatric diagnosis, or a narrative claim that illness makes a person evil or less human. If the desired output is only a filmed hallucination, route to a video or scene method instead.
 
@@ -137,6 +138,46 @@ Classify each channel:
 
 Do not distort every channel at once. If sight, sound, map, labels, collision feedback, subtitles, and controls all become unreliable, the player cannot reason; only the designer knows the rule.
 
+## Keep event, cue interpretation, presentation, and evidence separate
+
+A trust decision needs four records even when the game never shows those labels to the player:
+
+```text
+authoritative event     what occurred in world state
+cue interpretation      what this observer currently infers from this cue
+player presentation     what this camera, sound, label, dialogue, or UI channel shows
+inspectable evidence    what can later support, limit, or contradict either interpretation
+```
+
+An observer can accurately see an event and interpret it incorrectly. A channel can fabricate a cue without changing the event. A guide can tell the truth from incomplete knowledge. These cases must not share one boolean such as `is_hallucination` or `is_trusted`.
+
+For each consequential cue, store its author or generating system, channel, true event, presented alternative, observing actor, cue interpretation, stable anchor, competing explanation, and later verification. If the project intends ambiguity, write two complete causal interpretations. Each interpretation must explain the same retained facts and lead to a testable difference; a pile of unrelated dream images is not ambiguity.
+
+### Permission-based trust
+
+When a person, recording, radio operator, institution, or entity guides the player, record:
+
+- locations they can legitimately enter;
+- objects or records they can alter or transfer;
+- people they can contact or command;
+- facts they personally witnessed;
+- destinations their earlier guidance produced;
+- promises made, kept, broken, or still untested;
+- the exception they request now and why it exceeds prior behavior;
+- what following or refusing them costs;
+- what independent anchor can later verify the result.
+
+Trust is not a scalar mood. A guide may be reliable about routes but wrong about identity, or may keep every promise while using a known access right for a harmful purpose. Preserve the scope of each history entry.
+
+### Neighbor handoffs
+
+- This Skill owns cue-channel reliability, cue-specific interpretation, authored substitutions, guide history, and trust decisions. It does not own an observer's belief about an actor's role, identity, permission, or culpability.
+- `/worldview-game-evidence-based-entity-identification` owns accepted claim/test provenance and confidence. Send inspected cues there without redefining their presentation rule.
+- `/worldview-game-horror-role-and-identity-pressure` owns whether an actor actually has a role, permission, or expected schedule. This Skill records how that permission affects trust, not the permission itself.
+- `/worldview-game-asymmetric-information-cooperation` owns live transmission and acknowledgement. This Skill may distort a declared private presentation only if the cooperation contract preserves a complete accessible path.
+
+If a neighbor is unavailable, retain the handoff fields and mark the external authority unresolved. Do not invent a second role, evidence, or communication system inside this package.
+
 ## Make the cause and scope learnable
 
 This section completes **Distortion scope**, including tier entry, exit, hysteresis, and budget.
@@ -215,6 +256,8 @@ This section supplies the state and authority portion of **Reproduction proof**.
 
 Save authoritative exposure, tier, cause, active authored substitutions, recovery state, and any seed needed to reproduce the current presentation. Reloading must not reroll a false cue into a different answer after the player committed based on it.
 
+Also save the cue-interpretation version, guide-history entries already witnessed, promise state, permission references, active competing explanations, evidence snapshot IDs, and any consequence already applied. Reload must not make a guide retroactively know an event, repair a broken promise, change the author of a cue, or replay a one-shot betrayal/access action.
+
 Randomness chooses among content already legal for the current context. It never invents a contradiction outside the channel contract. For tests, expose a deterministic seed or scripted sequence. Restart cancels deferred audio, post-processing, camera impulses, false interactables, subtitle events, and recovery callbacks.
 
 In multiplayer, decide whether distortion is private, shared, or transmitted by an authoritative event. The server owns gameplay consequences and exposure causes; a client may own private presentation. Never let one client's false geometry mutate shared collision. Spectators, reconnecting players, and late joiners need an explicit policy.
@@ -252,6 +295,8 @@ Run and record:
 10. Exercise reduced motion, photosensitivity-safe settings, subtitles, no-audio play, remapped inputs, and the narrowest supported viewport.
 11. If networked, compare authoritative gameplay on two clients with different private presentations.
 12. Run deterministic sequences under different render schedules where simulation timing matters.
+13. Save and reload after a guide gives a direction, uses access, keeps or breaks a promise, requests an exception, and receives the player's commitment; confirm the history and consequence remain exact.
+14. For an intentionally ambiguous route, run both complete interpretations against the same event/evidence ledger and confirm the eventual test distinguishes them without deleting prior facts.
 
 Screenshots or short captures prove the presentation appeared. Pair them with state assertions, logs, and reproducible input traces for truth, persistence, and consequences.
 

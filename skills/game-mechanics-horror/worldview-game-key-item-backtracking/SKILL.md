@@ -1,6 +1,6 @@
 ---
 name: worldview-game-key-item-backtracking
-description: "Use when a horror, survival, or exploration game needs a playable loop in which the player reads a blocked objective, finds a protected key item or capability elsewhere, and returns through a meaningfully changed route to open progression. Produces an implemented loop when a runtime is available, plus a route-state graph, gate-and-key contract, persistence rules, tunables, and softlock verification. Do not use for empty repeat walking, abstract quest logs, random loot locks, or puzzles whose main challenge is decoding rather than spatial return."
+description: "Use when a blocked route and protected key item or learned capability should transform a return through familiar space. Defines bounded target compatibility, invalid feedback, calm and pressured use, physical versus knowledge ownership, handoff, final-use preview, atomic unlocking, recoverable failure, persistence, and graph verification."
 ---
 
 # Worldview Game — Key-Item Backtracking
@@ -150,6 +150,23 @@ Define:
 
 Progression items do not vanish through ordinary discard, overflow, crafting, or storage cleanup. If the fiction allows the player to place one in the world, its stable location and recovery route must persist. If it is consumed at a gate, commit the unlocked progression state in the same transaction; never consume first and hope the door saves later.
 
+## Bound the item's target compatibility
+
+Do not turn a memorable tool into a universal scanner, key, weapon, or repair device. Write a finite compatibility table:
+
+| Verb | Valid target class | Excluded target class | Range/duration | Cost/cooldown | Effect | Invalid feedback |
+| --- | --- | --- | --- | --- | --- | --- |
+
+Compatibility belongs to authoritative interaction rules, not item-description text. A valid target exposes a stable target class and precondition. An invalid target rejects before cost or ownership changes and explains the category through world feedback without revealing every future use.
+
+Teach one calm use before demanding a pressured use. The calm case establishes operation, target proof, cost, duration, and feedback. The pressured case changes timing, route, or threat consequence without changing compatibility. If the final use adds a new target class, preview that relationship earlier through an inaccessible socket, safe demonstration, residue, or low-cost rejection.
+
+## Separate physical ownership, knowledge, and operation
+
+Record physical holder or installed socket, actors who know the item's purpose, actors authorized or physically able to operate it, and observers who witnessed use. These sets may differ. Do not grant knowledge because an item entered shared inventory or grant custody because dialogue revealed meaning.
+
+For every handoff record item ID, prior and new holder, knowledge retained, knowledge transmitted, operation permission, world location, acknowledgement, save transaction, failure fallback, and whether the item is returned, retained, installed, or consumed. Use `/worldview-game-character-handoff-and-shared-evidence` when custody and knowledge cross playable viewpoints.
+
 ## Change the return without making the map arbitrary
 
 This section fills the **Return Transformation Lock** within the edges permitted by the **State-Aligned Route Lock**.
@@ -282,6 +299,10 @@ Perform and record at least these checks:
 8. Restart or load at S0, S1, S2, and S3 from each snapshot's named safe anchor; every snapshot has a route to completion.
 9. Exercise non-color cues, map scaling, remapped interaction, and each accessibility option claimed.
 10. In multiplayer, test simultaneous acquisition, duplicate unlock requests, late join, and disconnect during transition.
+11. Exercise every valid and excluded target class; invalid use gives bounded feedback and never charges, consumes, duplicates, or moves the item.
+12. Prove one calm use teaches the same verb, duration, and compatibility used under pressure.
+13. Transfer the item between every supported holder; verify custody, knowledge, permission, acknowledgement, save/load, disconnect, and recovery independently.
+14. Prove the final target class and consequence were previewed before commitment, and final application introduces no unlearned verb.
 
 Capture route-state assertions, logs, saves, and reproducible traversal traces. A screenshot can show that the gate opened; it cannot prove the key survived interruption or every state remained reachable.
 

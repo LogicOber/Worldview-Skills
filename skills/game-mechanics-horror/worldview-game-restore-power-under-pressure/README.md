@@ -1,8 +1,10 @@
 # Worldview Game — Restore Power Under Pressure
 
-Build a playable objective in which the player must locate distinct components, return to a disabled system, complete an interruptible repair, and use the restored state to open a real route while danger changes how each trip is planned.
+Build a playable objective in which the player locates dependencies, performs exposed staged work, and restores, isolates, disables, reroutes, or partially energizes a system while danger changes each plan.
 
 > **This Skill builds a causal objective, not a decorative blackout.** Components are unique, collection is persistent, repair has a legible interruption rule, restored power changes authoritative game state, and the newly available route can actually be completed.
+
+Power is not assumed to help the player. The result names each beneficiary and threat effect, gives partial work visible proof, and rolls back only the active unstable stage.
 
 ## Call this Skill
 

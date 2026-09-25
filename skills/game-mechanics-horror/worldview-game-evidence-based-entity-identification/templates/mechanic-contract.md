@@ -60,6 +60,23 @@ Confirm no two candidates remain indistinguishable under reachable tests.
 | Player hypothesis |  |  |  |  |
 | Outcome |  |  |  |  |
 
+## Case relationship and provenance model — Evidence Ledger Lock
+
+| Evidence ID | Claim source and basis | Source interest/bias | Direct observer and position | Time/place | Claim or observed behavior | Physical residue / institutional trace | Confidence | Contradicts | Prediction | Unlocks or forbids |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |  |  |  |
+
+| Object or access ID | Physical owner / controller | Knowledge holders | Transfer or access history | Case relevance | Save/load authority |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |
+
+- Mixed helpful behavior retained:
+- Mixed harmful behavior retained:
+- What sympathetic context changes:
+- Harm or uncertainty it does not erase:
+- Final operational relationship: contain / avoid / cooperate conditionally / expose / release / other:
+- Why the conclusion changes an action rather than only a label:
+
 ## Player verbs
 
 | Verb | Input | Preconditions | State change | Risk/feedback |
@@ -97,6 +114,15 @@ test instance ID:
 simulation time:
 supporting conditions:
 player/team owner:
+claim source and declared basis:
+observer and observation position:
+physical owner reference:
+knowledge-holder references:
+behavior/residue/institutional trace:
+confidence class:
+contradiction links:
+prediction:
+unlocked or forbidden action:
 ```
 
 - Idempotency rule:
@@ -156,6 +182,11 @@ player/team owner:
 - Active windows/callbacks cleared:
 - Ledger and hypotheses cleared:
 - Pressure and outcome reset:
+- Claim, witness, behavior, and contradiction reset/persistence:
+- Physical-owner references rebuilt from authoritative inventory/world state:
+- Knowledge ownership restored per actor rather than globally:
+- One-shot objective effects restored without replay:
+- Removed actor/object IDs retain last verified state:
 
 ## Accessibility and input
 
@@ -193,6 +224,12 @@ Complete only when actually networked.
 - [ ] A pressure-caused failure is legible.
 - [ ] Same-case restart and new-case generation clear/version all state.
 - [ ] Supported input, viewport, accessibility, and network paths were tested.
+- [ ] At least one claim is separated from direct observation and retains its source and basis.
+- [ ] One sincere-but-wrong claim can be contradicted without rewriting its history.
+- [ ] Helpful and harmful behavior remain separate; context does not erase retained harm.
+- [ ] Physical ownership and knowledge ownership are stored by their authoritative systems and referenced correctly.
+- [ ] A human or institutional trace changes a hypothesis or action without being treated as creature-trait flavor.
+- [ ] Save/load after claim, observation, transfer, contradiction, and unlock preserves exact provenance and effects.
 - [ ] Screenshot, matrix check, ledger trace, and playthrough are recorded separately.
 - [ ] Untested conditions and limitations are listed.
 - [ ] No late candidate, protocol, ledger, or outcome change bypassed the reopen rule; invalidated dependent evidence was rerun.

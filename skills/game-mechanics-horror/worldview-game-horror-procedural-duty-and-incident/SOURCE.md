@@ -1,3 +1,5 @@
-# Source and authorship
+# Source record
 
-This original Skill was written for Worldview Skills after private observation of horror openings that establish driving, service, employment, or inspection before an incident changes the player's responsibility. It contains no copied scenario, profession, map, dialogue, asset, or external Skill prose.
+This is an original Worldview Skills method written for this repository. It was refined through private qualitative comparison of duty, interruption, evidence, witnesses, task ownership, and aftermath.
+
+No external Skill, code, plot, dialogue, map, character, asset, title, timing, or file structure is reproduced. The duty-purpose audit, live-work snapshot, authority and witness ledgers, response matrix, verification method, and fictional flood-inspection example are repository-authored.

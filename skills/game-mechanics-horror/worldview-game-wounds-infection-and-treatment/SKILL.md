@@ -134,6 +134,21 @@ These labels are internal design concepts. Adapt them to the project's fiction a
 
 Use stable wound identifiers if several wounds can coexist. Do not let one generic status overwrite another wound's treatment, timer, or feedback. If the project supports only one wound, state that limitation instead of implying an extensible medical simulation.
 
+## Separate symptom, condition, transformation, and belief
+
+Do not treat what the character feels as proof of one diagnosis. Record four independent layers:
+
+| Layer | Owned question |
+| --- | --- |
+| `felt_symptom` | what the character reports or the player experiences |
+| `physical_state` | what the fictional body authority has established |
+| `transformation_state` | whether a separate fictional alteration exists and what causes it |
+| `social_interpretation` | what another actor believes and how confident they are |
+
+For each assessment, store `onset_cause`, evidence provenance, `confidence`, competing interpretation, and `reassessment` trigger. A treatment may produce a `treatment_effect` on physical state; a comfort action may produce only a `relief_only_effect` on felt symptoms. Neither automatically changes transformation or what another actor believes.
+
+If relief creates a separate delayed risk, send the accepted relief event to `worldview-game-relief-resource-with-hidden-cost`. This Skill remains authoritative for the resulting physical condition only. Record `route_cost` and a `reduced_intensity_equivalent` for every condition that changes play.
+
 ## Establish a causal transition model
 
 This section completes the **Condition Model Lock** and supplies the transitions governed by the **Clock Policy Lock**.
@@ -172,6 +187,8 @@ Communicate the current condition, trend, and available action through several c
 - treatment previews naming which declared state they affect.
 
 Avoid forcing players to infer essential state from graphic imagery, heartbeat audio, camera distortion, or rapid flashing. Provide a reduced-intensity mode that replaces gore, pulsing, distortion, and invasive audio with neutral but complete information.
+
+Reduced intensity must preserve the distinction among symptom, assessed physical state, possible transformation, and social belief. A neutral status table can replace graphic presentation; it cannot collapse uncertainty into a false confirmed diagnosis.
 
 Inspection should not require a medically correct diagnosis. It presents the fictional rule the player is expected to use: for example, “unstabilized,” “contamination increasing,” or “treatment incomplete.” Localize terms and avoid using real diagnostic labels casually.
 

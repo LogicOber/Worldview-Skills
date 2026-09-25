@@ -17,7 +17,7 @@ The Skill begins from a general design problem: revisiting space becomes meaning
 
 ## Repository writing method
 
-The structure follows the user's supplied Writing 2 principles without reproducing its text. The problem appears before the rule; project facts, runtime observations, and new proposals remain distinct; reasons and counterexamples travel with constraints; verification supports rather than precedes conclusions.
+The problem appears before the rule; project facts, runtime observations, and new proposals remain distinct; reasons and counterexamples travel with constraints; verification supports rather than precedes conclusions.
 
 ## New design decisions
 
@@ -32,6 +32,7 @@ This Skill introduces:
 - save migration, accessibility, and multiplayer authority boundaries;
 - the default four-file handoff under `gameplay/<return-route-slug>/`;
 - the fictional Rain Archive example.
+- bounded target compatibility, calm-to-pressured teaching, physical-versus-knowledge ownership, handoff, and final-use preview.
 
 These are repository proposals, not claims about every horror or exploration game. Projects may use different state names or document locations if they preserve the same responsibilities.
 

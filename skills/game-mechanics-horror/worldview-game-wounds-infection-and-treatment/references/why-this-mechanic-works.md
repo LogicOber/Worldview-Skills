@@ -51,3 +51,13 @@ Reduced-intensity presentation, neutral status text, adjustable mechanical effec
 Wounds collect clocks, interventions, and partial progress. A save that restores the resource cost but not the treatment effect—or advances time twice on load—breaks the relationship the player learned. Stable identifiers and explicit transition time keep the condition coherent across restart and migration.
 
 As with every survival system, trust in the state allows uncertainty in the fiction. The game may withhold what waits beyond a door; it must not lose track of whether treatment already occurred.
+
+## Reject symptom-as-proof and silent transformation
+
+- The same symptom is treated as conclusive proof of one diagnosis when several authored causes remain possible.
+- Fictional timing or treatment is presented as a real medical claim.
+- One treatment object erases every physical, contamination, transformation, and social state.
+- Grotesque imagery is the only feedback carrying critical condition information.
+- A comfort or relief action silently advances transformation without a separate visible ledger and disclosure path.
+
+Uncertainty is playable when evidence, confidence, reassessment, and alternatives are explicit. It is not playable when presentation substitutes for causal state.

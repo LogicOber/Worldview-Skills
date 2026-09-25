@@ -131,6 +131,35 @@ Sight has priority over sound because a visible player is stronger information t
 
 An attack requires current permission from the mechanic: detection, reach, windup, and an unresolved hit opportunity. Reaching the player's hidden transform through a wall is not permission.
 
+## Compose the encounter without creating a second monster brain
+
+This Skill owns the bounded encounter contract: what starts the lure-hide-escape sequence, which commitment creates the opening, how cover changes the player's state, where the escape boundary lies, and how escape success or reset is aggregated. It consumes capture or contact results from the project combat or pursuit owner. It does not automatically own the threat's durable identity, world route, long-term memory, or combat result.
+
+Use one `threat_id` across every participating system and assign writers before implementation:
+
+| State | Single writer when present | What this Skill may do |
+| --- | --- | --- |
+| Sound origin, propagation, and per-listener reception | `/worldview-game-sound-detection-and-distraction` | Emit a lure event and consume its acknowledged reception |
+| Observation permission | `/worldview-game-observation-gated-stalker` | Consume whether movement or harm is currently permitted |
+| Durable identity, knowledge, route, movement, search, and attack intent/commitment | `/worldview-game-roaming-stalker-pressure` | Request investigate, commitment, search, or release |
+| Reach validation, hit, damage, capture, and contact result | Project combat or pursuit contract | Consume the result without rewriting it |
+| Cover entry, hidden state, cover inspection, escape boundary, lifecycle, and escape-success/reset aggregation | This Skill | Write only the bounded encounter state |
+
+When the roaming Skill is present, replace this section's local pursuer record with references to its authoritative knowledge and behavior record. Do not maintain a second `last_seen`, `last_heard`, search target, route, movement state, or attack state. This encounter emits evidence and intent requests; the roaming owner accepts, rejects, or completes them under its own current knowledge and route constraints.
+
+Only when no persistent threat owner exists may this Skill implement the compact patrol-investigate-chase-search-return model below. Namespace that fallback to the encounter, declare that it dies with the encounter, and never save it as a second world-level identity. If a persistent owner is added later, migrate the fallback fields once and remove the local writers.
+
+For a composed threat, process one authoritative step in this order:
+
+1. The sound system commits the lure event and each listener's reception.
+2. The observation system commits the current movement-and-harm permission.
+3. This Skill commits cover transitions and emits encounter requests.
+4. The roaming owner updates durable knowledge, route, movement, search, and attack intent/commitment.
+5. The combat or pursuit owner resolves reach, hit, damage, capture, or contact.
+6. This Skill evaluates the escape boundary and aggregates escape success or reset from the authoritative behavior and contact results.
+
+Save one snapshot version containing the shared `threat_id` and each domain's version. On encounter reset, clear lure events, cover occupancy, and encounter requests before restoring or reconstructing the persistent threat snapshot. Never let reset resurrect a stale sound, duplicate a threat, or overwrite newer roaming knowledge.
+
 ## Make the lure reusable without making it free
 
 This section implements the **Lure event** lock inside the fixed evidence hierarchy.
@@ -215,7 +244,7 @@ Build one complete encounter before expanding the system. It must have:
 - a real hiding interaction;
 - a successful exit reached through the intended manipulation;
 - at least one failure caused by a comprehensible player decision;
-- an immediate restart that clears every timer, sound event, memory record, route commitment, hiding flag, and outcome.
+- an immediate restart that clears this encounter's timers, lure events, cover state, pending requests, hiding flags, and outcome. If this Skill owns the local fallback controller, also clear its encounter-local memory and route. When a persistent threat owner is present, issue the declared reset handoff and let each owner clear or restore its own sound, knowledge, route, movement, and combat state; never overwrite those records directly.
 
 Failure should diagnose the rule. Leaving while the pursuer still has sight, choosing cover it watched the player enter, or waiting until the search returns are legible failures. An unexplained instant capture is not.
 
@@ -236,7 +265,7 @@ Test the rule at its boundaries:
 9. Restart from investigation, chase, hiding, attack windup, success, and failure; no old event may survive.
 10. Test the narrowest supported viewport and input family. Touch and reduced-motion behavior must preserve game state even when presentation differs.
 
-For a fixed-step simulation, repeat a deterministic input trace under at least two render schedules. Rendering speed must not change the outcome clock. For multiplayer, the authoritative host owns detection, knowledge, timers, hiding, damage, and completion; two clients must observe the same state before the work is described as networked.
+For a fixed-step simulation, repeat a deterministic input trace under at least two render schedules. Rendering speed must not change the outcome clock. For multiplayer, this Skill's authoritative host owns encounter timers, lure use, hiding, the escape boundary, lifecycle, and escape-success/reset aggregation. Sound and observation owners write reception and permission; the behavior owner writes durable detection/knowledge and attack commitment; the combat owner writes damage, capture, and contact result. Two clients must observe the same composed state before the work is described as networked.
 
 Save direct evidence. A screenshot proves the scene rendered, not that the pursuit logic worked. Pair it with tests, logs, or a reproducible playthrough that exercises the claim.
 

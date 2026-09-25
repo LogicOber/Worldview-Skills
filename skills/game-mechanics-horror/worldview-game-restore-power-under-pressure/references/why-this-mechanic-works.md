@@ -55,6 +55,18 @@ Repair completion proves the transaction fired. It does not prove the consequenc
 
 That final action detects common errors: visual doors that retain collision, navigation links that remain closed, triggers reachable from the wrong side, and objective flags that never reach the destination system. It also gives the player a clear causal sentence: “I found the dependencies, survived the exposed repair, restored the system, and used what changed.”
 
+## Restoration is not always the safe objective
+
+Power, pressure, signal, or flow may benefit a route and a threat at the same time. A complete method supports isolation, disablement, rerouting, and partial energizing when the world contract allows them. The player needs to know who benefits, what capability changes, and what remains unavailable. A single global `powered=true` flag hides those decisions.
+
+## Partial work needs physical proof and rollback rules
+
+When staged work commits, the world should acknowledge it: one pump runs, one sweep stops, one bus carries load, or one control becomes reachable. Interruption then reverts only the active unstable stage unless the fiction declares a broader fault. If every attack erases installed hardware, pressure becomes authorial punishment.
+
+## Beneficiary and threat effects prevent accidental rewards
+
+For each operation record the intended beneficiary and any threat capability it enables or removes. Full restoration that silently wakes a hostile transmitter is fair only when the relationship was previewed or the first demonstration remains recoverable. Presentation follows the same authoritative branch; lights alone cannot prove isolation or rerouting.
+
 ## Failure and restart expose ownership mistakes
 
 The important failures are not arbitrary punishments. The player may begin repair too early, be forced out under the declared pressure, or test the route before restoration. Each outcome reveals a boundary of the mechanic.
@@ -66,3 +78,5 @@ Restart is unusually valuable because this objective distributes state across pi
 Components may be fuses, seals, relays, valves, coded fragments, or other world-specific dependencies. The disabled system may be electrical, mechanical, ritual, biological, or fictional. Pressure may come from a pursuer, environmental cycle, resource drain, or coordinated multiplayer role.
 
 Those choices alter presentation and sometimes the interaction contract. The reusable structure remains: stable dependencies accumulate, pressure changes their routes, repair exposes the player under a declared rule, restoration commits once, and a real consequence becomes usable.
+
+The final operation may restore, isolate, disable, reroute, or partially energize. The invariant is a legible dependency, owned staged work, declared rollback, exact subscribers, visible proof, and a usable consequence.

@@ -1,3 +1,5 @@
-# Source and authorship
+# Source record
 
-This original Skill was written for Worldview Skills after private observation of service, food, school, vehicle, and role-play openings in horror gameplay. It extracts the design relation between a normal routine and a rule-breaking exception. It contains no copied game loop, character, dialogue, map, asset, or external Skill prose.
+This is an original Worldview Skills package authored for the repository. Its method was refined through private qualitative research into how ordinary actions establish authoritative before-states and how controlled violations create fair player decisions.
+
+No external Skill, code, plot, dialogue, map, character, asset, title, timing, or file organization is reproduced. The baseline schema, mastery and skip-safe rules, attention audit, exception ladder, response matrix, tests, and fictional bakery example were independently written for this package.

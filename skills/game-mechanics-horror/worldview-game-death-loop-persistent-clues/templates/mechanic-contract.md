@@ -125,6 +125,36 @@ Owner: **Schedule and replay**. Do not skip an action that still carries an unre
 - Reduced-repetition option:
 - Clue review access:
 
+## Pass learning and actor memory
+
+| Pass | `pass_objective` | `reset_scope` | `persisted_fact` | `actor_memory` | `transformed_state` | `mastered_labor` | `compression_rule` | `new_information` | `actionable_difference` |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | | | | | | | | | |
+| 2 | | | | | | | | | |
+
+| Actor | Fact | Observation provenance | Confidence | Acquired pass | Persistence rule | Action enabled | Transmission required? |
+| --- | --- | --- | --- | ---: | --- | --- | --- |
+| | | | | | | | |
+
+- Bounded counterfactual, if used:
+- Single declared difference:
+- Interpretation or action changed:
+- Why this is not a full controlled-experiment matrix:
+
+## Quit, crash, reload, and testing
+
+| Transition | `quit_crash_reload_result` | Reset scope | Persistent scope | Player-facing label | Verified evidence |
+| --- | --- | --- | --- | --- | --- |
+| quit during active pass | | | | | |
+| crash during active pass | | | | | |
+| reload after committed clue | | | | | |
+| interruption during reset | | | | | |
+
+- `tester_bypass` entry:
+- State it may set:
+- State it must never modify:
+- Cleanup and disposable-profile rule:
+
 ## Save and user-facing actions
 
 | Action | Scope affected | Confirmation | Result | Must never affect |

@@ -38,6 +38,7 @@ Useful inputs include:
 - the current puzzle, interaction, map, camera, and input behavior;
 - the existing threat or environmental pressure and its warning cues;
 - intended puzzle steps, stable checkpoints, and completion consequence;
+- task owners, possible helper or system handoffs, and partial world effects;
 - retreat routes, cover, safe observation, and re-entry points;
 - accessibility, platform, and multiplayer requirements.
 
@@ -47,7 +48,7 @@ If no puzzle exists, the Agent proposes the smallest one whose state can be unde
 
 ```text
 gameplay/<encounter-slug>/
-├── mechanic.md       puzzle state, interruption, threat, map and outcome contract
+├── mechanic.md       puzzle, ownership, handoff, interruption and outcome
 ├── tunables.yaml     action, warning, approach, recovery and feedback values
 └── verification.md   interruption matrix, success, failure, restart and evidence
 ```

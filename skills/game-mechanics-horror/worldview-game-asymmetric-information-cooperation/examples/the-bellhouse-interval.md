@@ -52,6 +52,17 @@ The Keeper moves among three heavy counterweights while the lower machinery leak
 
 Neither role can complete the loop alone. Neither merely reads or types an answer.
 
+## Task, possession, and last-known state
+
+| Participant | Current task and reason | Last verified location/state | Physical possession | Knowledge held | Failure/fallback |
+| --- | --- | --- | --- | --- | --- |
+| Surveyor | clear the correct lens station, identify the wet mark, and verify the Keeper's staged pair | last acknowledged lens station; `clear`, `moths_obscuring`, or `injured` | viewing lens handle | private active mark and visible socket etching | if a lens path is blocked, report `LENS BLOCKED` and move to the named central fallback lens; no mark is fabricated |
+| Keeper | keep the pressure valve stable, stage the paired counterweight, and commit only after acknowledgement | last acknowledged lower control bay; `clear`, `water_rising`, or `injured` | counterweight controls and one loose brass clapper pin | pair vocabulary and staged control, but not the active mark until told | if the route to a control floods, clear the stage, report `CONTROL BLOCKED`, and return to the valve platform |
+
+The Keeper finds the clapper pin in the lower toolbox and physically owns it. They do not know its significance. Through the upper lens, the Surveyor can read an etching showing that the pin locks the unused third rope during the final phase, but cannot reach the pin or socket. The Surveyor must transmit the meaning; the Keeper must choose when to install it while maintaining the valve. Possession does not grant knowledge, and knowledge does not grant the ability to act.
+
+Last-known state updates only through direct authoritative room events or an acknowledged role message. When contact is lost, neither player receives a live marker for the other. The UI shows the last acknowledged task, location, condition, and timestamp.
+
 ## Vocabulary and acknowledgement
 
 The entry landing displays the three paired symbols with words and raised shapes:
@@ -65,6 +76,14 @@ NAVE ↔ DOOR
 The Surveyor sends `MARK: CROWN`. The Keeper stages `DRAIN`; both displays show `STAGED: DRAIN — PHASE 2`. The Surveyor acknowledges with `PAIR CONFIRMED`, after which the Keeper may commit.
 
 Voice is optional. A radial phrase board, text log, symbol ping, and raised-shape icon express the same meanings. Symbols never depend on color alone.
+
+## Missed handoff and deterministic recovery
+
+In phase two, the Surveyor sends `MARK: WINDOW` while the Keeper is responding to the water alarm. The server records the message as delivered, but the Keeper does not send an acknowledgement before the five-second stage-confirmation window expires. Delivery therefore does not become shared understanding.
+
+The Keeper may stage `WELL`, but the authoritative commit remains disabled. At expiry, the stage returns to neutral, both roles receive `CONFIRMATION MISSING — STAGE CLEARED` through text, symbol, and haptic feedback, and the threat clock continues. No wrong commit is charged, no clue is changed, and no role is blamed. The Surveyor can resend the same observation version or move to the fallback lens if the original view has become blocked.
+
+Transmission history retains separate `sent`, `delivered`, and `acknowledged` values. A save made after delivery but before acknowledgement reloads with the stage still reversible and commit disabled. It cannot convert the missing acknowledgement into consent or apply the action twice.
 
 ## Pressure
 
@@ -113,18 +132,24 @@ The authority validates role ownership independently of every request. A Keeper 
 
 No AI partner or solo mode is claimed.
 
+Save/load restores the shared phase, both current tasks, last verified locations and conditions, the Keeper as sole physical holder of the clapper pin, the Surveyor as the only role that initially knows its use, transmission and acknowledgement history, staged input, remaining distance, and protected-pause state. Death/retry follows the declared checkpoint: encounter-local messages, marks, and staged actions clear; the pin returns to its authored toolbox owner unless the checkpoint explicitly follows its accepted installation. Reload never grants the pin to the Surveyor, teaches the Keeper its meaning before transmission, heals an injured role, or advances a task twice.
+
 ## Evidence an implementation would need
 
 | Claim | Required evidence |
 | --- | --- |
 | Roles see only their declared information | Two-client capture plus private-state assertions |
 | Both roles make necessary decisions | Complete traces from Surveyor and Keeper viewpoints |
+| Possession differs from knowledge | Keeper holds the clapper pin; Surveyor knows its socket; only an acknowledged exchange enables correct installation |
 | A non-voice route works | Fresh-pair playthrough using only phrase board and pings |
 | Commit is authoritative and singular | Duplicate, delayed, and reordered input tests |
 | Wrong action updates both clients coherently | Shared phase and threat assertions after forced error |
 | Remaining distance persists | Authority trace across three correct phases and accumulated wrong commits, with no phase reset |
 | Provisional timing is usable | Fresh novice pairs through voice and every supported non-voice or localized path; status remains open until measured |
 | Reconnect restores one version without leaking the clue | Disconnect during clue, stage, acknowledgement, and commit; Keeper capture contains no private mark |
+| Missed handoff is recoverable | Delivered-but-unacknowledged phase clears the reversible stage, keeps commit disabled, and preserves the threat clock |
+| Last-known state is honest | Contact loss freezes the other role's last acknowledged task/location/condition instead of exposing a live marker |
+| Save/load preserves ownership and knowledge | Reload at claim, delivery, acknowledgement, pin transfer/use, injury, and fallback states without merging roles or duplicating the pin |
 | Spoofed role requests fail closed | Keeper requests Surveyor mark and Surveyor submits Keeper commit; authority rejects and logs both |
 | Late join follows the rejection policy | New identity attempts to join during clue, stage, protected pause, and accepted commit, then reaches lobby only |
 | Unsupported host migration has a deterministic fallback | Host loss, protected return, and grace-expiry abort traces with no client promotion or partial seal commit |

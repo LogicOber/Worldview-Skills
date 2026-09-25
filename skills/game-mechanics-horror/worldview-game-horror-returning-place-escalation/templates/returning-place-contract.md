@@ -1,34 +1,60 @@
-# Returning-place contract
+# Returning-place escalation contract
 
-## Stable grammar
+## Brief
+- Place ID / name:
+- Canonical ending:
+- Supported viewpoints:
+- Playable entry:
 
-| Landmark ID | First meaning | Visual/audio identity | Safe comparison view | Ending payoff |
-| --- | --- | --- | --- | --- |
-| | | | | |
+## Shared identity and landmarks
+| ID | Type | Stable identity/affordance | Route relation | Accessible cues | Owner | Persistence |
+| --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | |
+
+## State ownership
+| State | Authoritative owner | Readers | Writer/event | Load/reset order | Forbidden inference |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
 
 ## Return ledger
+| Return | Viewpoint/role | Known/disputed facts on entry | Stable anchors | Authoritative delta | Knowledge delta | Presentation delta | Route/social delta | New question | Comparison verb | Decision | Recovery | Exit question |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| R0 | | | | | | | | | | | | |
 
-| Visit | Trigger | Stable anchor | Changed fact | Comparison action | New player question | State consequence | Recovery edge |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| First | | | | | | | |
-| Return 1 | | | | | | | |
-| Return 2 | | | | | | | |
+## Safe-return history
+| Edge | Used safely by/when | Protection retained | Protection lost | Foreshadowing/residue | New cost | Recovery edge |
+| --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | |
 
-## Layer lock record
+## People, objects, and viewpoints
+| Shared ID | Physical holder/location | Knowledge holders | Last verified state | Permission/relationship | Evidence of change | Handoff owner |
+| --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | |
 
-| Lock | Artifact | Locked when | Reopen trigger | Dependent work to invalidate |
-| --- | --- | --- | --- | --- |
-| Stable grammar | | | | |
-| Return ledger | | | | |
-| Decision and recovery | | | | |
-| Persistence | | | | |
-| Runtime proof | | | | |
-| Handoff | | | | |
+## Transition transaction
+- Eligibility:
+- Commit event:
+- State load order:
+- Presentation application:
+- Interrupted transition behavior:
+- Save/migration behavior:
 
-## Persistence and tests
+## Payoff
+- Original anchor:
+- First meaning:
+- Final meaning:
+- Learned verb used:
+- State that persists in aftermath:
 
-- [ ] The change persists across the intended save boundary.
-- [ ] The player can identify the stable landmark and the changed fact.
-- [ ] The return never requires an unannounced memory test.
-- [ ] Each altered edge has collision, navigation, cue, and reset evidence.
-- [ ] The final return pays off an earlier spatial or social fact.
+## Verification
+| Journey | Expected comparison/decision | Direct evidence | Result/gap |
+| --- | --- | --- | --- |
+| First visit | | | |
+| Each return | | | |
+| Wrong reading/recovery | | | |
+| Skipped inspection | | | |
+| Changed safe route | | | |
+| Viewpoint variants | | | |
+| Save/load/restart | | | |
+| Accessibility | | | |
+| Final payoff | | | |

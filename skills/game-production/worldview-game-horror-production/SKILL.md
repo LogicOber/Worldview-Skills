@@ -1,269 +1,246 @@
 ---
 name: worldview-game-horror-production
-description: "Turn a short horror-game premise into a complete, playable, single-ending experience with a readable fear rhythm, memorable spaces, concrete player decisions, connected mechanics, route contracts, audio/camera cues, failure recovery, and verified delivery. Use when the user wants the Agent to fill in the missing horror-game design instead of listing isolated mechanics. Best suited to GPT-6 Astra with Max reasoning or Ultra orchestration, but remains executable by any compatible Agent."
+description: "Turn a short horror-game premise into a complete, original, playable, single-ending production with researched boundaries, chapter clocks, memorable maps, NPC/item/evidence ledgers, state-owned connected mechanics, visual/audio/asset plans, grey-box and runtime implementation, failure/recovery/save/accessibility tests, ending convergence, and truthful delivery. Best suited to GPT-6 Astra with Max reasoning or Ultra orchestration."
 ---
 
 # Worldview Game — Horror Production
 
 ## Call this Skill
-
 ```text
 /worldview-game-horror-production
 ```
 
-Treat everything after the Slash command as the creative brief. A premise, a protagonist, a place, a monster image, a desired fear, or one reference screenshot is enough to begin. Do not make the user enumerate every room, NPC, item, sound, puzzle, route, or scare. Expand the brief into a coherent production contract, then ask only questions whose answers would change the product or require authority.
+Treat everything after the command as the creative brief. Do not require the user to enumerate rooms, NPCs, items, mechanics, scares, or tests. Infer reversible details, record assumptions, and continue. Ask only when the answer changes ending count, platform, content boundary, runtime, publication, or external-service authority.
 
-## The result this Skill owns
+## Result and ownership
 
-This Skill is the lead for a complete horror-game experience. It does not replace the detailed mechanic Skills; it decides when one is needed, gives it a concrete job in the route, and checks that the pieces form one playable experience.
+This Skill owns whole-product selection, sequence, horror-system integration, and delivery. It does not replace focused mechanic contracts. It gives each mechanic a player-facing job, assigns one authoritative state owner, records handoffs, and rejects additions the route cannot teach or verify.
 
-It owns:
+When this Skill routes work to `/worldview-game-single-ending-campaign`, Horror Production remains the parent production owner. Single Ending owns research, original fictionalization, the one-ending campaign spine, final ontology, reconvergence, and aftermath for that handoff. It returns those artifacts here; it does not independently select, retune, integrate, verify, or deliver the horror mechanics. When Single Ending is invoked alone, it may own its full standalone production chain instead.
 
-1. the player-facing fear promise and canonical ending;
-2. the experience timeline from first control to ending;
-3. the map grammar, chapter route, return states, and landmarks;
-4. the threat's knowledge, perception, commitment, and recovery rules;
-5. the selection and composition of mechanics;
-6. the camera, light, sound, interface, asset, and accessibility contracts;
-7. the grey-box route and implementation order;
-8. failure, retry, save, reset, and ending verification;
-9. a truthful handoff that says what is built, what is proposed, and what remains unverified.
+The result may be a complete build, a bounded playable chapter, or an implementation-ready package. Never describe a design document, render, contact sheet, or successful launch screen as a playable game.
 
-The output may be a complete playable game, a playable chapter, or an implementation-ready package when no runtime is available. Never call a design-only package playable.
+## Read only what the production needs
 
-## Read only the companion files this task needs
+- Fill [the production contract](templates/horror-production-contract.md) before broad implementation.
+- Use [why horror productions fail](references/why-horror-games-fail.md) during scope and integration reviews.
+- Read [the worked example](examples/the-last-service-floor.md) for contract depth, not for plot or layout.
+- Open a focused Skill only after its player decision and owner handoff are selected.
+- Use `/worldview-game-high-fidelity-vertical-slice` for a small proof. Route to `/worldview-game-single-ending-campaign` for research, fictional transformation, one-ending spine, final ontology, reconvergence, and aftermath while this Skill remains the production parent.
 
-- Read [templates/horror-production-contract.md](templates/horror-production-contract.md) before broad design or map work. Fill an existing project contract instead of creating a parallel one.
-- Read [references/why-horror-games-fail.md](references/why-horror-games-fail.md) when a concept is becoming a sequence of errands, a flat chase, a large empty map, or a stack of unconnected scares.
-- Read [examples/the-last-service-floor.md](examples/the-last-service-floor.md) only when a filled fictional example clarifies the expected level of detail. Its setting and values are not defaults.
-- Read [SOURCE.md](SOURCE.md) when auditing originality or explaining the boundary between supplied material and repository-authored decisions.
-- Read the detailed Skill named in the routing table only when its contract is selected. Do not load all horror mechanics speculatively.
+## Phase locks
 
-## Step 1 — Recover the actual brief
+1. **Product lock:** platform, perspective, language, duration, content boundary, ending policy, and delivery agree.
+2. **Promise lock:** ordinary verb, central question, pressure, decision, cost, recovery, payoff, and aftermath form one experience.
+3. **Reference lock:** supplied facts, references, inspirations, and original proposals are separated; no protected identity is copied.
+4. **World lock:** chapters, map, routes, roles, items, evidence, protections, and ending dependencies agree.
+5. **Owner lock:** every authoritative state has one writer and explicit readers; selected Skills exchange named state.
+6. **Grey-box lock:** complete route, failure, recovery, save, and ending work before expensive presentation.
+7. **Presentation lock:** assets, camera, light, audio, UI, animation, and effects read game state and meet budgets.
+8. **Release lock:** runtime, accessibility, performance, persistence, build, deployment, and handoff evidence are truthful.
 
-Write this intake before inventing content:
+A changed earlier lock reopens dependent work and invalidates its old evidence.
+
+## 1. Recover the brief and project
+
+Create three records:
 
 ```markdown
 ## Declared
-- Story, protagonist, setting, desired fear, and ending intention:
-- Perspective, target platform, language, duration, and delivery:
-- Existing project, controls, assets, mechanics, and runtime:
-- Content boundaries, accessibility needs, and external-service permission:
+- premise, protagonist, place, story facts, desired fear and ending intention
+- perspective, platform, language, duration and delivery
+- existing project, assets, mechanics and controls
+- content, privacy, accessibility and external-service boundaries
 
 ## Observed
-- What the project actually runs:
-- Existing map, player controller, camera, save, audio, and interaction authority:
-- Supplied screenshots, videos, or visual references and their exact scope:
-- Missing evidence:
+- current runnable entry and build behavior
+- map, player, camera, interaction, audio, save and deployment owners
+- supplied screenshots/video and exactly which qualities they show
+- measured performance and missing evidence
 
-## Assumed
-- Reversible choices made to keep moving:
-- Why each assumption fits the brief:
-- What would reopen the decision:
+## Proposed
+- reversible assumptions made to continue
+- original additions and why they support the promise
+- decisions requiring confirmation or authority
 ```
 
-If the user wants one ending, use one canonical ending. Death, capture, failed attempts, degraded states, and knowledge changes are not alternate endings unless the user explicitly requests them as such.
+If no visual reference exists, propose an original visual target in concrete terms: camera height and lens behavior, spatial density, material roughness, light hierarchy, fog/particle policy, animation style, UI presence, and supported performance tier. Recommend one to three reference images only when their absence would materially risk mismatch; do not block a safe prototype.
 
-If the user names a real person, company, living creator, or public controversy, separate factual research from fictional invention. Use composite names, original characters, and a clear entertainment/research boundary when appropriate. Do not make a recognizable real person the unmodified antagonist or copy their likeness, speech, or private information.
+If the premise uses real people, companies, politics, or current controversies, research factual claims with dates and authoritative sources, then create original composite characters and institutions. Do not reproduce likeness, trademark identity, private information, accusations presented as fact, or another work’s plot and visual signature.
 
-## Step 2 — Lock the five-part horror promise
+## 2. Design one ending backward
 
-Write one sentence for each field:
+Write the canonical ending as a player action and persistent aftermath, not a cutscene summary. Then identify:
 
-| Part | Question | Good answer |
-| --- | --- | --- |
-| Player question | What does the player need to understand? | “Which of the three service doors is still connected to the dry stair?” |
-| Pressure | What makes understanding difficult now? | “The threat repeats the last sound from a different corridor after a delay.” |
-| Decision | What can the player choose? | “Stay quiet and take the long route, or make one loud action to open the short route.” |
-| Consequence | What changes visibly? | “The pump drains the stair and moves the threat's search boundary.” |
-| Recovery | How can the player learn and try again? | “A protected room shows the sound order and keeps the opened shortcut.” |
+- the verb taught earlier;
+- the rule the player must understand;
+- the person, item, or evidence state required;
+- the route and protection state required;
+- the cost that remains visible;
+- the failure/checkpoint boundary;
+- the aftermath facts that prove survival meant something.
 
-If a proposed scare has no player question, decision, consequence, or recovery, classify it as a cinematic beat and do not count it as gameplay.
+Work backward so every chapter teaches, complicates, or pays one dependency. Local decisions may alter injuries, trust, resources, evidence, route, and recovery position while reconverging causally on one ending. Death and capture are retry states, not alternate endings.
 
-## Step 3 — Build the experience timeline
+## 3. Lock the horror promise
 
-Use two clocks when the source is edited and three when the project is being implemented:
-
-- **Source time:** the timestamp in a recording or reference edit.
-- **Experience time:** the estimated time a player spends in the actual game, including exploration and retries when known.
-- **Implementation time:** the runtime event order used for tests and saves.
-
-For every beat, record:
+Complete:
 
 ```text
-player location → visible information → player question → available action
-→ state change → sensory feedback → threat pressure → consequence
-→ recovery or next question
+ordinary verb and expected result:
+central question the player can investigate:
+pressure that makes knowing costly:
+decisions the player can actually commit:
+persistent consequence:
+recovery action that restores planning:
+earlier fact transformed by final action:
+aftermath that cannot reset:
 ```
 
-Never turn a cut into a claimed teleport, a montage into a measured route, or a commentary reaction into proof of a private player emotion. Use `unknown` and list the evidence gap.
+At least one early player action must establish authoritative before-state. At least one likely mistake must teach a rule without erasing progress. The ending must use a previously taught verb under changed conditions.
 
-### The minimum rhythm
+## 4. Build the chapter and experience clocks
 
-The first complete route should contain, in an order appropriate to the story:
+For every chapter record novice, experienced, and assisted duration ranges for routine, navigation, optional evidence, dialogue/reading, active pressure, failure/restart, recovery, and aftermath.
 
-1. **Orientation:** the player learns movement, a landmark, and an immediate job.
-2. **Invitation:** a low-cost irregularity asks the player to inspect or choose.
-3. **Confirmation:** the irregularity repeats with one changed fact.
-4. **Complication:** progress changes a route, relationship, resource, or interpretation.
-5. **Pressure:** the player must act with incomplete information.
-6. **Cost:** an error, sacrifice, injury, noise, lost route, or changed state matters.
-7. **Recovery:** the player regains enough agency to form a new plan.
-8. **Payoff:** an earlier landmark, rule, object, or relationship returns in a changed state.
-
-This is a design checklist, not a rigid eight-room formula. Combine beats when the play length is short, but do not remove every quiet beat.
-
-## Step 4 — Design the map as a memory system
-
-Before detailed art, draw a graph and a player-facing landmark list. Every important location must have at least one function:
-
-- teach a rule;
-- test a rule under pressure;
-- change a route or state;
-- provide a safe or semi-safe recovery;
-- reveal a relationship or evidence;
-- pay off a question;
-- stage the ending.
-
-For each landmark, write:
+For each beat record:
 
 ```text
-stable identity → first meaning → changed-return meaning → route edges
-→ visible affordance → hidden implementation state → failure/recovery behavior
+location and player job → prior expectation → visible information
+→ player question → action/choice → authoritative state owner and delta
+→ feedback and accessible equivalent → emotion hypothesis
+→ protection gained/lost → cost → recovery → next question
 ```
 
-Use small, repeatable spatial vocabulary: a colored pipe, a broken clock, an unusual ceiling, a numbered hatch, a sound behind a grille, a visible exterior landmark, or a tactile door. Do not fill a large building with unique decoration that the player cannot use to navigate.
+Predicted emotion is a design hypothesis, not proof. Edited reference time is not play time. Replace estimates with runtime traces as soon as the grey-box runs.
 
-### Return-state rule
+Use `/worldview-game-horror-experience-rhythm` when the sequence needs full timing and attention analysis.
 
-A return is a new beat only if at least one of these changes:
+## 5. Design the world as connected obligations and protections
 
-- an object or obstruction;
-- a character's position, relationship, or behavior;
-- a light, sound, weather, or visibility boundary;
-- the legal route or shortcut;
-- the threat's knowledge or search rule;
-- what the player now understands about the place.
+Draw a graph before detailed art. For every node record landmark, ordinary function, obligation, known threat access, companion/task ownership, resource exposure, evidence available, protection retained/lost, legal exits, return cost, and recovery.
 
-If none changes, combine the traversal or remove it.
+Every important space must teach or test a rule, change state, preserve recovery, reveal relationship/evidence, or stage payoff. Large rooms with unique decoration but no player use are production cost, not depth.
 
-## Step 5 — Choose mechanics by player decision
+For every return, preserve shared place/object IDs and separate authoritative, observer-knowledge, presentation, route, and social deltas. Use `/worldview-game-horror-returning-place-escalation` for recurring hubs. Use `/worldview-game-stranded-journey-and-lost-protections` when the route’s main structure is progressive loss of mobility, communication, shelter, credibility, or help.
 
-Select no more mechanics than the route can teach, combine, and verify. Use this table before routing:
+For indoor pursuit, use `/worldview-game-chase-route-architecture`; prove calm route rehearsal, main/risky/wrong/recovery paths, interaction margins, and restart before art. For driving, mirrors, lane pressure, motion demand, and safe-stop decisions, use `/worldview-game-driving-horror-divided-attention` rather than treating a vehicle as an on-foot corridor.
 
-| Desired player decision | Route to detailed Skill |
+## 6. Build actors, duties, items, evidence, and viewpoints
+
+### Actors and roles
+
+For each significant actor record ID, current task, reason, permissions, schedule, access, last verified location/state, knowledge carried, promises, relationships, communication, success/delay/injury/failure transitions, and pathing fallback.
+
+Use `/worldview-game-horror-role-and-identity-pressure` for authorization or recognition decisions and `/worldview-game-horror-procedural-duty-and-incident` when obligation forces an incident response.
+
+### Ordinary routines
+
+Give every repeated task a later purpose: route rehearsal, affordance teaching, relationship proof, evidence creation, promise, or resource placement. Use `/worldview-game-horror-mundane-routine-corruption` to establish authoritative before-state and controlled violation.
+
+### Items and evidence
+
+Separate physical holder, legal operator, knowledge holders, item affordance, evidence provenance, and presentation. An item description does not grant a runtime capability. A shared journal does not automatically grant knowledge.
+
+Use `/worldview-game-character-handoff-and-shared-evidence` when the main challenge is transferring playable control, objects, knowledge, and consequences across characters. Use `/worldview-game-evidence-based-entity-identification` for test protocols and hypotheses.
+
+### Relief and cost
+
+If a resource solves immediate distress while increasing delayed exposure, store both axes and provide observable warning, alternative coping, and bounded thresholds. Use `/worldview-game-relief-resource-with-hidden-cost`; do not disguise author-only punishment as a sanity bar.
+
+## 7. Select mechanics by decision and owner
+
+Choose the smallest set the game can teach, combine, and verify. For each selected mechanic complete:
+
+> The player decides **[choice]** because **[information]**; this changes **[owned state]**, which alters **[route/knowledge/cost]**; the result is readable through **[cue]** and recoverable through **[rule]**.
+
+Core routes include:
+
+| Decision | Focused Skill |
 | --- | --- |
-| Shape orientation, anomaly, pressure, cost, recovery, and payoff across a chapter | `/worldview-game-horror-experience-rhythm` |
-| Make a familiar room or social hub change meaning on every return | `/worldview-game-horror-returning-place-escalation` |
-| Turn serving, driving, studying, sleeping, cooking, or playing into a corrupted routine | `/worldview-game-horror-mundane-routine-corruption` |
-| Make the player's professional or social duty force an inspection after an incident | `/worldview-game-horror-procedural-duty-and-incident` |
-| Make role, recognition, authority, or identity a fair social threat | `/worldview-game-horror-role-and-identity-pressure` |
-| Choose a main, risky, failure, and recovery path through a designed pursuit | `/worldview-game-chase-route-architecture` |
-| Create a false point of interest, break observation, hide, and escape | `/worldview-game-lure-hide-escape` |
-| Make a threat advance only when observation is invalid | `/worldview-game-observation-gated-stalker` |
-| Make surfaces, actions, or deliberate noise alter what a listener believes | `/worldview-game-sound-detection-and-distraction` |
-| Maintain pressure through a connected roaming threat without teleporting | `/worldview-game-roaming-stalker-pressure` |
-| Give the player a protected place to reorganize without erasing danger | `/worldview-game-safe-room-pressure-reset` |
-| Buy time by changing routes with a barricade or obstruction | `/worldview-game-barricade-delay-and-route-choice` |
-| Make limited carrying space change preparation and recovery | `/worldview-game-scarce-inventory-triage` |
-| Make an item open a remembered gate and transform the return route | `/worldview-game-key-item-backtracking` |
-| Make saving a survival decision with safe crash recovery | `/worldview-game-limited-save-risk` |
-| Make injury change movement, attention, treatment, or route cost | `/worldview-game-wounds-infection-and-treatment` |
-| Repair a system while threat and world state react | `/worldview-game-restore-power-under-pressure` |
-| Read bounded information about a nearby hidden threat | `/worldview-game-signal-proximity-tracking` |
-| Distinguish an entity through positive, negative, and inconclusive tests | `/worldview-game-evidence-based-entity-identification` |
-| Continue or retreat from a puzzle when danger interrupts it | `/worldview-game-threat-interrupted-puzzle` |
-| Make selected cues unreliable while keeping fair anchors | `/worldview-game-perception-distortion-and-trust` |
-| Preserve useful knowledge through a bounded death loop | `/worldview-game-death-loop-persistent-clues` |
-| Combine partial information between players under pressure | `/worldview-game-asymmetric-information-cooperation` |
+| Chapter timing, attention, pressure and aftermath | `/worldview-game-horror-experience-rhythm` |
+| Routine baseline and controlled violation | `/worldview-game-horror-mundane-routine-corruption` |
+| Duty, authority, live work and incident response | `/worldview-game-horror-procedural-duty-and-incident` |
+| Repeated-place comparison | `/worldview-game-horror-returning-place-escalation` |
+| Role, permission and recognition | `/worldview-game-horror-role-and-identity-pressure` |
+| Character handoff, physical custody and shared evidence | `/worldview-game-character-handoff-and-shared-evidence` |
+| Progressive journey and lost protections | `/worldview-game-stranded-journey-and-lost-protections` |
+| Vehicle control and divided attention | `/worldview-game-driving-horror-divided-attention` |
+| Immediate relief with delayed exposure | `/worldview-game-relief-resource-with-hidden-cost` |
+| Pursuit architecture | `/worldview-game-chase-route-architecture` |
+| Threat belief, hiding and escape | `/worldview-game-lure-hide-escape` |
+| Long-horizon stalker pressure | `/worldview-game-roaming-stalker-pressure` |
+| Sound evidence and distraction | `/worldview-game-sound-detection-and-distraction` |
+| Observation-gated movement | `/worldview-game-observation-gated-stalker` |
+| Refuge lifecycle | `/worldview-game-safe-room-pressure-reset` |
+| Temporary obstacle and route delay | `/worldview-game-barricade-delay-and-route-choice` |
+| Inventory custody and triage | `/worldview-game-scarce-inventory-triage` |
+| Key item and changed return | `/worldview-game-key-item-backtracking` |
+| Data-safe limited saving | `/worldview-game-limited-save-risk` |
+| Fictional wound/treatment loop | `/worldview-game-wounds-infection-and-treatment` |
+| Dependency restoration under pressure | `/worldview-game-restore-power-under-pressure` |
+| Bounded proximity signal | `/worldview-game-signal-proximity-tracking` |
+| Testable evidence and hypotheses | `/worldview-game-evidence-based-entity-identification` |
+| Interruptible world puzzle | `/worldview-game-threat-interrupted-puzzle` |
+| Distorted presentation with anchors | `/worldview-game-perception-distortion-and-trust` |
+| Persistent clues through recurrence | `/worldview-game-death-loop-persistent-clues` |
+| Live asymmetric cooperation | `/worldview-game-asymmetric-information-cooperation` |
 
-For every selected row, complete this sentence:
+Do not route speculative mechanics just to use more Skills.
 
-> The player decides **[choice]** because **[information]**; this changes **[state]**, which alters **[route/knowledge/cost]**; the player can learn it through **[cue]** and recover through **[reset/shortcut/safe beat]**.
+## 8. Make ownership and handoffs explicit
 
-If the sentence cannot be completed, do not route the mechanic yet.
+Create a master table:
 
-## Step 6 — Write the threat knowledge contract
+| State | Authoritative owner | Writers/events | Readers | Persistence | Reset/load order | Forbidden inference |
+| --- | --- | --- | --- | --- | --- | --- |
 
-The threat must not silently read the player's transform unless omniscience is the intended subject of the game. Define each channel:
+For each selected Skill record state read, state written by owner, tunables owned, events emitted, forbidden hidden facts, reset order, and evidence returned. Two systems may read the same state; only one defines it.
 
-| Channel | Receives | Does not receive | Range/age/occlusion | Player-facing proof |
-| --- | --- | --- | --- | --- |
-| Sight | | | | |
-| Sound | | | | |
-| Trace/disturbance | | | | |
-| Scripted/supernatural rule | | | | |
+Threat knowledge must be separate from world truth and director desire. Observer knowledge must be separate from global quest progress. Presentation must never define actor identity, item ownership, route legality, or evidence truth.
 
-Then define the state transitions:
+## 9. Build the threat and failure contract
 
-```text
-idle → suspicion → commitment → search → reacquisition or release
-```
+Define what the threat can receive through sight, sound, trace, schedule, territory, and supernatural rules; what it cannot receive; memory age; commitment; search; release; and player-facing warning. Do not grant player coordinates by convenience.
 
-Each transition needs a cause, a timestamp, an expiry, a route effect, a cue, and a reset rule. A loud noise may move the threat to a source location; it should not secretly reveal the player's current location unless that is explicitly the rule and the player can understand it.
+Every failure records cause, feedback, state retained, state reset, retry location, repeated labor, and new information. The likely novice mistake should refine a plan. Verify lost-player, aggressive, nonviolent, suspicious, compliant, early-investigation, missed-landmark, exhausted-resource, mistrusted-ally, and trusted-compromised-authority journeys when supported by the design.
 
-## Step 7 — Design camera, audio, light, and interface as gameplay
+## 10. Plan original assets and visual fidelity
 
-For each pressure beat, state what the player can and cannot know from the camera. Limited visibility is fair only when another cue carries the essential information.
+Create an asset ledger with purpose, screen importance, interaction, state variants, source/creation route, rights, optimization, collision, rigging, LOD, fallback, and validation.
 
-For audio, record:
+Choose per asset:
 
-```text
-source → location → intensity → propagation/occlusion → player meaning
-→ threat meaning → subtitle/accessibility equivalent → reset/cooldown
-```
+- reuse an authorized project asset;
+- author procedural or primitive geometry;
+- model manually in a DCC;
+- generate an original concept/texture/model through an authorized tool;
+- acquire a licensed asset and record its license;
+- use a proxy until the mechanic is proven.
 
-Silence, room tone, delayed repetition, directional noise, a missing expected sound, and a recovery sound are different design tools. Do not use loudness as a substitute for a state change. If microphone input is requested, provide permission, calibration, no-device behavior, a deterministic fallback, and a path that never stores or uploads raw speech.
+Generated 3D is not automatically production-ready. Inspect topology, scale, UVs, materials, normals, interior surfaces, collision, rig deformation, animation, LOD, memory, and export. Character models require pose and deformation tests; detailed exterior texture does not prove usable anatomy or hidden geometry. Test one tool call before batch production and keep a manual/proxy fallback.
 
-For light and interface, name the decision they support: route landmark, threat state, evidence confidence, resource cost, or recovery. Never use a flash, color, or vibration as the only required signal when an accessible alternative is possible.
+Presentation must serve states: landmark recognition, route legality, threat evidence, item affordance, relationship, cost, recovery, or payoff. Replace high-visibility proxies only after grey-box acceptance.
 
-## Step 8 — Build in the order that protects the experience
+## 11. Implement in vertical, testable slices
 
-1. Write the contract and experience timeline.
-2. Grey-box the route with stable landmarks and legal collision.
-3. Implement the player job and first safe teaching beat.
-4. Implement one pressure loop with visible feedback and reset.
-5. Implement the changed return and recovery beat.
-6. Add only the selected mechanics, reusing existing project authority.
-7. Test failure, retry, save/load, and ending before expensive art.
-8. Replace the most visible proxies with original assets and coherent materials.
-9. Add camera, lighting, audio, UI, effects, and performance tuning by named states.
-10. Capture the first-time route, a failure/recovery route, and the ending.
+1. Establish project boot, controls, camera, interaction, save, and test harness.
+2. Grey-box the complete canonical route and ending dependency.
+3. Implement ordinary verb and authoritative confirmation.
+4. Implement first contradiction, verification, and local consequence.
+5. Implement one pressure/failure/recovery loop.
+6. Implement return, handoff, or journey state required by the ending.
+7. Implement the final learned action and aftermath.
+8. Run persistence and accessibility tests.
+9. Integrate original assets and presentation by named state.
+10. Measure performance, rerun all journeys, build, and deploy only with authority.
 
-If an image model, Blender MCP, another DCC, an engine tool, an API, or a profiler is available, test one minimal call before planning a batch. Record capability, authorization, provider, output, and fallback in the contract. A generated floor plan is a communication aid; runtime collision, navigation, timing, and captures are the evidence.
+Keep the game runnable after every step. Do not build all art before proving the route.
 
-## Step 9 — Verify the actual experience
+## 12. Verify and deliver
 
-Run these journeys in the real runtime when possible:
+Verify first-time comprehension, efficient/skipped route, likely mistake, recovery, lost navigation, each selected mechanic boundary, save/load at every identity/viewpoint/route transition, death/restart, canonical ending from materially different local histories, aftermath persistence, accessibility, performance, build, and URL when deployment is authorized.
 
-| Journey | Must prove |
-| --- | --- |
-| First-time route | The job, next decision, landmarks, and feedback are understandable without hidden notes. |
-| Deliberate wrong choice | The failure has a visible cause, an attributable consequence, and a fast retry. |
-| Recovery route | The player can use new knowledge or a changed state rather than repeat a blind attempt. |
-| Resource edge | Scarcity, injury, sound, or puzzle progress changes the intended decision and resets honestly. |
-| Save/load | No door, threat, clue, audio event, or checkpoint state leaks or vanishes unexpectedly. |
-| Accessibility path | Reduced intensity, subtitles, color alternatives, input assistance, and no-microphone mode preserve the decision. |
-| Ending | The final state pays off an earlier rule, place, object, or relationship and does not introduce an unlearned mechanic. |
+Evidence may include logs, state dumps, test output, route traces, screenshots, video, performance captures, and build artifacts. A screenshot proves presentation, not behavior.
 
-Measure player route time, threat route time, interaction time, restart time, frame time, and loading where the runtime exposes them. Do not invent probabilities or performance numbers. A diagram, beauty frame, or title screen cannot prove a playable game.
-
-## Step 10 — Deliver a truthful handoff
-
-Return:
-
-```text
-Horror production handoff
-- creative promise:
-- canonical ending:
-- playable entry/build/URL:
-- implemented route:
-- selected mechanics and their contracts:
-- verified journeys:
-- runtime and performance evidence:
-- known limitations and unverified claims:
-- external tools and authorization boundaries:
-- next smallest valuable improvement:
-```
-
-Do not call a proposal an implementation, a contact sheet a playtest, a generated image a map proof, or a single successful run a complete game.
+Return creative promise, canonical ending, production contract, research/reference boundary, chapter clocks, maps, owner/handoff matrix, NPC/item/evidence ledgers, asset ledger, implemented route, build/URL, verified journeys, evidence paths, known limitations, external tools and licenses, and next smallest improvement.

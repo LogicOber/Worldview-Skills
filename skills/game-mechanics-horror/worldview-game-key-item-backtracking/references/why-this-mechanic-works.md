@@ -46,6 +46,20 @@ The mechanic crosses rooms, scene loads, deaths, and saves. Its truth cannot liv
 
 Atomic application matters because the key is often consumed or installed. If consumption saves but unlocking does not, a crash can leave neither key nor route. A durable transaction preserves one coherent side of the change.
 
+## Bounded compatibility turns a key into a learnable capability
+
+A tool can support several targets without becoming a universal answer. A finite compatibility table lets the player predict what it can reveal, unlock, deter, or install. Invalid targets need feedback before cost or custody changes. Item prose is a hint; authoritative target classes own the rule.
+
+## Calm use makes pressured use fair
+
+The player should learn the verb, valid-target proof, duration, and cost before danger compresses attention. Pressure may change when and where the tool is used, but not invent a new rule. A final application feels earned when its target class or mechanical relationship was visible earlier.
+
+## Physical possession is not knowledge
+
+One character may carry a device without understanding it, while another knows calibration but cannot reach the socket. Explicit custody, knowledge, and operation permission make handoff a decision and prevent shared inventory from becoming shared memory.
+
+Common failures are universal scanners, arbitrary matching shapes, invalid targets that consume charges, transfer without acknowledgement, duplicated ownership after save, and a finale that reveals a new use with no preview.
+
 ## Accessible navigation preserves the same reasoning
 
 Recognizing a place need not depend on perfect vision, color discrimination, hearing, or long-term memory. Shape, text, map symbols, contrast, haptics, and optional reminders can represent the same known relationship. Stronger breadcrumbs or reduced return pressure adjust difficulty without invalidating the route's underlying state.

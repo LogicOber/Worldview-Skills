@@ -6,7 +6,7 @@ This file records why `worldview-3d-asset-production-route` exists, what was che
 
 The Skill was created for this repository in response to the user’s 2026-09-20 request to improve the 3D production part of the Worldview workflow. The user described a practical choice between making assets by hand, using faster AI-generated 3D, and using a tool such as Tripo. They specifically warned that generated meshes can look richly textured while being structurally poor inside, difficult to rig, and prone to stretching when a character moves. They asked for an optional tool route, not a mandatory provider dependency, and for a production method that can be used automatically from a short asset request.
 
-The user required original Skills. The user’s observations are requirements and problem evidence, not text or code to copy. No Skill-generation Skill was invoked.
+The user required original Skills. The user's observations are requirements and problem evidence, not text or code to copy. The method and prose were authored directly for this repository.
 
 ## User-supplied problem evidence
 

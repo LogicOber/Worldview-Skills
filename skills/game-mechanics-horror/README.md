@@ -1,6 +1,6 @@
 # Horror Game Mechanics
 
-Twenty-three standalone Agent Skills cover familiar horror-game situations and the composition layers that make them feel like one experience. They describe what the player understands and does, what the simulation is allowed to know, how pressure changes a decision, what survives failure, and what evidence is needed before an encounter can be called playable.
+Twenty-seven standalone Agent Skills cover familiar horror-game situations and the composition layers that make them feel like one experience. They describe what the player understands and does, what the simulation is allowed to know, how pressure changes a decision, what survives failure, and what evidence is needed before an encounter can be called playable.
 
 Every package contains an original method written for this repository or a documented transformation of the user's own supplied mechanics material. `SOURCE.md` records that boundary. Examples use original fictional settings and demonstrate completed fields; their maps and values never become silent defaults.
 
@@ -53,6 +53,7 @@ The package template gives the Agent a fillable layer-lock record. Its example s
 | [`worldview-game-safe-room-pressure-reset`](worldview-game-safe-room-pressure-reset/README.md) | A protected room should let the player reorganize and breathe without deleting all accumulated danger. | Boundary, entry, pursuer disengagement, resource, exit-pressure, save, and reset rules. |
 | [`worldview-game-barricade-delay-and-route-choice`](worldview-game-barricade-delay-and-route-choice/README.md) | Blocking one approach should buy time while consuming access, material, silence, or a future route. | Stateful barrier, shared route mutation, useful-delay calculation, breach/detour, and persistence evidence. |
 | [`worldview-game-chase-route-architecture`](worldview-game-chase-route-architecture/README.md) | A pursuit should be a learnable building with a main route, risky alternatives, failure loops, and recovery—not an enemy following the player's transform. | Architectural graph and annotated plan, route legality, sight/hearing/microphone/sanity contracts, timing margins, checkpoints, and runtime proof. |
+| [`worldview-game-driving-horror-divided-attention`](worldview-game-driving-horror-divided-attention/README.md) | Driving, monitoring mirrors or instruments, and reacting to a cabin threat should compete for attention without turning vehicle failure into arbitrary input sabotage. | Road-demand timeline, cabin sight-zone graph, glance budget, stop nodes, control-interference states, motion-comfort alternatives, and checkpoint proof. |
 
 ### Scarcity, preparation, and bodily risk
 
@@ -62,6 +63,7 @@ The package template gives the Agent a fillable layer-lock record. Its example s
 | [`worldview-game-key-item-backtracking`](worldview-game-key-item-backtracking/README.md) | Finding an object should make a remembered lock and return route newly meaningful. | Gate/key contract, changing route graphs, shortcut, anti-softlock proof, and save-boundary verification. |
 | [`worldview-game-limited-save-risk`](worldview-game-limited-save-risk/README.md) | Choosing when to create a durable manual record should be a survival decision. | Save-opportunity economy separated from crash recovery, transactional write safety, accessibility override, and storage evidence. |
 | [`worldview-game-wounds-infection-and-treatment`](worldview-game-wounds-infection-and-treatment/README.md) | An injury should create a fictional, readable, time-dependent sequence of stabilization, travel, treatment, and reassessment. | Condition state model, treatment decisions, reduced-intensity presentation, save/authority rules, and explicit non-medical boundary. |
+| [`worldview-game-relief-resource-with-hidden-cost`](worldview-game-relief-resource-with-hidden-cost/README.md) | A resource should genuinely reduce immediate distress or impairment while creating a separate downstream exposure that becomes learnable through repeated use. | Independent relief and cost curves, disclosure stages, alternatives, thresholds, use-under-pressure rules, convergence, and cautious/compulsive verification. |
 
 ### Investigation, instruments, and interrupted objectives
 
@@ -79,6 +81,7 @@ The package template gives the Agent a fillable layer-lock record. Its example s
 | [`worldview-game-perception-distortion-and-trust`](worldview-game-perception-distortion-and-trust/README.md) | Selected cues should become unreliable while accessible anchors preserve fair reasoning. | Truth/presentation separation, authored substitutions, exposure tiers, recovery, and comfort/accessibility verification. |
 | [`worldview-game-death-loop-persistent-clues`](worldview-game-death-loop-persistent-clues/README.md) | Failure should reset a bounded world while preserving knowledge that changes the next decision. | Reset/persist/transform ledger, clue dependency graph, two-pass proof, honest save operations, and data-safety evidence. |
 | [`worldview-game-asymmetric-information-cooperation`](worldview-game-asymmetric-information-cooperation/README.md) | Different players should combine partial information and role-specific actions under pressure. | Role contracts, information-action graph, accessible communication vocabulary, acknowledgement, authority, and reconnect tests. |
+| [`worldview-game-character-handoff-and-shared-evidence`](worldview-game-character-handoff-and-shared-evidence/README.md) | The player controls different characters at different times and an earlier character's actions, possessions, knowledge, or mistakes must become a later character's world state or evidence. | Shared event/object IDs, physical and knowledge ownership, action-to-residue rules, atomic viewpoint handoffs, failure/skip behavior, and convergence proof. |
 
 ### Experience composition and social pressure
 
@@ -89,6 +92,7 @@ The package template gives the Agent a fillable layer-lock record. Its example s
 | [`worldview-game-horror-mundane-routine-corruption`](worldview-game-horror-mundane-routine-corruption/README.md) | Serving, driving, studying, sleeping, cooking, cleaning, or playing should become a rule-based horror loop. | Normal routine, exception ladder, comply/inspect/refuse/leave choices, state consequences, recovery, and reset evidence. |
 | [`worldview-game-horror-procedural-duty-and-incident`](worldview-game-horror-procedural-duty-and-incident/README.md) | The player's job should make an abnormal scene worth approaching and inspecting. | Duty/authority contract, teachable procedure, inspectable incident, response modes, route consequences, and verification. |
 | [`worldview-game-horror-role-and-identity-pressure`](worldview-game-horror-role-and-identity-pressure/README.md) | Recognition, social position, appearance, or a claimed role should become a fair horror decision. | Stable identity tests, contaminated evidence rules, social choices, presentation conflicts, accessibility, and safety checks. |
+| [`worldview-game-stranded-journey-and-lost-protections`](worldview-game-stranded-journey-and-lost-protections/README.md) | A journey should become frightening as mobility, communication, shelter, credibility, companionship, or a trusted return path fail one at a time. | Journey-segment ledger, protection state, help offers and costs, fallback routes, cargo/obligation pressure, recovery, and one-ending reconvergence. |
 
 ## Compose without hiding dependencies
 
@@ -112,10 +116,21 @@ field investigation
   -> evidence-based entity identification
   -> restore power under pressure
 
+stranded journey
+  mundane routine corruption
+  -> stranded journey and lost protections
+  -> driving horror divided attention, when the route uses a vehicle
+  -> relief resource with hidden cost, when immediate help creates exposure
+
 cooperative encounter
   asymmetric information cooperation
   -> threat-interrupted puzzle
   -> barricade delay and route choice
+
+sequential viewpoints
+  character handoff and shared evidence
+  -> returning-place escalation
+  -> evidence-based entity identification
 ```
 
 The later Skill reads the implemented project state left by the earlier one. Each package remains usable alone. If a later mechanic conflicts with a locked decision, it reopens that decision and names the tests and evidence that must be replaced.
@@ -143,7 +158,7 @@ Each package has its own `SOURCE.md` with the exact input and rewrite boundary.
 | Source | Skills | How it was used |
 | --- | --- | --- |
 | User-supplied mechanics brief | `worldview-game-lure-hide-escape`, `worldview-game-observation-gated-stalker`, `worldview-game-restore-power-under-pressure` | These packages record the internal brief consulted. Their expanded methods, lock sequences, templates, and public examples are repository-authored. |
-| The user's original horror-game design requests and private qualitative observations | The other 20 Skills in this category | The mechanic methods and fictional examples were written from the requested design problems and transformed player-facing relationships. No external Skill supplied their content. |
+| The user's original horror-game design requests and private qualitative observations | The other 24 Skills in this category | The mechanic methods and fictional examples were written from the requested design problems and transformed player-facing relationships. No external Skill supplied their content. |
 
 ## Collection boundaries
 

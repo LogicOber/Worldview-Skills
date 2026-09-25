@@ -1,8 +1,8 @@
 # Worldview Game — Perception Distortion and Trust
 
-Build a horror mechanic in which presentation becomes unreliable while the underlying game remains fair. The player learns which signals can drift, which anchors remain trustworthy, and how to act before certainty returns.
+Build a horror mechanic in which presentation or guidance becomes unreliable while the underlying game remains fair. The player learns which signals can drift, which anchors remain trustworthy, what access or promise makes a guide credible, and how to act before certainty returns.
 
-> **The mechanic separates authoritative world state from subjective presentation.** Its fiction uses a named cause and never treats real mental illness as shorthand for monstrosity or moral failure.
+> **The mechanic stores the event, cue-specific interpretation, player-facing presentation, and inspectable evidence separately.** Beliefs about an actor's role or permission remain with the role-and-identity system. Its fiction uses a named cause and never treats real mental illness as shorthand for monstrosity or moral failure.
 
 ## Call this Skill
 
@@ -17,7 +17,7 @@ with a recovery action and a failure caused by trusting the wrong signal.
 
 ## When to use it
 
-Use this Skill when horror should come from deciding which perceptions deserve trust. It works for supernatural influence, hostile signals, memory contamination, dream logic, toxic exposure, or an explicitly fictional condition with its own world rules.
+Use this Skill when horror should come from deciding which perceptions, instructions, or guides deserve trust. It works for supernatural influence, hostile signals, memory contamination, dream logic, toxic exposure, a guide whose permissions matter, or an explicitly fictional condition with its own world rules.
 
 Do not use it to represent a real diagnosis, to randomize controls without warning, to conceal required information with no recovery path, or to add cosmetic screen effects that never change a decision.
 

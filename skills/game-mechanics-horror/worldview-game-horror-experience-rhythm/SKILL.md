@@ -1,6 +1,6 @@
 ---
 name: worldview-game-horror-experience-rhythm
-description: "Use when a horror game has rooms or mechanics but its player experience feels flat, rushed, exhausting, or like disconnected scares. Builds a dual-clock experience timeline, attention budget, pressure/cost/recovery/payoff rhythm, sensory cue contract, and verified first-time, failure, recovery, and ending beats. Do not use for a single sound, chase, puzzle, or save mechanic; route those to their focused Skills."
+description: "Use when a horror game has good rooms or mechanics but its experience feels flat, rushed, exhausting, arbitrary, or like disconnected scares. Builds novice and experienced play clocks, a beat and attention ledger, question-driven escalation, pressure/cost/recovery/aftermath contracts, mechanic-owner handoffs, and verified first-play, failure, recovery, save, accessibility, and ending journeys."
 ---
 
 # Worldview Game — Horror Experience Rhythm
@@ -11,190 +11,212 @@ description: "Use when a horror game has rooms or mechanics but its player exper
 /worldview-game-horror-experience-rhythm
 ```
 
-Everything after the Slash command is the brief. Inspect the existing route and mechanics before proposing pacing changes. Do not solve flatness by adding more rooms, louder sounds, or more enemies before identifying what the player is supposed to notice and decide.
+Everything after the command is the brief. Recover the current game before changing its pace. Do not diagnose flatness as “not enough enemies,” “not dark enough,” or “needs another jump scare” until the player’s current job, question, decision, and recovery are known.
 
 ## What this Skill owns
 
-It owns the sequence of player attention:
+This Skill owns the order and duration of player attention:
 
 ```text
-orientation → ordinary job → contradiction → confirmation
-→ pressure → cost → recovery → payoff or changed question
+orientation → ordinary mastery → discrepancy → test → confirmation
+→ pressure → cost → recovery → revised plan → payoff → aftermath
 ```
 
-It does not own the implementation of a chase, sound system, puzzle, save system, or threat AI. It names the decision each beat needs and routes detailed implementation to the existing focused Skill.
+It defines when a focused mechanic is needed and what that mechanic must contribute. It does not own the focused mechanic’s state. Chase routes, sound events, entity truth, puzzle commits, save transactions, inventory custody, threat knowledge, and role permissions remain with their focused owners.
 
-## Read next
+## Read only what the task needs
 
-- Read [templates/rhythm-contract.md](templates/rhythm-contract.md) before editing a route.
-- Read [references/why-rhythm-fails.md](references/why-rhythm-fails.md) when diagnosing fatigue, dead air, or disconnected scares.
-- Read [examples/the-silent-shift.md](examples/the-silent-shift.md) only for field shape.
-- Read the selected mechanic Skill only after the beat ledger names its player decision.
+- Fill [the rhythm contract](templates/rhythm-contract.md) before moving rooms or adding encounters.
+- Use [why rhythm fails](references/why-rhythm-fails.md) to diagnose a weak sequence.
+- Read [the worked example](examples/the-silent-shift.md) for field depth, never as a plot or timing preset.
+- Open a focused mechanic Skill only after the ledger names a real player decision for it.
 
 ## Lock sequence
 
-### 1. Promise
-Write the ordinary job, contradiction, pressure, cost, recovery, and payoff before moving a beat.
+1. **Evidence and clock lock:** source edits, runtime observations, estimates, and unknowns are separated.
+2. **Promise lock:** the ordinary job, central question, pressure, cost, recovery, payoff, and aftermath agree.
+3. **Beat lock:** every beat changes a question, action, or state and has a plausible duration range.
+4. **Attention lock:** essential cues fit the player’s available attention and have accessible equivalents.
+5. **Owner lock:** every state written by the sequence has one authoritative owner and explicit readers.
+6. **Runtime proof lock:** first play, likely failure, recovery, save/load, accessibility, ending, and aftermath are run or marked unverified.
 
-### 2. Beat map
-Close when the dual-clock timeline names the player's task and question for every beat.
+A change to an earlier lock invalidates dependent timings and test evidence.
 
-### 3. Attention contract
-Close when each interval has a primary demand, anchor, sensory cue, and accessible equivalent.
+## 1. Recover the experience without inventing time
 
-### 4. Recovery contract
-Close when every pressure peak has a consequence and an interactive way to reorganize knowledge.
+Create four evidence labels:
 
-### 5. Runtime proof
-Close after first-time, failure, recovery, save/load, and ending journeys are run or marked unverified.
+| Label | Meaning |
+| --- | --- |
+| Measured | Produced by a current runtime trace or controlled playthrough. |
+| Observed | Visible in supplied material, but duration or causality may be edited. |
+| Estimated | A bounded design target awaiting runtime measurement. |
+| Unknown | Not supported enough to use as a claim. |
 
-### 6. Handoff
-Close when implemented, proposed, and unknown beats are separated in the report.
+Maintain three clocks when applicable:
 
-## 1. Recover the experience
+- **Reference clock:** where a beat appears in an edit, storyboard, or external reference. It proves ordering or emphasis, not play duration.
+- **Experience clock:** time spent navigating, working, reading, failing, replaying, recovering, and understanding.
+- **Runtime clock:** actual event timestamps, state commits, saves, loads, and resets in the build.
 
-Write three separate records:
+For each current scene record the player’s job, location, known facts, expectation, available action, state change, feedback, likely next question, and evidence label. A cut is not a teleport. A montage is not a measured traversal. A commentator’s reaction is not a universal player emotion.
 
-| Clock | Meaning | Evidence |
-| --- | --- | --- |
-| Source time | Timestamp in an edited video or reference recording. | Frame, caption, or cut. |
-| Experience time | Time a player spends exploring, acting, failing, and recovering. | Runtime trace or explicitly bounded estimate. |
-| Implementation time | Event order, state changes, and save boundaries in the build. | Logs, state IDs, or controlled journey. |
+## 2. Lock the experience promise
 
-Never turn a cut into a measured traversal. Write `unknown` when a retry or omitted segment cannot be recovered.
-
-For each existing beat answer:
-
-1. What is the player's current job?
-2. What can the player see, hear, remember, or infer?
-3. What decision is available now?
-4. What changes after the decision?
-5. What tells the player that the change happened?
-6. Where can the player recover, revise, or form the next question?
-
-If a scene has no job, decision, state change, or question, classify it as presentation rather than gameplay and decide whether it earns its time.
-
-## 2. Lock the rhythm promise
-
-Write one sentence for each:
+Complete these sentences in project nouns:
 
 ```text
-ordinary baseline:
-first contradiction:
-rule the player can test:
-pressure that consumes attention:
-cost that survives the peak:
-recovery action:
-earlier fact paid off by the ending:
+The player begins by doing ___ and learns that ___ normally happens.
+The first contradiction changes only ___, so the player asks ___.
+The player can test that question by ___.
+Pressure makes the test costly because ___.
+A likely mistake changes ___ but preserves ___.
+Recovery lets the player revise the plan by ___.
+The ending pays off the earlier ___ through the final action ___.
+After the peak, the game shows that ___ persisted.
 ```
 
-The first contradiction should violate one known variable, not every rule at once. The first pressure should test a rule the player had a chance to notice. The cost should alter a route, resource, relationship, body state, or knowledge. Recovery should be interactive and should not erase the cost.
+Reject a promise whose only verbs are walk, watch, read, and run. At least one early verb must establish authoritative state that a later beat can violate.
 
-## 3. Budget attention
+## 3. Budget real play time
 
-At every interval choose one primary attention demand:
+Estimate a range rather than a false exact minute. For every chapter, budget separately:
 
-- navigation and landmark memory;
-- social reading or dialogue choice;
-- object inspection or evidence comparison;
-- route timing and threat position;
-- resource or bodily condition;
-- camera, sound, or visibility interpretation.
+- orientation and control learning;
+- ordinary routine repetitions;
+- navigation and optional inspection;
+- reading or dialogue that cannot overlap another demand;
+- testing a suspicion;
+- active threat or pursuit;
+- failure and restart;
+- recovery and preparation;
+- replayed mastered labor;
+- ending action and aftermath.
 
-One secondary demand is usually enough. If a beat asks the player to read a subtitle, hear a directional cue, follow a moving threat, solve a code, and remember a landmark at the same moment, move or simplify one demand. Accessibility assists should reduce intensity while preserving the primary decision.
+Record novice, experienced, and accessibility-assisted ranges. Do not tune only with the developer’s shortest path. If the estimated chapter is 25 minutes but required tasks total 36 minutes before exploration or failure, change scope before polishing.
+
+Routine lasts until the player can predict one result, not for a fixed universal count. Pressure ends while warning and counterplay still matter. Recovery lasts long enough to inspect consequence and form a new plan. Aftermath lasts long enough to answer who or what changed; a credits cut immediately after escape is not aftermath.
 
 ## 4. Build the beat ledger
 
-Minimum beats:
+For every beat, fill:
 
-1. **Orientation** gives control, a landmark, and a job.
-2. **Invitation** presents a low-cost irregularity.
-3. **Confirmation** repeats it with one changed fact.
-4. **Complication** makes progress alter a route, relationship, resource, or interpretation.
-5. **Pressure** asks for action with incomplete information.
-6. **Cost** makes the decision matter.
-7. **Recovery** gives a safe-enough action that reorganizes knowledge.
-8. **Payoff** returns an earlier place, rule, object, or relationship in changed form.
-
-Short games may combine beats, but do not remove both invitation and recovery. A player cannot learn a threat that only appears at its peak, and cannot enjoy a peak that never changes the next decision.
-
-## 5. Connect sensory cues to state
-
-For every camera, light, audio, subtitle, UI, or vibration cue record:
-
-```text
-state that causes it → player interpretation → action it supports
-→ accessible equivalent → reset/expiry
-```
-
-Audio activity is not automatically fear. A loud moment can announce a transition, mask a route, reveal a source, or mark a recovery. Test silence, overlap, occlusion, subtitle timing, muted audio, and no-device behavior.
-
-## 6. Route focused mechanics
-
-| Beat need | Route |
+| Field | Required decision |
 | --- | --- |
-| Designed pursuit with main, risky, failure, and recovery routes | `worldview-game-chase-route-architecture` |
-| A false sound, hiding place, and timed escape | `worldview-game-lure-hide-escape` |
-| A returning room or hub changes physical/social meaning | `worldview-game-horror-returning-place-escalation` |
-| A normal service, study, sleep, driving, or cooking loop breaks | `worldview-game-horror-mundane-routine-corruption` |
-| A job turns an incident into an inspection decision | `worldview-game-horror-procedural-duty-and-incident` |
-| A person, authority, or role becomes uncertain | `worldview-game-horror-role-and-identity-pressure` |
-| A puzzle is interrupted or progress must recover | `worldview-game-threat-interrupted-puzzle` |
+| Entry question | What is the player trying to understand or accomplish now? |
+| Job and location | What verb occupies the player, and where? |
+| Expected state | What does prior play teach should happen? |
+| Contradiction or pressure | What exact field changes? |
+| Primary attention | Navigation, object comparison, social judgment, sound, threat position, resource, or body state. |
+| Secondary attention | At most one required concurrent demand unless tested otherwise. |
+| Choice and input | What can the player actually commit? |
+| State owner and delta | Which system writes what authoritative change? |
+| Feedback | What makes the result readable through more than one channel? |
+| Likely emotion | A design hypothesis tied to evidence, never a guaranteed feeling. |
+| Control | What control is lost, retained, and regained? |
+| Cost | Route, resource, relationship, body, evidence, time, or knowledge consequence. |
+| Exit question | What becomes newly uncertain or actionable? |
+| Duration | Novice/experienced range and evidence label. |
 
-Do not route a beat until its player decision is written in one sentence.
+Two adjacent beats must not have identical job, question, attention, and consequence. If they do, merge them or change the second beat’s purpose.
 
-## Audit every beat for the decision it creates
+## 5. Design escalation as a changing question
 
-Use this table for every transition that is meant to affect play. A beat may be short, but it cannot be approved because it looks frightening in isolation.
+Escalation is not only more volume, speed, darkness, enemies, or health. Change what the player must decide:
 
-| Beat check | Required record | Rewrite when |
-| --- | --- | --- |
-| Baseline | The ordinary job, landmark, and confirmation the player can repeat. | The player has no stable behavior to compare against. |
-| Contradiction | One changed field and the evidence that makes it noticeable. | Every rule changes at once or the anomaly exists only in a caption. |
-| Hypothesis | The question the player can ask and at least one plausible wrong reading. | The intended interpretation is obvious before the player acts. |
-| Choice | The actual input, route, resource, social response, or wait that commits the player. | The “choice” is only a dialogue label or a forced camera moment. |
-| Consequence | The world, route, relationship, body, resource, or knowledge state that changes. | The consequence is only a louder sting or a new paragraph. |
-| Recovery | The action that lets the player reorganize knowledge while preserving a meaningful cost. | Recovery erases the cost or only waits for the next scare. |
-| Payoff | The earlier question, object, place, or rule that returns in changed form. | The ending introduces a new answer with no earlier preparation. |
+1. **Notice:** is this different?
+2. **Classify:** what changed and what remained stable?
+3. **Test:** which explanation predicts a result?
+4. **Commit:** what route, person, resource, or procedure should I trust?
+5. **Pay:** what survives the decision?
+6. **Reconstruct:** what does the consequence prove?
+7. **Act with knowledge:** how does the learned rule change the final action?
 
-For each beat, write this action chain in project nouns:
+A later beat may intensify an earlier verb, but it must add a changed condition or consequence. Repeating the same pursuit faster is not a new chapter.
+
+## 6. Control player attention
+
+At each interval choose one primary demand. Place subtitles, codes, directional audio, route signs, and threat warnings where the player can process them. Do not require simultaneous sprinting, navigation, subtitle reading, inventory manipulation, and a quiet off-screen cue unless the encounter has been tested for that exact load.
+
+For every essential cue record:
 
 ```text
-player performs the ordinary job
-→ notices one contradiction
-→ tests a concrete explanation
-→ commits to an action with a declared cost
-→ receives a state change and readable feedback
-→ uses recovery to form a revised question
-→ meets the earlier fact again at the payoff
+authoritative state → cue channel → player interpretation → supported action
+→ equivalent cue → expiry/reset
 ```
 
-Do not use “tension rises,” “the player is immersed,” or “a scare lands” as the final row. Those phrases describe a hoped-for reaction, not a design decision.
+When a task forces the camera away, record task position, visible and blind zones, expected blind seconds, active timers, and what may change while unseen. An anomaly placed in a blind interval must leave inspectable residue or another fair comparison.
 
-## Remove shallow rhythm fixes
+## 7. Place recovery and aftermath
 
-| Shallow fix | Why it fails | Required decision change |
-| --- | --- | --- |
-| Add another monster encounter | Attention becomes fatigue without new understanding. | Change what the player must notice, remember, or trade. |
-| Insert a silent hallway after every scare | Silence becomes a predictable reset button. | Give recovery an action that reorganizes the next route or hypothesis. |
-| Use a loud cue for every anomaly | The player learns volume, not meaning. | Give each cue a state cause and an accessible equivalent. |
-| Explain the rule in a note | The player can recite it without testing it. | Let an ordinary action reveal the rule and let a later choice challenge it. |
-| Make every beat darker and faster | Intensity loses contrast and control. | Alternate social, spatial, sensory, bodily, and interpretive demands. |
-| End on a twist unrelated to the baseline | The ending cannot pay back the player's attention. | Reuse an earlier anchor and change its meaning through a playable state. |
+Recovery is an action, not empty silence. It may let the player compare evidence, reorganize inventory, treat a condition, contact a companion, reopen a shortcut, test an anchor, save safely, or rehearse the next route.
 
-## 7. Verify the curve
+Recovery should preserve a meaningful cost. Full restoration after every peak erases consequence; punishment inside every refuge destroys contrast.
 
-Run named journeys:
+The aftermath records who is safe, injured, missing, changed, or uncertain; which evidence is private, shared, destroyed, or public; which route, institution, or protection changed; which relationship cannot return; and what ordinary action now has a different meaning.
 
-- first-time player reaches the first contradiction;
-- player recognizes the confirmed rule before the peak;
-- deliberate wrong decision produces an attributable cost;
-- recovery lets the player form a different plan;
-- the same state survives reload and restart as declared;
-- the ending reuses an earlier question or anchor.
+## 8. Handle false closure, replay, and comedy deliberately
 
-Measure only what the runtime exposes: time in beat, retries, route length, audio/camera event order, frame time, and load time. A commentary reaction or a beautiful still cannot prove the curve.
+A false closure is allowed only when unresolved evidence already exists and the next section changes information regime, verb, or tempo. Do not roll credits and restart the same pressure.
+
+Replay should compress mastered labor and stop at changed information. Record what auto-completes, what can be skipped, what must repeat for state safety, and what new decision justifies it.
+
+Humor may restore agency, expose a contradiction, humanize a relationship, or release attention. A joke that dismisses the threat or repeats during grief undermines state rather than controlling rhythm.
+
+## 9. Route focused mechanics with ownership
+
+Select only mechanics the route can teach, combine, and verify.
+
+| Beat decision | Focused owner |
+| --- | --- |
+| Learn and choose a pursuit path | `/worldview-game-chase-route-architecture` |
+| Manipulate a threat belief, hide, then cross | `/worldview-game-lure-hide-escape` |
+| Survive recurring long-horizon threat pressure | `/worldview-game-roaming-stalker-pressure` |
+| Make sound change listener belief | `/worldview-game-sound-detection-and-distraction` |
+| Let observation gate threat movement | `/worldview-game-observation-gated-stalker` |
+| Compare a changed familiar place | `/worldview-game-horror-returning-place-escalation` |
+| Establish and corrupt an ordinary rule | `/worldview-game-horror-mundane-routine-corruption` |
+| Make duty force an incident decision | `/worldview-game-horror-procedural-duty-and-incident` |
+| Test role, permission, or identity | `/worldview-game-horror-role-and-identity-pressure` |
+| Interrupt and resume world-space work | `/worldview-game-threat-interrupted-puzzle` |
+| Test evidence and hypotheses | `/worldview-game-evidence-based-entity-identification` |
+| Distort presentation while preserving anchors | `/worldview-game-perception-distortion-and-trust` |
+| Convert pressure in a refuge | `/worldview-game-safe-room-pressure-reset` |
+| Change a route with a temporary obstacle | `/worldview-game-barricade-delay-and-route-choice` |
+| Preserve knowledge through recurrence | `/worldview-game-death-loop-persistent-clues` |
+
+For each handoff write: state read, state written, tunables owned, forbidden hidden facts, reset order, and evidence returned. Rhythm reads the result; it does not retune another owner’s state silently.
+
+## 10. Implement in an order that protects the curve
+
+1. Grey-box landmarks, route lengths, and recovery edges.
+2. Implement the ordinary job and authoritative confirmation.
+3. Implement the first contradiction and verification action.
+4. Implement one pressure loop and informative failure.
+5. Implement cost persistence and recovery.
+6. Implement the ending payoff and aftermath before visual polish.
+7. Measure novice, experienced, failure, and assisted journeys.
+8. Add presentation by named state, then rerun timings.
+
+Do not approve the curve from a storyboard or beauty capture. Presentation can change comprehension and traversal time, so final runs happen after integration.
+
+## 11. Verify the experience
+
+Run and record:
+
+- first-time route without designer explanation;
+- efficient route that skips optional material;
+- likely novice mistake and attributable feedback;
+- recovery route that uses new knowledge;
+- lost-player route that misses one landmark;
+- pressure with muted audio, subtitles, non-color cues, reduced motion, and assisted timing as supported;
+- save/load before and after every major beat transition;
+- retry without stale audio, threat, task, or cost state;
+- ending using only previously taught verbs;
+- aftermath with persistent world and relationship state.
+
+Measure durations, retries, interaction locks, route margins, restart, load, and frame performance only when the runtime exposes them. Mark all other values estimated or unverified.
 
 ## Handoff
 
-Return the rhythm contract, selected mechanic routes, timeline, sensory cue list, test journeys, evidence, and unresolved gaps. Say which beats are implemented, which are grey-boxed, and which are proposals.
+Return the completed rhythm contract, experience clock, beat ledger, attention budget, selected mechanic handoffs, implemented state list, verification traces, evidence labels, unresolved gaps, and the next smallest revision. Never call predicted emotion observed emotion or an edited reference duration measured play time.

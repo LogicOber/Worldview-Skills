@@ -58,9 +58,7 @@ The rewrite expands those missing decisions without changing the mechanic into a
 
 ## Additional method source
 
-The rewrite style follows the user-supplied `Writing 2.zip` method: restore the problem before naming the rule, separate source observation from proposal, retain why a rule appeared, keep counterexamples inside the rule, and let each file close one complete question.
-
-`Writing 2.zip` is an internal writing reference. Its text is not copied into the public repository.
+The package restores the problem before naming the rule, separates project observation from proposal, retains why a rule exists, keeps counterexamples beside the rule, and lets each file close one complete question. The wording and structure are original to this repository.
 
 ## Related but not merged
 

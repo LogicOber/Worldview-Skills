@@ -17,7 +17,7 @@ The Skill was written from the underlying design problem: limited carrying space
 
 ## Repository writing method
 
-The presentation follows the user's supplied Writing 2 principles without copying its prose. It first restores the problem, separates facts from observations and proposals, retains the reason behind each constraint, includes counterexamples, and asks verification evidence to support conclusions.
+The presentation reconstructs the practical problem, separates facts from proposals, keeps reasons and counterexamples beside each constraint, and requires verification before making conclusions.
 
 ## New design decisions
 

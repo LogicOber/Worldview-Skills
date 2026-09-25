@@ -1,34 +1,61 @@
-# Why horror-game production fails
+# Why horror-game productions fail
 
-## The player is scared before they understand the job
+## The user supplies a premise and receives questions
+The production method should infer reversible details and expose assumptions. Ask only about decisions that materially change product, safety, authority, or ending.
 
-An unexplained image can be memorable, but it cannot sustain play. Give the player a small job first: cross the room, check a signal, restore a line, identify a person, or return with an object. Then let the threat change what that job means. The job is not busywork; it is the handle by which the player interprets danger.
-
-## The monster is doing all the work
-
-If the threat simply follows the player's transform, the player has no model to learn. Declare sight, sound, trace, memory, search, and commitment separately. Give the player a way to test one channel in a safe beat. A chase should ask for route decisions, not only faster movement.
+## The game starts before the player knows the job
+Without an ordinary verb and expected result, anomaly looks like noise. Let the player establish authoritative state.
 
 ## The map is large but not memorable
+Unique decoration is not navigation. Use functional landmarks, connected obligations, protection changes, return costs, and recovery edges.
 
-Players remember contrasts and consequences: a red service stripe, a lift that stops at a different floor, a window that becomes occupied, a door that is safe only after power is restored. Give every important space a stable landmark and a changed-return rule. Empty corridors increase walking time without increasing knowledge.
+## A chase is an enemy following a transform
+Pursuit needs architecture, branch evidence, timing margins, threat knowledge, failure feedback, and recovery. Speed tuning cannot replace route design.
 
-## Every room is at maximum intensity
+## Mechanics are selected as features
+Inventory, sanity, microphone, puzzles, and saving are not automatically depth. Every selected mechanic needs a player decision, owned state, route/knowledge/cost consequence, cue, and recovery.
 
-Fear needs contrast. Use orientation, curiosity, confirmation, pressure, cost, and recovery. Recovery is not a reward screen; it is the short time in which the player reorganizes what they know. The next pressure should make that knowledge useful.
+## Systems share hidden truth
+Threat, companion, UI, and notebook reading global state creates omniscience. Separate world truth, observer knowledge, presentation, physical custody, role permission, and director desire.
 
-## A puzzle and a threat are unrelated errands
+## Ordinary work becomes filler
+A routine earns time by teaching a route or affordance, proving a relationship, creating evidence, establishing a promise, or placing a resource.
 
-When danger interrupts a puzzle, name what progress persists, what rolls back, and what changed in the world. The player should decide whether to continue, retreat, spend a resource, or accept a worse position. If the threat only pauses the puzzle, the two systems are not connected.
+## Every chapter raises volume
+Escalation should change the question and protection, not only speed, darkness, enemies, or noise. Alternate pressure with actions that restore planning.
 
-## Audio is treated as decoration
+## Failure repeats labor
+Preserve a clue, changed route, checkpoint, or mastered step. A retry should test a revised plan rather than patience.
 
-Record what the player hears before and after a state change. A sound can locate a threat, announce a route, mask a decision, or give recovery. Loudness alone is not fear. Test silence, overlap, occlusion, subtitles, muted audio, and hearing-accessible alternatives.
+## The companion becomes a marker
+Track task, reason, capability, last verified state, knowledge, communication, transitions, and pathing fallback. If a handoff occurs, preserve physical and knowledge custody separately.
 
-## The ending is a new game
+## Trust is a mood scalar
+Trust should attach to permissions, history, promises, evidence, and requested exceptions. Betrayal uses a known capability.
 
-Design the ending backward from the one thing the player should understand or feel. Reuse a landmark, object, rule, or relationship from the opening in a changed state. Do not introduce a final mechanic that the player never had time to learn.
+## Relief hides author-only punishment
+If a resource helps now and harms later, both axes need observable evidence, alternatives, and bounded thresholds.
 
-## The AI made a beautiful screenshot instead of a game
+## References become imitation
+References specify qualities such as density, lens, materials, or motion. They do not authorize copied maps, characters, logos, dialogue, assets, or scene composition.
 
-Lock the route, state table, camera promise, and interaction contract before expensive art. A generated image can explain a target composition; it cannot prove collision, timing, persistence, or a playable route. Capture the same named states in the runtime and test failure as carefully as success.
+## Generated assets are accepted from a beauty view
+A detailed texture does not prove topology, scale, UVs, normals, collision, interior surfaces, rigging, deformation, LOD, memory, or export.
 
+## Art arrives before route proof
+A beautiful room can still have illegal collision, unreadable exits, impossible margins, or broken reset. Prove grey-box route, failure, recovery, and ending first.
+
+## The puzzle and threat are unrelated errands
+They must share attention, space, state, or consequence. If the threat pauses in UI and puzzle progress silently resets, the systems do not form one loop.
+
+## The ending is a new genre
+Do not introduce an untrained combat, code, ritual, or tool. Use an earlier verb and make accumulated state operational.
+
+## Escape cuts directly to credits
+Aftermath should show people, evidence, institutions, routes, relationships, and ordinary actions that changed.
+
+## A screenshot is called a game
+Visual capture proves presentation only. Runtime proof includes input, state transitions, failure, recovery, save/load, restart, performance, build, and ending.
+
+## Minimal acceptance test
+A new player can describe what was normal, what changed, what they investigated, which decision mattered, what protection was lost, what failure taught, how recovery changed the plan, why the final action was possible, and what persisted afterward. The build and saved state must agree.

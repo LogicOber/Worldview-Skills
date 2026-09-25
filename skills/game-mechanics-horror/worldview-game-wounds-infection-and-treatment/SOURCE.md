@@ -23,7 +23,7 @@ Illness and disability are not treated as guilt, corruption, lack of personhood,
 
 ## Repository writing method
 
-The presentation follows the user's supplied Writing 2 principles without copying their language. It restores the design problem, separates declared facts, observations, fictional proposals, and reviewed claims, keeps reasons and counterexamples beside rules, and requires direct evidence before concluding that behavior or representation works.
+The presentation restores the design problem, separates declared facts, observations, fictional proposals, and reviewed claims, keeps reasons and counterexamples beside rules, and requires direct evidence before concluding that behavior or representation works.
 
 ## New design decisions
 

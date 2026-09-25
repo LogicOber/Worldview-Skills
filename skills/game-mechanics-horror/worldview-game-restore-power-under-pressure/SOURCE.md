@@ -56,9 +56,9 @@ These additions are design and editorial decisions, not claims proven by the sup
 
 ## Writing method
 
-The presentation follows the user-provided Writing 2 principles: reconstruct the practical problem before stating rules, retain the reason each rule exists, distinguish source material from new proposals, keep counterexamples near the rule they qualify, and close the causal chain before summarizing it.
+The presentation reconstructs the practical problem before stating rules, retains the reason each rule exists, distinguishes project facts from new proposals, keeps counterexamples near the rule they qualify, and closes the causal chain before summarizing it. The wording and structure are original to this repository.
 
-The wording in this package is original. The Writing 2 archive is used as a method reference and is not reproduced. No Skill-generation Skill or skill-creator was used.
+The restore/isolate/disable/reroute/partial operation model, beneficiary and threat audit, staged ownership, partial proof, and rollback extensions are original repository-authored abstractions.
 
 ## Self-contained loading boundary
 

@@ -19,7 +19,7 @@ Treat the remaining text as the world and project brief.
 
 - Fill [mechanic-contract.md](templates/mechanic-contract.md) before implementation unless the project already records the same decisions.
 - Read [why-this-mechanic-works.md](references/why-this-mechanic-works.md) when checking fit, resolving an observation tradeoff, or tuning pressure. A narrow implementation task with a locked contract does not need it.
-- Read [the-lantern-index.md](examples/the-lantern-index.md) only when a filled fictional example clarifies an unfamiliar field. Its values are not portable defaults.
+- Read [the-rotating-archive.md](examples/the-rotating-archive.md) only when a filled fictional example clarifies an unfamiliar field. Its values are not portable defaults.
 - Read [SOURCE.md](SOURCE.md) for provenance review or to distinguish supplied facts from repository decisions. It is not implementation guidance.
 - [README.md](README.md) is the human catalog page and is not required after this Skill is loaded.
 
@@ -184,6 +184,27 @@ If observation happens after movement, the stalker can advance or hit during the
 
 Never repair penetration by secretly teleporting the stalker closer. If a stuck recovery is required, constrain it to an unobserved, unreachable region, log it, and make it a declared exception. Prefer correcting navigation and map geometry.
 
+## Own permission, not a second threat controller
+
+This Skill is the single writer for the observation predicate and the movement-and-harm permission derived from it. Its public handoff is:
+
+```text
+observation_permission_changed(
+  threat_id,
+  observed,
+  movement_permitted,
+  harm_permitted,
+  authoritative_step,
+  predicate_version
+)
+```
+
+When `/worldview-game-roaming-stalker-pressure` is present, that Skill remains the single writer for durable identity, knowledge, route, movement, search, and attack intent/commitment. The project combat or pursuit contract owns reach, hit, damage, capture, and contact result. When `/worldview-game-lure-hide-escape` provides the bounded encounter, it owns cover, the escape boundary, lifecycle, and escape-success/reset aggregation. This Skill must never pick a search target, remember sound or sight evidence, select a route, translate the stalker, or resolve damage independently; it only grants or revokes permission before the designated behavior owner acts.
+
+The update transaction is observation samples, predicate and hysteresis, permission event, behavior-owner movement decision, then contact resolution under the same permission version. The behavior owner must reject a stale permission version. Save the predicate configuration and current hysteresis state with the shared `threat_id`; the behavior owner saves the threat. During reset or load, reconstruct the threat first without movement, rebuild active cameras and occluders, evaluate observation, publish permission, and only then resume behavior.
+
+If there is no other behavior owner, a proof scene may include one minimal local executor solely to demonstrate the predicate. Label it as fallback, keep it free of durable knowledge or world routing, and ensure only one package supplies such a fallback. Adding a roaming or encounter owner removes this executor rather than layering another controller on top.
+
 ## Build a state model the player can read
 
 The state family is the readable form of the **Permission-order lock**; feedback may elaborate it but cannot grant movement or harm.
@@ -273,7 +294,7 @@ Build one bounded encounter before generalizing the controller. It needs:
 - a failure or correction for assuming a wall does not occlude;
 - an immediate restart from every active state.
 
-Restart must reset observation history, grace timers, state, animation time, navigation path, velocity, objective ownership, door state, camera pose, input locks, audio loops, attack resolution, multiplayer replication state, and success or failure UI. Test restart during grace, pursuit, attack windup, caught, and success. Reconstructing the scene is acceptable only when it deterministically clears all state and matches project conventions.
+This Skill's restart clears observation samples and history, hysteresis and grace timers, predicate state, permission versions, and observation presentation. It then issues the declared reset handoff and waits for acknowledgements from the behavior, combat, objective, camera/input, audio, replication, and outcome owners; those owners clear navigation, velocity, attack resolution, objectives, doors, camera pose, input locks, audio loops, replicated state, and UI. Test restart during grace, pursuit, attack windup, caught, and success, and verify that no behavior resumes before a fresh permission event. Reconstructing the scene is acceptable only when it deterministically clears every owner and matches project conventions.
 
 ## Accessibility without erasing the decision
 
@@ -299,7 +320,7 @@ Do not add networking to a single-player project. When multiplayer is already re
 
 - which cameras count as observers;
 - whether any player, every player, or a designated player restrains the stalker;
-- which host owns sample tests, grace, state, movement, attack, objectives, and outcomes;
+- which host owns observation samples, grace, and permission; which behavior host owns movement and attack commitment; which combat, objective, and encounter owners resolve their respective contact, objective, and lifecycle results;
 - how late camera poses and prediction are handled without visible cheating;
 - what a joining or disconnected player contributes to observation.
 

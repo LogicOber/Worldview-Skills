@@ -64,6 +64,16 @@ The strongest failure is one the player can explain: they tried to finish a ring
 
 Interrupted puzzles accumulate transitional state—camera capture, held input, pending animations, partial values, threat events, milestone flags, and opened routes. Restarting from every transition reveals whether those records have clear ownership. A reset that moves only the player can leave the puzzle solved, the camera trapped, or an old commit scheduled for the new attempt.
 
+## Task ownership prevents helpers from erasing agency
+
+A companion or machine can finish a bounded subtask without stealing the puzzle when the player assigns it, required knowledge and objects are explicit, the task has a last-known state, and the result returns through a readable handoff. An ally who silently completes a step after the player leaves turns interruption into a cutscene.
+
+## Partial effects make retained work physically meaningful
+
+Committed progress is easier to trust when the world changes with it. One aligned channel can stop one sweep arm or open one recovery pocket before final completion. The effect must be bounded and compatible with a named subscriber; a generic “progress weakens the monster” flag hides causality.
+
+Common ownership failures include an uninterruptible action longer than the warning window, a visually closed panel that retains input, helper completion without assignment or acknowledgement, UI progress whose world effect resets, invalid targets that consume state, final completion that republishes partial rewards, and save/load that gives two operators the same task.
+
 ## What may change without changing the mechanic
 
 The puzzle can be mechanical, symbolic, electrical, spatial, linguistic, musical, chemical, or fictional. The pressure can be a pursuer, environmental cycle, exposure, surveillance sweep, or another active danger. Progress can revert, pause, or checkpoint according to the world.

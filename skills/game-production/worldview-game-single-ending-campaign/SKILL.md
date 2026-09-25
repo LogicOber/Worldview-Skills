@@ -29,7 +29,9 @@ Do not make the user enumerate every character, joke, item, room, quest, visual 
 
 This Skill turns a short story idea into a researched, original, playable campaign with one canonical ending. The finished route should feel layered because people, places, objects, threats, and information respond to shared state—not because the project contains a large pile of disconnected content.
 
-It owns the complete chain:
+When invoked alone, this Skill owns the complete campaign production chain below. When `/worldview-game-horror-production` routes work here, it is the parent production owner: this Skill owns research, original fictionalization, the one-ending campaign spine, final ontology, convergence dependencies, reconvergence, and aftermath, then returns those artifacts. It does not independently select, retune, integrate, verify, or deliver the parent's horror mechanics.
+
+In standalone use, it owns the complete chain:
 
 1. inspect the project and available capabilities;
 2. research the subject and keep a dated evidence ledger;
@@ -255,6 +257,33 @@ One canonical ending does not require a single corridor. Use branch-and-rejoin s
 All viable routes must converge on the same final action and final world state. Do not label death screens, arrests, resource exhaustion, abandoned runs, or softlocks as alternate endings; they are failure states with explicit recovery. Do not pretend two cosmetically different final cutscenes are one ending if they contradict the locked final consequence.
 
 Design backward. For each final prerequisite, ask what teaches it, what tests it, what source proves it, what system owns it, and where recovery is possible if the player missed it.
+
+### Lock the final ontology and correction chain
+
+Name one `final_ontology`: the campaign's authoritative answer about what happened, how the central system works, and why the final action changes it. Maintain an unresolved-question ledger instead of resolving uncertainty through scattered lore.
+
+For every mandatory correction, record:
+
+```text
+unresolved_question
+original_event
+earlier_interpretation
+corrective_evidence
+revised_interpretation
+changed_action
+```
+
+The chain is complete only when the revised interpretation changes something the player does. A document that corrects lore but leaves the route, relationship, tool use, or finale verb unchanged is optional explanation, not convergence.
+
+List `convergence_dependencies` and the `reconvergence_point` where permitted route variation becomes a common canonical state. Preserve `local_variation` visibly rather than erasing it: resources, injuries, evidence, helper behavior, route cost, and dialogue may change as long as the final ontology, action, and world result do not.
+
+Every finale verb needs a `prior_tutorial_beat`, a pressured use, and a recovery case before the commit. Do not change genre at the finale by introducing an untaught aiming, driving, rhythm, combat, or puzzle rule.
+
+### Require a persistent aftermath
+
+The ending commit must produce an `aftermath_state` that survives return, reload, or the declared post-ending boundary. Show what remains changed in the central place, institution, relationship, threat ecology, body, or resource network. Victory cannot restore every relationship and institution to their opening state unless restoration is the explicitly earned thematic answer.
+
+Counterfactual or replay material may revise understanding without creating a second ending. Route the reset/persistence transaction to the death-loop owner; this Skill consumes its learned fact and keeps one final ontology.
 
 ## Phase 4 — Build a campaign spine that can be played before it is decorated
 

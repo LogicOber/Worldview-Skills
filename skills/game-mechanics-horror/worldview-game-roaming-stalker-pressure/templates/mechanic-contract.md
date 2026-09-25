@@ -70,6 +70,33 @@ Complete these rows in order. Reopen the earliest contradicted row and replace o
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `<...>` | `<...>` | `<stage/trace/withdraw>` | `<...>` | `<...>` | `<...>` | `<...>` | `<...>` |
 
+## Territory grammar — World-route-and-identity lock
+
+| Territory cue | Connector/boundary implied | First safe observation | Local claim and claimant | Observed behavior | Confirms or contradicts | Player prediction/decision | Save/load owner |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |
+
+- Territory fact taught before first contact:
+- Territory change unlocked by objective/world state:
+- How that change is communicated before it can cause contact:
+- Decorative cue rejected because it teaches no reachability rule:
+- Evidence-system handoff for claims versus observed behavior:
+
+### Territory and recovery state fields
+
+```text
+territory_cue: <stable cue and the boundary/connector it predicts>
+first_safe_observation: <behavior, viewpoint, and why contact cannot occur>
+knowledge_source: <sense/event/world fact that legally updates stalker knowledge>
+search_commitment: <sites, breadth, duration, and cancellation rule>
+route_mutation: <world change, affected connectors, and prior warning>
+release_condition: <knowledge/search/world condition; never timer alone>
+capture_modifier: <declared help, cost, or none on the next attempt>
+post_capture_location: <player node and stalker physical/abstract state>
+folklore_claim: <claimant, context, statement, and confidence>
+observed_behavior: <event ID, actual behavior, and confirm/contradict result>
+```
+
 ## Persistent stalker record — World-route-and-identity lock
 
 ```text
@@ -119,6 +146,16 @@ Knowledge states and transitions: `<unaware / suspicious / investigating / confi
 | Search | `<...>` | `<...>` | `<...>` | `<...>` | `<...>` |
 | Countered/withdraw | `<...>` | `<...>` | `<...>` | `<...>` | `<...>` |
 | Recovery | `<...>` | `<...>` | `<...>` | `<...>` | `<...>` |
+
+## Search release and withdrawal — Stalker-knowledge and Encounter-and-warning locks
+
+| Encounter shape | Confirmation-loss cause | Last-known evidence retained | Search sites / maximum breadth | Release condition | Withdrawal connector | End cue in supported modes | Reacquisition during release | Cooldown begins when |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |  |
+
+- Why timer expiry alone cannot release the stalker:
+- Proof the stalker actually left contact:
+- Persistent consequence after withdrawal:
 
 ## Pressure director — Pressure-eligibility lock
 
@@ -245,6 +282,14 @@ Accessibility equivalence: `<...>`
 - Route success lock: `<...>`
 - Diagnostic failure A: `<...>`
 - Diagnostic failure B: `<...>`
+- Capture checkpoint: `<...>`
+- Route knowledge retained after capture: `<...>`
+- Objective progress retained/reset: `<...>`
+- Counterplay resource retained/restored/spent: `<...>`
+- Stalker zone and knowledge after capture: `<...>`
+- Pressure budget/cooldown after capture: `<...>`
+- Repeated encounter/connector exclusion: `<...>`
+- Capture recovery modifier and player-facing cue: `<...>`
 
 Reset checklist:
 
@@ -254,6 +299,10 @@ Reset checklist:
 - [ ] warnings, searches, attacks, audio, effects, camera, UI
 - [ ] objectives, doors, connectors, counterplay resources, safe exclusions
 - [ ] saves/checkpoints, outcomes, replicated messages
+- [ ] territory cue and safe-observation history
+- [ ] local claims remain distinct from observed behavior
+- [ ] search release progress and withdrawal connector
+- [ ] capture recovery modifier and repeated-encounter exclusion
 
 ## Accessibility
 
@@ -300,6 +349,11 @@ If irrelevant: `single-player; networking not added`.
 | ROAM-13D | Simultaneous objective signals arrive from different players | Authority records evidence and chooses one legal pressure result deterministically | `<...>` | `<... / not applicable>` |
 | ROAM-13E | Disconnect during staging, then reconnect | Candidate, budget, warning, and single stalker identity follow the declared policy | `<...>` | `<... / not applicable>` |
 | ROAM-13F | Latency at warning/contact and host migration, if claimed | No hidden early contact, duplicate stalker, or lost authoritative episode | `<...>` | `<... / not applicable>` |
+| ROAM-14 | Territory cues and first safe observation | Player can predict one legal/illegal stalker route before contact | `<...>` | `<...>` |
+| ROAM-15 | Local claim conflicts with behavior | Claim provenance remains; controller follows world rule; evidence records contradiction | `<...>` | `<...>` |
+| ROAM-16 | Confirmation breaks in each encounter shape | Bounded search completes only through declared release and withdrawal | `<...>` | `<...>` |
+| ROAM-17 | Capture in warning, pursuit, search, and release | Checkpoint, retained knowledge, stalker state, budget, resources, and modifier match contract | `<...>` | `<...>` |
+| ROAM-18 | Save/load during release and capture recovery | End cue, withdrawal route, history exclusion, and one stalker identity reproduce exactly | `<...>` | `<...>` |
 
 ## Lock review
 
@@ -309,6 +363,10 @@ If irrelevant: `single-player; networking not added`.
 - [ ] Abstract travel through an unloaded zone is distinct from physical staging/materialization in an unloaded zone.
 - [ ] Every reopened earlier layer caused the named dependent implementation and evidence to be replaced or rerun.
 - [ ] No late tuning, director fallback, streaming callback, or network path bypassed a reopen rule.
+- [ ] Territory cues teach reachability before first contact rather than only decorating the map.
+- [ ] Local claims and observed behavior remain separate through save/load and contradiction.
+- [ ] Release requires actual knowledge/search/route state; cooldown never ends contact by itself.
+- [ ] Capture recovery produces the declared retry state without punitive hidden escalation.
 
 ## Handoff
 

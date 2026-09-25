@@ -1,37 +1,74 @@
 # Mundane routine corruption contract
 
-## Normal loop
+## Brief and boundary
 
-| Step | Player action | Expected feedback | State recorded | Normal completion |
-| --- | --- | --- | --- | --- |
-| Receive | | | | |
-| Prepare | | | | |
-| Deliver/perform | | | | |
-| Confirm/close | | | | |
+- Routine:
+- Canonical ending:
+- Playable entry:
+- Existing systems reused:
+- Out of scope:
+
+## State owners
+
+| State | Owner | Readers | Writer | Persistence | Forbidden inference |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
+
+## Baseline contract
+
+| Cycle | Verb/input | Place | Actor | Object ID | Expected result | Confirmation | State owner | Later purpose |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Guided | | | | | | | | |
+| Independent | | | | | | | | |
+| Optional variation | | | | | | | | |
+
+- Mastery behavior:
+- Skip-safe comparison:
+- Baseline persistence boundary:
+
+## Attention coverage
+
+| Task | Position/view | Visible zones | Blind zones | Duration/cancel | Live timers | Allowed unseen change | Required residue |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | |
 
 ## Exception ladder
 
-| Level | Normal confirmation | Violated field | Evidence before choice | Player choices | State consequence | Recovery | Next known rule |
+| ID | Canonical value | Changed field/value | Unchanged anchors | Recognition window | Verification action | Eligibility/cause | Later combination |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | | | | | | | |
-| 2 | | | | | | | |
-| 3 | | | | | | | |
+| E1 | | | | | | | |
 
-## Layer lock record
+## Response matrix
 
-| Lock | Artifact | Locked when | Reopen trigger | Dependent work to invalidate |
-| --- | --- | --- | --- | --- |
-| Baseline loop | | | | |
-| Exception ladder | | | | |
-| Choice contract | | | | |
-| Recovery and reset | | | | |
-| Runtime proof | | | | |
-| Handoff | | | | |
+| Exception | Response/input | Route delta | Evidence delta | Relationship/access delta | Resource/time delta | Threat delta | Feedback | Recovery |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | | |
+
+## Reconvergence and payoff
+
+- Local histories preserved:
+- Visible cause of reconvergence:
+- Earlier routine verb used at ending:
+- Aftermath state:
 
 ## Verification
 
-- [ ] Three ordinary loops teach the baseline.
-- [ ] The exception changes one readable field before adding another.
-- [ ] Comply, inspect, refuse, delay, and leave have declared consequences.
-- [ ] The routine never requires a hidden pixel or arbitrary timing.
-- [ ] Failure, reload, and accessibility paths preserve the decision.
+| Journey | Expected state/decision | Evidence | Result/gap |
+| --- | --- | --- | --- |
+| Normal guided and independent | | | |
+| Skipped teaching | | | |
+| First exception | | | |
+| Each response | | | |
+| Wrong reading/recovery | | | |
+| Interaction cancellation | | | |
+| Save/load and restart | | | |
+| Accessibility variants | | | |
+| Canonical ending from two histories | | | |
+
+## Handoff
+
+- Implemented:
+- Proposed:
+- Unverified:
+- Evidence paths:
+- Next smallest revision:

@@ -61,6 +61,20 @@ This example explicitly uses checkpointed encounter failure: capture returns the
 
 If saving is supported, the snapshot stores committed notches, last stable values, solved version, and bridge state. Saving during a working rotation records the last stable notch rather than an animation angle. Loading rebuilds ring presentation and threat state before control returns and publishes the bridge consequence at most once.
 
+## Task ownership, handoff, and partial effects
+
+The player owns rings A and C. Ring B may be assigned to a mechanical counterweight after the player inserts a timing pin and demonstrates the target notch once. The counterweight can operate but does not know the solution; the player retains solution knowledge. Assignment records task `ring_b`, operator `counterweight_02`, last stable notch, pin custody, start event, and acknowledgement bell.
+
+If interrupted, the counterweight continues only to the next stable notch. A jam pauses the task and raises a striped flag. The player can reclaim it by removing the pin; removal reverts uncommitted motion while preserving the last notch.
+
+| Ring | Compatible subscriber | Effect and proof | Invalid feedback |
+| --- | --- | --- | --- |
+| A `WAVE` | west spill channel | lowers water to expose one recovery ledge; gauge and waterline agree | other channels pulse and reject |
+| B `FORK` | gallery counterweight | stops one ceiling sweep arm; brake and lock tooth become visible | wrong notch rings without stopping arm |
+| C `BAR` | sluice bridge latch | primes, but does not open, the bridge latch | unprimed latch remains blocked |
+
+All three rings and final validation remain required. Save/load reconstructs waterline, arm, latch, ring commits, task owner, and pin custody before control returns.
+
 ## Threat boundary
 
 The gallery stalker follows its existing navigation and perception system. When it crosses the far pump arch, the console-lane beacon changes from a steady vertical bar to a descending bracket. A captioned metal-strain cue and supported haptic pattern provide equivalent warning.
@@ -95,6 +109,8 @@ When all three ring channels form a continuous path and the player confirms the 
 
 Repeated confirm, interrupted animation, or reconnect cannot lower the bridge twice or grant duplicate outcome state.
 
+Final completion closes the counterweight lease, preserves the lowered channel and stopped arm as solved-state effects, and opens the primed bridge. If ring B remains assigned, its acknowledgement resolves before the bridge event publishes.
+
 ## Failure that teaches the rule
 
 After the warning bracket begins descending, the player starts a nearly full turn of the last ring instead of disengaging. The rotation does not reach its stable notch before the stalker arrives. The player is caught under the project’s normal threat rule. On checkpoint retry, the first two committed rings remain and the unfinished third rotation returns to its last stable notch. On full restart, all rings return to initial state exactly as declared.
@@ -124,6 +140,8 @@ gameplay/tidewheel-console/
 | Puzzle state is available without color or vision alone | Shape/text/focus-speech/haptic checks for marks, orientations, locks, and return context |
 | Save/load follows stable-state policy | Loads from working, committed, solved, and bridge-open snapshots without mid-animation state or duplicate completion |
 | Restart is complete | Restarts from every action, interruption, solve effect, opened bridge, and failure |
+| Handoff is coherent | Counterweight success, jam, reclaim, interruption, save/load, and final completion retain one owner and one pin |
+| Partial effects are causal | Each ring changes only its declared subscriber; invalid notches affect no unrelated system |
 
 ## What is not claimed
 

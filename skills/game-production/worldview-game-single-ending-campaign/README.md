@@ -18,6 +18,8 @@ That is enough to begin. You do not need to list every quest, NPC, prop, room, s
 
 Use this Skill when you want one substantial story game rather than a concept document, a collection of disconnected scenes, a short vertical slice, or a branching game with several endings. It is especially useful when the premise depends on a current industry debate, cultural conversation, historical event, or public controversy that needs careful research before it can become fiction.
 
+When `/worldview-game-horror-production` routes to this Skill, Horror Production remains the parent for mechanic selection, integration, verification, and delivery. This Skill returns the research, original fictionalization, one-ending campaign spine, final ontology, reconvergence, and aftermath. When invoked alone, it owns the complete campaign production chain.
+
 ## What you will receive
 
 The exact scale follows the repository, runtime, available assets, authorized services, and execution budget. The Agent must finish the largest coherent campaign it can verify rather than promise an unplayable “massive world.” When the prompt does not provide production limits, it targets a dense first release of roughly 20–40 minutes with:

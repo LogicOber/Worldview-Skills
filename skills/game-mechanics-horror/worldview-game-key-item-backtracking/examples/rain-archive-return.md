@@ -21,6 +21,8 @@ The archive has four stable landmarks: the public gallery and stalled freight li
 
 The player reaches the annex through the gallery and map room. There, the matching spindle is mounted in a manual drainage rack. Removing it secures the item in protected objective state and releases an emergency counterweight: flood shutters close across the gallery, the far-side maintenance-stair latch becomes operable, and lowered water exposes a service ladder from the pump passage to the entrance alcove. Sound, gauge movement, and a view through wired glass establish the shared cause before the return begins.
 
+Before acquisition, a calm maintenance bench lets the player fit a fixed practice spindle into a `counterweight_socket` and turn it one indexed quarter-turn. The bench cannot be removed or used for progression. It teaches the same align-insert-turn verb, positive lock tooth, duration, and rejection feedback used later under pressure.
+
 ## Layer lock record
 
 These rows lock the fictional proposal; their evidence paths are the records a later implementation must produce rather than claims that a build was run.
@@ -65,6 +67,20 @@ During the return through the pump passage, the player can climb the newly expos
 
 If the player enters the pump passage and turns back before the ladder, the passage returns to the map room rather than ending in a trap; continuing reaches the entrance and completes the return. An optional objective reminder says that the spindle matches the lift housing already marked on the map. It does not direct the player to the shortcut.
 
+## Compatibility, ownership, and handoff
+
+| Verb | Valid target | Effect | Invalid target and feedback |
+| --- | --- | --- | --- |
+| align / insert / quarter-turn | `counterweight_socket` | engages a compatible mechanical counterweight | ordinary keyhole: spindle collar cannot enter and no state changes |
+| mount / turn | `freight_lift_01.spindle_socket` | installs spindle and unlocks lift atomically | pump-valve square: tooth pattern visibly disagrees before insertion |
+| probe | `inspection_recess` | reveals matching tooth spacing without consuming or moving item | flat wall seam: no indexed contact and a neutral refusal cue |
+
+The spindle cannot open every mechanical target. Invalid use charges no cost, changes no holder, and leaves no progression event.
+
+Archivist Neme knows the lift socket's orientation from a diagram but cannot leave the map room after shutters close. The player physically holds the spindle but may not know which stamped tooth faces upward. If the player inspected the diagram, they retain that knowledge. Otherwise Neme can transmit one bounded orientation cue over the speaking tube. This transfers knowledge, not the object. If a later playable handoff is supported, the transaction records prior/new holder, retained knowledge, acknowledgement, world location, and recovery; this example keeps physical custody with the player.
+
+The lift socket is visible during S0 inspection, so the final target class and quarter-turn consequence are previewed before acquisition. The pressured use changes surroundings—floodwater and route exposure—not the verb or compatibility.
+
 ## Protected application
 
 The spindle cannot be discarded, consumed as crafting material, or lost to ordinary inventory overflow. Installing it uses a durable transaction:
@@ -108,5 +124,9 @@ gameplay/rain-archive-return/
 | Unlock and spindle ownership are atomic | Interruption tests proving only protected-storage/locked or installed-socket/unlocked tuples |
 | Every snapshot has a safe anchor | S0–S3 load traces from the four named anchors to completion |
 | Navigation is not color-dependent | Shape/text/map cue and selected assist checks |
+| Compatibility is bounded | Valid socket, ordinary keyhole, pump valve, and inspection recess tests; invalid uses consume nothing |
+| Calm use teaches pressured use | Practice-bench and final-lift traces use the same align/insert/turn contract |
+| Ownership and knowledge stay separate | Spindle custody, diagram inspection, speaking-tube cue, save/load, and final installed socket records |
+| Final use is previewed | First lift inspection exposes socket class and orientation relationship before acquisition |
 
 All timings and threat placements remain proposals until run in the actual project. The example specifies relationships, not a claim of finished balance.

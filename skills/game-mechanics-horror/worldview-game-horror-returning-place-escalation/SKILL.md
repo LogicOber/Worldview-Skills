@@ -1,135 +1,109 @@
 ---
 name: worldview-game-horror-returning-place-escalation
-description: "Use when a familiar room, street, workplace, or social hub should become more frightening through changed occupants, objects, routes, relationships, sound, light, or knowledge on each return. Produces a stable landmark grammar, return-state graph, player comparison cues, recovery edge, persistence rules, and verification. Do not use for empty backtracking, a key-only lock, or a hub whose only change is more lore text."
+description: "Use when a familiar room, street, workplace, shelter, or social hub should change meaning across visits. Builds shared place/object IDs, stable landmarks, viewpoint and observer-knowledge records, authoritative and presentation deltas, changed questions and verbs, route/social consequences, recovery edges, persistence, and verified payoff instead of empty backtracking or 'same map, darker.'"
 ---
 
 # Worldview Game — Horror Returning-Place Escalation
 
 ## Call this Skill
-
 ```text
 /worldview-game-horror-returning-place-escalation
 ```
 
-Treat the brief as a request for a place the player can remember and compare. Inspect current map, landmarks, save authority, NPC state, route graph, lighting, and audio before adding content.
+Recover the existing map, place IDs, object IDs, routes, occupants, observer knowledge, save authority, lighting, and audio before changing a return. A return earns time only when the player can recognize what stayed stable and act on what changed.
 
-## What this Skill owns
+## Ownership boundary
 
-It makes a return a playable comparison:
+This Skill owns comparison across visits:
 
 ```text
-first meaning → player leaves with a question
-→ world or relationship changes → player returns
-→ stable anchor proves the place is the same
-→ changed fact demands a new decision
-→ route, knowledge, or relationship persists
+remember place → return with a question → recognize stable anchors
+→ compare authoritative or observed change → choose a test/action
+→ route, relationship, knowledge, or threat state changes
+→ recover and carry the comparison to payoff
 ```
 
-It does not replace key-item backtracking, roaming stalkers, or narrative dialogue. It owns the comparison and escalation contract that lets those systems matter in one place.
+It does not own item-gate logic, perception truth, roaming-threat scheduling, or campaign viewpoint transfer. It records their state owners and reads their deltas.
 
 ## Lock sequence
+1. **Shared identity:** place, subspace, landmark, object, route, and actor IDs survive returns.
+2. **Stable grammar:** three to five functional anchors make the place recognizable across supported presentation states.
+3. **Return question:** each visit enters and exits with a specific question and action.
+4. **Delta ownership:** authoritative, presentation, observer-knowledge, social, and route changes are separate.
+5. **Recovery and persistence:** wrong readings remain useful and return state survives save/load.
+6. **Payoff proof:** the final return uses an earlier anchor and learned comparison rather than a new mechanic.
 
-### 1. Stable grammar
-Close when the player can identify the same place through three to five anchors.
+## 1. Establish shared IDs and stable grammar
 
-### 2. Return ledger
-Close when each return changes a named physical, social, route, sensory, or knowledge fact.
+Assign stable IDs to the place, important subspaces, recurring objects, connectors, and actors. A later viewpoint or chapter must refer to the same ID when it means the same thing. Approximate visual callbacks are not shared state.
 
-### 3. Decision and recovery
-Close when each changed fact asks for a decision and provides a recoverable wrong reading.
+Choose three to five anchors that serve navigation or action: a clock that marks the central axis, a textured boundary, a machine with a consistent hum, an exterior silhouette, a door with a distinct operation, or an object with custody history. Record identity, first meaning, affordance, route edges, accessible cues, and reset behavior.
 
-### 4. Persistence
-Close when changed states survive the declared save boundary and reset cleanly.
+Do not remove every anchor for mystery. If presentation hides one, keep another usable through sound, geometry, touch, text, or route relation.
 
-### 5. Runtime proof
-Close after first visit, each return, save/load, failure, and final payoff are tested or marked unverified.
+## 2. Separate kinds of change
 
-### 6. Handoff
-Close when implemented states, proposals, and unknowns are separated.
+For every return distinguish:
 
-## 1. Establish the stable grammar
+- **authoritative delta:** what actually changed in world, actor, object, access, or threat state;
+- **observer-knowledge delta:** what this viewpoint knows, witnessed, or was told;
+- **presentation delta:** light, sound, model, label, voice, weather, or interface;
+- **route delta:** edge opened, blocked, priced, exposed, or made one-way;
+- **social delta:** permission, trust, role, obligation, or relationship;
+- **interpretation delta:** what an earlier fact can now mean.
 
-Choose three to five landmarks that survive returns: a clock, stripe, machine, window, statue, sound source, exterior silhouette, or tactile door. Each needs a player-facing function, not only decoration.
+Presentation may suggest change but cannot silently write authoritative state. A new viewpoint can reinterpret an unchanged object without the object teleporting or changing ownership.
 
-For every landmark record:
+## 3. Write a changed question and verb
 
-```text
-identity → first meaning → changed-return meaning → player action
-→ route edges → accessible cue → save/reset behavior
-```
-
-Do not remove all anchors while trying to create mystery. If the player cannot tell that the place is the same, they cannot infer what changed.
-
-## 2. Build the return ledger
-
-Each return must change at least one of:
-
-- physical obstruction or object;
-- occupant position, authority, or relationship;
-- legal route, shortcut, or safe edge;
-- light, weather, sound, or visibility boundary;
-- threat knowledge, search rule, or access permission;
-- what an earlier clue now means.
-
-Change one primary fact before adding another. Record why the change is visible, what it asks the player to decide, and how the player can recover if they misread it.
-
-## 3. Make the hub a decision, not a hallway
-
-At each return, write:
+At each return complete:
 
 ```text
-I recognize ___, but ___ is different.
-Therefore I must choose ___ before ___ happens.
-If I am wrong, I learn ___ and can recover through ___.
+I recognize ___ through ___, but ___ is different.
+I currently know ___ and dispute ___.
+I can test it by ___ before ___ changes.
+If I am wrong, ___ remains useful and I recover through ___.
+The visit ends with the new question ___.
 ```
 
-If the sentence ends with “read another paragraph,” add a physical, route, social, or resource consequence. If a return only takes the player past the same rooms, cut it or merge it.
+Vary the verb when possible: compare, ask, inspect, cross, wait, restore, hide, carry, authorize, or refuse. A return whose only action is collecting another note should merge with another visit.
 
-## 4. Connect people and place
+## 4. Preserve safe-return history and corrupt routes causally
 
-When an NPC changes, specify the spatial evidence: a blocked desk, moved chair, missing tool, altered greeting, light left on, new sound, or changed route. Dialogue can explain the change, but it cannot be the only evidence if the player is meant to play a comparison.
+Record which edges were used safely, by whom, under what conditions, and how recently. If a trusted return edge changes, foreshadow it through residue, a missing sound, changed permission, visible obstruction, witness warning, or altered threat rule. Do not place an arbitrary blocker because the plot needs a detour.
 
-For social horror, let the player ask, trust, refuse, or seek help. Do not make every changed occupant an enemy; uncertainty is more useful when relationships have different consequences.
+A route can lose protection rather than disappear: group becomes solitude, power becomes darkness, public access becomes trespass, shelter becomes exposure, or a known shortcut becomes noisy. Record protection retained/lost and recovery.
 
-## Audit each return as a comparison decision
+## 5. Connect people, objects, and knowledge
 
-Complete this ledger before adding a fourth or later return:
+When an occupant changes, show spatial and state evidence: moved custody object, altered work, missing tool, blocked desk, changed access, violated schedule, or witness history. Dialogue may explain but should not be the only proof.
 
-| Return check | Required record | Rewrite when |
-| --- | --- | --- |
-| Stable anchor | Three to five landmarks that prove this is the same place. | The player cannot tell whether the space changed or was replaced. |
-| Changed fact | One physical, social, route, sensory, or knowledge change. | The only change is more debris, darker color, or extra lore. |
-| Player question | What the player now wants to verify, avoid, confront, or use. | The return is required only because a marker says so. |
-| Comparison action | Look, listen, speak, inspect, cross, wait, or test an old affordance. | The comparison happens in a cutscene or automatically. |
-| Consequence | Access, trust, route, threat, resource, or knowledge changes after the test. | The player can perform the test without changing any state. |
-| Recovery edge | A reliable anchor or route that lets a wrong reading remain useful. | A wrong interpretation traps the player or resets the whole place. |
-| Payoff | The earlier question is answered, reversed, or made more specific. | The return only delays the next new room. |
+When viewpoints change, track physical holder, knowledge holders, last verified state, and shared IDs. Use `/worldview-game-character-handoff-and-shared-evidence` when cross-character ownership is the main problem. Use `/worldview-game-horror-role-and-identity-pressure` when recognition or authorization is the main decision.
 
-The same place should not become “scarier” by merely adding enemies. Make the player compare a remembered relation: a chair now faces the wrong door, the person who granted access is absent, a safe shortcut now exposes a sound source, or an earlier landmark still works while its social meaning has changed.
+## 6. Escalate meaning, not decoration
 
-## Remove empty backtracking
+Useful return sequence:
 
-| Empty pattern | Player experience | Repair |
-| --- | --- | --- |
-| Return only to fetch a key | The place is a corridor between objectives. | Change the returner's question and make the old key location answer it. |
-| Random prop rearrangement | The player cannot infer a rule. | Change one authored fact at a time and preserve a truthful anchor. |
-| All anchors disappear | Mystery becomes disorientation. | Keep at least one stable visual, acoustic, or tactile landmark. |
-| NPC teleports without relationship evidence | Social escalation feels like a script error. | Track where the person could have gone and what their absence changes. |
-| Every return is more hostile | There is no recovery or interpretation phase. | Alternate escalation with a return that grants knowledge or route control. |
+1. first visit teaches grammar and one ordinary use;
+2. first return changes one inspectable fact;
+3. later return changes who knows or controls that fact;
+4. pressure return changes a trusted route or protection;
+5. final return pays off the original anchor through action.
 
-## 5. Persist and verify
+Not every project needs five visits. Merge visits that do not change a question. Alternate pressure with a return that grants knowledge, route control, or relationship clarity.
 
-The same return state must survive the intended save boundary. Test:
+## 7. Implement and persist
 
-- first visit and landmark recognition;
-- each changed return at ordinary speed;
-- wrong interpretation and recovery;
-- save before and after the change;
-- threat/NPC/door state after reload;
-- final return and payoff of the first landmark.
+Store return index separately from the states it summarizes. Load authoritative object, route, actor, and observer knowledge before applying presentation. Use event transactions so crossing a return threshold cannot commit half the room. Save before/after transitions with explicit migration behavior.
 
-Collision, navigation, audio, lighting, subtitles, and accessibility cues must agree with the return ledger.
+Grey-box anchors and route deltas before lighting. Test every place state at ordinary walking speed, in reverse approach, after reload, and from each supported viewpoint.
+
+## 8. Verify
+
+Run first-visit recognition; each return’s comparison action; wrong interpretation and recovery; skipped optional inspection; old safe route under new state; observer/viewpoint variants; save before/during/after transition; death and restart; accessibility variants; and final payoff.
+
+Validate collision, navigation, audio, subtitles, object custody, actor schedule, and lighting against the same return state. The player should explain what stayed stable, what changed, how they know, and what action follows.
 
 ## Handoff
 
-Return the landmark map, return ledger, changed-state implementation, route and relationship consequences, recovery edge, save/reset evidence, and a statement of which return states remain proposals.
+Return the shared-ID map, landmark grammar, return ledger, state-owner table, observer knowledge, safe-return history, route/social deltas, recovery edges, persistence traces, implementation evidence, unknowns, and final payoff proof.

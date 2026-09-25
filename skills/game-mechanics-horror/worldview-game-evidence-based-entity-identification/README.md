@@ -1,8 +1,8 @@
 # Worldview Game — Evidence-Based Entity Identification
 
-Build a playable investigation in which the player observes a dangerous unknown entity, performs bounded tests, distinguishes valid findings from inconclusive or contaminated readings, records evidence, and commits to one identity supported by the encounter’s actual behavior.
+Build a playable investigation in which the player tests an unknown danger, compares claims with observed behavior and physical or institutional traces, distinguishes valid findings from inconclusive or contaminated readings, and commits to an operational conclusion that changes what they do next.
 
-> **This Skill builds an investigation, not a collectible checklist.** Evidence is produced by world conditions and entity behavior, negative results are accepted only after valid tests, every candidate is distinguishable, and the final identification reads the same authoritative case state that generated the clues.
+> **This Skill builds an investigation, not a collectible checklist.** Evidence retains who claimed, witnessed, held, or inspected it; behavior may be helpful in one context and harmful in another; and the final identification reads the same authoritative case state that generated the clues.
 
 ## Call this Skill
 
@@ -20,13 +20,14 @@ The Slash name is the stable public entry. The user may provide an existing proj
 
 ## When to use it
 
-Use this Skill when the main play is a cycle of hypothesis and test:
+Use this Skill when the main play is a cycle of hypothesis and test, including cases where the unknown may be a creature, person, institution, environmental condition, or mixed cause:
 
 1. Several candidate identities could explain the initial signs.
 2. Tools, environmental manipulations, or close observation can produce discriminating evidence.
 3. Results may be positive, validly negative, inconclusive, or contaminated.
 4. The player records and interprets findings while danger constrains observation.
 5. A final commitment is checked against the same authoritative case state.
+6. Testimony, access records, payments, schedules, keys, or physical residue may matter alongside instrument readings.
 
 Do not use it for lore trivia, a linear clue trail with only one selectable answer, arbitrary item collection, a dialogue-only mystery, or a general quest journal. Do not use it when the identity is merely revealed in a cutscene regardless of what the player tested.
 

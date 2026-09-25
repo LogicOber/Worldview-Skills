@@ -54,6 +54,7 @@ Complete these rows in order. If an earlier artifact changes, reopen it and reru
 
 ```text
 event_id:        <...>
+source_actor_id: <...>
 emitter_id:      <...>
 source_kind:     <...>
 origin:          <captured how and when>
@@ -63,12 +64,16 @@ started_at:      <clock>
 duration:        <impulse or sustained rule>
 sequence:        <duplicate protection>
 tags:            <...>
+intended_listener_ids: <design intent only; does not force reception>
 ```
 
 - Causal emission boundary: `<...>`
 - Duplicate/debounce rule: `<...>`
 - Sustained-event cadence: `<...>`
 - Relationship to audio playback: `<...>`
+- Immutable provenance fields: `<...>`
+- Authorship: `environment / player / other actor / entity / presentation only`
+- Rule preventing copied/imitated audio from relabeling the original source:
 
 ## Source table
 
@@ -128,9 +133,61 @@ last_heard_at:       <...>
 received_intensity:  <...>
 source_kind:         <...>
 priority/confidence: <...>
+estimated_origin:    <may differ from true origin only by declared rule>
+response/reason:     <...>
+acknowledgement:     <...>
 ```
 
 Explicitly forbidden knowledge: `<for example, hidden live player transform>`
+
+### Listener-specific reception and response
+
+| Listener | Intended or unintended | Threshold/category | Received event and time | Estimated origin/confidence | Response and reason | Acknowledgement | Deadline/abandonment | External handoff owner |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |  |
+
+One listener's receipt must not set a global `heard` flag.
+
+### Witness/helper use
+
+- Intended witness/helper:
+- Recognition requirement:
+- Credibility or authorization requirement:
+- Travel/communication response time:
+- State the helper can change:
+- Accessible acknowledgement:
+- Late/failed arrival behavior:
+- Credible hostile or unintended listeners:
+- How simultaneous helpful and hostile responses remain independent:
+
+### Expected silence and false localization
+
+| Case | Authoritative source/origin | Valid opportunity/window | Masking/interruption | Listener/player estimate | Confidence | Accessible equivalent | Later correction | Action changed |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Expected sound occurs | | | | | | | | |
+| Valid expected silence | | | | | | | | |
+| Masked/interrupted; not evidence | | | | | | | | |
+| False localization | | | | | | | | |
+
+- Rule distinguishing unavailable audio presentation from world silence:
+- Rule preserving immutable origin while a listener holds a false estimate:
+
+### Cross-system sound state fields
+
+```text
+source_actor: <actor/system that caused the event>
+source_location: <immutable origin or propagation node at emission>
+event_timestamp: <authoritative simulation time>
+intended_listener: <design intent; does not force reception>
+hostile_or_unintended_listeners: <credible listener IDs and independent eligibility>
+propagation_path: <sampled links and states>
+occlusion: <rule and sampled value>
+listener_belief_change: <listener-specific before -> after with reason>
+helper_response_time: <communication/travel time and clock owner>
+acknowledgement: <world, UI, caption, or haptic receipt from the same state>
+false_localization_rule: <cause, estimated origin, confidence, and correction>
+accessible_equivalent: <same event information without extra certainty>
+```
 
 ## Priority and state model — Listener-decision lock
 
@@ -198,6 +255,11 @@ Reset checklist:
 - [ ] player, inventory, doors, surfaces, machines, and objective
 - [ ] captions, indicators, haptics, audio loops, outcomes, and UI
 - [ ] authoritative/replicated messages when networked
+- [ ] source actor, authorship, true origin, and sequence for retained events
+- [ ] separate reception, memory, estimate, and response for every listener
+- [ ] witness/helper progress and acknowledgement
+- [ ] expected-silence eligibility/masking state
+- [ ] false-localization estimate and later correction
 
 ## Accessibility
 
@@ -209,6 +271,9 @@ Reset checklist:
 | Relative source direction | `<...>` | `<...>` | `<...>` | `<...>` |
 | Device activation | `<...>` | `<...>` | `<...>` | `<...>` |
 | Reduced transients/vibration | `<...>` | `<...>` | `<...>` | `<...>` |
+| Expected silence | `<...>` | `<...>` | `<...>` | `<...>` |
+| False localization / uncertainty | `<...>` | `<...>` | `<...>` | `<...>` |
+| Helper acknowledgement | `<...>` | `<...>` | `<...>` | `<...>` |
 
 ## Multiplayer authority — Hearing-authority proof lock
 
@@ -243,6 +308,12 @@ If irrelevant, state `single-player; networking not added`.
 | SND-12C | Door authority changes while an event propagates | The locked sampling-time rule yields one shared propagation result | `<...>` | `<... / not applicable>` |
 | SND-12D | Device owner disconnects with a sustained or placed source active | Source follows the declared transfer, stop, or persistence rule | `<...>` | `<... / not applicable>` |
 | SND-12E | Restart occurs with queued or retried sound messages | Stale sequences are rejected and no prior listener memory survives | `<...>` | `<... / not applicable>` |
+| SND-13 | One event can reach intended and unintended listeners | Each listener receives, remembers, and responds only under its own contract | `<...>` | `<...>` |
+| SND-14 | Sound summons a witness/helper and also reaches a threat | Helper acknowledgement and hostile response proceed independently | `<...>` | `<...>` |
+| SND-15 | Environmental and entity-authored versions use similar presentation | Provenance remains distinct and drives only declared behavior | `<...>` | `<...>` |
+| SND-16 | Expected event occurs, is validly absent, and is masked/interrupted | Only the valid complete opportunity makes silence evidence | `<...>` | `<...>` |
+| SND-17 | Reflection/vent/imitation produces false localization | True origin is immutable; estimate, confidence, action, and correction are reproducible | `<...>` | `<...>` |
+| SND-18 | Save/load after emission, reception, helper acknowledgement, and false estimate | No provenance rewrite, global hearing leak, duplicate response, or reroll | `<...>` | `<...>` |
 
 ## Lock review
 
@@ -250,6 +321,10 @@ If irrelevant, state `single-player; networking not added`.
 - [ ] Switch-margin sides, exact equality, idle tie order, and same-origin refresh/coalescing were tested separately.
 - [ ] Every reopened earlier layer caused its named dependent implementation and evidence to be replaced or rerun.
 - [ ] No late tuning, one-off trigger, presentation callback, or network path bypassed the reopen rule.
+- [ ] Source provenance is immutable and source authorship is explicit.
+- [ ] Intended and unintended listeners never share a global reception result.
+- [ ] Every required audio cue has an equivalent that preserves the same uncertainty.
+- [ ] Silence and false localization never overwrite event truth.
 
 ## Handoff
 

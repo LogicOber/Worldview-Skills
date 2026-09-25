@@ -1,8 +1,8 @@
 # Worldview Game — Asymmetric Information Cooperation
 
-Build a horror encounter in which players survive by combining different, incomplete views of the same danger. One player can perceive a rule another cannot; another can act where the first cannot; communication turns those partial truths into a shared decision.
+Build a horror encounter in which active participants survive by combining different observations, tools, locations, and responsibilities. Communication carries provenance and acknowledgement; every participant has a current task, last verified state, and deterministic fallback when a handoff or path fails.
 
-> **The result gives every role necessary agency, a clear shared vocabulary, and a diagnosable mistake-and-recovery path.**
+> **The result separates what a participant holds from what they know, gives every role necessary agency, and makes missed messages, stale locations, disconnections, and recovery diagnosable.**
 
 ## Call this Skill
 
@@ -17,9 +17,9 @@ They must communicate three safe moves before the creature reaches either room.
 
 ## When to use it
 
-Use this Skill for two or more players whose roles differ by perception, location, tool, language, time window, or authority. It supports online, local, mixed-device, or explicitly designed AI-partner play when the project already provides that environment.
+Use this Skill for two or more simultaneously active players or declared AI partners whose roles differ by perception, location, tool, language, time window, task, or authority. It supports online, local, mixed-device, or explicitly designed AI-partner play when the project already provides that environment.
 
-Do not use it for ordinary co-op where everyone has the same information, a hidden-traitor game, a voice-chat-only puzzle with no accessible alternative, or a single-player companion that solves the puzzle automatically.
+Do not use it for ordinary co-op where everyone has the same information, a hidden-traitor game, a voice-chat-only puzzle with no accessible alternative, or a single-player companion that solves the puzzle automatically. When one human sequentially controls different protagonists and earlier actions become later evidence, use the character-handoff Skill instead.
 
 ## What you provide
 

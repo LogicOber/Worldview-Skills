@@ -1,47 +1,65 @@
 # Role and identity pressure contract
 
-## Roles
+## Brief
+- Decision:
+- Canonical ending:
+- Playable entry:
+- Safety/privacy boundary:
 
-| Role/claim | What grants authority | Stable test | Presentation that may change | Player-facing consequence |
-| --- | --- | --- | --- | --- |
-| | | | | |
+## Identity layers
+| State/candidate | Actor ID | Body/form | Presented identity | Assigned role | Culpability | State owner |
+| --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | |
 
-## Identity decision audit
-
-| Role claim | Stable test 1 | Stable test 2 | Contaminated cue | Verification action | Choice cost | Consequence | Recovery |
+## Permission and history
+| Actor/role | Locations | Objects/records | Commands/contacts | Expected schedule/task | Witnessed facts | Promises kept/broken | Exception requested |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | | | | | | | | |
 
-## Evidence matrix
+## Observer beliefs
+| Observer | Belief | Evidence inspected | Testimony received | Confidence | Missing fact | Update event |
+| --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | |
 
-| Observation | Supports | Contradicts | Contaminated by | Player can verify through |
-| --- | --- | --- | --- | --- |
-| | | | | |
+## Verification tests
+| Test | Input/opportunity | Stable anchor | Possible results | Contamination | Who can know | Consequence |
+| --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | |
 
-## Choices and safety
+## Replacement/transformation event
+- Cause and limits:
+- Original actor state:
+- New body/form/presentation:
+- Permissions inherited / not inherited:
+- Knowledge inherited / missing:
+- Residue:
+- Observer updates:
+- Reversibility:
 
-| Choice | Social cost | Route/state cost | Threat consequence | Recovery |
-| --- | --- | --- | --- | --- |
-| Trust | | | | |
-| Question | | | | |
-| Refuse | | | | |
-| Seek help | | | | |
+## Choice matrix
+| Choice | Access/role | Evidence | Relationship | Route/time/resource | Witness/threat | Feedback | Recovery |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Question | | | | | | | |
+| Comply/trust | | | | | | | |
+| Refuse | | | | | | | |
+| Verify | | | | | | | |
+| Report/seek witness | | | | | | | |
 
-## Layer lock record
+## False-positive recovery
+- Wrong accusation cost:
+- Independent residue/witness:
+- Appeal or later test:
+- Irreversible boundary preview:
 
-| Lock | Artifact | Locked when | Reopen trigger | Dependent work to invalidate |
-| --- | --- | --- | --- | --- |
-| Role and authority | | | | |
-| Identity evidence | | | | |
-| Presentation conflict | | | | |
-| Social choices and safety | | | | |
-| Runtime proof | | | | |
-| Handoff | | | | |
-
-## Verification
-
-- [ ] At least two stable tests work without face recognition.
-- [ ] Presentation changes have an anchor and a reason.
-- [ ] Refusal and help-seeking are playable choices.
-- [ ] No real diagnosis, disability, or identity is treated as the horror cause.
-- [ ] Save, failure, accessibility, and ending consequences are explicit.
+## Persistence and verification
+| Journey | Expected state/decision | Evidence | Result/gap |
+| --- | --- | --- | --- |
+| Each identity layer combination | | | |
+| Permissions and violations | | | |
+| Private knowledge learned/not learned | | | |
+| Mistaken trust | | | |
+| False accusation/recovery | | | |
+| Witness variants | | | |
+| Save/load/restart | | | |
+| Accessibility/privacy | | | |
+| Ending from two histories | | | |

@@ -45,3 +45,13 @@ These options do not need punishment to remain honest. A clear description is su
 Players can accept severe fictional consequences when the system behaves consistently. Exact feedback, durable records, and recoverable prior versions let them direct attention toward the route and their supplies. Reliability makes the authored uncertainty credible.
 
 Corruption and accidental deletion do not produce deeper horror. They dissolve the boundary between the work and the person using it. This Skill keeps that boundary explicit: the game may threaten the run's fictional situation, never the integrity of user-owned data.
+
+## Reject false durability and disguised data loss
+
+- **Fake permanence:** the interface says a record is permanent while quit, relaunch, or ending cleanup removes it.
+- **Lost progress disguised as horror:** an abnormal termination sends the player back because recovery was intentionally withheld to protect mood.
+- **No corrupt-write recovery:** a bad candidate replaces the only known-valid version.
+- **Charge before acceptance:** the scarce item disappears before the new version becomes durable.
+- **Unsafe testing:** the build offers no authorized way to reset test state, inspect versions, or exercise faults on disposable data.
+
+Scarcity governs a voluntary manual opportunity. Durability governs whether the product keeps its promise. Combining those responsibilities makes every technical failure look like intentional difficulty and every intentional difficulty feel unsafe.

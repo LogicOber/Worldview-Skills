@@ -41,6 +41,29 @@ If the boiler damper no longer controls the service-side heat in the propagation
 
 The matrix uses combinations rather than one exclusive clue. Every candidate can be distinguished by two positive results and one valid negative. A production design could use another threshold, but this example’s submission station requires two accepted positives and one completed valid-negative opportunity.
 
+## Claims, behavior, and institutional traces
+
+The closed conservatory has one surviving caretaker, Mara Pell, who left a signed maintenance recording before evacuation. She states that the presence avoids mineral shutters because it cannot cross their reflected seams. The recording is sincere: during an earlier incident, closing a shutter stopped an approach. It is not a complete rule. Mara observed from the potting room, could not see the propagation cabinet, and did not know the boiler damper was open.
+
+The building record provides an independent trace. A mechanical access counter shows the mineral-shutter cabinet opened twice after the official evacuation, while Mara's staff key remained sealed in the exterior lockbox. The counter proves cabinet access, not who opened it. Scratches on the interior latch establish manipulation from the greenhouse side. Together, these findings weaken a simple “the caretaker returned” explanation without identifying the presence by themselves.
+
+Observed behavior remains mixed:
+
+- during the first clean reflection test, the presence interrupts its approach when the player steps beneath falling glass; the delay gives the player time to retreat;
+- during a later wire test, it deliberately crosses the prepared line and breaks the return lane, causing direct danger;
+- the helpful delay is retained as behavior under one context, not promoted into proof that the presence is harmless;
+- the harmful crossing remains in the ledger after the caretaker's recording supplies a sympathetic interpretation.
+
+| Evidence ID | Source / observer | What is established | What is not established | Action changed |
+| --- | --- | --- | --- | --- |
+| `claim_mara_shutter` | caretaker recording; limited potting-room view | a shutter closure coincided with one stopped approach | mineral seams always repel every candidate | motivates a controlled shutter test |
+| `trace_cabinet_counter` | mechanical counter inspected by player | cabinet opened twice after evacuation | who opened it or why | rules out a sealed-room assumption |
+| `trace_latch_inside` | player inspection | latch was manipulated from greenhouse side | candidate identity | adds an access contradiction |
+| `behavior_glass_delay` | player during accepted reflection window | presence delayed while glass fell | benevolent motive | permits one safer retreat prediction |
+| `behavior_wire_breach` | player during accepted wire window | presence crossed and broke the return lane | behavior in every context | forbids treating the prior delay as innocence |
+
+The proposed world state owns the shutter cabinet and caretaker key. The ledger references their stable IDs; it does not move or duplicate them. The player knows the recording and inspection results. Mara's old recording does not gain knowledge of later tests.
+
 ## Test protocols
 
 ### Condensation inversion
@@ -103,6 +126,10 @@ At the potting station, the player selects one candidate and commits. A correct 
 
 A submission is one irreversible commitment per encounter attempt and is enabled only after the ledger contains two accepted positives and one completed valid-negative opportunity. A wrong answer starts an incompatible procedure, produces an eight-second multimodal instability warning, and lets the player retreat before the case ends in containment failure. Retry preserves the candidate matrix but clears accepted case evidence, instrument samples, submission, seal state, and threat outcome while retaining the same hidden identity. The player must perform valid tests again before another submission; the UI never cycles candidates, reveals the answer, or changes the hidden identity. This cost prevents rapid menu brute force while keeping the reasoning reproducible.
 
+The final action expresses the conclusion rather than only naming it. A `glass_root` conclusion requires the player to close the west shutter, leave the cracked east shutter open as a lure, and carry the caretaker's sealed key back outside instead of inserting it. The observed delay predicts which crossing remains usable; the latch trace explains why locking the cabinet is insufficient; the harmful wire crossing justifies containment despite the protective moment. Choosing the label without performing this operational sequence does not complete the case.
+
+Save after the caretaker claim, cabinet inspection, glass delay, key pickup, and final shutter commit. Reload must preserve each evidence source and contradiction, restore the key from world ownership exactly once, retain the player's knowledge without changing Mara's recorded knowledge, and avoid replaying the already-applied shutter transition.
+
 ## Expected saved output
 
 ```text
@@ -125,6 +152,10 @@ gameplay/wrenfall-conservatory/
 | Essential evidence has accessible equivalents | Condensation and reflection positives, negatives, and contamination identified through text/focus-speech/haptic as well as visuals |
 | Conclusion has consequence | Correct seal playthrough plus one wrong-procedure failure, cleared-attempt retry, and blocked rapid resubmission |
 | Restart is clean | Same-case and new-case resets during each test and outcome state |
+| Claims do not become observations | Caretaker recording remains attributed and limited after save/load |
+| Mixed behavior remains mixed | Protective delay and harmful crossing persist as separate rows |
+| Institutional evidence affects action | Counter and latch traces alter the final shutter/key procedure |
+| Ownership remains singular | Key pickup, save/load, return, and restart never duplicate or erase the key |
 
 ## What is not claimed
 

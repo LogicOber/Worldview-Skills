@@ -6,6 +6,8 @@ A persistent stalker changes how the player interprets empty space. A moved door
 
 This is different from constant pursuit. Continuous contact consumes attention until every objective becomes the same escape task. Roaming pressure alternates evidence, approach, decision, consequence, and recovery. Absence is not inactivity; it is where anticipation and route planning happen.
 
+Presence becomes actionable when traces form a territory grammar. Residue on only compatible connectors, a distant safe crossing, a ward that visibly changes access, or an approach sound tied to the route lets the player predict where contact can occur. Scratches everywhere and a global sting produce mood but teach no boundary.
+
 ## Spatial continuity makes uncertainty strategic
 
 The player rarely needs exact coordinates. They need bounded inference: the stalker was in the east wing, the lift is locked, the maintenance bridge connects north, and a fresh trace appeared near the generator. Those facts narrow possible movement without guaranteeing safety.
@@ -44,11 +46,25 @@ The warning must belong to the actual approach. A global sting followed by conta
 
 Not every warning needs to end in attack. Sometimes the player counteracts the route, the stalker passes elsewhere, or constraints invalidate the opportunity. This keeps signs informative rather than reducing them to mandatory pre-hit alarms.
 
+## Claims are not behavior
+
+Characters, notes, and local folklore can teach hypotheses about territory or behavior. They should remain attributed claims. A sincere witness may describe an old boundary that an objective later disables. A frightened resident may mistake correlation for a rule. The stalker follows authoritative world state; the evidence record preserves whether observation confirms or contradicts the claim.
+
+This prevents two opposite failures: exposition that is always an answer key, and arbitrary betrayal of every stated rule. The player can use a claim provisionally, test it from a protected position, and update a route without the text being deleted or rewritten.
+
 ## Recovery restores the value of warning
 
 After contact or successful counterplay, a bounded search and withdrawal let the immediate problem close. Presentation intensity falls, the director spends its budget, and another full episode becomes ineligible for a meaningful interval.
 
 Without recovery, warning becomes continuous background noise and players remain in one defensive mode. With excessive scheduled calm, the threat becomes a predictable clock. Recovery should combine time with world state: the stalker must actually leave contact, and the player must not be punished for pausing, reading, or using a refuge.
+
+Release and cooldown are different. Release clears confirmation through sensory loss or counterplay, completes the bounded search, and moves the stalker through a declared withdrawal connector. Cooldown controls when a later episode may be scheduled. Starting cooldown while the stalker still waits outside a hiding place creates a false end and allows overlapping pressure episodes.
+
+The player needs an end cue available in supported modes: a visible crossing away, a ward returning, a directional caption and world motion, or another route-grounded signal. Silence alone can mean withdrawal, waiting, a muted device, or missing audio.
+
+## Capture recovery should preserve learning, not confusion
+
+A retry may retain discovered route knowledge, objective progress, or a recorded territory cue while resetting immediate pursuit. It may also retain a declared injury or spent resource when the campaign calls for it. The contract must name the result. Hidden pressure debt, a duplicated stalker, changed connector access, or a harsher repeated encounter with no explanation turns capture into technical uncertainty rather than learning.
 
 ## Counterplay needs to alter simulation state
 
@@ -77,6 +93,14 @@ A hidden cut does not establish world continuity. Abstract travel still needs a 
 ### “More encounters create more pressure”
 
 Continuous contact often reduces tension and exhausts the mechanic. Variation in evidence, distance, objective exposure, counterplay, and recovery creates a more durable curve.
+
+### “The room has the stalker's texture, so the player knows its territory”
+
+Decoration does not establish reachability, knowledge, or behavior. Give the cue a connector, an observed crossing, or a changed world rule the player can test.
+
+### “Search ends when the timer expires”
+
+A timer may bound search breadth, but release still needs a valid loss of confirmation, completed search transition, and withdrawal route. Otherwise the stalker can stop while visibly holding current evidence.
 
 ## What a successful route lets the player explain
 

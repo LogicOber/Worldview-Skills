@@ -66,6 +66,27 @@ Fill these rows in order. Keep progression meanings and route snapshots aligned 
 | Drop and recovery policy |  |
 | Save representation |  |
 
+## Bounded target compatibility — Progression Relationship Lock
+
+| Verb | Valid target class/precondition | Excluded target class | Range/duration | Cost/cooldown | Authoritative effect | Invalid feedback | Final-use dependency |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | |
+
+- Calm teaching use:
+- Pressured use and what changes around it:
+- Final target-class preview:
+- Why the item is not universal:
+
+## Physical, knowledge, and operation ownership — Atomic Application Lock
+
+| State/phase | Physical holder or socket | Knowledge holders | Authorized operators | Witnesses | World location | Save representation |
+| --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | |
+
+| Handoff | Prior holder | New holder | Knowledge transmitted/retained | Permission change | Acknowledgement | Failure/disconnect fallback | Final custody |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | |
+
 ## Route graph — State-Aligned Route Lock
 
 | Node | Landmark cues | Connections | Hazards | Safe anchor |
@@ -186,3 +207,7 @@ Complete only if network play is implemented.
 - [ ] Network races were tested if claimed.
 - [ ] Screenshot, logs, route traces, and limitations are recorded.
 - [ ] No late implementation or tuning change bypassed a reopen trigger; every affected state graph and dependent check was invalidated and rerun.
+- [ ] Every valid and excluded target class was tested; invalid use consumes no cost or ownership.
+- [ ] A calm use teaches the same operation and compatibility later used under pressure.
+- [ ] Physical holder, knowledge holder, operator permission, witnesses, and installed socket remain distinct through handoff and save/load.
+- [ ] The final target class and consequence are previewed before final commitment.

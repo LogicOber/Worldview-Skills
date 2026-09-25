@@ -70,11 +70,36 @@ The player can:
 - compare the label's claimed location with brass north and choose the true Gallery C;
 - spend a dry filter at the survey station to make labels stable for the next route.
 
+## Guide history and competing interpretations
+
+An in-world custodian named Oren Vale speaks through the archive's wired call boxes. Oren has legitimate access to the flood pumps, enamel-label tracks, and survey station, but cannot change the brass compass or the stamped mechanical access strip inside the station.
+
+Before exposure rises, Oren gives two bounded directions. He tells the player which valve drains the entry stair and warns that the center bridge will close after the pressure key is removed. Both predictions become visibly true. He also promises that he will not operate a label track while the player is below. This establishes useful route knowledge and a testable promise without making him universally trustworthy.
+
+At Unreliable exposure, Oren asks the player to place the compass in the survey station's calibration slot and follow the `C` label immediately. He claims the brass housing is amplifying the pipe signal. The request exceeds his previous behavior because it removes the player's only directional anchor while he has legitimate access to the label machinery.
+
+The same retained facts support two causal interpretations:
+
+| Retained fact | Interpretation A | Interpretation B |
+| --- | --- | --- |
+| Oren's first two directions were correct | he understands the archive and is trying to help | he built credibility before an important misdirection |
+| C/F labels exchange during exposure | memory bleed authors the substitution | Oren uses the label track while exposure hides the physical transition |
+| Oren asks for the compass | he believes its housing worsens the signal | he wants the player to lose the independent anchor |
+| mechanical strip records a label-track operation | an old automatic correction coincided with exposure | Oren broke his promise through his legitimate access |
+
+The stamped strip is an inspectable record, not a UI declaration. It logs the last operation time and source lever without interpreting motive. The player can compare it with the saved onset time of the active substitution. If the lever operation predates the cue, Interpretation A remains viable. If it occurs during Oren's spoken promise, Interpretation B gains direct support. Both readings preserve the same room geometry, compass direction, earlier successful guidance, and exposure history.
+
+The eventual trust decision cites scope and history: keep the compass and inspect the strip, surrender it and follow Oren, or spend the dry filter before accepting either instruction. The game does not display a trust percentage.
+
 ## Consequences
 
 Using the compass reaches Gallery C and the pressure key. Trusting the changed label enters Gallery F, where a leaking pipe consumes time and raises exposure through the 85-point Critical entry threshold. That is a recoverable failure: the player can retreat, but the longer route lets the archive custodian reach the central bridge first.
 
 Recovery consumes the only dry filter and suppresses label substitutions for ninety illustrative seconds. It does not reveal the custodian or remove ordinary threat pressure.
+
+After taking the Gallery C key, Oren opens one route toward the east floodgate and requests that the player ignore the survey station. If the strip shows he operated the track during his promise, following him opens the shorter route but grants him control of its closing gate. Refusing him costs time but preserves an independently verified path. If the strip clears him, refusal still remains legal and costly; the game does not punish caution with an impossible route.
+
+Save the authoritative event, player's current interpretation, active C/F presentation, strip snapshot, Oren's promise history, permission reference, compass ownership, and any gate consequence separately. Reload cannot reroll the label, make Oren know an unseen strip result, repair a broken promise, or replay the gate transition.
 
 ## Accessibility expressions
 
@@ -97,6 +122,9 @@ Recovery consumes the only dry filter and suppresses label substitutions for nin
 | Wrong trust has a coherent cost | Trace entering Gallery F and reaching the declared delayed state |
 | Recovery has the exact declared scope | Before/after state and presentation checks at the station |
 | Save/load does not reroll the committed label | Save in unreliable tier, reload, and compare substitution identifier |
+| Event, cue interpretation, presentation, and evidence remain distinct | Compare fixed rooms, player hypothesis, active label, and stamped strip before and after reload |
+| Both interpretations preserve retained facts | Run old automatic operation and live custodian operation sequences against the same geometry and exposure history |
+| Trust follows permission and history | Verify early directions, promise, exception request, access use, and both follow/refuse consequences |
 | Restart is clean | Restart during pipe audio, substitution, reflection, recovery, and failure |
 
 ## Limits

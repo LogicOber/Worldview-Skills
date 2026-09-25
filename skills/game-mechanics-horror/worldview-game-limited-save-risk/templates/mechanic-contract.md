@@ -52,6 +52,32 @@ Fill these rows in order. Scarcity work stops if the first three locks cannot be
 | Suspend record |  | Safe session exit |  | None |  |
 | Settings/profile |  | Preferences/accessibility |  | None |  |
 
+## Persistence scope and lifecycle policy
+
+- `persistence_scope` by subsystem:
+- `save_opportunity_owner`:
+- `durable_acceptance_point`:
+- `crash_recovery`:
+- `quit_result`:
+- `relaunch_result`:
+- Reinstall / local-data-loss limitation:
+- `profile_reset_authority` and confirmation:
+- `post_ending_state`:
+- `tester_bypass` scope and disposable-data rule:
+- `accessibility_override`:
+- Truthful warning before irreversible persistence change:
+
+| Transition | Expected durable record | Expected live/resource state | Player-facing explanation | Test evidence |
+| --- | --- | --- | --- | --- |
+| normal quit | | | | |
+| crash before acceptance | | | | |
+| crash after acceptance | | | | |
+| relaunch | | | | |
+| reinstall / local-data loss | | | | |
+| authorized profile reset | | | | |
+| post-ending load | | | | |
+| tester bypass enter / exit | | | | |
+
 ## Snapshot boundary — Snapshot Boundary Lock
 
 | Subsystem | Authoritative state saved | Transient state excluded | Restore validation |

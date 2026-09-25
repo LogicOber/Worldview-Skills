@@ -23,14 +23,15 @@ This package independently establishes that:
 5. Warning, encounter, counterplay, withdrawal, and recovery form a bounded grammar.
 6. “No legal encounter” is a successful scheduling outcome, not an error that justifies an unfair fallback.
 7. Recovery is required to restore anticipation and cannot accumulate punitive debt during refuge or accessibility use.
+8. Territory cues must teach a reachability or behavior prediction before contact; local claims remain distinct from observed behavior.
+9. Search release, withdrawal, and director cooldown are separate states with separate proof.
+10. Capture recovery explicitly restores identity, knowledge, route, resource, history, and retry modifiers rather than relying on a generic reset.
 
 These choices remain project-specific proposals until implemented and tested in a named runtime.
 
 ## Writing method
 
-The Skill follows the user's Writing 2 preference: it begins with the hidden problem rather than a list of genre conventions, separates facts from proposals and judgments, explains causal reasons, keeps counterexamples close to rules, and uses detailed prose to prevent critical implementation gaps.
-
-No Writing 2 wording is reproduced.
+The Skill begins with the hidden problem rather than a list of genre conventions, separates facts from proposals and judgments, explains causal reasons, keeps counterexamples close to rules, and uses enough detail to prevent critical implementation gaps.
 
 ## Maintenance rule
 

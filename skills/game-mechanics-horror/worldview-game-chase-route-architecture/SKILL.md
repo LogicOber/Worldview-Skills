@@ -1,6 +1,6 @@
 ---
 name: worldview-game-chase-route-architecture
-description: "Use when a horror chase needs a designed indoor route rather than a pursuer that simply follows the player's live position. Builds a measured building graph, success and failure paths, imperfect perception, linked mechanics, checkpoints, and a verified runtime encounter."
+description: "Use when a horror chase needs a learnable indoor route rather than a pursuer following the player's live position. Builds a calmly rehearsed building graph, sequential branch rejection, success and failure paths, interaction and travel margins, recovery pockets, no-return and lure/containment thresholds, checkpoints, and a verified runtime encounter. Route moving-vehicle attention and progressive loss of journey protections to their dedicated Skills."
 ---
 
 # Worldview Game — Chase Route Architecture
@@ -135,6 +135,55 @@ Every edge in the contract must answer four questions:
 At least one route should be discoverable without a frame-perfect trick. A route may be hidden by pressure, but its landmark or consequence should have appeared during a safe beat. A good first capture teaches the next attempt; a random branch that can only be solved by a guide is not depth.
 
 Branches should rejoin at an intentional landmark. Preserve only useful state across the merge: time lost, item spent, injury, noise level, pursuer commitment, knowledge, or a changed shortcut. If two branches require separate untestable campaigns, reduce them or move the difference into a bounded state.
+
+### Rehearse the route before peak pressure
+
+Every critical chase edge needs a source of prior knowledge. Let the player traverse it calmly, observe it from safety, use it during ordinary work, see a companion cross it, or test a short segment under low pressure. Record which landmark, door operation, ladder, crawl, drop, hiding pocket, or containment control the rehearsal teaches.
+
+Rehearsal does not reveal the complete winning sequence. It establishes the spatial vocabulary and interaction cost so the chase can test memory and judgment instead of first-time camera reading. When a route cannot be visited early, provide a safe sightline or a short recoverable probe and verify that it teaches the same fact.
+
+Do not debut a required turn during camera shake, sprint audio, or a scripted look lock. If the player must hear story information during pursuit, repeat or preserve it after recovery; a revelation that is inaudible while running cannot own the next route decision.
+
+### Reject branches sequentially
+
+When only one route should ultimately succeed, make wrong branches fail for different, ordered reasons. The first failure might reveal that a fire door needs pressure. A later branch might be legal but too slow while the pursuer owns the short connector. Another may work only after the player preserves a countermeasure. Each rejection adds one actionable fact.
+
+For every branch, declare:
+
+```text
+fact known before commitment
+reject cue
+commit point
+interaction lock and cancel time
+pursuer travel time in the current state
+wrong-but-useful result
+recovery pocket
+next-attempt change
+```
+
+Do not activate every blocker simultaneously. That makes the route look arbitrarily sealed and prevents diagnosis. One attempt may reveal more than one fact only when the cues remain separately attributable.
+
+### Mark recovery and no-return boundaries
+
+A recovery pocket is safe enough to orient, not necessarily a safe room. Record what can enter, what knowledge or progress persists, how long the player can plan, and which edge returns to active danger. A return-path trap is fair only if the earlier safe traversal is established and the changed obstruction, threat access, or timing is visible before commitment.
+
+Mark the no-return line where retreat stops being legal. The player must know which preparation, item, companion action, or countermeasure becomes unavailable after it. Save/load and checkpoint behavior must preserve that boundary exactly.
+
+### End at an escape, lure, or containment threshold
+
+The final threshold may be an exit, but it may instead ask the player to draw the pursuer through a gate, hold it in a room, activate a relationship-owned countermeasure, or deliver it to a prepared destination. Name who owns the countermeasure, how the player learned it, which target states it affects, how long it lasts, and what happens when it is used too early or on the wrong target.
+
+The finale cannot introduce a new combat or ritual grammar. Its decisive verb, landmark, and target compatibility must appear earlier in the route. Crossing the threshold is successful only when the authoritative world state confirms escape or containment; a cutscene trigger alone is not proof.
+
+### Neighbor handoffs
+
+- This Skill owns on-foot route topology, branch evidence, recovery pockets, timing margins, and the final spatial threshold.
+- `/worldview-game-driving-horror-divided-attention` owns vehicle motion, road demand, mirrors or cabin view zones, safe look-away windows, collision grace, and motion comfort. Do not stretch this on-foot template over a moving vehicle.
+- `/worldview-game-stranded-journey-and-lost-protections` owns progressive availability of transport, communication, shelter, legitimacy, companions, help, and safe return across a journey. A chase may consume those states but does not define them.
+- `/worldview-game-roaming-stalker-pressure` owns persistent threat location, knowledge, search, withdrawal, and cooldown outside the chase.
+- `/worldview-game-sound-detection-and-distraction` owns sound-event provenance, propagation, listener memory, and distraction commitment.
+
+When a neighbor is not installed, keep the handoff fields and mark the external owner unresolved rather than copying its state into the chase controller.
 
 ### Architectural affordances
 
